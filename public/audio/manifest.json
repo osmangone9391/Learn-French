@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-04T09:54:32.304Z",
+  "provider": "google-cloud-tts",
+  "voiceFr": "fr-FR-Neural2-A",
+  "voiceEn": "en-US-Neural2-F",
+  "files": {}
+}

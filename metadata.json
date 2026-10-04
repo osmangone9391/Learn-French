@@ -1,0 +1,6 @@
+{
+  "name": "LireFacile - French Story Reader",
+  "description": "Read short French stories at your level, tap words for instant English and Bangla translations, listen with French audio, and save vocabulary offline.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
