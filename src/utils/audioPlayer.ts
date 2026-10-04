@@ -4,7 +4,7 @@
  * Layer B (Fallback): Highest-quality browser SpeechSynthesis voice (prioritizing Natural/Neural/Google/Siri)
  */
 
-import { AudioManifest, AudioManifestEntry } from '../types';
+import { AudioManifest, AudioManifestEntry, Story } from '../types';
 
 export type AudioSourceType = 'neural' | 'browser' | 'none';
 
@@ -76,6 +76,35 @@ class UnifiedAudioPlayer {
     if (ranked.length > 0) {
       this.selectedBrowserVoice = ranked[0];
     }
+  }
+
+  public getManifest(): AudioManifest | null {
+    return this.manifest;
+  }
+
+  public getRecordedSentencesRatio(stories: Story[]): { recorded: number; total: number } {
+    let total = 0;
+    let recorded = 0;
+    const manifestEntries = this.manifest?.files ? Object.values(this.manifest.files) : [];
+    const recordedFrTexts = new Set(
+      manifestEntries.filter(e => e.language === 'fr').map(e => e.text.trim().toLowerCase())
+    );
+
+    stories.forEach(story => {
+      story.paragraphs.forEach(p => {
+        const sentences = p.match(/[^.!?]+[.!?]+["»]?|\S+/g) || [p];
+        sentences.forEach(s => {
+          const clean = s.trim();
+          if (!clean) return;
+          total++;
+          if (recordedFrTexts.has(clean.toLowerCase())) {
+            recorded++;
+          }
+        });
+      });
+    });
+
+    return { recorded, total };
   }
 
   public getAvailableFrenchVoices(): SpeechSynthesisVoice[] {

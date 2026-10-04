@@ -14,6 +14,7 @@ import {
   Radio
 } from 'lucide-react';
 import { AppSettings, UserStats } from '../types';
+import { INITIAL_STORIES } from '../data/stories';
 import { exportAllData, importAllData } from '../utils/storage';
 import { audioPlayer } from '../utils/audioPlayer';
 import { i18n } from '../i18n/en';
@@ -320,6 +321,20 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 ))}
               </select>
             )}
+
+            {/* Audio status line */}
+            {(() => {
+              const ratio = audioPlayer.getRecordedSentencesRatio(INITIAL_STORIES);
+              return (
+                <div className="flex items-center justify-between py-2 px-3 bg-stone-50 rounded-xl border border-stone-200/80 text-xs">
+                  <span className="font-semibold text-stone-700">Audio status:</span>
+                  <span className="font-medium text-stone-600">
+                    {ratio.recorded} of {ratio.total} sentences have recorded audio
+                    {ratio.recorded === 0 && ' (using browser voice fallback)'}
+                  </span>
+                </div>
+              );
+            })()}
           </div>
 
           {/* Backup: Export & Import */}

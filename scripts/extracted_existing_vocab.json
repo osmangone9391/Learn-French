@@ -1,0 +1,1832 @@
+{
+  "chaque": {
+    "lemma": "chaque",
+    "en": "each / every",
+    "bn": "প্রতিটি",
+    "pos": "adjective"
+  },
+  "matin": {
+    "lemma": "matin",
+    "en": "morning",
+    "bn": "সকাল",
+    "pos": "noun"
+  },
+  "marche": {
+    "lemma": "marcher",
+    "en": "walks",
+    "bn": "হাঁটে",
+    "pos": "verb"
+  },
+  "dans": {
+    "lemma": "dans",
+    "en": "in / inside",
+    "bn": "মধ্যে",
+    "pos": "preposition"
+  },
+  "sa": {
+    "lemma": "son",
+    "en": "his / her",
+    "bn": "তার",
+    "pos": "pronoun"
+  },
+  "rue": {
+    "lemma": "rue",
+    "en": "street",
+    "bn": "রাস্তা",
+    "pos": "noun"
+  },
+  "paris": {
+    "lemma": "Paris",
+    "en": "Paris",
+    "bn": "প্যারিস",
+    "pos": "noun"
+  },
+  "il": {
+    "lemma": "il",
+    "en": "he",
+    "bn": "সে",
+    "pos": "pronoun"
+  },
+  "arrête": {
+    "lemma": "arrêter",
+    "en": "stops",
+    "bn": "থামে",
+    "pos": "verb"
+  },
+  "devant": {
+    "lemma": "devant",
+    "en": "in front of",
+    "bn": "সামনে",
+    "pos": "preposition"
+  },
+  "petite": {
+    "lemma": "petit",
+    "en": "small / little",
+    "bn": "ছোট",
+    "pos": "adjective"
+  },
+  "boulangerie": {
+    "lemma": "boulangerie",
+    "en": "bakery",
+    "bn": "বেকারি",
+    "pos": "noun"
+  },
+  "artisanale": {
+    "lemma": "artisanal",
+    "en": "handcrafted / artisanal",
+    "bn": "হাতে তৈরি",
+    "pos": "adjective"
+  },
+  "une": {
+    "lemma": "un",
+    "en": "a / an (feminine)",
+    "bn": "একটি",
+    "pos": "article"
+  },
+  "un": {
+    "lemma": "un",
+    "en": "a / an (masculine)",
+    "bn": "একটি",
+    "pos": "article"
+  },
+  "bonne": {
+    "lemma": "bon",
+    "en": "good",
+    "bn": "ভালো",
+    "pos": "adjective"
+  },
+  "odeur": {
+    "lemma": "odeur",
+    "en": "smell / scent",
+    "bn": "সুগন্ধ / গন্ধ",
+    "pos": "noun"
+  },
+  "de": {
+    "lemma": "de",
+    "en": "of / from",
+    "bn": "এর / থেকে",
+    "pos": "preposition"
+  },
+  "pain": {
+    "lemma": "pain",
+    "en": "bread",
+    "bn": "পাউরুটি",
+    "pos": "noun"
+  },
+  "chaud": {
+    "lemma": "chaud",
+    "en": "hot / warm",
+    "bn": "গরম",
+    "pos": "adjective"
+  },
+  "sort": {
+    "lemma": "sortir",
+    "en": "comes out / exits",
+    "bn": "বের হয়",
+    "pos": "verb"
+  },
+  "du": {
+    "lemma": "de + le",
+    "en": "of the / from the",
+    "bn": "দোকানের",
+    "pos": "article"
+  },
+  "magasin": {
+    "lemma": "magasin",
+    "en": "shop / store",
+    "bn": "দোকান",
+    "pos": "noun"
+  },
+  "entre": {
+    "lemma": "entrer",
+    "en": "enters",
+    "bn": "প্রবেশ করে",
+    "pos": "verb"
+  },
+  "et": {
+    "lemma": "et",
+    "en": "and",
+    "bn": "এবং",
+    "pos": "conjunction"
+  },
+  "sourit": {
+    "lemma": "sourire",
+    "en": "smiles",
+    "bn": "হাসে",
+    "pos": "verb"
+  },
+  "à": {
+    "lemma": "à",
+    "en": "to / at",
+    "bn": "প্রতি / দিকে",
+    "pos": "preposition"
+  },
+  "la": {
+    "lemma": "le",
+    "en": "the (feminine)",
+    "bn": "টি / টা",
+    "pos": "article"
+  },
+  "le": {
+    "lemma": "le",
+    "en": "the (masculine)",
+    "bn": "টি / টা",
+    "pos": "article"
+  },
+  "les": {
+    "lemma": "les",
+    "en": "the (plural)",
+    "bn": "গুলি / গুলো",
+    "pos": "article"
+  },
+  "boulangère": {
+    "lemma": "boulangère",
+    "en": "baker (female)",
+    "bn": "মহিলা রুটি প্রস্তুতকারক",
+    "pos": "noun"
+  },
+  "dit": {
+    "lemma": "dire",
+    "en": "says",
+    "bn": "বলে",
+    "pos": "verb"
+  },
+  "poliment": {
+    "lemma": "poliment",
+    "en": "politely",
+    "bn": "ভদ্রভাবে",
+    "pos": "adverb"
+  },
+  "bonjour": {
+    "lemma": "bonjour",
+    "en": "hello / good day",
+    "bn": "শুভ সকাল / নমস্কার",
+    "pos": "expression"
+  },
+  "monsieur": {
+    "lemma": "monsieur",
+    "en": "sir / mister",
+    "bn": "মহাশয় / জনাব",
+    "pos": "noun"
+  },
+  "questce": {
+    "lemma": "qu'est-ce que",
+    "en": "what",
+    "bn": "কী",
+    "pos": "pronoun"
+  },
+  "que": {
+    "lemma": "que",
+    "en": "that / what",
+    "bn": "কী / যে",
+    "pos": "pronoun"
+  },
+  "vous": {
+    "lemma": "vous",
+    "en": "you (formal/plural)",
+    "bn": "আপনি / আপনারা",
+    "pos": "pronoun"
+  },
+  "désirez": {
+    "lemma": "désirer",
+    "en": "desire / want",
+    "bn": "চান",
+    "pos": "verb"
+  },
+  "aujourdhui": {
+    "lemma": "aujourd'hui",
+    "en": "today",
+    "bn": "আজ",
+    "pos": "adverb"
+  },
+  "répond": {
+    "lemma": "répondre",
+    "en": "answers / replies",
+    "bn": "উত্তর দেয়",
+    "pos": "verb"
+  },
+  "calmement": {
+    "lemma": "calmement",
+    "en": "calmly",
+    "bn": "শান্তভাবে",
+    "pos": "adverb"
+  },
+  "madame": {
+    "lemma": "madame",
+    "en": "madam / ma'am",
+    "bn": "ম্যাডাম / বেগম",
+    "pos": "noun"
+  },
+  "je": {
+    "lemma": "je",
+    "en": "I",
+    "bn": "আমি",
+    "pos": "pronoun"
+  },
+  "voudrais": {
+    "lemma": "vouloir",
+    "en": "would like",
+    "bn": "চাই / নিতে চাই",
+    "pos": "verb"
+  },
+  "baguette": {
+    "lemma": "baguette",
+    "en": "baguette (French bread)",
+    "bn": "বাগেট (ফরাসি লম্বা রুটি)",
+    "pos": "noun"
+  },
+  "tradition": {
+    "lemma": "tradition",
+    "en": "traditional baguette",
+    "bn": "ঐতিহ্যবাহী বাগেট",
+    "pos": "noun"
+  },
+  "pas": {
+    "lemma": "pas",
+    "en": "not",
+    "bn": "না",
+    "pos": "adverb"
+  },
+  "trop": {
+    "lemma": "trop",
+    "en": "too / overly",
+    "bn": "বেশি / অতিরিক্ত",
+    "pos": "adverb"
+  },
+  "cuite": {
+    "lemma": "cuit",
+    "en": "baked / cooked",
+    "bn": "পোড়া / সেঁকা",
+    "pos": "adjective"
+  },
+  "sil": {
+    "lemma": "si",
+    "en": "if",
+    "bn": "যদি",
+    "pos": "conjunction"
+  },
+  "plaît": {
+    "lemma": "plaire",
+    "en": "pleases (s'il vous plaît = please)",
+    "bn": "দয়া করে",
+    "pos": "verb"
+  },
+  "aussi": {
+    "lemma": "aussi",
+    "en": "also / too",
+    "bn": "আরও / ও",
+    "pos": "adverb"
+  },
+  "croissant": {
+    "lemma": "croissant",
+    "en": "croissant",
+    "bn": "ক্রোয়াসাঁ (চাঁদের মতো মাখনের পেস্ট্রি)",
+    "pos": "noun"
+  },
+  "au": {
+    "lemma": "à + le",
+    "en": "with / to the",
+    "bn": "দিয়ে",
+    "pos": "preposition"
+  },
+  "beurre": {
+    "lemma": "beurre",
+    "en": "butter",
+    "bn": "মাখন",
+    "pos": "noun"
+  },
+  "met": {
+    "lemma": "mettre",
+    "en": "puts / places",
+    "bn": "রাখে",
+    "pos": "verb"
+  },
+  "produits": {
+    "lemma": "produit",
+    "en": "products / items",
+    "bn": "জিনিসপত্র",
+    "pos": "noun"
+  },
+  "sachet": {
+    "lemma": "sachet",
+    "en": "small bag / pouch",
+    "bn": "কাগজের ব্যাগ",
+    "pos": "noun"
+  },
+  "en": {
+    "lemma": "en",
+    "en": "in / made of",
+    "bn": "তৈরি / দিয়ে",
+    "pos": "preposition"
+  },
+  "papier": {
+    "lemma": "papier",
+    "en": "paper",
+    "bn": "কাগজ",
+    "pos": "noun"
+  },
+  "elle": {
+    "lemma": "elle",
+    "en": "she",
+    "bn": "সে (মহিলা)",
+    "pos": "pronoun"
+  },
+  "annonce": {
+    "lemma": "annoncer",
+    "en": "announces / states",
+    "bn": "জানায়",
+    "pos": "verb"
+  },
+  "prix": {
+    "lemma": "prix",
+    "en": "price",
+    "bn": "দাম / মূল্য",
+    "pos": "noun"
+  },
+  "très": {
+    "lemma": "très",
+    "en": "very",
+    "bn": "খুব",
+    "pos": "adverb"
+  },
+  "bien": {
+    "lemma": "bien",
+    "en": "well / good",
+    "bn": "ভালো / ঠিক আছে",
+    "pos": "adverb"
+  },
+  "cela": {
+    "lemma": "cela",
+    "en": "that / this",
+    "bn": "এটা",
+    "pos": "pronoun"
+  },
+  "fait": {
+    "lemma": "faire",
+    "en": "makes / amounts to",
+    "bn": "হয়",
+    "pos": "verb"
+  },
+  "deux": {
+    "lemma": "deux",
+    "en": "two",
+    "bn": "দুই",
+    "pos": "adjective"
+  },
+  "euros": {
+    "lemma": "euro",
+    "en": "euros",
+    "bn": "ইউরো",
+    "pos": "noun"
+  },
+  "soixante": {
+    "lemma": "soixante",
+    "en": "sixty",
+    "bn": "ষাট",
+    "pos": "adjective"
+  },
+  "centimes": {
+    "lemma": "centime",
+    "en": "cents",
+    "bn": "সেন্ট",
+    "pos": "noun"
+  },
+  "total": {
+    "lemma": "total",
+    "en": "total",
+    "bn": "মোট",
+    "pos": "noun"
+  },
+  "donne": {
+    "lemma": "donner",
+    "en": "gives",
+    "bn": "দেয়",
+    "pos": "verb"
+  },
+  "pièce": {
+    "lemma": "pièce",
+    "en": "coin / room",
+    "bn": "কয়েন / মুদ্রা",
+    "pos": "noun"
+  },
+  "lui": {
+    "lemma": "lui",
+    "en": "to him / her",
+    "bn": "তাকে",
+    "pos": "pronoun"
+  },
+  "rend": {
+    "lemma": "rendre",
+    "en": "returns / gives back",
+    "bn": "ফেরত দেয়",
+    "pos": "verb"
+  },
+  "monnaie": {
+    "lemma": "monnaie",
+    "en": "change (coins)",
+    "bn": "ভাঙতি টাকা / ফেরত টাকা",
+    "pos": "noun"
+  },
+  "avec": {
+    "lemma": "avec",
+    "en": "with",
+    "bn": "সাথে",
+    "pos": "preposition"
+  },
+  "sourire": {
+    "lemma": "sourire",
+    "en": "smile",
+    "bn": "হাসি",
+    "pos": "noun"
+  },
+  "merci": {
+    "lemma": "merci",
+    "en": "thank you",
+    "bn": "ধন্যবাদ",
+    "pos": "expression"
+  },
+  "beaucoup": {
+    "lemma": "beaucoup",
+    "en": "a lot / very much",
+    "bn": "অনেক",
+    "pos": "adverb"
+  },
+  "journée": {
+    "lemma": "journée",
+    "en": "day (duration)",
+    "bn": "দিন",
+    "pos": "noun"
+  },
+  "rentre": {
+    "lemma": "rentrer",
+    "en": "returns / goes home",
+    "bn": "ফেরে",
+    "pos": "verb"
+  },
+  "chez": {
+    "lemma": "chez",
+    "en": "at the place of",
+    "bn": "বাসায় / কাছে",
+    "pos": "preposition"
+  },
+  "son": {
+    "lemma": "son",
+    "en": "his / her",
+    "bn": "তার",
+    "pos": "pronoun"
+  },
+  "petitdéjeuner": {
+    "lemma": "petit-déjeuner",
+    "en": "breakfast",
+    "bn": "সকালের নাস্তা",
+    "pos": "noun"
+  },
+  "kabir": {
+    "lemma": "Kabir",
+    "en": "Kabir",
+    "bn": "কবির",
+    "pos": "noun"
+  },
+  "doit": {
+    "lemma": "devoir",
+    "en": "must / has to",
+    "bn": "হবে / বাধ্য",
+    "pos": "verb"
+  },
+  "aller": {
+    "lemma": "aller",
+    "en": "to go",
+    "bn": "যাওয়া",
+    "pos": "verb"
+  },
+  "école": {
+    "lemma": "école",
+    "en": "school",
+    "bn": "স্কুল / বিদ্যালয়",
+    "pos": "noun"
+  },
+  "français": {
+    "lemma": "français",
+    "en": "French",
+    "bn": "ফরাসি",
+    "pos": "noun"
+  },
+  "station": {
+    "lemma": "station",
+    "en": "station",
+    "bn": "স্টেশন",
+    "pos": "noun"
+  },
+  "métro": {
+    "lemma": "métro",
+    "en": "subway / metro",
+    "bn": "মেট্রো",
+    "pos": "noun"
+  },
+  "est": {
+    "lemma": "être",
+    "en": "is",
+    "bn": "হয়",
+    "pos": "verb"
+  },
+  "cinq": {
+    "lemma": "cinq",
+    "en": "five",
+    "bn": "পাঁচ",
+    "pos": "adjective"
+  },
+  "minutes": {
+    "lemma": "minute",
+    "en": "minutes",
+    "bn": "মিনিট",
+    "pos": "noun"
+  },
+  "pied": {
+    "lemma": "pied",
+    "en": "foot (à pied = on foot)",
+    "bn": "পা (হাঁটা পথ)",
+    "pos": "noun"
+  },
+  "studio": {
+    "lemma": "studio",
+    "en": "studio apartment",
+    "bn": "স্টুডিও ফ্ল্যাট",
+    "pos": "noun"
+  },
+  "entrée": {
+    "lemma": "entrée",
+    "en": "entrance",
+    "bn": "প্রবেশদ্বার",
+    "pos": "noun"
+  },
+  "descend": {
+    "lemma": "descendre",
+    "en": "goes down / descends",
+    "bn": "নিচে নামে",
+    "pos": "verb"
+  },
+  "escaliers": {
+    "lemma": "escalier",
+    "en": "stairs",
+    "bn": "সিঁড়ি",
+    "pos": "noun"
+  },
+  "regarde": {
+    "lemma": "regarder",
+    "en": "looks at / watches",
+    "bn": "তাকায়",
+    "pos": "verb"
+  },
+  "borne": {
+    "lemma": "borne",
+    "en": "terminal / kiosk machine",
+    "bn": "মেশিন / কিয়স্ক",
+    "pos": "noun"
+  },
+  "automatique": {
+    "lemma": "automatique",
+    "en": "automatic",
+    "bn": "স্বয়ংক্রিয়",
+    "pos": "adjective"
+  },
+  "pour": {
+    "lemma": "pour",
+    "en": "for / in order to",
+    "bn": "জন্য",
+    "pos": "preposition"
+  },
+  "acheter": {
+    "lemma": "acheter",
+    "en": "to buy",
+    "bn": "কেনা",
+    "pos": "verb"
+  },
+  "ticket": {
+    "lemma": "ticket",
+    "en": "ticket",
+    "bn": "টিকিট",
+    "pos": "noun"
+  },
+  "écran": {
+    "lemma": "écran",
+    "en": "screen",
+    "bn": "পর্দা / স্ক্রিন",
+    "pos": "noun"
+  },
+  "tactile": {
+    "lemma": "tactile",
+    "en": "touch-sensitive",
+    "bn": "টাচস্ক্রিন",
+    "pos": "adjective"
+  },
+  "propose": {
+    "lemma": "proposer",
+    "en": "offers / suggests",
+    "bn": "দেয় / অফার করে",
+    "pos": "verb"
+  },
+  "plusieurs": {
+    "lemma": "plusieurs",
+    "en": "several",
+    "bn": "কয়েকটি",
+    "pos": "adjective"
+  },
+  "langues": {
+    "lemma": "langue",
+    "en": "languages",
+    "bn": "ভাষা",
+    "pos": "noun"
+  },
+  "mais": {
+    "lemma": "mais",
+    "en": "but",
+    "bn": "কিন্তু",
+    "pos": "conjunction"
+  },
+  "choisit": {
+    "lemma": "choisir",
+    "en": "chooses",
+    "bn": "বেছে নেয়",
+    "pos": "verb"
+  },
+  "sélectionne": {
+    "lemma": "sélectionner",
+    "en": "selects",
+    "bn": "নির্বাচন করে",
+    "pos": "verb"
+  },
+  "paie": {
+    "lemma": "payer",
+    "en": "pays",
+    "bn": "পরিশোধ করে",
+    "pos": "verb"
+  },
+  "carte": {
+    "lemma": "carte",
+    "en": "card",
+    "bn": "কার্ড",
+    "pos": "noun"
+  },
+  "bancaire": {
+    "lemma": "bancaire",
+    "en": "bank",
+    "bn": "ব্যাংক",
+    "pos": "adjective"
+  },
+  "sans": {
+    "lemma": "sans",
+    "en": "without",
+    "bn": "ছাড়া / বিহীন",
+    "pos": "preposition"
+  },
+  "contact": {
+    "lemma": "contact",
+    "en": "contact (contactless)",
+    "bn": "স্পর্শ (কন্টাক্টলেস)",
+    "pos": "noun"
+  },
+  "machine": {
+    "lemma": "machine",
+    "en": "machine",
+    "bn": "যন্ত্র / মেশিন",
+    "pos": "noun"
+  },
+  "délivre": {
+    "lemma": "délivrer",
+    "en": "dispenses / delivers",
+    "bn": "বের করে দেয়",
+    "pos": "verb"
+  },
+  "blanc": {
+    "lemma": "blanc",
+    "en": "white",
+    "bn": "সাদা",
+    "pos": "adjective"
+  },
+  "passe": {
+    "lemma": "passer",
+    "en": "passes / goes (se passer = happen/go)",
+    "bn": "চলছে",
+    "pos": "verb"
+  },
+  "portillon": {
+    "lemma": "portillon",
+    "en": "turnstile gate",
+    "bn": "প্রবেশ গেট",
+    "pos": "noun"
+  },
+  "panneaux": {
+    "lemma": "panneau",
+    "en": "signs / signposts",
+    "bn": "সাইনবোর্ড",
+    "pos": "noun"
+  },
+  "bleus": {
+    "lemma": "bleu",
+    "en": "blue",
+    "bn": "নীল",
+    "pos": "adjective"
+  },
+  "sur": {
+    "lemma": "sur",
+    "en": "on / upon",
+    "bn": "উপর",
+    "pos": "preposition"
+  },
+  "quai": {
+    "lemma": "quai",
+    "en": "platform",
+    "bn": "প্ল্যাটফর্ম",
+    "pos": "noun"
+  },
+  "ligne": {
+    "lemma": "ligne",
+    "en": "line",
+    "bn": "লাইন",
+    "pos": "noun"
+  },
+  "quatre": {
+    "lemma": "quatre",
+    "en": "four",
+    "bn": "চার",
+    "pos": "adjective"
+  },
+  "va": {
+    "lemma": "aller",
+    "en": "goes",
+    "bn": "যায়",
+    "pos": "verb"
+  },
+  "direction": {
+    "lemma": "direction",
+    "en": "direction / destination",
+    "bn": "দিক / গন্তব্য",
+    "pos": "noun"
+  },
+  "arrive": {
+    "lemma": "arriver",
+    "en": "arrives",
+    "bn": "পৌঁছায়",
+    "pos": "verb"
+  },
+  "bruit": {
+    "lemma": "bruit",
+    "en": "noise / sound",
+    "bn": "শব্দ",
+    "pos": "noun"
+  },
+  "sourd": {
+    "lemma": "sourd",
+    "en": "deep / low rumble",
+    "bn": "গম্ভীর",
+    "pos": "adjective"
+  },
+  "portes": {
+    "lemma": "porte",
+    "en": "doors",
+    "bn": "দরজাগুলো",
+    "pos": "noun"
+  },
+  "ouvrent": {
+    "lemma": "ouvrir",
+    "en": "open",
+    "bn": "খোলে",
+    "pos": "verb"
+  },
+  "trouve": {
+    "lemma": "trouver",
+    "en": "finds",
+    "bn": "খুঁজে পায়",
+    "pos": "verb"
+  },
+  "place": {
+    "lemma": "place",
+    "en": "seat / space",
+    "bn": "আসন / জায়গা",
+    "pos": "noun"
+  },
+  "assise": {
+    "lemma": "assis",
+    "en": "seated / sitting",
+    "bn": "বসার",
+    "pos": "adjective"
+  },
+  "voix": {
+    "lemma": "voix",
+    "en": "voice",
+    "bn": "কণ্ঠস্বর",
+    "pos": "noun"
+  },
+  "prochaine": {
+    "lemma": "prochain",
+    "en": "next",
+    "bn": "পরবর্তী",
+    "pos": "adjective"
+  },
+  "content": {
+    "lemma": "content",
+    "en": "happy / pleased",
+    "bn": "খুশি",
+    "pos": "adjective"
+  },
+  "voyage": {
+    "lemma": "voyage",
+    "en": "trip / journey",
+    "bn": "যাত্রা",
+    "pos": "noun"
+  },
+  "simple": {
+    "lemma": "simple",
+    "en": "simple / easy",
+    "bn": "সহজ",
+    "pos": "adjective"
+  },
+  "rapide": {
+    "lemma": "rapide",
+    "en": "fast / quick",
+    "bn": "দ্রুত",
+    "pos": "adjective"
+  },
+  "ce": {
+    "lemma": "ce",
+    "en": "this",
+    "bn": "এই",
+    "pos": "pronoun"
+  },
+  "rahim": {
+    "lemma": "Rahim",
+    "en": "Rahim",
+    "bn": "রহিম",
+    "pos": "noun"
+  },
+  "a": {
+    "lemma": "avoir",
+    "en": "has",
+    "bn": "আছে",
+    "pos": "verb"
+  },
+  "rendezvous": {
+    "lemma": "rendez-vous",
+    "en": "appointment",
+    "bn": "অ্যাপয়েন্টমেন্ট / সাক্ষাতকার",
+    "pos": "noun"
+  },
+  "important": {
+    "lemma": "important",
+    "en": "important",
+    "bn": "গুরুত্বপূর্ণ",
+    "pos": "adjective"
+  },
+  "préfecture": {
+    "lemma": "préfecture",
+    "en": "prefecture (government office)",
+    "bn": "প্রিফেকচার (সরকারি অফিস)",
+    "pos": "noun"
+  },
+  "prépare": {
+    "lemma": "préparer",
+    "en": "prepares",
+    "bn": "প্রস্তুত করে",
+    "pos": "verb"
+  },
+  "pochette": {
+    "lemma": "pochette",
+    "en": "folder / wallet file",
+    "bn": "ফাইল ফোল্ডার",
+    "pos": "noun"
+  },
+  "plastique": {
+    "lemma": "plastique",
+    "en": "plastic",
+    "bn": "প্লাস্টিক",
+    "pos": "noun"
+  },
+  "tous": {
+    "lemma": "tout",
+    "en": "all",
+    "bn": "সব",
+    "pos": "adjective"
+  },
+  "documents": {
+    "lemma": "document",
+    "en": "documents / papers",
+    "bn": "কাগজপত্র",
+    "pos": "noun"
+  },
+  "originaux": {
+    "lemma": "original",
+    "en": "originals",
+    "bn": "আসল কপি",
+    "pos": "adjective"
+  },
+  "photocopies": {
+    "lemma": "photocopie",
+    "en": "photocopies",
+    "bn": "ফটোকপি",
+    "pos": "noun"
+  },
+  "quinze": {
+    "lemma": "quinze",
+    "en": "fifteen",
+    "bn": "পনেরো",
+    "pos": "adjective"
+  },
+  "avant": {
+    "lemma": "avant",
+    "en": "before",
+    "bn": "আগে",
+    "pos": "preposition"
+  },
+  "heure": {
+    "lemma": "heure",
+    "en": "hour / scheduled time",
+    "bn": "সময় / ঘণ্টা",
+    "pos": "noun"
+  },
+  "bâtiment": {
+    "lemma": "bâtiment",
+    "en": "building",
+    "bn": "ভবন",
+    "pos": "noun"
+  },
+  "agent": {
+    "lemma": "agent",
+    "en": "officer / agent",
+    "bn": "কর্মকর্তা / কর্মী",
+    "pos": "noun"
+  },
+  "sécurité": {
+    "lemma": "sécurité",
+    "en": "security",
+    "bn": "নিরাপত্তা",
+    "pos": "noun"
+  },
+  "vérifie": {
+    "lemma": "vérifier",
+    "en": "verifies / checks",
+    "bn": "যাচাই করে",
+    "pos": "verb"
+  },
+  "convocation": {
+    "lemma": "convocation",
+    "en": "appointment summons letter",
+    "bn": "সমন / হাজিরার চিঠি",
+    "pos": "noun"
+  },
+  "passeport": {
+    "lemma": "passeport",
+    "en": "passport",
+    "bn": "পাসপোর্ট",
+    "pos": "noun"
+  },
+  "bon": {
+    "lemma": "bon",
+    "en": "good / fine",
+    "bn": "ঠিক / ভালো",
+    "pos": "adjective"
+  },
+  "montez": {
+    "lemma": "monter",
+    "en": "go up / climb",
+    "bn": "উপরে উঠুন",
+    "pos": "verb"
+  },
+  "premier": {
+    "lemma": "premier",
+    "en": "first",
+    "bn": "প্রথম",
+    "pos": "adjective"
+  },
+  "étage": {
+    "lemma": "étage",
+    "en": "floor / storey",
+    "bn": "তলা",
+    "pos": "noun"
+  },
+  "salle": {
+    "lemma": "salle",
+    "en": "room / hall",
+    "bn": "কক্ষ / রুম",
+    "pos": "noun"
+  },
+  "assoit": {
+    "lemma": "asseoir",
+    "en": "sits",
+    "bn": "বসে",
+    "pos": "verb"
+  },
+  "attente": {
+    "lemma": "attente",
+    "en": "waiting (salle d'attente = waiting room)",
+    "bn": "অপেক্ষা",
+    "pos": "noun"
+  },
+  "affiche": {
+    "lemma": "afficher",
+    "en": "displays / shows",
+    "bn": "প্রদর্শন করে",
+    "pos": "verb"
+  },
+  "numéros": {
+    "lemma": "numéro",
+    "en": "numbers",
+    "bn": "নম্বরগুলো",
+    "pos": "noun"
+  },
+  "soudain": {
+    "lemma": "soudain",
+    "en": "suddenly",
+    "bn": "হঠাৎ",
+    "pos": "adverb"
+  },
+  "apparaît": {
+    "lemma": "apparaître",
+    "en": "appears",
+    "bn": "ভেসে ওঠে",
+    "pos": "verb"
+  },
+  "guichet": {
+    "lemma": "guichet",
+    "en": "counter / service window",
+    "bn": "কাউন্টার / বুথ",
+    "pos": "noun"
+  },
+  "lève": {
+    "lemma": "lever",
+    "en": "stands up / rises",
+    "bn": "ওঠে",
+    "pos": "verb"
+  },
+  "vers": {
+    "lemma": "vers",
+    "en": "towards",
+    "bn": "দিকে",
+    "pos": "preposition"
+  },
+  "salue": {
+    "lemma": "saluer",
+    "en": "greets",
+    "bn": "অভিবাদন জানায়",
+    "pos": "verb"
+  },
+  "politesse": {
+    "lemma": "politesse",
+    "en": "politeness",
+    "bn": "ভদ্রতা",
+    "pos": "noun"
+  },
+  "voici": {
+    "lemma": "voici",
+    "en": "here is / here are",
+    "bn": "এই যে / এখানে",
+    "pos": "preposition"
+  },
+  "dossier": {
+    "lemma": "dossier",
+    "en": "file / paperwork folder",
+    "bn": "নথিপত্র / ফাইল",
+    "pos": "noun"
+  },
+  "complet": {
+    "lemma": "complet",
+    "en": "complete",
+    "bn": "সম্পূর্ণ",
+    "pos": "adjective"
+  },
+  "justificatifs": {
+    "lemma": "justificatif",
+    "en": "supporting proof documents",
+    "bn": "প্রমাণপত্র",
+    "pos": "noun"
+  },
+  "domicile": {
+    "lemma": "domicile",
+    "en": "residence / home address",
+    "bn": "ঠিকানা / বাসস্থান",
+    "pos": "noun"
+  },
+  "photos": {
+    "lemma": "photo",
+    "en": "photos",
+    "bn": "ছবি",
+    "pos": "noun"
+  },
+  "identité": {
+    "lemma": "identité",
+    "en": "identity",
+    "bn": "পরিচয়",
+    "pos": "noun"
+  },
+  "tape": {
+    "lemma": "taper",
+    "en": "types",
+    "bn": "টাইপ করে",
+    "pos": "verb"
+  },
+  "informations": {
+    "lemma": "information",
+    "en": "information",
+    "bn": "তথ্য",
+    "pos": "noun"
+  },
+  "ordinateur": {
+    "lemma": "ordinateur",
+    "en": "computer",
+    "bn": "কম্পিউটার",
+    "pos": "noun"
+  },
+  "dix": {
+    "lemma": "dix",
+    "en": "ten",
+    "bn": "দশ",
+    "pos": "adjective"
+  },
+  "plus": {
+    "lemma": "plus",
+    "en": "more / plus",
+    "bn": "আরও",
+    "pos": "adverb"
+  },
+  "tard": {
+    "lemma": "tard",
+    "en": "late (plus tard = later)",
+    "bn": "দেরিতে (পরে)",
+    "pos": "adverb"
+  },
+  "tend": {
+    "lemma": "tendre",
+    "en": "hands over / stretches",
+    "bn": "তুলে দেয়",
+    "pos": "verb"
+  },
+  "officiel": {
+    "lemma": "officiel",
+    "en": "official",
+    "bn": "অফিসিয়াল / সরকারি",
+    "pos": "adjective"
+  },
+  "votre": {
+    "lemma": "votre",
+    "en": "your (formal)",
+    "bn": "আপনার",
+    "pos": "pronoun"
+  },
+  "récépissé": {
+    "lemma": "récépissé",
+    "en": "receipt document / temporary permit",
+    "bn": "রিসিপ্ট / সাময়িক কাগজ",
+    "pos": "noun"
+  },
+  "valable": {
+    "lemma": "valable",
+    "en": "valid",
+    "bn": "বৈধ",
+    "pos": "adjective"
+  },
+  "six": {
+    "lemma": "six",
+    "en": "six",
+    "bn": "ছয়",
+    "pos": "adjective"
+  },
+  "mois": {
+    "lemma": "mois",
+    "en": "month / months",
+    "bn": "মাস",
+    "pos": "noun"
+  },
+  "soulagé": {
+    "lemma": "soulagé",
+    "en": "relieved",
+    "bn": "স্বস্তিবোধ করছে",
+    "pos": "adjective"
+  },
+  "grand": {
+    "lemma": "grand",
+    "en": "big / great",
+    "bn": "বড়",
+    "pos": "adjective"
+  },
+  "samedi": {
+    "lemma": "samedi",
+    "en": "Saturday",
+    "bn": "শনিবার",
+    "pos": "noun"
+  },
+  "aprèsmidi": {
+    "lemma": "après-midi",
+    "en": "afternoon",
+    "bn": "বিকাল / দুপুর",
+    "pos": "noun"
+  },
+  "fahim": {
+    "lemma": "Fahim",
+    "en": "Fahim",
+    "bn": "ফাহিম",
+    "pos": "noun"
+  },
+  "courses": {
+    "lemma": "course",
+    "en": "shopping / errands",
+    "bn": "বাজার / কেনাকাটা",
+    "pos": "noun"
+  },
+  "supermarché": {
+    "lemma": "supermarché",
+    "en": "supermarket",
+    "bn": "সুপারমার্কেট",
+    "pos": "noun"
+  },
+  "liste": {
+    "lemma": "liste",
+    "en": "list",
+    "bn": "তালিকা",
+    "pos": "noun"
+  },
+  "téléphone": {
+    "lemma": "téléphone",
+    "en": "phone",
+    "bn": "ফোন",
+    "pos": "noun"
+  },
+  "portable": {
+    "lemma": "portable",
+    "en": "mobile / laptop",
+    "bn": "মোবাইল",
+    "pos": "adjective"
+  },
+  "dabord": {
+    "lemma": "d'abord",
+    "en": "first / at first",
+    "bn": "প্রথমে",
+    "pos": "adverb"
+  },
+  "rayon": {
+    "lemma": "rayon",
+    "en": "aisle / department",
+    "bn": "বিভাগ / তাক",
+    "pos": "noun"
+  },
+  "fruits": {
+    "lemma": "fruit",
+    "en": "fruits",
+    "bn": "ফলসমূহ",
+    "pos": "noun"
+  },
+  "légumes": {
+    "lemma": "légume",
+    "en": "vegetables",
+    "bn": "শাকসবজি",
+    "pos": "noun"
+  },
+  "bananes": {
+    "lemma": "banane",
+    "en": "bananas",
+    "bn": "কলা",
+    "pos": "noun"
+  },
+  "jaunes": {
+    "lemma": "jaune",
+    "en": "yellow",
+    "bn": "হলুদ",
+    "pos": "adjective"
+  },
+  "kilo": {
+    "lemma": "kilo",
+    "en": "kilogram",
+    "bn": "কেজি",
+    "pos": "noun"
+  },
+  "oignons": {
+    "lemma": "oignon",
+    "en": "onions",
+    "bn": "পেঁয়াজ",
+    "pos": "noun"
+  },
+  "tomates": {
+    "lemma": "tomate",
+    "en": "tomatoes",
+    "bn": "টমেটো",
+    "pos": "noun"
+  },
+  "rouges": {
+    "lemma": "rouge",
+    "en": "red",
+    "bn": "লাল",
+    "pos": "adjective"
+  },
+  "pèse": {
+    "lemma": "peser",
+    "en": "weighs",
+    "bn": "ওজন করে",
+    "pos": "verb"
+  },
+  "balance": {
+    "lemma": "balance",
+    "en": "scale / balance",
+    "bn": "ওজন মাপার যন্ত্র",
+    "pos": "noun"
+  },
+  "colle": {
+    "lemma": "coller",
+    "en": "sticks / glues",
+    "bn": "আঠা দিয়ে লাগায়",
+    "pos": "verb"
+  },
+  "étiquette": {
+    "lemma": "étiquette",
+    "en": "label / sticker",
+    "bn": "লেবেল / স্টিকার",
+    "pos": "noun"
+  },
+  "codebarres": {
+    "lemma": "code-barres",
+    "en": "barcode",
+    "bn": "বারকোড",
+    "pos": "noun"
+  },
+  "ensuite": {
+    "lemma": "ensuite",
+    "en": "then / next",
+    "bn": "তারপর",
+    "pos": "adverb"
+  },
+  "cherche": {
+    "lemma": "chercher",
+    "en": "searches / looks for",
+    "bn": "খোঁজে",
+    "pos": "verb"
+  },
+  "riz": {
+    "lemma": "riz",
+    "en": "rice",
+    "bn": "চাল / ভাত",
+    "pos": "noun"
+  },
+  "basmati": {
+    "lemma": "basmati",
+    "en": "basmati",
+    "bn": "বাসমতী",
+    "pos": "noun"
+  },
+  "épicerie": {
+    "lemma": "épicerie",
+    "en": "grocery section",
+    "bn": "মুদি দোকান বিভাগ",
+    "pos": "noun"
+  },
+  "prend": {
+    "lemma": "prendre",
+    "en": "takes",
+    "bn": "নেয়",
+    "pos": "verb"
+  },
+  "boîte": {
+    "lemma": "boîte",
+    "en": "box / carton",
+    "bn": "বাক্স / কার্টন",
+    "pos": "noun"
+  },
+  "œufs": {
+    "lemma": "œuf",
+    "en": "eggs",
+    "bn": "ডিমসমূহ",
+    "pos": "noun"
+  },
+  "frais": {
+    "lemma": "frais",
+    "en": "fresh",
+    "bn": "তাজা",
+    "pos": "adjective"
+  },
+  "bouteille": {
+    "lemma": "bouteille",
+    "en": "bottle",
+    "bn": "বোতল",
+    "pos": "noun"
+  },
+  "huile": {
+    "lemma": "huile",
+    "en": "oil",
+    "bn": "তেল",
+    "pos": "noun"
+  },
+  "olive": {
+    "lemma": "olive",
+    "en": "olive",
+    "bn": "জলপাই",
+    "pos": "noun"
+  },
+  "caisse": {
+    "lemma": "caisse",
+    "en": "checkout counter / till",
+    "bn": "ক্যাশ কাউন্টার",
+    "pos": "noun"
+  },
+  "caissière": {
+    "lemma": "caissière",
+    "en": "cashier (female)",
+    "bn": "মহিলা ক্যাশিয়ার",
+    "pos": "noun"
+  },
+  "scanne": {
+    "lemma": "scanner",
+    "en": "scans",
+    "bn": "স্ক্যান করে",
+    "pos": "verb"
+  },
+  "articles": {
+    "lemma": "article",
+    "en": "articles / grocery items",
+    "bn": "পণ্যসামগ্রী",
+    "pos": "noun"
+  },
+  "rapidement": {
+    "lemma": "rapidement",
+    "en": "quickly",
+    "bn": "দ্রুততার সাথে",
+    "pos": "adverb"
+  },
+  "sac": {
+    "lemma": "sac",
+    "en": "bag",
+    "bn": "ব্যাগ",
+    "pos": "noun"
+  },
+  "réutilisable": {
+    "lemma": "réutilisable",
+    "en": "reusable",
+    "bn": "পুনর্ব্যবহারযোগ্য",
+    "pos": "adjective"
+  },
+  "tissu": {
+    "lemma": "tissu",
+    "en": "fabric / cloth",
+    "bn": "কাপড়",
+    "pos": "noun"
+  },
+  "poche": {
+    "lemma": "poche",
+    "en": "pocket",
+    "bn": "পকেট",
+    "pos": "noun"
+  },
+  "demande": {
+    "lemma": "demander",
+    "en": "asks",
+    "bn": "জিজ্ঞাসা করে",
+    "pos": "verb"
+  },
+  "fidélité": {
+    "lemma": "fidélité",
+    "en": "loyalty (carte de fidélité = loyalty card)",
+    "bn": "লয়ালটি / বিশ্বস্ততা",
+    "pos": "noun"
+  },
+  "non": {
+    "lemma": "non",
+    "en": "no",
+    "bn": "না",
+    "pos": "expression"
+  },
+  "encore": {
+    "lemma": "encore",
+    "en": "yet / still",
+    "bn": "এখনও",
+    "pos": "adverb"
+  },
+  "espèces": {
+    "lemma": "espèces",
+    "en": "cash",
+    "bn": "নগদ টাকা",
+    "pos": "noun"
+  },
+  "billet": {
+    "lemma": "billet",
+    "en": "banknote / ticket",
+    "bn": "নোট / কাগজের টাকা",
+    "pos": "noun"
+  },
+  "vingt": {
+    "lemma": "vingt",
+    "en": "twenty",
+    "bn": "বিশ",
+    "pos": "adjective"
+  },
+  "entreprise": {
+    "lemma": "entreprise",
+    "en": "company / business",
+    "bn": "প্রতিষ্ঠান / কোম্পানি",
+    "pos": "noun"
+  },
+  "informatique": {
+    "lemma": "informatique",
+    "en": "IT / computer science",
+    "bn": "কম্পিউটার প্রযুক্তি / আইটি",
+    "pos": "noun"
+  },
+  "samir": {
+    "lemma": "Samir",
+    "en": "Samir",
+    "bn": "সমীর",
+    "pos": "noun"
+  },
+  "travaille": {
+    "lemma": "travailler",
+    "en": "works",
+    "bn": "কাজ করে",
+    "pos": "verb"
+  },
+  "comme": {
+    "lemma": "comme",
+    "en": "as / like",
+    "bn": "হিসেবে",
+    "pos": "preposition"
+  },
+  "technicien": {
+    "lemma": "technicien",
+    "en": "technician",
+    "bn": "প্রযুক্তিবিদ",
+    "pos": "noun"
+  },
+  "support": {
+    "lemma": "support",
+    "en": "support (IT helpdesk)",
+    "bn": "সাপোর্ট / সহায়তা",
+    "pos": "noun"
+  },
+  "depuis": {
+    "lemma": "depuis",
+    "en": "since / for",
+    "bn": "ধরে / যাবত",
+    "pos": "preposition"
+  },
+  "semaines": {
+    "lemma": "semaine",
+    "en": "weeks",
+    "bn": "সপ্তাহ",
+    "pos": "noun"
+  },
+  "collègue": {
+    "lemma": "collègue",
+    "en": "colleague / coworker",
+    "bn": "সহকর্মী",
+    "pos": "noun"
+  },
+  "julien": {
+    "lemma": "Julien",
+    "en": "Julien",
+    "bn": "জুলিয়াঁ",
+    "pos": "noun"
+  },
+  "approche": {
+    "lemma": "approcher",
+    "en": "approaches / comes closer",
+    "bn": "কাছে আসে",
+    "pos": "verb"
+  },
+  "bureau": {
+    "lemma": "bureau",
+    "en": "desk / office",
+    "bn": "ডেস্ক / অফিস",
+    "pos": "noun"
+  },
+  "salut": {
+    "lemma": "salut",
+    "en": "hi / hello (informal)",
+    "bn": "হাই / হ্যালো",
+    "pos": "expression"
+  },
+  "tu": {
+    "lemma": "tu",
+    "en": "you (informal)",
+    "bn": "তুমি / তুই",
+    "pos": "pronoun"
+  },
+  "veux": {
+    "lemma": "vouloir",
+    "en": "want",
+    "bn": "চাও",
+    "pos": "verb"
+  },
+  "pause": {
+    "lemma": "pause",
+    "en": "break / pause",
+    "bn": "বিরতি",
+    "pos": "noun"
+  },
+  "café": {
+    "lemma": "café",
+    "en": "coffee / café",
+    "bn": "কফি",
+    "pos": "noun"
+  },
+  "oui": {
+    "lemma": "oui",
+    "en": "yes",
+    "bn": "হ্যাঁ",
+    "pos": "expression"
+  },
+  "plaisir": {
+    "lemma": "plaisir",
+    "en": "pleasure",
+    "bn": "আনন্দ (avec plaisir = আনন্দের সাথে)",
+    "pos": "noun"
+  },
+  "yeux": {
+    "lemma": "œil",
+    "en": "eyes",
+    "bn": "চোখ",
+    "pos": "noun"
+  },
+  "fatigués": {
+    "lemma": "fatigué",
+    "en": "tired",
+    "bn": "ক্লান্ত",
+    "pos": "adjective"
+  },
+  "par": {
+    "lemma": "par",
+    "en": "by",
+    "bn": "দ্বারা / দিয়ে",
+    "pos": "preposition"
+  },
+  "vont": {
+    "lemma": "aller",
+    "en": "go",
+    "bn": "যায়",
+    "pos": "verb"
+  },
+  "moderne": {
+    "lemma": "moderne",
+    "en": "modern",
+    "bn": "আধুনিক",
+    "pos": "adjective"
+  },
+  "appuies": {
+    "lemma": "appuyer",
+    "en": "press / push",
+    "bn": "চাপ দাও",
+    "pos": "verb"
+  },
+  "bouton": {
+    "lemma": "bouton",
+    "en": "button",
+    "bn": "বোতাম / বাটন",
+    "pos": "noun"
+  },
+  "expresso": {
+    "lemma": "expresso",
+    "en": "espresso coffee",
+    "bn": "এসপ্রেসো কফি",
+    "pos": "noun"
+  },
+  "ici": {
+    "lemma": "ici",
+    "en": "here",
+    "bn": "এখানে",
+    "pos": "adverb"
+  },
+  "thé": {
+    "lemma": "thé",
+    "en": "tea",
+    "bn": "চা",
+    "pos": "noun"
+  },
+  "sucre": {
+    "lemma": "sucre",
+    "en": "sugar",
+    "bn": "চিনি",
+    "pos": "noun"
+  },
+  "tout": {
+    "lemma": "tout",
+    "en": "all / everything",
+    "bn": "সবকিছু",
+    "pos": "pronoun"
+  },
+  "ordinateurs": {
+    "lemma": "ordinateur",
+    "en": "computers",
+    "bn": "কম্পিউটারসমূহ",
+    "pos": "noun"
+  },
+  "souriant": {
+    "lemma": "sourire",
+    "en": "smiling",
+    "bn": "হেসে",
+    "pos": "verb"
+  },
+  "résous": {
+    "lemma": "résoudre",
+    "en": "resolve / solve",
+    "bn": "সমাধান করি",
+    "pos": "verb"
+  },
+  "problèmes": {
+    "lemma": "problème",
+    "en": "problems / issues",
+    "bn": "সমস্যাগুলো",
+    "pos": "noun"
+  },
+  "réseau": {
+    "lemma": "réseau",
+    "en": "network",
+    "bn": "নেটওয়ার্ক",
+    "pos": "noun"
+  },
+  "change": {
+    "lemma": "changer",
+    "en": "change / reset",
+    "bn": "পরিবর্তন করি",
+    "pos": "verb"
+  },
+  "motdepasse": {
+    "lemma": "mot de passe",
+    "en": "password",
+    "bn": "পাসওয়ার্ড",
+    "pos": "noun"
+  },
+  "oublié": {
+    "lemma": "oublié",
+    "en": "forgotten",
+    "bn": "ভুলে যাওয়া",
+    "pos": "adjective"
+  },
+  "intéressant": {
+    "lemma": "intéressant",
+    "en": "interesting",
+    "bn": "মজার / চিত্তাকর্ষক",
+    "pos": "adjective"
+  },
+  "équipe": {
+    "lemma": "équipe",
+    "en": "team",
+    "bn": "দল / টিম",
+    "pos": "noun"
+  },
+  "sympa": {
+    "lemma": "sympa",
+    "en": "friendly / nice",
+    "bn": "বন্ধুত্বপূর্ণ / অমায়িক",
+    "pos": "adjective"
+  },
+  "acquiesce": {
+    "lemma": "acquiescer",
+    "en": "nods in agreement",
+    "bn": "সম্মতি জানায়",
+    "pos": "verb"
+  },
+  "parfait": {
+    "lemma": "parfait",
+    "en": "perfect / great",
+    "bn": "চমৎকার",
+    "pos": "adjective"
+  },
+  "bienvenue": {
+    "lemma": "bienvenue",
+    "en": "welcome",
+    "bn": "স্বাগতম",
+    "pos": "expression"
+  }
+}
