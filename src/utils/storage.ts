@@ -112,6 +112,11 @@ export function saveWord(
     sentence: string;
     storyId: string;
     storyTitle: string;
+    gender?: SavedWord['gender'];
+    number?: SavedWord['number'];
+    person?: string;
+    tense?: string;
+    lemmaWithArticle?: string;
   }
 ): { success: boolean; isNew: boolean; item: SavedWord } {
   try {
@@ -131,7 +136,12 @@ export function saveWord(
         ...words[existingIndex],
         sentence: item.sentence || words[existingIndex].sentence,
         storyId: item.storyId || words[existingIndex].storyId,
-        storyTitle: item.storyTitle || words[existingIndex].storyTitle
+        storyTitle: item.storyTitle || words[existingIndex].storyTitle,
+        gender: item.gender || words[existingIndex].gender,
+        number: item.number || words[existingIndex].number,
+        person: item.person || words[existingIndex].person,
+        tense: item.tense || words[existingIndex].tense,
+        lemmaWithArticle: item.lemmaWithArticle || words[existingIndex].lemmaWithArticle
       };
       words[existingIndex] = savedItem;
     } else {
@@ -149,7 +159,12 @@ export function saveWord(
         srsStage: 1,
         nextReviewDate: nextReview.toISOString(),
         timesReviewed: 0,
-        timesCorrect: 0
+        timesCorrect: 0,
+        gender: item.gender,
+        number: item.number,
+        person: item.person,
+        tense: item.tense,
+        lemmaWithArticle: item.lemmaWithArticle
       };
       words.unshift(savedItem);
     }

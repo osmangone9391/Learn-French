@@ -28,25 +28,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "chaque",
         "en": "each / every",
         "bn": "প্রতিটি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "matin": {
         "lemma": "matin",
         "en": "morning",
         "bn": "সকাল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
       },
       "tariq": {
         "lemma": "Tariq",
         "en": "Tariq (first name)",
         "bn": "তারিক (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Tariq"
       },
       "marche": {
         "lemma": "marcher",
         "en": "walks",
         "bn": "হাঁটে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "dans": {
         "lemma": "dans",
@@ -64,7 +74,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "rue",
         "en": "street",
         "bn": "রাস্তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la rue"
       },
       "à": {
         "lemma": "à",
@@ -76,19 +89,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "Paris",
         "en": "Paris",
         "bn": "প্যারিস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Paris"
       },
       "il": {
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "arrête": {
         "lemma": "arrêter",
         "en": "stops",
         "bn": "থামে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "devant": {
         "lemma": "devant",
@@ -100,43 +120,59 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "petite": {
         "lemma": "petit",
         "en": "small (feminine)",
         "bn": "ছোট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "boulangerie": {
         "lemma": "boulangerie",
         "en": "bakery",
         "bn": "বেকারি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la boulangerie"
       },
       "artisanale": {
         "lemma": "artisanal",
         "en": "handcrafted / artisanal",
         "bn": "হাতে তৈরি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "une": {
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "bonne": {
         "lemma": "bon",
         "en": "good",
         "bn": "ভালো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "odeur": {
         "lemma": "odeur",
         "en": "smell / aroma",
         "bn": "গন্ধ / সুবাস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'odeur"
       },
       "de": {
         "lemma": "de",
@@ -148,31 +184,43 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "pain",
         "en": "bread",
         "bn": "পাউরুটি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pain"
       },
       "chaud": {
         "lemma": "chaud",
         "en": "hot / warm",
         "bn": "গরম",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "sort": {
         "lemma": "sortir",
         "en": "comes out / exits",
         "bn": "বের হয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "du": {
         "lemma": "de + le",
         "en": "of the / from the",
         "bn": "দোকানের",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "magasin": {
         "lemma": "magasin",
         "en": "shop / store",
         "bn": "দোকান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le magasin"
       },
       "s": {
         "lemma": "se",
@@ -184,7 +232,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "entrer",
         "en": "enters",
         "bn": "প্রবেশ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "et": {
         "lemma": "et",
@@ -196,19 +245,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "sourire",
         "en": "smiles",
         "bn": "হাসে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "boulangère": {
         "lemma": "boulangère",
         "en": "baker (female)",
         "bn": "মহিলা রুটি প্রস্তুতকারক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la boulangère"
       },
       "dit": {
         "lemma": "dire",
         "en": "says",
         "bn": "বলে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "poliment": {
         "lemma": "poliment",
@@ -226,7 +282,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "monsieur",
         "en": "sir / gentleman",
         "bn": "জনাব / মহাশয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
       },
       "est-ce": {
         "lemma": "est-ce que",
@@ -250,7 +309,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "désirer",
         "en": "desire / want",
         "bn": "চান",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
       },
       "aujourd'hui": {
         "lemma": "aujourd'hui",
@@ -268,7 +329,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "être",
         "en": "is",
         "bn": "হয় / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "ce": {
         "lemma": "ce",
@@ -292,7 +355,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "répondre",
         "en": "answers / replies",
         "bn": "উত্তর দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "calmement": {
         "lemma": "calmement",
@@ -304,7 +369,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "madame",
         "en": "madam / ma'am",
         "bn": "ম্যাডাম / বেগম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "madame"
       },
       "je": {
         "lemma": "je",
@@ -316,25 +384,36 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "vouloir",
         "en": "would like",
         "bn": "চাই / নিতে চাই",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "conditional"
       },
       "baguette": {
         "lemma": "baguette",
         "en": "baguette (French bread)",
         "bn": "বাগেট (ফরাসি লম্বা রুটি)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la baguette"
       },
       "tradition": {
         "lemma": "tradition",
         "en": "traditional baguette",
         "bn": "ঐতিহ্যবাহী বাগেট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la tradition"
       },
       "pas": {
         "lemma": "pas",
         "en": "step / footsteps / not",
         "bn": "পদক্ষেপ / পায়ের আওয়াজ / না",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pas"
       },
       "trop": {
         "lemma": "trop",
@@ -346,13 +425,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "cuit",
         "en": "baked / cooked",
         "bn": "পোড়া / সেঁকা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "plaît": {
         "lemma": "plaire",
         "en": "pleases (s'il vous plaît)",
         "bn": "পছন্দ হয় / দয়া করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "aussi": {
         "lemma": "aussi",
@@ -364,13 +447,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "croissant": {
         "lemma": "croissant",
         "en": "croissant",
         "bn": "ক্রোয়াসাঁ (চাঁদের মতো মাখনের পেস্ট্রি)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le croissant"
       },
       "au": {
         "lemma": "à + le",
@@ -382,31 +470,44 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "beurre",
         "en": "butter",
         "bn": "মাখন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le beurre"
       },
       "met": {
         "lemma": "mettre",
         "en": "puts",
         "bn": "রাখে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "les": {
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "masculine"
       },
       "produits": {
         "lemma": "produit",
         "en": "products / items",
         "bn": "জিনিসপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le produit"
       },
       "sachet": {
         "lemma": "sachet",
         "en": "bag / pouch",
         "bn": "ছোট ব্যাগ / প্যাকেট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sachet"
       },
       "en": {
         "lemma": "en",
@@ -418,31 +519,43 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "papier",
         "en": "paper",
         "bn": "কাগজ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le papier"
       },
       "elle": {
         "lemma": "elle",
         "en": "she",
         "bn": "সে (মহিলা)",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "feminine",
+        "number": "singular"
       },
       "annonce": {
         "lemma": "annoncer",
         "en": "announces / states",
         "bn": "জানায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "le": {
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "prix": {
         "lemma": "prix",
         "en": "price",
         "bn": "দাম / মূল্য",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le prix"
       },
       "très": {
         "lemma": "très",
@@ -466,73 +579,103 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "faire",
         "en": "makes / does / fact",
         "bn": "করে / ঘটনা",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "deux": {
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "euros": {
         "lemma": "euro",
         "en": "euros",
         "bn": "ইউরো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'euro"
       },
       "soixante": {
         "lemma": "soixante",
         "en": "sixty",
         "bn": "ষাট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "centimes": {
         "lemma": "centime",
         "en": "cents",
         "bn": "সেন্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le centime"
       },
       "total": {
         "lemma": "total",
         "en": "total",
         "bn": "মোট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le total"
       },
       "donne": {
         "lemma": "donner",
         "en": "gives",
         "bn": "দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "pièce": {
         "lemma": "pièce",
         "en": "coin / room",
         "bn": "কয়েন / মুদ্রা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pièce"
       },
       "euro": {
         "lemma": "euro",
         "en": "euro (currency)",
         "bn": "ইউরো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'euro"
       },
       "lui": {
         "lemma": "lui",
         "en": "to him / her",
         "bn": "তাকে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "rend": {
         "lemma": "rendre",
         "en": "returns / gives back",
         "bn": "ফেরত দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "monnaie": {
         "lemma": "monnaie",
         "en": "change / currency",
         "bn": "ভাঙতি টাকা / মুদ্রা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la monnaie"
       },
       "avec": {
         "lemma": "avec",
@@ -544,7 +687,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "sourire",
         "en": "smile",
         "bn": "হাসি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sourire"
       },
       "merci": {
         "lemma": "merci",
@@ -562,13 +708,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "journée",
         "en": "day (duration)",
         "bn": "দিন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la journée"
       },
       "rentre": {
         "lemma": "rentrer",
         "en": "returns / goes home",
         "bn": "ফেরে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "chez": {
         "lemma": "chez",
@@ -586,19 +736,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "petit-déjeuner",
         "en": "breakfast",
         "bn": "সকালের নাস্তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le petit-déjeuner"
       },
       "petit": {
         "lemma": "petit",
         "en": "small / short",
         "bn": "ছোট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "déjeuner": {
         "lemma": "déjeuner",
         "en": "lunch / to have lunch",
         "bn": "দুপুরের খাবার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le déjeuner"
       }
     },
     "quiz": [
@@ -673,19 +831,25 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "Kabir",
         "en": "Kabir (first name)",
         "bn": "কবীর (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Kabir"
       },
       "doit": {
         "lemma": "devoir",
         "en": "must / has to",
         "bn": "হবে / বাধ্য",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "aller": {
         "lemma": "aller",
         "en": "to go",
         "bn": "যাওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "à": {
         "lemma": "à",
@@ -703,7 +867,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "école",
         "en": "school",
         "bn": "স্কুল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'école"
       },
       "de": {
         "lemma": "de",
@@ -715,79 +882,113 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "français",
         "en": "French",
         "bn": "ফরাসি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le français"
       },
       "la": {
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "station": {
         "lemma": "station",
         "en": "station",
         "bn": "স্টেশন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la station"
       },
       "métro": {
         "lemma": "métro",
         "en": "subway / underground train",
         "bn": "পাতালরেল / মেট্রো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le métro"
       },
       "est": {
         "lemma": "être",
         "en": "is",
         "bn": "হয় / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "cinq": {
         "lemma": "cinq",
         "en": "five",
         "bn": "পাঁচ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "minutes": {
         "lemma": "minute",
         "en": "minutes",
         "bn": "মিনিট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la minute"
       },
       "pied": {
         "lemma": "pied",
         "en": "foot (à pied = on foot)",
         "bn": "পা (হাঁটা পথ)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pied"
       },
       "studio": {
         "lemma": "studio",
         "en": "studio flat",
         "bn": "স্টুডিও অ্যাপার্টমেন্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le studio"
       },
       "il": {
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "prend": {
         "lemma": "prendre",
         "en": "takes",
         "bn": "নেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "sac": {
         "lemma": "sac",
         "en": "bag / backpack",
         "bn": "ব্যাগ / থলে",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sac"
       },
       "dos": {
         "lemma": "dos",
         "en": "back (backpack)",
         "bn": "পিঠ / কাঁধ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le dos"
       },
       "et": {
         "lemma": "et",
@@ -799,7 +1000,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "fermer",
         "en": "locks / closes",
         "bn": "বন্ধ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "sa": {
         "lemma": "son",
@@ -811,13 +1014,19 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "porte",
         "en": "door",
         "bn": "দরজা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la porte"
       },
       "clé": {
         "lemma": "clé",
         "en": "key",
         "bn": "চাবি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la clé"
       },
       "aujourd": {
         "lemma": "aujourd'hui",
@@ -841,43 +1050,60 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "entrée",
         "en": "entrance / starter",
         "bn": "প্রবেশদ্বার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entrée"
       },
       "descend": {
         "lemma": "descendre",
         "en": "goes down",
         "bn": "নেমে যায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "les": {
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "masculine"
       },
       "escaliers": {
         "lemma": "escalier",
         "en": "stairs",
         "bn": "সিঁড়ি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'escalier"
       },
       "regarde": {
         "lemma": "regarder",
         "en": "looks at / watches",
         "bn": "তাকায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "borne": {
         "lemma": "borne",
         "en": "terminal / kiosk machine",
         "bn": "মেশিন / কিয়স্ক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la borne"
       },
       "automatique": {
         "lemma": "automatique",
         "en": "automatic",
         "bn": "স্বয়ংক্রিয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "pour": {
         "lemma": "pour",
@@ -889,55 +1115,76 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "acheter",
         "en": "to buy",
         "bn": "কেনা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "un": {
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "titre": {
         "lemma": "titre",
         "en": "transport ticket / title / permit",
         "bn": "টিকিট / কার্ড / শিরোনাম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le titre"
       },
       "transport": {
         "lemma": "transport",
         "en": "transportation",
         "bn": "যাতায়াত / পরিবহন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le transport"
       },
       "écran": {
         "lemma": "écran",
         "en": "screen / display",
         "bn": "পর্দা / স্ক্রিন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'écran"
       },
       "tactile": {
         "lemma": "tactile",
         "en": "touch (screen)",
         "bn": "স্পর্শকাতর / টাচস্ক্রিন",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "propose": {
         "lemma": "proposer",
         "en": "offers / suggests",
         "bn": "প্রস্তাব দেয় / প্রদান করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "plusieurs": {
         "lemma": "plusieurs",
         "en": "several",
         "bn": "কয়েকটি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "langues": {
         "lemma": "langue",
         "en": "languages",
         "bn": "ভাষাসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la langue"
       },
       "mais": {
         "lemma": "mais",
@@ -949,25 +1196,32 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "choisir",
         "en": "chooses",
         "bn": "পছন্দ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "le": {
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "entraîner": {
         "lemma": "entraîner",
         "en": "to practice / train",
         "bn": "অনুশীলন করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "l": {
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "s": {
         "lemma": "se",
@@ -979,19 +1233,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "sélectionner",
         "en": "selects",
         "bn": "নির্বাচন করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "option": {
         "lemma": "option",
         "en": "option",
         "bn": "বিকল্প / অপশন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'option"
       },
       "ticket": {
         "lemma": "ticket",
         "en": "ticket / token",
         "bn": "টিকিট / টোকেন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le ticket"
       },
       "t": {
         "lemma": "te",
@@ -1003,7 +1265,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "payer",
         "en": "pays / pay slip",
         "bn": "অর্থ প্রদান করে / বেতন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "avec": {
         "lemma": "avec",
@@ -1015,13 +1279,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "carte",
         "en": "card / menu",
         "bn": "কার্ড / মেনু",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carte"
       },
       "bancaire": {
         "lemma": "bancaire",
         "en": "banking / bank-related",
         "bn": "ব্যাংক সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "sans": {
         "lemma": "sans",
@@ -1033,67 +1302,93 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "contact",
         "en": "contact",
         "bn": "যোগাযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le contact"
       },
       "machine": {
         "lemma": "machine",
         "en": "machine",
         "bn": "যন্ত্র / মেশিন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la machine"
       },
       "délivre": {
         "lemma": "délivrer",
         "en": "dispenses / issues",
         "bn": "প্রদান করে / বের করে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "petit": {
         "lemma": "petit",
         "en": "small / short",
         "bn": "ছোট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "cartonné": {
         "lemma": "cartonné",
         "en": "cardboard / paper-based",
         "bn": "কার্ডবোর্ডের",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "reçu": {
         "lemma": "reçu",
         "en": "receipt / received",
         "bn": "রসিদ / পেয়েছে",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le reçu"
       },
       "passe": {
         "lemma": "passer",
         "en": "passes / goes through",
         "bn": "যায় / অতিক্রম করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "portillon": {
         "lemma": "portillon",
         "en": "turnstile / subway barrier",
         "bn": "মেট্রো গেট / ব্যারিয়ার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le portillon"
       },
       "grands": {
         "lemma": "grand",
         "en": "large (plural)",
         "bn": "বড়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "panneaux": {
         "lemma": "panneau",
         "en": "signs / boards",
         "bn": "সাইনবোর্ডসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le panneau"
       },
       "bleus": {
         "lemma": "bleu",
         "en": "blue",
         "bn": "নীল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "sur": {
         "lemma": "sur",
@@ -1105,19 +1400,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quai",
         "en": "platform",
         "bn": "প্ল্যাটফর্ম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le quai"
       },
       "ligne": {
         "lemma": "ligne",
         "en": "line (metro / telephone / online)",
         "bn": "লাইন / সংযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ligne"
       },
       "va": {
         "lemma": "aller",
         "en": "goes",
         "bn": "যায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "en": {
         "lemma": "en",
@@ -1129,85 +1432,117 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "direction",
         "en": "direction",
         "bn": "দিক / অভিমুখ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la direction"
       },
       "clignancourt": {
         "lemma": "Clignancourt",
         "en": "Clignancourt (place in Paris)",
         "bn": "ক্লিনিয়াঁকুর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Clignancourt"
       },
       "arrive": {
         "lemma": "arriver",
         "en": "arrives",
         "bn": "পৌঁছায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "bruit": {
         "lemma": "bruit",
         "en": "noise / sound",
         "bn": "শব্দ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bruit"
       },
       "sourd": {
         "lemma": "sourd",
         "en": "deep (rumble) / deaf",
         "bn": "গম্ভীর (আওয়াজ) / বধির",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "régulier": {
         "lemma": "régulier",
         "en": "steady / regular",
         "bn": "নিয়মিত / স্থির",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "portes": {
         "lemma": "porte",
         "en": "doors",
         "bn": "দরজাগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la porte"
       },
       "coulissantes": {
         "lemma": "coulissant",
         "en": "sliding (doors)",
         "bn": "স্লাইডিং (দরজা)",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "ouvrent": {
         "lemma": "ouvrir",
         "en": "open (plural)",
         "bn": "খোলে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
       },
       "entre": {
         "lemma": "entrer",
         "en": "enters",
         "bn": "প্রবেশ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "trouve": {
         "lemma": "trouver",
         "en": "finds",
         "bn": "পায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "une": {
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "place": {
         "lemma": "place",
         "en": "seat / space",
         "bn": "আসন / জায়গা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la place"
       },
       "assise": {
         "lemma": "assis",
         "en": "seated / sitting",
         "bn": "বসার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "près": {
         "lemma": "près",
@@ -1219,49 +1554,69 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "sortie",
         "en": "exit",
         "bn": "বের হওয়ার পথ / প্রস্থান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la sortie"
       },
       "voix": {
         "lemma": "voix",
         "en": "voice",
         "bn": "কণ্ঠ / আওয়াজ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la voix"
       },
       "annonce": {
         "lemma": "annoncer",
         "en": "announces / states",
         "bn": "জানায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "prochaine": {
         "lemma": "prochain",
         "en": "next (feminine)",
         "bn": "পরবর্তী",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "châtelet": {
         "lemma": "Châtelet",
         "en": "Châtelet (metro station)",
         "bn": "শাতলে (মেট্রো স্টেশন)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Châtelet"
       },
       "sourit": {
         "lemma": "sourire",
         "en": "smiles",
         "bn": "হাসে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "voyage": {
         "lemma": "voyage",
         "en": "journey / trip",
         "bn": "ভ্রমণ / যাত্রা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le voyage"
       },
       "simple": {
         "lemma": "simple",
         "en": "simple / easy",
         "bn": "সহজ / সাধারণ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "très": {
         "lemma": "très",
@@ -1273,7 +1628,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "rapide",
         "en": "fast / quick",
         "bn": "দ্রুত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       }
     },
     "quiz": [
@@ -1348,31 +1705,44 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "matin",
         "en": "morning",
         "bn": "সকাল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
       },
       "rahim": {
         "lemma": "Rahim",
         "en": "Rahim (first name)",
         "bn": "রহিম (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Rahim"
       },
       "a": {
         "lemma": "avoir",
         "en": "has",
         "bn": "আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "un": {
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "rendez-vous": {
         "lemma": "rendez-vous",
         "en": "appointment / meeting",
         "bn": "সাক্ষাৎ / অ্যাপয়েন্টমেন্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
       },
       "très": {
         "lemma": "très",
@@ -1384,7 +1754,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "important",
         "en": "important",
         "bn": "গুরুত্বপূর্ণ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "à": {
         "lemma": "à",
@@ -1396,43 +1768,58 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "sous-préfecture": {
         "lemma": "sous-préfecture",
         "en": "sub-prefecture",
         "bn": "সাব-প্রিফেকচার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la sous-préfecture"
       },
       "il": {
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "prépare": {
         "lemma": "préparer",
         "en": "prepares",
         "bn": "প্রস্তুত করে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "une": {
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "chemise": {
         "lemma": "chemise",
         "en": "shirt / paper folder",
         "bn": "শার্ট / ফাইল ফোল্ডার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la chemise"
       },
       "cartonnée": {
         "lemma": "cartonné",
         "en": "made of cardboard / stiff paper",
         "bn": "কার্ডবোর্ডের তৈরি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "avec": {
         "lemma": "avec",
@@ -1444,7 +1831,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "tout",
         "en": "all",
         "bn": "সব",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "ses": {
         "lemma": "son",
@@ -1456,13 +1845,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "document",
         "en": "documents",
         "bn": "নথিপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le document"
       },
       "officiels": {
         "lemma": "officiel",
         "en": "official (plural)",
         "bn": "দাপ্তরিক / অফিসিয়াল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "son": {
         "lemma": "son",
@@ -1474,7 +1868,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "passeport",
         "en": "passport",
         "bn": "পাসপোর্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le passeport"
       },
       "en": {
         "lemma": "en",
@@ -1486,7 +1883,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "cours",
         "en": "class / course / in progress",
         "bn": "ক্লাস / কোর্স / চলমান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cours"
       },
       "de": {
         "lemma": "de",
@@ -1498,25 +1898,36 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "validité",
         "en": "validity",
         "bn": "বৈধতা / মেয়াদ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la validité"
       },
       "justificatif": {
         "lemma": "justificatif",
         "en": "supporting document / proof",
         "bn": "প্রমাণপত্র / প্রত্যয়ন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le justificatif"
       },
       "domicile": {
         "lemma": "domicile",
         "en": "home / residence",
         "bn": "বাসস্থান / ঠিকানা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le domicile"
       },
       "récent": {
         "lemma": "récent",
         "en": "recent",
         "bn": "সাম্প্রতিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "et": {
         "lemma": "et",
@@ -1528,31 +1939,44 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "un",
         "en": "some / of the",
         "bn": "কিছু / গুলির",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "feminine"
       },
       "photos": {
         "lemma": "photo",
         "en": "photos",
         "bn": "ছবি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la photo"
       },
       "identité": {
         "lemma": "identité",
         "en": "identity",
         "bn": "পরিচয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'identité"
       },
       "conformes": {
         "lemma": "conforme",
         "en": "compliant (plural)",
         "bn": "যথাযথ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "rendez": {
         "lemma": "rendre",
         "en": "return / appointment (rendez-vous)",
         "bn": "সাক্ষাৎ / ফেরত দেওয়া",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
       },
       "vous": {
         "lemma": "vous",
@@ -1570,7 +1994,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "préfecture",
         "en": "prefecture (government office)",
         "bn": "প্রিফেকচার (সরকারি অফিস)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la préfecture"
       },
       "d": {
         "lemma": "de",
@@ -1582,19 +2009,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "arriver",
         "en": "arrives",
         "bn": "পৌঁছায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "quinze": {
         "lemma": "quinze",
         "en": "fifteen",
         "bn": "পনেরো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "minutes": {
         "lemma": "minute",
         "en": "minutes",
         "bn": "মিনিট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la minute"
       },
       "avant": {
         "lemma": "avant",
@@ -1606,67 +2040,95 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "heure",
         "en": "hour / time",
         "bn": "ঘণ্টা / সময়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'heure"
       },
       "fixée": {
         "lemma": "fixer",
         "en": "scheduled / fixed (feminine)",
         "bn": "নির্ধারিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "entrée": {
         "lemma": "entrée",
         "en": "entrance / starter",
         "bn": "প্রবেশদ্বার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entrée"
       },
       "du": {
         "lemma": "de + le",
         "en": "of the / from the",
         "bn": "দোকানের",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "bâtiment": {
         "lemma": "bâtiment",
         "en": "building",
         "bn": "ভবন / বিল্ডিং",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bâtiment"
       },
       "public": {
         "lemma": "public",
         "en": "public",
         "bn": "সরকারি / গণ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "agent": {
         "lemma": "agent",
         "en": "officer / agent",
         "bn": "কর্মকর্তা / কর্মী",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'agent"
       },
       "sécurité": {
         "lemma": "sécurité",
         "en": "security",
         "bn": "নিরাপত্তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la sécurité"
       },
       "contrôle": {
         "lemma": "contrôler",
         "en": "checks / inspects",
         "bn": "পরীক্ষা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "sac": {
         "lemma": "sac",
         "en": "bag / backpack",
         "bn": "ব্যাগ / থলে",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sac"
       },
       "regarde": {
         "lemma": "regarder",
         "en": "looks at / watches",
         "bn": "তাকায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "sa": {
         "lemma": "son",
@@ -1678,25 +2140,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "convocation",
         "en": "appointment summons letter",
         "bn": "সমন / হাজিরার চিঠি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la convocation"
       },
       "papier": {
         "lemma": "papier",
         "en": "paper",
         "bn": "কাগজ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le papier"
       },
       "l": {
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "entre": {
         "lemma": "entrer",
         "en": "enters",
         "bn": "প্রবেশ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "dans": {
         "lemma": "dans",
@@ -1708,61 +2179,87 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "hall": {
         "lemma": "hall",
         "en": "entrance lobby / hall",
         "bn": "প্রবেশ লবি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le hall"
       },
       "accueil": {
         "lemma": "accueil",
         "en": "reception / welcome",
         "bn": "অভ্যর্থনা / স্বাগত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'accueil"
       },
       "prend": {
         "lemma": "prendre",
         "en": "takes",
         "bn": "নেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "ticket": {
         "lemma": "ticket",
         "en": "ticket / token",
         "bn": "টিকিট / টোকেন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le ticket"
       },
       "numéro": {
         "lemma": "numéro",
         "en": "number / ticket number",
         "bn": "নম্বর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le numéro"
       },
       "ordre": {
         "lemma": "ordre",
         "en": "order / in order",
         "bn": "ক্রম / শৃঙ্খলা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ordre"
       },
       "borne": {
         "lemma": "borne",
         "en": "terminal / kiosk machine",
         "bn": "মেশিন / কিয়স্ক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la borne"
       },
       "électronique": {
         "lemma": "électronique",
         "en": "electronic",
         "bn": "ইলেকট্রনিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "assoit": {
         "lemma": "asseoir",
         "en": "sits",
         "bn": "বসে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "calmement": {
         "lemma": "calmement",
@@ -1780,31 +2277,43 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "masculine"
       },
       "autres": {
         "lemma": "autre",
         "en": "other / others",
         "bn": "অন্যান্য / অন্যরা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "usagers": {
         "lemma": "usager",
         "en": "service users / citizens",
         "bn": "সেবাগ্রহীতা / নাগরিক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'usager"
       },
       "attend": {
         "lemma": "attendre",
         "en": "waits for",
         "bn": "অপেক্ষা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "tour": {
         "lemma": "tour",
         "en": "turn (waiting turn)",
         "bn": "পালা / সিরিয়াল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le tour"
       },
       "s": {
         "lemma": "se",
@@ -1816,32 +2325,45 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "écran",
         "en": "screen / display",
         "bn": "পর্দা / স্ক্রিন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'écran"
       },
       "lumineux": {
         "lemma": "lumineux",
         "en": "bright / luminous",
         "bn": "উজ্জ্বল / আলোকময়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "affiche": {
         "lemma": "afficher",
         "en": "displays / shows",
         "bn": "প্রদর্শন করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "a-42": {
         "lemma": "A-42",
         "en": "ticket number A-42",
         "bn": "টিকেট নম্বর এ-৪২",
         "pos": "noun",
-        "ttsText": "Ticket A quarante-deux"
+        "ttsText": "Ticket A quarante-deux",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le A-42"
       },
       "guichet": {
         "lemma": "guichet",
         "en": "counter / service window",
         "bn": "কাউন্টার / টিকিট জানালা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le guichet"
       },
       "se": {
         "lemma": "se",
@@ -1853,13 +2375,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "lever",
         "en": "stands up / rises",
         "bn": "ওঠে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "avance": {
         "lemma": "avance",
         "en": "ahead / early",
         "bn": "আগে",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'avance"
       },
       "vers": {
         "lemma": "vers",
@@ -1871,91 +2398,128 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "politesse",
         "en": "courtesy / politeness",
         "bn": "ভদ্রতা / শিষ্টাচার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la politesse"
       },
       "dame": {
         "lemma": "dame",
         "en": "lady / woman",
         "bn": "ভদ্রমহিলা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la dame"
       },
       "souriante": {
         "lemma": "souriant",
         "en": "smiling (feminine)",
         "bn": "হাস্যোজ্জ্বল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "vérifie": {
         "lemma": "vérifier",
         "en": "checks / verifies",
         "bn": "যাচাই করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "chaque": {
         "lemma": "chaque",
         "en": "each / every",
         "bn": "প্রতিটি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "pièce": {
         "lemma": "pièce",
         "en": "coin / room",
         "bn": "কয়েন / মুদ্রা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pièce"
       },
       "justificative": {
         "lemma": "justificatif",
         "en": "supporting (piece justificative)",
         "bn": "প্রমাণপত্রমূলক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "dossier": {
         "lemma": "dossier",
         "en": "application file / folder",
         "bn": "ফাইল / আবেদনপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le dossier"
       },
       "tamponne": {
         "lemma": "tamponner",
         "en": "stamps (seal)",
         "bn": "সিলমোহর মারে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "formulaire": {
         "lemma": "formulaire",
         "en": "official form",
         "bn": "ফর্ম / আবেদনপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le formulaire"
       },
       "officiel": {
         "lemma": "officiel",
         "en": "official",
         "bn": "সরকারি / দাপ্তরিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "lui": {
         "lemma": "lui",
         "en": "to him / her",
         "bn": "তাকে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "remet": {
         "lemma": "remettre",
         "en": "hands over / gives",
         "bn": "হস্তান্তর করে / দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "récépissé": {
         "lemma": "récépissé",
         "en": "official filing receipt / temporary permit",
         "bn": "প্রাপ্তিস্বীকার রসিদ / সাময়িক সনদ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le récépissé"
       },
       "demande": {
         "lemma": "demande",
         "en": "request / application",
         "bn": "অনুরোধ / আবেদন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la demande"
       },
       "votre": {
         "lemma": "votre",
@@ -1967,55 +2531,76 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "être",
         "en": "is",
         "bn": "হয় / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "complet": {
         "lemma": "complet",
         "en": "complete / full",
         "bn": "সম্পূর্ণ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "monsieur": {
         "lemma": "monsieur",
         "en": "sir / gentleman",
         "bn": "জনাব / মহাশয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
       },
       "document": {
         "lemma": "document",
         "en": "document",
         "bn": "নথি / দলিল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le document"
       },
       "provisoire": {
         "lemma": "provisoire",
         "en": "provisional / temporary",
         "bn": "সাময়িক / অস্থায়ী",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "valable": {
         "lemma": "valable",
         "en": "valid",
         "bn": "বৈধ / মেয়াদযুক্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "six": {
         "lemma": "six",
         "en": "six",
         "bn": "ছয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "mois": {
         "lemma": "mois",
         "en": "month / months",
         "bn": "মাস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le mois"
       },
       "remercie": {
         "lemma": "remercier",
         "en": "thanks",
         "bn": "ধন্যবাদ জানায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "chaleureusement": {
         "lemma": "chaleureusement",
@@ -2090,31 +2675,44 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "samedi": {
         "lemma": "samedi",
         "en": "Saturday",
         "bn": "শনিবার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le samedi"
       },
       "après-midi": {
         "lemma": "après-midi",
         "en": "afternoon",
         "bn": "বিকাল / দুপুর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'après-midi"
       },
       "fahim": {
         "lemma": "Fahim",
         "en": "Fahim (first name)",
         "bn": "ফাহিম (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Fahim"
       },
       "fait": {
         "lemma": "faire",
         "en": "makes / does / fact",
         "bn": "করে / ঘটনা",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "ses": {
         "lemma": "son",
@@ -2126,7 +2724,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "course",
         "en": "shopping / errands",
         "bn": "বাজার / কেনাকাটা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la course"
       },
       "dans": {
         "lemma": "dans",
@@ -2138,61 +2739,84 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "grand": {
         "lemma": "grand",
         "en": "large / big",
         "bn": "বড়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "supermarché": {
         "lemma": "supermarché",
         "en": "supermarket",
         "bn": "সুপারমার্কেট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le supermarché"
       },
       "du": {
         "lemma": "de + le",
         "en": "of the / from the",
         "bn": "দোকানের",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "centre-ville": {
         "lemma": "centre-ville",
         "en": "city centre / downtown",
         "bn": "শহরের কেন্দ্রস্থল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le centre-ville"
       },
       "il": {
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "a": {
         "lemma": "avoir",
         "en": "has",
         "bn": "আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "une": {
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "petite": {
         "lemma": "petit",
         "en": "small (feminine)",
         "bn": "ছোট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "liste": {
         "lemma": "liste",
         "en": "list",
         "bn": "তালিকা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la liste"
       },
       "sur": {
         "lemma": "sur",
@@ -2210,13 +2834,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "téléphone",
         "en": "telephone / mobile phone",
         "bn": "টেলিফোন / ফোন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le téléphone"
       },
       "portable": {
         "lemma": "portable",
         "en": "mobile / laptop",
         "bn": "মোবাইল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "pour": {
         "lemma": "pour",
@@ -2240,7 +2869,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "oublier",
         "en": "to forget",
         "bn": "ভুলে যাওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "après": {
         "lemma": "après",
@@ -2252,19 +2882,28 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "midi",
         "en": "midday / noon",
         "bn": "দুপুর / মধ্যাহ্ন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le midi"
       },
       "centre": {
         "lemma": "centre",
         "en": "center",
         "bn": "কেন্দ্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le centre"
       },
       "ville": {
         "lemma": "ville",
         "en": "city / town",
         "bn": "শহর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ville"
       },
       "à": {
         "lemma": "à",
@@ -2276,37 +2915,52 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "entrée",
         "en": "entrance / starter",
         "bn": "প্রবেশদ্বার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entrée"
       },
       "magasin": {
         "lemma": "magasin",
         "en": "shop / store",
         "bn": "দোকান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le magasin"
       },
       "prend": {
         "lemma": "prendre",
         "en": "takes",
         "bn": "নেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "panier": {
         "lemma": "panier",
         "en": "shopping basket",
         "bn": "কেনাকাটার ঝুড়ি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le panier"
       },
       "rouge": {
         "lemma": "rouge",
         "en": "red",
         "bn": "লাল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "commence": {
         "lemma": "commencer",
         "en": "starts / begins",
         "bn": "শুরু হয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "par": {
         "lemma": "par",
@@ -2318,19 +2972,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "rayon",
         "en": "supermarket section / aisle",
         "bn": "বিভাগ / সেকশন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rayon"
       },
       "des": {
         "lemma": "un",
         "en": "some / of the",
         "bn": "কিছু / গুলির",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "masculine"
       },
       "fruits": {
         "lemma": "fruit",
         "en": "fruits",
         "bn": "ফলমূল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le fruit"
       },
       "et": {
         "lemma": "et",
@@ -2342,61 +3004,85 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "légume",
         "en": "vegetables",
         "bn": "শাকসবজি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le légume"
       },
       "frais": {
         "lemma": "frais",
         "en": "fresh / cool",
         "bn": "তাজা / ঠান্ডা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "choisit": {
         "lemma": "choisir",
         "en": "chooses",
         "bn": "পছন্দ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "six": {
         "lemma": "six",
         "en": "six",
         "bn": "ছয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "bananes": {
         "lemma": "banane",
         "en": "bananas",
         "bn": "কলা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la banane"
       },
       "jaunes": {
         "lemma": "jaune",
         "en": "yellow (plural)",
         "bn": "হলুদ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "trois": {
         "lemma": "trois",
         "en": "three",
         "bn": "তিন",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "tomates": {
         "lemma": "tomate",
         "en": "tomatoes",
         "bn": "টমেটো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la tomate"
       },
       "rouges": {
         "lemma": "rouge",
         "en": "red (plural)",
         "bn": "লাল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "sachet": {
         "lemma": "sachet",
         "en": "bag / pouch",
         "bn": "ছোট ব্যাগ / প্যাকেট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sachet"
       },
       "de": {
         "lemma": "de",
@@ -2408,73 +3094,102 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "pomme",
         "en": "apples / potatoes (pommes de terre)",
         "bn": "আলু / আপেল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la pomme"
       },
       "terre": {
         "lemma": "terre",
         "en": "earth / potatoes (pommes de terre)",
         "bn": "মাটি / আলু",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la terre"
       },
       "l": {
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "pèse": {
         "lemma": "peser",
         "en": "weighs",
         "bn": "ওজন করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "les": {
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "masculine"
       },
       "la": {
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "balance": {
         "lemma": "balance",
         "en": "scale / balance",
         "bn": "ওজন মাপার যন্ত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la balance"
       },
       "automatique": {
         "lemma": "automatique",
         "en": "automatic",
         "bn": "স্বয়ংক্রিয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "machine": {
         "lemma": "machine",
         "en": "machine",
         "bn": "যন্ত্র / মেশিন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la machine"
       },
       "imprime": {
         "lemma": "imprimer",
         "en": "prints",
         "bn": "প্রিন্ট করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "étiquette": {
         "lemma": "étiquette",
         "en": "label / sticker",
         "bn": "লেবেল / স্টিকার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'étiquette"
       },
       "adhésive": {
         "lemma": "adhésif",
         "en": "adhesive / sticky",
         "bn": "আঠালো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "avec": {
         "lemma": "avec",
@@ -2486,49 +3201,70 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "code-barres",
         "en": "barcode",
         "bn": "বারকোড",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le code-barres"
       },
       "prix": {
         "lemma": "prix",
         "en": "price",
         "bn": "দাম / মূল্য",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le prix"
       },
       "exact": {
         "lemma": "exact",
         "en": "exact / accurate",
         "bn": "সঠিক / নির্ভুল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "colle": {
         "lemma": "coller",
         "en": "sticks / glues",
         "bn": "আঠা দিয়ে লাগায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "sac": {
         "lemma": "sac",
         "en": "bag / backpack",
         "bn": "ব্যাগ / থলে",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sac"
       },
       "transparent": {
         "lemma": "transparent",
         "en": "transparent / clear",
         "bn": "স্বচ্ছ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "code": {
         "lemma": "code",
         "en": "PIN code / rule",
         "bn": "কোড / পিন নম্বর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le code"
       },
       "barres": {
         "lemma": "barre",
         "en": "bars (code-barres)",
         "bn": "বারকোড",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la barre"
       },
       "ensuite": {
         "lemma": "ensuite",
@@ -2540,61 +3276,87 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "aller",
         "en": "goes",
         "bn": "যায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "allées": {
         "lemma": "allée",
         "en": "aisles / walkways",
         "bn": "সারি / করিডোর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'allée"
       },
       "produits": {
         "lemma": "produit",
         "en": "products / items",
         "bn": "জিনিসপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le produit"
       },
       "laitiers": {
         "lemma": "laitier",
         "en": "dairy (products)",
         "bn": "দুগ্ধজাত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "épicerie": {
         "lemma": "épicerie",
         "en": "grocery section",
         "bn": "মুদি দোকান বিভাগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'épicerie"
       },
       "deux": {
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "briques": {
         "lemma": "brique",
         "en": "cartons (of milk)",
         "bn": "দুধের প্যাকেট / কার্টন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la brique"
       },
       "lait": {
         "lemma": "lait",
         "en": "milk",
         "bn": "দুধ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le lait"
       },
       "demi-écrémé": {
         "lemma": "demi-écrémé",
         "en": "semi-skimmed (milk)",
         "bn": "সেমি-স্কিমড (দুধ)",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "boîte": {
         "lemma": "boîte",
         "en": "box",
         "bn": "বাক্স",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la boîte"
       },
       "d": {
         "lemma": "de",
@@ -2606,49 +3368,69 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "œuf",
         "en": "eggs (oeufs)",
         "bn": "ডিম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'œuf"
       },
       "paquet": {
         "lemma": "paquet",
         "en": "packet / package",
         "bn": "প্যাকেট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le paquet"
       },
       "riz": {
         "lemma": "riz",
         "en": "rice",
         "bn": "চাল / ভাত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le riz"
       },
       "blanc": {
         "lemma": "blanc",
         "en": "white (masculine)",
         "bn": "সাদা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "bonne": {
         "lemma": "bon",
         "en": "good",
         "bn": "ভালো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "qualité": {
         "lemma": "qualité",
         "en": "quality",
         "bn": "মান / গুণগত মান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la qualité"
       },
       "demi": {
         "lemma": "demi",
         "en": "half",
         "bn": "অর্ধেক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "écrémé": {
         "lemma": "écrémé",
         "en": "semi-skimmed (milk)",
         "bn": "সেমি-স্কিমড (দুধ)",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "se": {
         "lemma": "se",
@@ -2660,7 +3442,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "diriger",
         "en": "heads towards / directs",
         "bn": "অগ্রসর হয় / যায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "vers": {
         "lemma": "vers",
@@ -2672,31 +3456,44 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "caisse",
         "en": "checkouts",
         "bn": "ক্যাশ কাউন্টারগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la caisse"
       },
       "caissière": {
         "lemma": "caissière",
         "en": "cashier (female)",
         "bn": "মহিলা ক্যাশিয়ার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la caissière"
       },
       "passe": {
         "lemma": "passer",
         "en": "passes / goes through",
         "bn": "যায় / অতিক্রম করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "chaque": {
         "lemma": "chaque",
         "en": "each / every",
         "bn": "প্রতিটি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "article": {
         "lemma": "article",
         "en": "item / article",
         "bn": "পণ্য / জিনিস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'article"
       },
       "sous": {
         "lemma": "sous",
@@ -2708,13 +3505,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "lecteur",
         "en": "scanner / reader",
         "bn": "স্ক্যানার / রিডার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le lecteur"
       },
       "optique": {
         "lemma": "optique",
         "en": "optical (scanner)",
         "bn": "অপটিক্যাল / স্ক্যানার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "bip": {
         "lemma": "bip",
@@ -2726,7 +3528,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "payer",
         "en": "pays / pay slip",
         "bn": "অর্থ প্রদান করে / বেতন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "en": {
         "lemma": "en",
@@ -2738,49 +3542,70 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "espèce",
         "en": "cash (en espèces)",
         "bn": "নগদ টাকা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'espèce"
       },
       "billet": {
         "lemma": "billet",
         "en": "banknote / ticket",
         "bn": "টাকার নোট / টিকিট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le billet"
       },
       "vingt": {
         "lemma": "vingt",
         "en": "twenty",
         "bn": "বিশ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "euros": {
         "lemma": "euro",
         "en": "euros",
         "bn": "ইউরো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'euro"
       },
       "range": {
         "lemma": "ranger",
         "en": "packs / puts away",
         "bn": "গুছিয়ে রাখে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "achats": {
         "lemma": "achat",
         "en": "purchases / shopping",
         "bn": "কেনাকাটা / পণ্য",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'achat"
       },
       "toile": {
         "lemma": "toile",
         "en": "canvas / fabric",
         "bn": "ক্যানভাস কাপড়ের তৈরি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la toile"
       },
       "réutilisable": {
         "lemma": "réutilisable",
         "en": "reusable",
         "bn": "পুনর্ব্যবহারযোগ্য",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       }
     },
     "quiz": [
@@ -2849,25 +3674,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "est": {
         "lemma": "être",
         "en": "is",
         "bn": "হয় / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "dix": {
         "lemma": "dix",
         "en": "ten",
         "bn": "দশ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "heures": {
         "lemma": "heure",
         "en": "hours / o'clock",
         "bn": "ঘণ্টা / টা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'heure"
       },
       "et": {
         "lemma": "et",
@@ -2879,19 +3713,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "demi",
         "en": "half (hour)",
         "bn": "আধ / সাড়ে",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "du": {
         "lemma": "de + le",
         "en": "of the / from the",
         "bn": "দোকানের",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "matin": {
         "lemma": "matin",
         "en": "morning",
         "bn": "সকাল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
       },
       "dans": {
         "lemma": "dans",
@@ -2903,43 +3744,61 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "masculine"
       },
       "bureaux": {
         "lemma": "bureau",
         "en": "offices",
         "bn": "অফিসসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le bureau"
       },
       "une": {
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "société": {
         "lemma": "société",
         "en": "company / society",
         "bn": "কোম্পানি / সমাজ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la société"
       },
       "informatique": {
         "lemma": "informatique",
         "en": "IT / computing",
         "bn": "আইটি / কম্পিউটার বিজ্ঞান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'informatique"
       },
       "samir": {
         "lemma": "Samir",
         "en": "Samir (first name)",
         "bn": "সমীর (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Samir"
       },
       "travaille": {
         "lemma": "travailler",
         "en": "works",
         "bn": "কাজ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
       },
       "comme": {
         "lemma": "comme",
@@ -2951,13 +3810,19 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "technicien",
         "en": "technician",
         "bn": "টেকনিশিয়ান / কারিগরি কর্মী",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le technicien"
       },
       "support": {
         "lemma": "support",
         "en": "support (IT)",
         "bn": "আইটি সহায়তা / সাপোর্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le support"
       },
       "depuis": {
         "lemma": "depuis",
@@ -2969,25 +3834,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "semaines": {
         "lemma": "semaine",
         "en": "weeks",
         "bn": "সপ্তাহসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la semaine"
       },
       "le": {
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "moment": {
         "lemma": "moment",
         "en": "moment / time",
         "bn": "মুহূর্ত / সময়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le moment"
       },
       "de": {
         "lemma": "de",
@@ -2999,19 +3874,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "pause": {
         "lemma": "pause",
         "en": "break / pause",
         "bn": "বিরতি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pause"
       },
       "café": {
         "lemma": "café",
         "en": "coffee / café",
         "bn": "কফি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le café"
       },
       "pour": {
         "lemma": "pour",
@@ -3023,19 +3906,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "tout",
         "en": "all / entire (feminine)",
         "bn": "পুরো / সমস্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "équipe": {
         "lemma": "équipe",
         "en": "team",
         "bn": "দল / টিম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'équipe"
       },
       "technique": {
         "lemma": "technique",
         "en": "technical / technique",
         "bn": "কারিগরি / টেকনিক্যাল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "d": {
         "lemma": "de",
@@ -3053,25 +3943,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "va": {
         "lemma": "aller",
         "en": "goes",
         "bn": "যায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "salle": {
         "lemma": "salle",
         "en": "room / hall",
         "bn": "কক্ষ / রুম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la salle"
       },
       "détente": {
         "lemma": "détente",
         "en": "relaxation / break",
         "bn": "বিশ্রাম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la détente"
       },
       "avec": {
         "lemma": "avec",
@@ -3089,43 +3989,61 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "collègue",
         "en": "colleague",
         "bn": "সহকর্মী",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le collègue"
       },
       "thomas": {
         "lemma": "Thomas",
         "en": "Thomas (first name)",
         "bn": "টমাস (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Thomas"
       },
       "pièce": {
         "lemma": "pièce",
         "en": "coin / room",
         "bn": "কয়েন / মুদ্রা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pièce"
       },
       "lumineuse": {
         "lemma": "lumineux",
         "en": "bright (feminine)",
         "bn": "উজ্জ্বল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "conviviale": {
         "lemma": "convivial",
         "en": "friendly / cozy (feminine)",
         "bn": "আন্তরিক ও প্রফুল্ল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "ingénieurs": {
         "lemma": "ingénieur",
         "en": "engineers",
         "bn": "প্রকৌশলীবৃন্দ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'ingénieur"
       },
       "discutent": {
         "lemma": "discuter",
         "en": "chat / discuss",
         "bn": "কথা বলে / আলোচনা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "calmement": {
         "lemma": "calmement",
@@ -3143,13 +4061,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "grand",
         "en": "large (feminine)",
         "bn": "বড়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "machine": {
         "lemma": "machine",
         "en": "machine",
         "bn": "যন্ত্র / মেশিন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la machine"
       },
       "à": {
         "lemma": "à",
@@ -3167,13 +4090,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "métal",
         "en": "metal",
         "bn": "ধাতু",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le métal"
       },
       "propose": {
         "lemma": "proposer",
         "en": "offers / suggests",
         "bn": "প্রস্তাব দেয় / প্রদান করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "amicalement": {
         "lemma": "amicalement",
@@ -3191,19 +4119,25 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "vouloir",
         "en": "want (je/tu)",
         "bn": "চাই / চাও",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
       },
       "un": {
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "chaud": {
         "lemma": "chaud",
         "en": "hot / warm",
         "bn": "গরম",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "ou": {
         "lemma": "ou",
@@ -3215,31 +4149,44 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "thé",
         "en": "tea",
         "bn": "চা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le thé"
       },
       "menthe": {
         "lemma": "menthe",
         "en": "mint",
         "bn": "পুদিনা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la menthe"
       },
       "répond": {
         "lemma": "répondre",
         "en": "answers / replies",
         "bn": "উত্তর দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "sourire": {
         "lemma": "sourire",
         "en": "smile",
         "bn": "হাসি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sourire"
       },
       "noir": {
         "lemma": "noir",
         "en": "black",
         "bn": "কালো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "sans": {
         "lemma": "sans",
@@ -3251,7 +4198,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "sucre",
         "en": "sugar",
         "bn": "চিনি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sucre"
       },
       "te": {
         "lemma": "te",
@@ -3263,7 +4213,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "plaire",
         "en": "pleases (s'il vous plaît)",
         "bn": "পছন্দ হয় / দয়া করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "s": {
         "lemma": "se",
@@ -3275,7 +4227,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "appuyer",
         "en": "presses (a button)",
         "bn": "চাপ দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "sur": {
         "lemma": "sur",
@@ -3287,43 +4241,61 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "bouton",
         "en": "button",
         "bn": "বোতাম / বাটন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bouton"
       },
       "appareil": {
         "lemma": "appareil",
         "en": "device / appliance",
         "bn": "যন্ত্র / ডিভাইস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'appareil"
       },
       "coule": {
         "lemma": "couler",
         "en": "pours / flows",
         "bn": "পড়ে / প্রবাহিত হয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "bonne": {
         "lemma": "bon",
         "en": "good",
         "bn": "ভালো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "odeur": {
         "lemma": "odeur",
         "en": "smell / aroma",
         "bn": "গন্ধ / সুবাস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'odeur"
       },
       "torréfiée": {
         "lemma": "torréfier",
         "en": "roasted (feminine)",
         "bn": "রোস্ট করা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "demande": {
         "lemma": "demande",
         "en": "request / application",
         "bn": "অনুরোধ / আবেদন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la demande"
       },
       "comment": {
         "lemma": "comment",
@@ -3341,7 +4313,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "passer",
         "en": "passes / goes through",
         "bn": "যায় / অতিক্রম করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "ta": {
         "lemma": "son",
@@ -3353,25 +4327,36 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "matinée",
         "en": "morning (duration)",
         "bn": "সকালবেলা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la matinée"
       },
       "parc": {
         "lemma": "parc",
         "en": "park / computer workstation pool",
         "bn": "পার্ক / আইটি সিস্টেম পুল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le parc"
       },
       "explique": {
         "lemma": "expliquer",
         "en": "explains",
         "bn": "ব্যাখ্যা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "enthousiasme": {
         "lemma": "enthousiasme",
         "en": "enthusiasm",
         "bn": "উদ্দীপনা / উৎসাহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'enthousiasme"
       },
       "très": {
         "lemma": "très",
@@ -3401,73 +4386,103 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "résoudre",
         "en": "resolve / solve",
         "bn": "সমাধান করি",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "problèmes": {
         "lemma": "problème",
         "en": "problems / issues",
         "bn": "সমস্যাসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le problème"
       },
       "réseau": {
         "lemma": "réseau",
         "en": "network",
         "bn": "নেটওয়ার্ক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le réseau"
       },
       "local": {
         "lemma": "local",
         "en": "local / storage room",
         "bn": "স্থানীয় / সাধারণ স্টোররুম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le local"
       },
       "change": {
         "lemma": "changer",
         "en": "change / reset",
         "bn": "পরিবর্তন করি",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "mot": {
         "lemma": "mot",
         "en": "word",
         "bn": "শব্দ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mot"
       },
       "oublié": {
         "lemma": "oublié",
         "en": "forgotten",
         "bn": "ভুলে যাওয়া",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "utilisateur": {
         "lemma": "utilisateur",
         "en": "user (IT user)",
         "bn": "ব্যবহারকারী",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'utilisateur"
       },
       "collègues": {
         "lemma": "collègue",
         "en": "colleagues",
         "bn": "সহকর্মীবৃন্দ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le collègue"
       },
       "sont": {
         "lemma": "être",
         "en": "are (plural)",
         "bn": "হয় / আছেন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
       },
       "accueillants": {
         "lemma": "accueillant",
         "en": "welcoming (plural)",
         "bn": "আন্তরিক / বন্ধুবৎসল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "aident": {
         "lemma": "aider",
         "en": "help (plural)",
         "bn": "সাহায্য করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "quand": {
         "lemma": "quand",
@@ -3479,13 +4494,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "avoir",
         "en": "have (first person: j'ai)",
         "bn": "আছে (আমার আছে)",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "question": {
         "lemma": "question",
         "en": "question",
         "bn": "প্রশ্ন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la question"
       },
       "m": {
         "lemma": "me",
@@ -3572,13 +4591,19 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "matin",
         "en": "morning",
         "bn": "সকাল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
       },
       "tariq": {
         "lemma": "Tariq",
         "en": "Tariq (first name)",
         "bn": "তারিক (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Tariq"
       },
       "ne": {
         "lemma": "ne",
@@ -3596,13 +4621,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "sentir",
         "en": "feels",
         "bn": "অনুভব করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "pas": {
         "lemma": "pas",
         "en": "step / footsteps / not",
         "bn": "পদক্ষেপ / পায়ের আওয়াজ / না",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pas"
       },
       "très": {
         "lemma": "très",
@@ -3632,25 +4662,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "corps",
         "en": "body",
         "bn": "শরীর / দেহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le corps"
       },
       "il": {
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "a": {
         "lemma": "avoir",
         "en": "has",
         "bn": "আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "mal": {
         "lemma": "mal",
         "en": "pain / difficulty / bad",
         "bn": "ব্যথা / কষ্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mal"
       },
       "à": {
         "lemma": "à",
@@ -3662,13 +4702,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "gorge": {
         "lemma": "gorge",
         "en": "throat",
         "bn": "গলা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la gorge"
       },
       "depuis": {
         "lemma": "depuis",
@@ -3686,7 +4731,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "soir",
         "en": "evening",
         "bn": "সন্ধ্যা / রাত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le soir"
       },
       "et": {
         "lemma": "et",
@@ -3698,7 +4746,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "peu": {
         "lemma": "peu",
@@ -3716,19 +4766,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "fièvre",
         "en": "fever",
         "bn": "জ্বর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fièvre"
       },
       "prend": {
         "lemma": "prendre",
         "en": "takes",
         "bn": "নেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "téléphone": {
         "lemma": "téléphone",
         "en": "telephone / mobile phone",
         "bn": "টেলিফোন / ফোন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le téléphone"
       },
       "pour": {
         "lemma": "pour",
@@ -3740,13 +4798,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "réserver",
         "en": "to book / reserve",
         "bn": "বুকিং করা / সময় নেওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "rendez-vous": {
         "lemma": "rendez-vous",
         "en": "appointment / meeting",
         "bn": "সাক্ষাৎ / অ্যাপয়েন্টমেন্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
       },
       "chez": {
         "lemma": "chez",
@@ -3758,43 +4820,62 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "docteur": {
         "lemma": "docteur",
         "en": "doctor",
         "bn": "ডাক্তার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le docteur"
       },
       "laurent": {
         "lemma": "Laurent",
         "en": "Laurent (name)",
         "bn": "লরেন্ট (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Laurent"
       },
       "cabinet": {
         "lemma": "cabinet",
         "en": "doctor's surgery / practice",
         "bn": "ডাক্তারখানা / চেম্বার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cabinet"
       },
       "médical": {
         "lemma": "médical",
         "en": "medical",
         "bn": "চিকিৎসা সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "quartier": {
         "lemma": "quartier",
         "en": "neighbourhood / district",
         "bn": "মহল্লা / এলাকা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le quartier"
       },
       "rendez": {
         "lemma": "rendre",
         "en": "return / appointment (rendez-vous)",
         "bn": "সাক্ষাৎ / ফেরত দেওয়া",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
       },
       "vous": {
         "lemma": "vous",
@@ -3806,25 +4887,33 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "arriver",
         "en": "arrives",
         "bn": "পৌঁছায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "heure": {
         "lemma": "heure",
         "en": "hour / time",
         "bn": "ঘণ্টা / সময়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'heure"
       },
       "précise": {
         "lemma": "préciser",
         "en": "specifies / exact (feminine)",
         "bn": "স্পষ্ট করে বলে / সঠিক",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "assoit": {
         "lemma": "asseoir",
         "en": "sits",
         "bn": "বসে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "calmement": {
         "lemma": "calmement",
@@ -3836,25 +4925,36 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "salle",
         "en": "room / hall",
         "bn": "কক্ষ / রুম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la salle"
       },
       "attente": {
         "lemma": "attente",
         "en": "waiting",
         "bn": "অপেক্ষা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attente"
       },
       "quelques": {
         "lemma": "quelque",
         "en": "a few / some",
         "bn": "কয়েকটি / কিছু",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "minutes": {
         "lemma": "minute",
         "en": "minutes",
         "bn": "মিনিট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la minute"
       },
       "plus": {
         "lemma": "plus",
@@ -3872,25 +4972,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "médecin",
         "en": "doctor / physician",
         "bn": "চিকিৎসক / ডাক্তার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le médecin"
       },
       "ouvre": {
         "lemma": "ouvrir",
         "en": "opens",
         "bn": "খোলে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "porte": {
         "lemma": "porte",
         "en": "door",
         "bn": "দরজা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la porte"
       },
       "dit": {
         "lemma": "dire",
         "en": "says",
         "bn": "বলে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "bonjour": {
         "lemma": "bonjour",
@@ -3902,13 +5011,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "monsieur",
         "en": "sir / gentleman",
         "bn": "জনাব / মহাশয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
       },
       "entrez": {
         "lemma": "entrer",
         "en": "come in / enter (formal)",
         "bn": "আসুন / ভেতরে আসুন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "je": {
         "lemma": "je",
@@ -3926,13 +5040,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "prier",
         "en": "please (je vous en prie)",
         "bn": "দয়া করে আসুন / অনুরোধ",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "asseyez-vous": {
         "lemma": "asseoir",
         "en": "take a seat / sit down",
         "bn": "বসুন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "sur": {
         "lemma": "sur",
@@ -3944,19 +5062,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "fauteuil",
         "en": "armchair",
         "bn": "আরামদায়ক চেয়ার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le fauteuil"
       },
       "confortable": {
         "lemma": "confortable",
         "en": "comfortable",
         "bn": "আরামদায়ক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "l": {
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "s": {
         "lemma": "se",
@@ -3974,31 +5099,42 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "asseoir",
         "en": "sit (asseyez-vous)",
         "bn": "বসুন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "pose": {
         "lemma": "poser",
         "en": "places / puts / asks",
         "bn": "রাখে / জিজ্ঞেস করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "des": {
         "lemma": "un",
         "en": "some / of the",
         "bn": "কিছু / গুলির",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "feminine"
       },
       "questions": {
         "lemma": "question",
         "en": "questions",
         "bn": "প্রশ্নসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la question"
       },
       "claires": {
         "lemma": "clair",
         "en": "clear (plural)",
         "bn": "সুস্পষ্ট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "avec": {
         "lemma": "avec",
@@ -4010,7 +5146,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "gentillesse",
         "en": "kindness",
         "bn": "সদয়তা / ভদ্রতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la gentillesse"
       },
       "est-ce": {
         "lemma": "est-ce que",
@@ -4028,7 +5167,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "aller",
         "en": "goes",
         "bn": "যায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "aujourd'hui": {
         "lemma": "aujourd'hui",
@@ -4046,7 +5187,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "avoir",
         "en": "do you have",
         "bn": "আপনার কি আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "exactement": {
         "lemma": "exactement",
@@ -4058,7 +5201,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "répondre",
         "en": "answers / replies",
         "bn": "উত্তর দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "posément": {
         "lemma": "posément",
@@ -4070,19 +5215,25 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "avoir",
         "en": "have (first person: j'ai)",
         "bn": "আছে (আমার আছে)",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "tête": {
         "lemma": "tête",
         "en": "head / headache",
         "bn": "মাথা / মাথা ব্যথা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la tête"
       },
       "tousse": {
         "lemma": "tousser",
         "en": "coughs",
         "bn": "কাশি দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "beaucoup": {
         "lemma": "beaucoup",
@@ -4094,7 +5245,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "nuit",
         "en": "night",
         "bn": "রাত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la nuit"
       },
       "qu": {
         "lemma": "que",
@@ -4106,7 +5260,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "être",
         "en": "is",
         "bn": "হয় / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "aujourd": {
         "lemma": "aujourd'hui",
@@ -4124,7 +5280,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "avoir",
         "en": "have (you have)",
         "bn": "আছে (আপনার আছে)",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
       },
       "j": {
         "lemma": "je",
@@ -4136,25 +5294,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "ausculter",
         "en": "examines / listens with stethoscope",
         "bn": "স্টেথোস্কোপ দিয়ে পরীক্ষা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "stéthoscope": {
         "lemma": "stéthoscope",
         "en": "stethoscope",
         "bn": "স্টেথোস্কোপ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le stéthoscope"
       },
       "moderne": {
         "lemma": "moderne",
         "en": "modern",
         "bn": "আধুনিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "regarde": {
         "lemma": "regarder",
         "en": "looks at / watches",
         "bn": "তাকায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "sa": {
         "lemma": "son",
@@ -4166,61 +5333,84 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "rouge",
         "en": "red",
         "bn": "লাল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "température": {
         "lemma": "température",
         "en": "temperature",
         "bn": "তাপমাত্রা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la température"
       },
       "petit": {
         "lemma": "petit",
         "en": "small / short",
         "bn": "ছোট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "thermomètre": {
         "lemma": "thermomètre",
         "en": "thermometer",
         "bn": "থার্মোমিটার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le thermomètre"
       },
       "frontal": {
         "lemma": "frontal",
         "en": "forehead (thermometer)",
         "bn": "কপালে ধরার (থার্মোমিটার)",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "une": {
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "petite": {
         "lemma": "petit",
         "en": "small (feminine)",
         "bn": "ছোট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "angine": {
         "lemma": "angine",
         "en": "throat infection / angina",
         "bn": "গলার ইনফেকশন / টনসিল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'angine"
       },
       "virale": {
         "lemma": "viral",
         "en": "viral (infection)",
         "bn": "ভাইরাল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "inquiétez": {
         "lemma": "inquiéter",
         "en": "worry (ne vous inquiétez pas)",
         "bn": "চিন্তা করবেন না",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "rien": {
         "lemma": "rien",
@@ -4232,7 +5422,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "grave",
         "en": "serious / severe",
         "bn": "গুরুতর",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "n": {
         "lemma": "ne",
@@ -4244,91 +5436,125 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "praticien",
         "en": "medical practitioner / doctor",
         "bn": "চিকিৎসক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le praticien"
       },
       "rédige": {
         "lemma": "rédiger",
         "en": "writes / drafts (prescription)",
         "bn": "লেখে / প্রস্তুত করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "ordonnance": {
         "lemma": "ordonnance",
         "en": "prescription",
         "bn": "প্রেসক্রিপশন / ব্যবস্থাপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ordonnance"
       },
       "du": {
         "lemma": "de + le",
         "en": "of the / from the",
         "bn": "দোকানের",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "paracétamol": {
         "lemma": "paracétamol",
         "en": "paracetamol",
         "bn": "প্যারাসিটামল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le paracétamol"
       },
       "calmer": {
         "lemma": "calmer",
         "en": "to soothe / calm down",
         "bn": "উপশম করা / শান্ত করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "douleur": {
         "lemma": "douleur",
         "en": "pain / ache",
         "bn": "ব্যথা / যন্ত্রণা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la douleur"
       },
       "sirop": {
         "lemma": "sirop",
         "en": "cough syrup",
         "bn": "কাশির সিরাপ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sirop"
       },
       "doux": {
         "lemma": "doux",
         "en": "gentle / sweet / mild",
         "bn": "মৃদু / মিষ্টি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "toux": {
         "lemma": "toux",
         "en": "cough",
         "bn": "কাশি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la toux"
       },
       "conseille": {
         "lemma": "conseiller",
         "en": "advises / recommends",
         "bn": "পরামর্শ দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "boire": {
         "lemma": "boire",
         "en": "to drink",
         "bn": "পান করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "eau": {
         "lemma": "eau",
         "en": "water",
         "bn": "পানি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'eau"
       },
       "tiède": {
         "lemma": "tiède",
         "en": "lukewarm / warm",
         "bn": "কুসুম গরম",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "rester": {
         "lemma": "rester",
         "en": "to stay / remain",
         "bn": "থাকা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "au": {
         "lemma": "à + le",
@@ -4340,7 +5566,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "lire",
         "en": "reads / bed",
         "bn": "পড়ে / বিছানা",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "pendant": {
         "lemma": "pendant",
@@ -4352,19 +5580,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "jours": {
         "lemma": "jour",
         "en": "days",
         "bn": "দিনগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le jour"
       },
       "remercie": {
         "lemma": "remercier",
         "en": "thanks",
         "bn": "ধন্যবাদ জানায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "chaleureusement": {
         "lemma": "chaleureusement",
@@ -4376,19 +5611,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "payer",
         "en": "pays / pay slip",
         "bn": "অর্থ প্রদান করে / বেতন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "carte": {
         "lemma": "carte",
         "en": "card / menu",
         "bn": "কার্ড / মেনু",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carte"
       },
       "bancaire": {
         "lemma": "bancaire",
         "en": "banking / bank-related",
         "bn": "ব্যাংক সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       }
     },
     "quiz": [
@@ -4463,19 +5705,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "midi",
         "en": "midday / noon",
         "bn": "দুপুর / মধ্যাহ্ন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le midi"
       },
       "kabir": {
         "lemma": "Kabir",
         "en": "Kabir (first name)",
         "bn": "কবীর (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Kabir"
       },
       "a": {
         "lemma": "avoir",
         "en": "has",
         "bn": "আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "très": {
         "lemma": "très",
@@ -4487,7 +5737,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "faim",
         "en": "hunger",
         "bn": "ক্ষুধা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la faim"
       },
       "après": {
         "lemma": "après",
@@ -4505,7 +5758,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "cours",
         "en": "class / course / in progress",
         "bn": "ক্লাস / কোর্স / চলমান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cours"
       },
       "de": {
         "lemma": "de",
@@ -4517,25 +5773,33 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "français",
         "en": "French",
         "bn": "ফরাসি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le français"
       },
       "intensif": {
         "lemma": "intensif",
         "en": "intensive",
         "bn": "নিবিড় / গভীর",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "il": {
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "entre": {
         "lemma": "entrer",
         "en": "enters",
         "bn": "প্রবেশ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "dans": {
         "lemma": "dans",
@@ -4547,25 +5811,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "petite": {
         "lemma": "petit",
         "en": "small (feminine)",
         "bn": "ছোট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "brasserie": {
         "lemma": "brasserie",
         "en": "brasserie / casual French restaurant",
         "bn": "ফরাসি রেস্তোরাঁ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la brasserie"
       },
       "conviviale": {
         "lemma": "convivial",
         "en": "friendly / cozy (feminine)",
         "bn": "আন্তরিক ও প্রফুল্ল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "près": {
         "lemma": "près",
@@ -4577,31 +5850,43 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "mairie": {
         "lemma": "mairie",
         "en": "town hall / mayor's office",
         "bn": "পৌরসভা / টাউন হল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la mairie"
       },
       "salle": {
         "lemma": "salle",
         "en": "room / hall",
         "bn": "কক্ষ / রুম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la salle"
       },
       "est": {
         "lemma": "être",
         "en": "is",
         "bn": "হয় / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "propre": {
         "lemma": "propre",
         "en": "clean / own",
         "bn": "পরিষ্কার / নিজস্ব",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "et": {
         "lemma": "et",
@@ -4613,13 +5898,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "feminine"
       },
       "tables": {
         "lemma": "table",
         "en": "tables",
         "bn": "টেবিলগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la table"
       },
       "en": {
         "lemma": "en",
@@ -4631,13 +5921,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "bois",
         "en": "wood",
         "bn": "কাঠ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bois"
       },
       "sont": {
         "lemma": "être",
         "en": "are (plural)",
         "bn": "হয় / আছেন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
       },
       "élégamment": {
         "lemma": "élégamment",
@@ -4649,25 +5944,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "dresser",
         "en": "set (tables plural)",
         "bn": "সাজানো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "le": {
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "serveur": {
         "lemma": "serveur",
         "en": "waiter / server",
         "bn": "ওয়েটার / পরিবেশক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le serveur"
       },
       "approche": {
         "lemma": "approcher",
         "en": "approaches / comes closer",
         "bn": "কাছে আসে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "avec": {
         "lemma": "avec",
@@ -4679,25 +5983,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "carnet": {
         "lemma": "carnet",
         "en": "notebook / notepad",
         "bn": "নোটবুক / খাতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le carnet"
       },
       "menu": {
         "lemma": "menu",
         "en": "menu",
         "bn": "খাবার তালিকা / মেনু",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le menu"
       },
       "imprimé": {
         "lemma": "imprimer",
         "en": "printed",
         "bn": "মুদ্রিত / প্রিন্ট করা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "bonjour": {
         "lemma": "bonjour",
@@ -4709,7 +6023,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "monsieur",
         "en": "sir / gentleman",
         "bn": "জনাব / মহাশয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
       },
       "vous": {
         "lemma": "vous",
@@ -4721,13 +6038,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "être",
         "en": "are (vous)",
         "bn": "হন / আছেন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
       },
       "seul": {
         "lemma": "seul",
         "en": "alone / single",
         "bn": "একা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "pour": {
         "lemma": "pour",
@@ -4739,43 +6060,60 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "déjeuner",
         "en": "lunch / to have lunch",
         "bn": "দুপুরের খাবার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le déjeuner"
       },
       "choisissez": {
         "lemma": "choisir",
         "en": "choose (formal)",
         "bn": "পছন্দ করুন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "jolie": {
         "lemma": "joli",
         "en": "pretty (feminine)",
         "bn": "সুন্দর",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "table": {
         "lemma": "table",
         "en": "table",
         "bn": "টেবিল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la table"
       },
       "grande": {
         "lemma": "grand",
         "en": "large (feminine)",
         "bn": "বড়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "fenêtre": {
         "lemma": "fenêtre",
         "en": "window",
         "bn": "জানালা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fenêtre"
       },
       "installe": {
         "lemma": "installer",
         "en": "settles in / installs",
         "bn": "বসে / ইনস্টল করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "confortablement": {
         "lemma": "confortablement",
@@ -4787,13 +6125,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "poser",
         "en": "places / puts / asks",
         "bn": "রাখে / জিজ্ঞেস করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "manteau": {
         "lemma": "manteau",
         "en": "coat / overcoat",
         "bn": "কোট / ওভারকোট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le manteau"
       },
       "s": {
         "lemma": "se",
@@ -4805,7 +6148,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "revenir",
         "en": "comes back / returns",
         "bn": "ফিরে আসে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "rapidement": {
         "lemma": "rapidement",
@@ -4817,13 +6162,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "avoir",
         "en": "do you have",
         "bn": "আপনার কি আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "choisi": {
         "lemma": "choisir",
         "en": "chosen",
         "bn": "পছন্দ করেছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "votre": {
         "lemma": "votre",
@@ -4835,7 +6184,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "repas",
         "en": "meal",
         "bn": "খাবার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le repas"
       },
       "est-ce": {
         "lemma": "est-ce que",
@@ -4853,13 +6205,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "faire",
         "en": "would do / please (plaisir)",
         "bn": "করবে / পছন্দ হবে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "plaisir": {
         "lemma": "plaisir",
         "en": "pleasure",
         "bn": "আনন্দ (avec plaisir = আনন্দের সাথে)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le plaisir"
       },
       "aujourd'hui": {
         "lemma": "aujourd'hui",
@@ -4871,25 +6228,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "regarder",
         "en": "looks at / watches",
         "bn": "তাকায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "ardoise": {
         "lemma": "ardoise",
         "en": "chalkboard / slate menu",
         "bn": "কালো স্লেট বোর্ড / মেন্যু বোর্ড",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ardoise"
       },
       "murale": {
         "lemma": "mural",
         "en": "wall-mounted / on the wall",
         "bn": "দেয়ালে ঝুলানো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "répond": {
         "lemma": "répondre",
         "en": "answers / replies",
         "bn": "উত্তর দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "oui": {
         "lemma": "oui",
@@ -4907,43 +6273,59 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "vouloir",
         "en": "would like",
         "bn": "চাই / নিতে চাই",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "formule": {
         "lemma": "formule",
         "en": "set deal / package",
         "bn": "প্যাকেজ / সেট মেনু",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la formule"
       },
       "du": {
         "lemma": "de + le",
         "en": "of the / from the",
         "bn": "দোকানের",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "plat": {
         "lemma": "plat",
         "en": "dish / main course",
         "bn": "খাবারের পদ / ডিশ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le plat"
       },
       "jour": {
         "lemma": "jour",
         "en": "day",
         "bn": "দিন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le jour"
       },
       "plaît": {
         "lemma": "plaire",
         "en": "pleases (s'il vous plaît)",
         "bn": "পছন্দ হয় / দয়া করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "avez": {
         "lemma": "avoir",
         "en": "have (you have)",
         "bn": "আছে (আপনার আছে)",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
       },
       "qu": {
         "lemma": "que",
@@ -4973,19 +6355,25 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "précise": {
         "lemma": "préciser",
         "en": "specifies / exact (feminine)",
         "bn": "স্পষ্ট করে বলে / সঠিক",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "parfait": {
         "lemma": "parfait",
         "en": "perfect",
         "bn": "নিখুঁত / চমৎকার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "notre": {
         "lemma": "notre",
@@ -4997,79 +6385,111 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "chef",
         "en": "chef / boss",
         "bn": "প্রধান বাবুর্চি / প্রধান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le chef"
       },
       "prépare": {
         "lemma": "préparer",
         "en": "prepares",
         "bn": "প্রস্তুত করে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "délicieux": {
         "lemma": "délicieux",
         "en": "delicious",
         "bn": "সুস্বাদু / মজাদার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "poulet": {
         "lemma": "poulet",
         "en": "chicken",
         "bn": "মুরগির মাংস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le poulet"
       },
       "rôti": {
         "lemma": "rôtir",
         "en": "roasted",
         "bn": "রোস্ট করা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "riz": {
         "lemma": "riz",
         "en": "rice",
         "bn": "চাল / ভাত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le riz"
       },
       "blanc": {
         "lemma": "blanc",
         "en": "white (masculine)",
         "bn": "সাদা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "parfumé": {
         "lemma": "parfumer",
         "en": "fragrant / scented",
         "bn": "সুগন্ধযুক্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "des": {
         "lemma": "un",
         "en": "some / of the",
         "bn": "কিছু / গুলির",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "masculine"
       },
       "légumes": {
         "lemma": "légume",
         "en": "vegetables",
         "bn": "শাকসবজি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le légume"
       },
       "saison": {
         "lemma": "saison",
         "en": "season",
         "bn": "ঋতু / মৌসুম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la saison"
       },
       "boisson": {
         "lemma": "boisson",
         "en": "drink / beverage",
         "bn": "পানীয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la boisson"
       },
       "demande": {
         "lemma": "demande",
         "en": "request / application",
         "bn": "অনুরোধ / আবেদন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la demande"
       },
       "poliment": {
         "lemma": "poliment",
@@ -5081,19 +6501,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "carafe",
         "en": "pitcher / water jug",
         "bn": "পানির জগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carafe"
       },
       "eau": {
         "lemma": "eau",
         "en": "water",
         "bn": "পানি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'eau"
       },
       "fraîche": {
         "lemma": "frais",
         "en": "fresh / cool (feminine)",
         "bn": "তাজা / ঠান্ডা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "d": {
         "lemma": "de",
@@ -5105,13 +6533,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "arriver",
         "en": "arrives",
         "bn": "পৌঁছায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "fumant": {
         "lemma": "fumer",
         "en": "steaming hot",
         "bn": "ধোঁয়া ওঠা গরম",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "sur": {
         "lemma": "sur",
@@ -5123,49 +6555,68 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "viande",
         "en": "meat",
         "bn": "মাংস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la viande"
       },
       "tendre": {
         "lemma": "tendre",
         "en": "tender / soft",
         "bn": "নরম / কোমল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "savoureuse": {
         "lemma": "savoureux",
         "en": "tasty / flavourful",
         "bn": "সুস্বাদু",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "fin": {
         "lemma": "fin",
         "en": "end",
         "bn": "শেষ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fin"
       },
       "fait": {
         "lemma": "faire",
         "en": "makes / does / fact",
         "bn": "করে / ঘটনা",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "petit": {
         "lemma": "petit",
         "en": "small / short",
         "bn": "ছোট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "signe": {
         "lemma": "signe",
         "en": "sign / signal",
         "bn": "ইশারা / সংকেত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le signe"
       },
       "discret": {
         "lemma": "discret",
         "en": "discreet",
         "bn": "বিচক্ষণ / শান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "au": {
         "lemma": "à + le",
@@ -5183,13 +6634,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "addition",
         "en": "restaurant bill",
         "bn": "খাবারের বিল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'addition"
       },
       "paie": {
         "lemma": "payer",
         "en": "pays / pay slip",
         "bn": "অর্থ প্রদান করে / বেতন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "par": {
         "lemma": "par",
@@ -5201,31 +6657,44 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "carte",
         "en": "card / menu",
         "bn": "কার্ড / মেনু",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carte"
       },
       "bancaire": {
         "lemma": "bancaire",
         "en": "banking / bank-related",
         "bn": "ব্যাংক সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "laisse": {
         "lemma": "laisser",
         "en": "leaves (behind)",
         "bn": "রেখে যায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "pièce": {
         "lemma": "pièce",
         "en": "coin / room",
         "bn": "কয়েন / মুদ্রা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pièce"
       },
       "monnaie": {
         "lemma": "monnaie",
         "en": "change / currency",
         "bn": "ভাঙতি টাকা / মুদ্রা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la monnaie"
       },
       "comme": {
         "lemma": "comme",
@@ -5237,13 +6706,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "pourboire",
         "en": "tip / gratuity",
         "bn": "বকশিশ / টিপস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pourboire"
       },
       "excusez": {
         "lemma": "excuser",
         "en": "excuse (excusez-moi)",
         "bn": "ক্ষমা করবেন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "moi": {
         "lemma": "moi",
@@ -5318,31 +6792,43 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "Rahim",
         "en": "Rahim (first name)",
         "bn": "রহিম (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Rahim"
       },
       "sort": {
         "lemma": "sortir",
         "en": "comes out / exits",
         "bn": "বের হয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "du": {
         "lemma": "de + le",
         "en": "of the / from the",
         "bn": "দোকানের",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "cabinet": {
         "lemma": "cabinet",
         "en": "doctor's surgery / practice",
         "bn": "ডাক্তারখানা / চেম্বার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cabinet"
       },
       "médical": {
         "lemma": "médical",
         "en": "medical",
         "bn": "চিকিৎসা সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "avec": {
         "lemma": "avec",
@@ -5360,13 +6846,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "ordonnance",
         "en": "prescription",
         "bn": "প্রেসক্রিপশন / ব্যবস্থাপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ordonnance"
       },
       "pliée": {
         "lemma": "plier",
         "en": "folded",
         "bn": "ভাঁজ করা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "dans": {
         "lemma": "dans",
@@ -5378,13 +6869,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "poche": {
         "lemma": "poche",
         "en": "pocket",
         "bn": "পকেট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la poche"
       },
       "de": {
         "lemma": "de",
@@ -5402,55 +6898,75 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "veste",
         "en": "jacket",
         "bn": "জ্যাকেট / কোট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la veste"
       },
       "avenue": {
         "lemma": "avenue",
         "en": "avenue / wide street",
         "bn": "প্রধান প্রশস্ত রাস্তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'avenue"
       },
       "principale": {
         "lemma": "principal",
         "en": "main / principal",
         "bn": "প্রধান",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "il": {
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "aperçoit": {
         "lemma": "apercevoir",
         "en": "spots / notices / catches sight of",
         "bn": "দেখতে পায় / চোখে পড়ে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "grande": {
         "lemma": "grand",
         "en": "large (feminine)",
         "bn": "বড়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "croix": {
         "lemma": "croix",
         "en": "cross",
         "bn": "ক্রস চিহ্ন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la croix"
       },
       "verte": {
         "lemma": "vert",
         "en": "green (feminine)",
         "bn": "সবুজ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "lumineuse": {
         "lemma": "lumineux",
         "en": "bright (feminine)",
         "bn": "উজ্জ্বল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "qui": {
         "lemma": "qui",
@@ -5462,61 +6978,84 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "indiquer",
         "en": "indicates / shows",
         "bn": "নির্দেশ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "une": {
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "pharmacie": {
         "lemma": "pharmacie",
         "en": "pharmacy / chemist",
         "bn": "ফার্মেসি / ওষুধের দোকান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pharmacie"
       },
       "garde": {
         "lemma": "garde",
         "en": "duty (pharmacie de garde)",
         "bn": "ডিউটি / জরুরি সেবা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la garde"
       },
       "ouverte": {
         "lemma": "ouvert",
         "en": "open (feminine)",
         "bn": "খোলা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "l": {
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "les": {
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "feminine"
       },
       "portes": {
         "lemma": "porte",
         "en": "doors",
         "bn": "দরজাগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la porte"
       },
       "vitrées": {
         "lemma": "vitré",
         "en": "glass (doors)",
         "bn": "কাঁচের তৈরি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "ouvrent": {
         "lemma": "ouvrir",
         "en": "open (plural)",
         "bn": "খোলে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
       },
       "silencieusement": {
         "lemma": "silencieusement",
@@ -5528,25 +7067,33 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "entrer",
         "en": "enters",
         "bn": "প্রবেশ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "officine": {
         "lemma": "officine",
         "en": "dispensary / pharmacy premises",
         "bn": "ফার্মেসি দোকান / ডিসপেনসারি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'officine"
       },
       "claire": {
         "lemma": "clair",
         "en": "clear (feminine)",
         "bn": "পরিষ্কার / সুস্পষ্ট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "propre": {
         "lemma": "propre",
         "en": "clean / own",
         "bn": "পরিষ্কার / নিজস্ব",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "et": {
         "lemma": "et",
@@ -5564,19 +7111,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "ranger",
         "en": "tidy / organized",
         "bn": "পরিপাটি / সাজানো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "deux": {
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "préparatrices": {
         "lemma": "préparateur",
         "en": "pharmacy assistants",
         "bn": "ফার্মেসি সহকারীগণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le préparateur"
       },
       "en": {
         "lemma": "en",
@@ -5588,31 +7142,43 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "vêtir",
         "en": "dressed (feminine plural)",
         "bn": "পরিহিত / পোশাক পরিধানকারী",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "blouse": {
         "lemma": "blouse",
         "en": "lab coat / medical coat",
         "bn": "মেডিকেল কোট / অ্যাপ্রোন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la blouse"
       },
       "blanche": {
         "lemma": "blanc",
         "en": "white (feminine)",
         "bn": "সাদা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "accueillent": {
         "lemma": "accueillir",
         "en": "welcome (plural)",
         "bn": "স্বাগত জানায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "clients": {
         "lemma": "client",
         "en": "customers",
         "bn": "গ্রাহকগণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le client"
       },
       "derrière": {
         "lemma": "derrière",
@@ -5624,19 +7190,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "comptoir": {
         "lemma": "comptoir",
         "en": "counter",
         "bn": "কাউন্টার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le comptoir"
       },
       "vitré": {
         "lemma": "vitré",
         "en": "glass (counter)",
         "bn": "কাঁচের",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "s": {
         "lemma": "se",
@@ -5654,13 +7227,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "pharmacien",
         "en": "pharmacist (female)",
         "bn": "ফার্মাসিস্ট (মহিলা)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pharmacien"
       },
       "sourit": {
         "lemma": "sourire",
         "en": "smiles",
         "bn": "হাসে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "aimablement": {
         "lemma": "aimablement",
@@ -5684,7 +7262,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "monsieur",
         "en": "sir / gentleman",
         "bn": "জনাব / মহাশয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
       },
       "comment": {
         "lemma": "comment",
@@ -5696,7 +7277,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "pouvoir",
         "en": "may I / can I",
         "bn": "আমি কি পারি",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "vous": {
         "lemma": "vous",
@@ -5708,7 +7291,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "aider",
         "en": "to help / assist",
         "bn": "সাহায্য করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "ce": {
         "lemma": "ce",
@@ -5720,19 +7304,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "matin",
         "en": "morning",
         "bn": "সকাল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
       },
       "pose": {
         "lemma": "poser",
         "en": "places / puts / asks",
         "bn": "রাখে / জিজ্ঞেস করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "document": {
         "lemma": "document",
         "en": "document",
         "bn": "নথি / দলিল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le document"
       },
       "sur": {
         "lemma": "sur",
@@ -5744,7 +7336,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "madame",
         "en": "madam / ma'am",
         "bn": "ম্যাডাম / বেগম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "madame"
       },
       "voici": {
         "lemma": "voici",
@@ -5762,13 +7357,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "docteur",
         "en": "doctor",
         "bn": "ডাক্তার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le docteur"
       },
       "vient": {
         "lemma": "venir",
         "en": "comes / has just (vient de)",
         "bn": "আসে / এইমাত্র",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "me": {
         "lemma": "me",
@@ -5780,7 +7380,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "donner",
         "en": "to give",
         "bn": "দেওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "puis": {
         "lemma": "puis",
@@ -5798,67 +7399,91 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "professionnel",
         "en": "professional (feminine)",
         "bn": "পেশাদার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "lit": {
         "lemma": "lire",
         "en": "reads / bed",
         "bn": "পড়ে / বিছানা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "prescription": {
         "lemma": "prescription",
         "en": "medical prescription",
         "bn": "প্রেসক্রিপশন / নির্দেশপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la prescription"
       },
       "attention": {
         "lemma": "attention",
         "en": "attention / care",
         "bn": "মনোযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attention"
       },
       "elle": {
         "lemma": "elle",
         "en": "she",
         "bn": "সে (মহিলা)",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "feminine",
+        "number": "singular"
       },
       "va": {
         "lemma": "aller",
         "en": "goes",
         "bn": "যায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "chercher": {
         "lemma": "chercher",
         "en": "to look for / fetch",
         "bn": "খোঁজা / নিয়ে আসা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "boîtes": {
         "lemma": "boîte",
         "en": "boxes / mailboxes",
         "bn": "বাক্সগুলো / চিঠির বাক্স",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la boîte"
       },
       "requises": {
         "lemma": "requis",
         "en": "required (plural)",
         "bn": "প্রয়োজনীয় / আবশ্যকীয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "tiroirs": {
         "lemma": "tiroir",
         "en": "drawers",
         "bn": "ড্রয়ারসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le tiroir"
       },
       "métalliques": {
         "lemma": "métallique",
         "en": "metallic (plural)",
         "bn": "ধাতব",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "votre": {
         "lemma": "votre",
@@ -5870,43 +7495,61 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "paracétamol",
         "en": "paracetamol",
         "bn": "প্যারাসিটামল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le paracétamol"
       },
       "sirop": {
         "lemma": "sirop",
         "en": "cough syrup",
         "bn": "কাশির সিরাপ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sirop"
       },
       "prenez": {
         "lemma": "prendre",
         "en": "take (imperative/formal)",
         "bn": "নিন / গ্রহণ করুন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
       },
       "un": {
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "comprimé": {
         "lemma": "comprimé",
         "en": "tablet / pill",
         "bn": "ট্যাবলেট / বড়ি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le comprimé"
       },
       "trois": {
         "lemma": "trois",
         "en": "three",
         "bn": "তিন",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "fois": {
         "lemma": "fois",
         "en": "time / times (trois fois)",
         "bn": "বার (তিন বার)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la fois"
       },
       "par": {
         "lemma": "par",
@@ -5918,7 +7561,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "jour",
         "en": "day",
         "bn": "দিন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le jour"
       },
       "après": {
         "lemma": "après",
@@ -5930,19 +7576,28 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "repas",
         "en": "meal",
         "bn": "খাবার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le repas"
       },
       "cuillère": {
         "lemma": "cuillère",
         "en": "spoon / spoonful",
         "bn": "চামচ / এক চামচ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la cuillère"
       },
       "soir": {
         "lemma": "soir",
         "en": "evening",
         "bn": "সন্ধ্যা / রাত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le soir"
       },
       "avant": {
         "lemma": "avant",
@@ -5954,19 +7609,24 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "dormir",
         "en": "to sleep",
         "bn": "ঘুমানো",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "écrit": {
         "lemma": "écrire",
         "en": "writes / written",
         "bn": "লেখে / লিখিত",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "posologie": {
         "lemma": "posologie",
         "en": "dosage / medicine instructions",
         "bn": "ওষুধ সেবনের নিয়ম ও মাত্রা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la posologie"
       },
       "clairement": {
         "lemma": "clairement",
@@ -5984,73 +7644,101 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "feutre",
         "en": "felt pen / marker",
         "bn": "মার্কার কলম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le feutre"
       },
       "noir": {
         "lemma": "noir",
         "en": "black",
         "bn": "কালো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "carton": {
         "lemma": "carton",
         "en": "cardboard box",
         "bn": "কার্ডবোর্ড / শক্ত কাগজ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le carton"
       },
       "chaque": {
         "lemma": "chaque",
         "en": "each / every",
         "bn": "প্রতিটি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "médicament": {
         "lemma": "médicament",
         "en": "medicine / drug",
         "bn": "ওষুধ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le médicament"
       },
       "présente": {
         "lemma": "présenter",
         "en": "presents / introduces",
         "bn": "উপস্থাপন করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "carte": {
         "lemma": "carte",
         "en": "card / menu",
         "bn": "কার্ড / মেনু",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carte"
       },
       "vitale": {
         "lemma": "vital",
         "en": "vital (carte Vitale: French healthcare card)",
         "bn": "ফরাসি স্বাস্থ্যসেবা কার্ড",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "règle": {
         "lemma": "régler",
         "en": "pays / settles / adjusts",
         "bn": "পরিশোধ করে / মেটায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "reste": {
         "lemma": "reste",
         "en": "remainder / balance / stays",
         "bn": "অবশিষ্টাংশ / থাকে",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le reste"
       },
       "payer": {
         "lemma": "payer",
         "en": "to pay",
         "bn": "টাকা দেওয়া / পরিশোধ করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "met": {
         "lemma": "mettre",
         "en": "puts",
         "bn": "রাখে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "tout": {
         "lemma": "tout",
@@ -6062,37 +7750,52 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "petit",
         "en": "small / short",
         "bn": "ছোট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "sachet": {
         "lemma": "sachet",
         "en": "bag / pouch",
         "bn": "ছোট ব্যাগ / প্যাকেট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sachet"
       },
       "papier": {
         "lemma": "papier",
         "en": "paper",
         "bn": "কাগজ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le papier"
       },
       "bon": {
         "lemma": "bon",
         "en": "good / fine",
         "bn": "ঠিক / ভালো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "rétablissement": {
         "lemma": "rétablissement",
         "en": "recovery (bon rétablissement)",
         "bn": "আরোগ্য / সুস্থতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rétablissement"
       },
       "remercie": {
         "lemma": "remercier",
         "en": "thanks",
         "bn": "ধন্যবাদ জানায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "poliment": {
         "lemma": "poliment",
@@ -6167,19 +7870,25 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "Fahim",
         "en": "Fahim (first name)",
         "bn": "ফাহিম (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Fahim"
       },
       "vient": {
         "lemma": "venir",
         "en": "comes / has just (vient de)",
         "bn": "আসে / এইমাত্র",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "arriver": {
         "lemma": "arriver",
         "en": "to arrive",
         "bn": "পৌঁছানো",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "en": {
         "lemma": "en",
@@ -6191,7 +7900,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "France",
         "en": "France",
         "bn": "ফ্রান্স",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la France"
       },
       "pour": {
         "lemma": "pour",
@@ -6203,7 +7915,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "poursuivre",
         "en": "to pursue / continue",
         "bn": "অব্যাহত রাখা / চালিয়ে যাওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "ses": {
         "lemma": "son",
@@ -6215,13 +7928,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "étude",
         "en": "studies / degree",
         "bn": "পড়াশোনা / উচ্চশিক্ষা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'étude"
       },
       "supérieures": {
         "lemma": "supérieur",
         "en": "higher (education)",
         "bn": "উচ্চ (শিক্ষা)",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "sa": {
         "lemma": "son",
@@ -6233,43 +7951,58 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "premier",
         "en": "first (feminine)",
         "bn": "প্রথম",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "priorité": {
         "lemma": "priorité",
         "en": "priority",
         "bn": "অগ্রাধিকার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la priorité"
       },
       "pratique": {
         "lemma": "pratique",
         "en": "practical / practice",
         "bn": "বাস্তবমুখী / ব্যবহারিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "est": {
         "lemma": "être",
         "en": "is",
         "bn": "হয় / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "obtenir": {
         "lemma": "obtenir",
         "en": "to obtain / get",
         "bn": "পাওয়া / অর্জন করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "un": {
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "numéro": {
         "lemma": "numéro",
         "en": "number / ticket number",
         "bn": "নম্বর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le numéro"
       },
       "de": {
         "lemma": "de",
@@ -6281,19 +8014,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "téléphone",
         "en": "telephone / mobile phone",
         "bn": "টেলিফোন / ফোন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le téléphone"
       },
       "mobile": {
         "lemma": "mobile",
         "en": "mobile (phone/network)",
         "bn": "মোবাইল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "français": {
         "lemma": "français",
         "en": "French",
         "bn": "ফরাসি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le français"
       },
       "et": {
         "lemma": "et",
@@ -6305,43 +8046,58 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "bonne": {
         "lemma": "bon",
         "en": "good",
         "bn": "ভালো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "connexion": {
         "lemma": "connexion",
         "en": "internet connection",
         "bn": "সংযোগ / কানেকশন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la connexion"
       },
       "internet": {
         "lemma": "internet",
         "en": "internet",
         "bn": "ইন্টারনেট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'internet"
       },
       "contacter": {
         "lemma": "contacter",
         "en": "to contact",
         "bn": "যোগাযোগ করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "proches": {
         "lemma": "proche",
         "en": "close relatives / family",
         "bn": "নিকটাত্মীয় / পরিবার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le proche"
       },
       "orienter": {
         "lemma": "orienter",
         "en": "to find one's way / navigate",
         "bn": "দিক ঠিক করা / পথ খোঁজা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "dans": {
         "lemma": "dans",
@@ -6353,13 +8109,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "ville": {
         "lemma": "ville",
         "en": "city / town",
         "bn": "শহর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ville"
       },
       "d": {
         "lemma": "de",
@@ -6377,7 +8138,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "se": {
         "lemma": "se",
@@ -6389,73 +8152,102 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "rendre",
         "en": "returns / gives back",
         "bn": "ফেরত দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "boutique": {
         "lemma": "boutique",
         "en": "store / boutique",
         "bn": "দোকান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la boutique"
       },
       "opérateur": {
         "lemma": "opérateur",
         "en": "telecom operator",
         "bn": "টেলিকম অপারেটর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'opérateur"
       },
       "téléphonique": {
         "lemma": "téléphonique",
         "en": "telephone (line)",
         "bn": "টেলিফোন সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "située": {
         "lemma": "situer",
         "en": "located / situated",
         "bn": "অবস্থিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "grande": {
         "lemma": "grand",
         "en": "large (feminine)",
         "bn": "বড়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "galerie": {
         "lemma": "galerie",
         "en": "shopping mall / gallery",
         "bn": "মার্কেট / গ্যালারি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la galerie"
       },
       "marchande": {
         "lemma": "marchand",
         "en": "commercial (mall)",
         "bn": "বাণিজ্যিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "conseiller": {
         "lemma": "conseiller",
         "en": "advisor / counselor",
         "bn": "পরামর্শক / কর্মকর্তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le conseiller"
       },
       "commercial": {
         "lemma": "commercial",
         "en": "sales / commercial",
         "bn": "বাণিজ্যিক / বিক্রয় প্রতিনিধি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "souriant": {
         "lemma": "sourire",
         "en": "smiling",
         "bn": "হেসে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "avance": {
         "lemma": "avance",
         "en": "ahead / early",
         "bn": "আগে",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'avance"
       },
       "vers": {
         "lemma": "vers",
@@ -6467,7 +8259,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "lui",
         "en": "to him / her",
         "bn": "তাকে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "bonjour": {
         "lemma": "bonjour",
@@ -6479,7 +8273,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "monsieur",
         "en": "sir / gentleman",
         "bn": "জনাব / মহাশয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
       },
       "bienvenue": {
         "lemma": "bienvenue",
@@ -6503,7 +8300,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "désirer",
         "en": "would you like",
         "bn": "আপনি কি চান",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "aujourd'hui": {
         "lemma": "aujourd'hui",
@@ -6515,7 +8314,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "désirer",
         "en": "desire / want",
         "bn": "চান",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
       },
       "vous": {
         "lemma": "vous",
@@ -6539,7 +8340,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "exposer",
         "en": "lays out / states",
         "bn": "তুলে ধরে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "son": {
         "lemma": "son",
@@ -6551,7 +8354,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "besoin",
         "en": "need",
         "bn": "প্রয়োজন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le besoin"
       },
       "avec": {
         "lemma": "avec",
@@ -6563,7 +8369,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "simplicité",
         "en": "simplicity",
         "bn": "সরলতা / অনাড়ম্বর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la simplicité"
       },
       "je": {
         "lemma": "je",
@@ -6575,25 +8384,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "chercher",
         "en": "searches / looks for",
         "bn": "খোঁজে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
       },
       "carte": {
         "lemma": "carte",
         "en": "card / menu",
         "bn": "কার্ড / মেনু",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carte"
       },
       "sim": {
         "lemma": "SIM",
         "en": "SIM card",
         "bn": "সিম কার্ড",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la SIM"
       },
       "prépayée": {
         "lemma": "prépayé",
         "en": "prepaid",
         "bn": "প্রিপেইড",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "sans": {
         "lemma": "sans",
@@ -6605,25 +8424,37 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "engagement",
         "en": "commitment / contract obligation",
         "bn": "চুক্তিবদ্ধতা / বাধ্যবাধকতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'engagement"
       },
       "durée": {
         "lemma": "durée",
         "en": "duration / length",
         "bn": "মেয়াদ / সময়কাল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la durée"
       },
       "quantité": {
         "lemma": "quantité",
         "en": "quantity / amount",
         "bn": "পরিমাণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la quantité"
       },
       "données": {
         "lemma": "donnée",
         "en": "data (gigabytes)",
         "bn": "মোবাইল ডেটা / ইন্টারনেট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la donnée"
       },
       "mon": {
         "lemma": "son",
@@ -6635,43 +8466,60 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "smartphone",
         "en": "smartphone",
         "bn": "স্মার্টফোন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le smartphone"
       },
       "le": {
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "vendeur": {
         "lemma": "vendeur",
         "en": "salesperson / clerk",
         "bn": "বিক্রেতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le vendeur"
       },
       "consulte": {
         "lemma": "consulter",
         "en": "checks / consults",
         "bn": "দেখে / পরামর্শ নেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "les": {
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "masculine"
       },
       "forfaits": {
         "lemma": "forfait",
         "en": "mobile plans",
         "bn": "মোবাইল প্যাকেজসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le forfait"
       },
       "disponibles": {
         "lemma": "disponible",
         "en": "available (plural)",
         "bn": "উপলব্ধ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "sur": {
         "lemma": "sur",
@@ -6683,13 +8531,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "écran",
         "en": "screen / display",
         "bn": "পর্দা / স্ক্রিন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'écran"
       },
       "tactile": {
         "lemma": "tactile",
         "en": "touch (screen)",
         "bn": "স্পর্শকাতর / টাচস্ক্রিন",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "nous": {
         "lemma": "nous",
@@ -6701,19 +8554,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "avoir",
         "en": "have (we have)",
         "bn": "আছে (আমাদের আছে)",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "formule": {
         "lemma": "formule",
         "en": "set deal / package",
         "bn": "প্যাকেজ / সেট মেনু",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la formule"
       },
       "idéale": {
         "lemma": "idéal",
         "en": "ideal (feminine)",
         "bn": "আদর্শ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "à": {
         "lemma": "à",
@@ -6725,13 +8585,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quinze",
         "en": "fifteen",
         "bn": "পনেরো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "euros": {
         "lemma": "euro",
         "en": "euros",
         "bn": "ইউরো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'euro"
       },
       "par": {
         "lemma": "par",
@@ -6743,67 +8608,95 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "mois",
         "en": "month / months",
         "bn": "মাস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mois"
       },
       "avez": {
         "lemma": "avoir",
         "en": "have (you have)",
         "bn": "আছে (আপনার আছে)",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
       },
       "appels": {
         "lemma": "appel",
         "en": "phone calls",
         "bn": "ফোন কল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'appel"
       },
       "illimités": {
         "lemma": "illimité",
         "en": "unlimited",
         "bn": "সীমাহীন / আনলিমিটেড",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "cinquante": {
         "lemma": "cinquante",
         "en": "fifty",
         "bn": "পঞ্চাশ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "gigaoctets": {
         "lemma": "gigaoctet",
         "en": "gigabytes (GB)",
         "bn": "গিগাবাইট (জিবি)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le gigaoctet"
       },
       "4g": {
         "lemma": "4G",
         "en": "4G mobile network",
         "bn": "৪জি মোবাইল নেটওয়ার্ক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la 4G"
       },
       "5g": {
         "lemma": "5G",
         "en": "5G mobile network",
         "bn": "৫জি মোবাইল নেটওয়ার্ক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la 5G"
       },
       "trouve": {
         "lemma": "trouver",
         "en": "finds",
         "bn": "পায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "cette": {
         "lemma": "ce",
         "en": "this (feminine)",
         "bn": "এই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "offre": {
         "lemma": "offre",
         "en": "offer / job offer",
         "bn": "অফার / চাকরির সুযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'offre"
       },
       "tout": {
         "lemma": "tout",
@@ -6815,145 +8708,204 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "faire",
         "en": "makes / does / fact",
         "bn": "করে / ঘটনা",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "adaptée": {
         "lemma": "adapter",
         "en": "adapted / suited",
         "bn": "উপযোগী / উপযুক্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "budget": {
         "lemma": "budget",
         "en": "budget",
         "bn": "বাজেট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le budget"
       },
       "g": {
         "lemma": "gigaoctet",
         "en": "gigabyte / G (4G, 5G)",
         "bn": "জিবি / জি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le gigaoctet"
       },
       "demande": {
         "lemma": "demande",
         "en": "request / application",
         "bn": "অনুরোধ / আবেদন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la demande"
       },
       "pièce": {
         "lemma": "pièce",
         "en": "coin / room",
         "bn": "কয়েন / মুদ্রা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pièce"
       },
       "identité": {
         "lemma": "identité",
         "en": "identity",
         "bn": "পরিচয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'identité"
       },
       "officielle": {
         "lemma": "officiel",
         "en": "official (feminine)",
         "bn": "দাপ্তরিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "présente": {
         "lemma": "présenter",
         "en": "presents / introduces",
         "bn": "উপস্থাপন করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "passeport": {
         "lemma": "passeport",
         "en": "passport",
         "bn": "পাসপোর্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le passeport"
       },
       "original": {
         "lemma": "original",
         "en": "original",
         "bn": "আসল / মূল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "quelques": {
         "lemma": "quelque",
         "en": "a few / some",
         "bn": "কয়েকটি / কিছু",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "minutes": {
         "lemma": "minute",
         "en": "minutes",
         "bn": "মিনিট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la minute"
       },
       "active": {
         "lemma": "activer",
         "en": "activates",
         "bn": "সক্রিয় করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "ligne": {
         "lemma": "ligne",
         "en": "line (metro / telephone / online)",
         "bn": "লাইন / সংযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ligne"
       },
       "insère": {
         "lemma": "insérer",
         "en": "inserts",
         "bn": "প্রবেশ করায় / ঢোকায়",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "puce": {
         "lemma": "puce",
         "en": "SIM chip / microchip",
         "bn": "সিম চিপ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la puce"
       },
       "nano-sim": {
         "lemma": "nano-SIM",
         "en": "nano-SIM card",
         "bn": "ন্যানো সিম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la nano-SIM"
       },
       "appareil": {
         "lemma": "appareil",
         "en": "device / appliance",
         "bn": "যন্ত্র / ডিভাইস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'appareil"
       },
       "compose": {
         "lemma": "composer",
         "en": "dials (a phone number)",
         "bn": "ডায়াল করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "frère": {
         "lemma": "frère",
         "en": "brother",
         "bn": "ভাই",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le frère"
       },
       "essayer": {
         "lemma": "essayer",
         "en": "to try / test",
         "bn": "চেষ্টা করা / পরীক্ষা করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "tonalité": {
         "lemma": "tonalité",
         "en": "dial tone / ringtone",
         "bn": "রিংটোন / ডায়াল টোন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la tonalité"
       },
       "sonne": {
         "lemma": "sonner",
         "en": "rings / sounds",
         "bn": "বেজে ওঠে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "immédiatement": {
         "lemma": "immédiatement",
@@ -6965,13 +8917,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "nano",
         "en": "nano (SIM)",
         "bn": "ন্যানো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "l": {
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       }
     },
     "quiz": [
@@ -7040,13 +8996,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "Tariq",
         "en": "Tariq (first name)",
         "bn": "তারিক (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Tariq"
       },
       "descend": {
         "lemma": "descendre",
         "en": "goes down",
         "bn": "নেমে যায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "lentement": {
         "lemma": "lentement",
@@ -7058,13 +9019,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "feminine"
       },
       "marches": {
         "lemma": "marche",
         "en": "steps / stairs",
         "bn": "সিঁড়ির ধাপ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la marche"
       },
       "de": {
         "lemma": "de",
@@ -7082,19 +9048,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "nouveau",
         "en": "new (before vowel)",
         "bn": "নতুন",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "immeuble": {
         "lemma": "immeuble",
         "en": "apartment building",
         "bn": "বিল্ডিং / বহুতল ভবন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'immeuble"
       },
       "résidentiel": {
         "lemma": "résidentiel",
         "en": "residential",
         "bn": "আবাসিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "pour": {
         "lemma": "pour",
@@ -7106,19 +9079,25 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "relever",
         "en": "to collect (mail)",
         "bn": "তুলে নেওয়া / সংগ্রহ করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "courrier": {
         "lemma": "courrier",
         "en": "mail / letters",
         "bn": "চিঠিপত্র / ডাক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le courrier"
       },
       "quotidien": {
         "lemma": "quotidien",
         "en": "daily",
         "bn": "দৈনন্দিন",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "dans": {
         "lemma": "dans",
@@ -7130,61 +9109,85 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "hall": {
         "lemma": "hall",
         "en": "entrance lobby / hall",
         "bn": "প্রবেশ লবি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le hall"
       },
       "entrée": {
         "lemma": "entrée",
         "en": "entrance / starter",
         "bn": "প্রবেশদ্বার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entrée"
       },
       "lumineux": {
         "lemma": "lumineux",
         "en": "bright / luminous",
         "bn": "উজ্জ্বল / আলোকময়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "un": {
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "monsieur": {
         "lemma": "monsieur",
         "en": "sir / gentleman",
         "bn": "জনাব / মহাশয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
       },
       "une": {
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "cinquantaine": {
         "lemma": "cinquantaine",
         "en": "about fifty years old",
         "bn": "পঞ্চাশোর্ধ্ব / প্রায় পঞ্চাশ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la cinquantaine"
       },
       "années": {
         "lemma": "année",
         "en": "years",
         "bn": "বছরগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'année"
       },
       "ouvre": {
         "lemma": "ouvrir",
         "en": "opens",
         "bn": "খোলে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "sa": {
         "lemma": "son",
@@ -7196,7 +9199,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "boîte",
         "en": "box",
         "bn": "বাক্স",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la boîte"
       },
       "aux": {
         "lemma": "à + les",
@@ -7208,7 +9214,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "lettre",
         "en": "letters / mail",
         "bn": "চিঠিপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la lettre"
       },
       "avec": {
         "lemma": "avec",
@@ -7220,13 +9229,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "petit",
         "en": "small (feminine)",
         "bn": "ছোট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "clé": {
         "lemma": "clé",
         "en": "key",
         "bn": "চাবি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la clé"
       },
       "d": {
         "lemma": "de",
@@ -7238,25 +9252,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "homme",
         "en": "man",
         "bn": "পুরুষ / মানুষ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'homme"
       },
       "entend": {
         "lemma": "entendre",
         "en": "hears",
         "bn": "শোনে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "des": {
         "lemma": "un",
         "en": "some / of the",
         "bn": "কিছু / গুলির",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "masculine"
       },
       "pas": {
         "lemma": "pas",
         "en": "step / footsteps / not",
         "bn": "পদক্ষেপ / পায়ের আওয়াজ / না",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le pas"
       },
       "se": {
         "lemma": "se",
@@ -7268,7 +9292,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "retourner",
         "en": "turns around / returns",
         "bn": "ঘোরে / ফেরে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "et": {
         "lemma": "et",
@@ -7280,7 +9306,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "sourire",
         "en": "smiles",
         "bn": "হাসে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "chaleureusement": {
         "lemma": "chaleureusement",
@@ -7310,13 +9338,16 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "devoir",
         "en": "must / have to (vous)",
         "bn": "আপনাকে অবশ্যই হবে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "être": {
         "lemma": "être",
         "en": "to be",
         "bn": "হওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "notre": {
         "lemma": "notre",
@@ -7328,31 +9359,43 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "nouveau",
         "en": "new (masculine)",
         "bn": "নতুন",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "voisin": {
         "lemma": "voisin",
         "en": "neighbour (masculine)",
         "bn": "প্রতিবেশী",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le voisin"
       },
       "du": {
         "lemma": "de + le",
         "en": "of the / from the",
         "bn": "দোকানের",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "troisième": {
         "lemma": "troisième",
         "en": "third",
         "bn": "তৃতীয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "étage": {
         "lemma": "étage",
         "en": "floor / storey",
         "bn": "তলা / ফ্লোর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'étage"
       },
       "est-ce": {
         "lemma": "est-ce que",
@@ -7364,31 +9407,42 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "être",
         "en": "be (subjunctive/imperative)",
         "bn": "হোন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "bienvenu": {
         "lemma": "bienvenu",
         "en": "welcome",
         "bn": "স্বাগত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "résidence": {
         "lemma": "résidence",
         "en": "residence / housing building",
         "bn": "আবাসন ভবন / বাসভবন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la résidence"
       },
       "calme": {
         "lemma": "calme",
         "en": "calm / quiet",
         "bn": "শান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "l": {
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "n": {
         "lemma": "ne",
@@ -7400,7 +9454,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "être",
         "en": "is",
         "bn": "হয় / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "ce": {
         "lemma": "ce",
@@ -7412,19 +9468,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "répondre",
         "en": "answers / replies",
         "bn": "উত্তর দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "politesse": {
         "lemma": "politesse",
         "en": "courtesy / politeness",
         "bn": "ভদ্রতা / শিষ্টাচার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la politesse"
       },
       "naturelle": {
         "lemma": "naturel",
         "en": "natural (feminine)",
         "bn": "স্বাভাবিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "oui": {
         "lemma": "oui",
@@ -7442,7 +9505,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "faire",
         "en": "makes / does / fact",
         "bn": "করে / ঘটনা",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "je": {
         "lemma": "je",
@@ -7454,25 +9519,32 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "appeler",
         "en": "calls / names",
         "bn": "ডাকে / নাম",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "viens": {
         "lemma": "venir",
         "en": "come / have just (vient de)",
         "bn": "আসি / এইমাত্র",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
       },
       "emménager": {
         "lemma": "emménager",
         "en": "to move in (housing)",
         "bn": "নতুন বাসায় ওঠা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "il": {
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "y": {
         "lemma": "y",
@@ -7484,31 +9556,43 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "avoir",
         "en": "has",
         "bn": "আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "trois": {
         "lemma": "trois",
         "en": "three",
         "bn": "তিন",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "jours": {
         "lemma": "jour",
         "en": "days",
         "bn": "দিনগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le jour"
       },
       "peine": {
         "lemma": "peine",
         "en": "scarcely / barely (à peine)",
         "bn": "মাত্র / সবেমাত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la peine"
       },
       "suis": {
         "lemma": "être",
         "en": "am (je suis)",
         "bn": "হই / আছি",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
       },
       "très": {
         "lemma": "très",
@@ -7520,13 +9604,16 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "heureux",
         "en": "happy / pleased",
         "bn": "খুশি / আনন্দিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "faire": {
         "lemma": "faire",
         "en": "to do / make",
         "bn": "করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "votre": {
         "lemma": "votre",
@@ -7538,31 +9625,42 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "connaissance",
         "en": "acquaintance / knowledge",
         "bn": "পরিচয় / জ্ঞান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la connaissance"
       },
       "lui": {
         "lemma": "lui",
         "en": "to him / her",
         "bn": "তাকে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "serre": {
         "lemma": "serrer",
         "en": "shakes (hand)",
         "bn": "হাতে হাত মেলায়",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "la": {
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "main": {
         "lemma": "main",
         "en": "hand",
         "bn": "হাত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la main"
       },
       "enchanté": {
         "lemma": "enchanté",
@@ -7580,13 +9678,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "Pierre",
         "en": "Pierre (first name)",
         "bn": "পিয়ের (ফরাসি নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Pierre"
       },
       "habite": {
         "lemma": "habiter",
         "en": "lives",
         "bn": "বাস করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
       },
       "juste": {
         "lemma": "juste",
@@ -7616,7 +9719,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "deuxième",
         "en": "second",
         "bn": "দ্বিতীয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "m": {
         "lemma": "me",
@@ -7640,7 +9745,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "donner",
         "en": "gives",
         "bn": "দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "alors": {
         "lemma": "alors",
@@ -7652,109 +9759,155 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quelque",
         "en": "a few / some",
         "bn": "কয়েকটি / কিছু",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "conseils": {
         "lemma": "conseil",
         "en": "advice / tips",
         "bn": "পরামর্শসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le conseil"
       },
       "pratiques": {
         "lemma": "pratique",
         "en": "practical (plural)",
         "bn": "ব্যবহারিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "précieux": {
         "lemma": "précieux",
         "en": "precious / valuable",
         "bn": "মূল্যবান",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "local": {
         "lemma": "local",
         "en": "local / storage room",
         "bn": "স্থানীয় / সাধারণ স্টোররুম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le local"
       },
       "vélos": {
         "lemma": "vélo",
         "en": "bicycles / bikes",
         "bn": "সাইকেলগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le vélo"
       },
       "poubelles": {
         "lemma": "poubelle",
         "en": "trash bins",
         "bn": "ময়লার পাত্রগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la poubelle"
       },
       "trouve": {
         "lemma": "trouver",
         "en": "finds",
         "bn": "পায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "sous-sol": {
         "lemma": "sous-sol",
         "en": "basement",
         "bn": "বেজমেন্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sous-sol"
       },
       "éboueurs": {
         "lemma": "éboueur",
         "en": "garbage collectors",
         "bn": "পরিচ্ছন্নতাকর্মী",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'éboueur"
       },
       "ramassent": {
         "lemma": "ramasser",
         "en": "collect (garbage)",
         "bn": "সংগ্রহ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "bac": {
         "lemma": "bac",
         "en": "recycling bin / container",
         "bn": "ময়লার বিন / পাত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bac"
       },
       "vert": {
         "lemma": "vert",
         "en": "green",
         "bn": "সবুজ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "mardi": {
         "lemma": "mardi",
         "en": "Tuesday",
         "bn": "মঙ্গলবার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mardi"
       },
       "jaune": {
         "lemma": "jaune",
         "en": "yellow",
         "bn": "হলুদ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "tri": {
         "lemma": "tri",
         "en": "sorting / recycling",
         "bn": "বাছাইকরণ / রিসাইক্লিং",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le tri"
       },
       "sélectif": {
         "lemma": "sélectif",
         "en": "selective (recycling)",
         "bn": "বাছাইকরণ (রিসাইক্লিং)",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "jeudi": {
         "lemma": "jeudi",
         "en": "Thursday",
         "bn": "বৃহস্পতিবার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le jeudi"
       },
       "si": {
         "lemma": "si",
@@ -7766,37 +9919,51 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "avoir",
         "en": "have (you have)",
         "bn": "আছে (আপনার আছে)",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
       },
       "besoin": {
         "lemma": "besoin",
         "en": "need",
         "bn": "প্রয়োজন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le besoin"
       },
       "outil": {
         "lemma": "outil",
         "en": "tool",
         "bn": "টুলস / হাতিয়ার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'outil"
       },
       "monter": {
         "lemma": "monter",
         "en": "to assemble / go up",
         "bn": "জোড়া লাগানো / ওঠা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "meuble": {
         "lemma": "meuble",
         "en": "piece of furniture",
         "bn": "আসবাবপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le meuble"
       },
       "hésitez": {
         "lemma": "hésiter",
         "en": "hesitate",
         "bn": "দ্বিধা করা",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "surtout": {
         "lemma": "surtout",
@@ -7808,7 +9975,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "frapper",
         "en": "to knock (on door)",
         "bn": "দরজায় কড়া নাড়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "chez": {
         "lemma": "chez",
@@ -7826,7 +9994,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "sol",
         "en": "ground / floor",
         "bn": "মেঝে / মাটি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sol"
       },
       "sincèrement": {
         "lemma": "sincèrement",
@@ -7838,7 +10009,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "toucher",
         "en": "touched / moved emotionally",
         "bn": "অভিভূত / আবেগাপ্লুত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "par": {
         "lemma": "par",
@@ -7850,19 +10023,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "ce",
         "en": "this (feminine)",
         "bn": "এই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "gentillesse": {
         "lemma": "gentillesse",
         "en": "kindness",
         "bn": "সদয়তা / ভদ্রতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la gentillesse"
       },
       "spontanée": {
         "lemma": "spontané",
         "en": "spontaneous",
         "bn": "স্বতঃস্ফূর্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "extrêmement": {
         "lemma": "extrêmement",
@@ -7874,7 +10054,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "aimable",
         "en": "kind / amiable",
         "bn": "দয়ালু / অমায়িক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "merci": {
         "lemma": "merci",
@@ -7886,97 +10068,132 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "mille",
         "en": "thousand (merci mille fois)",
         "bn": "হাজার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "fois": {
         "lemma": "fois",
         "en": "time / times (trois fois)",
         "bn": "বার (তিন বার)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fois"
       },
       "toutes": {
         "lemma": "tout",
         "en": "all (feminine plural)",
         "bn": "সবগুলো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "ces": {
         "lemma": "ce",
         "en": "these / those",
         "bn": "এইসব",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "explications": {
         "lemma": "explication",
         "en": "explanations",
         "bn": "ব্যাখ্যাসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'explication"
       },
       "claires": {
         "lemma": "clair",
         "en": "clear (plural)",
         "bn": "সুস্পষ্ট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "souhaite": {
         "lemma": "souhaiter",
         "en": "wishes / desires",
         "bn": "কামনা করে / চায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
       },
       "excellente": {
         "lemma": "excellent",
         "en": "excellent (feminine)",
         "bn": "চমৎকার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "journée": {
         "lemma": "journée",
         "en": "day (duration)",
         "bn": "দিন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la journée"
       },
       "remonte": {
         "lemma": "remonter",
         "en": "goes back up",
         "bn": "উপরে উঠে যায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "certitude": {
         "lemma": "certitude",
         "en": "certainty",
         "bn": "নিশ্চয়তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la certitude"
       },
       "avoir": {
         "lemma": "avoir",
         "en": "to have",
         "bn": "থাকা / পাওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "trouvé": {
         "lemma": "trouver",
         "en": "found",
         "bn": "পেয়েছে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "environnement": {
         "lemma": "environnement",
         "en": "environment / surroundings",
         "bn": "পরিবেশ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'environnement"
       },
       "paisible": {
         "lemma": "paisible",
         "en": "peaceful",
         "bn": "শান্তিপূর্ণ / নিরিবিলি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "accueillant": {
         "lemma": "accueillant",
         "en": "welcoming / friendly",
         "bn": "উষ্ণ অভ্যর্থনাকারী",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       }
     },
     "quiz": [
@@ -8051,25 +10268,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "plusieurs",
         "en": "several",
         "bn": "কয়েকটি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "semaines": {
         "lemma": "semaine",
         "en": "weeks",
         "bn": "সপ্তাহসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la semaine"
       },
       "samir": {
         "lemma": "Samir",
         "en": "Samir (first name)",
         "bn": "সমীর (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Samir"
       },
       "cherche": {
         "lemma": "chercher",
         "en": "searches / looks for",
         "bn": "খোঁজে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
       },
       "activement": {
         "lemma": "activement",
@@ -8081,13 +10308,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "studio": {
         "lemma": "studio",
         "en": "studio flat",
         "bn": "স্টুডিও অ্যাপার্টমেন্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le studio"
       },
       "à": {
         "lemma": "à",
@@ -8099,7 +10331,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "louer",
         "en": "to rent",
         "bn": "ভাড়া নেওয়া / ভাড়া দেওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "pour": {
         "lemma": "pour",
@@ -8117,7 +10350,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "rapprocher",
         "en": "to get closer to",
         "bn": "কাছে আসা / কাছাকাছি হওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "de": {
         "lemma": "de",
@@ -8135,55 +10369,77 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "France Travail",
         "en": "France Travail (national employment agency)",
         "bn": "ফ্রান্স ত্রাভাই (কর্মসংস্থান সংস্থা)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "France Travail"
       },
       "informaticien": {
         "lemma": "informaticien",
         "en": "IT professional / computer scientist",
         "bn": "কম্পিউটার বিশেষজ্ঞ / আইটি কর্মী",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'informaticien"
       },
       "tous": {
         "lemma": "tout",
         "en": "all",
         "bn": "সব",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "les": {
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "feminine"
       },
       "soirs": {
         "lemma": "soir",
         "en": "evenings",
         "bn": "সন্ধ্যাগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le soir"
       },
       "il": {
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "consulte": {
         "lemma": "consulter",
         "en": "checks / consults",
         "bn": "দেখে / পরামর্শ নেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "annonces": {
         "lemma": "annonce",
         "en": "listings / advertisements",
         "bn": "বিজ্ঞাপন / তালিকা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'annonce"
       },
       "immobilières": {
         "lemma": "immobilier",
         "en": "real estate (listings)",
         "bn": "আবাসন সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "en": {
         "lemma": "en",
@@ -8195,31 +10451,43 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "ligne",
         "en": "line (metro / telephone / online)",
         "bn": "লাইন / সংযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ligne"
       },
       "compare": {
         "lemma": "comparer",
         "en": "compares",
         "bn": "তুলনা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "prix": {
         "lemma": "prix",
         "en": "price",
         "bn": "দাম / মূল্য",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le prix"
       },
       "des": {
         "lemma": "un",
         "en": "some / of the",
         "bn": "কিছু / গুলির",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "feminine"
       },
       "loyers": {
         "lemma": "loyer",
         "en": "rents",
         "bn": "বাড়িভাড়াগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le loyer"
       },
       "et": {
         "lemma": "et",
@@ -8231,13 +10499,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "contacter",
         "en": "contacts",
         "bn": "যোগাযোগ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "propriétaires": {
         "lemma": "propriétaire",
         "en": "landlords / owners",
         "bn": "বাড়িওয়ালাগণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le propriétaire"
       },
       "hier": {
         "lemma": "hier",
@@ -8249,43 +10522,60 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "matin",
         "en": "morning",
         "bn": "সকাল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
       },
       "une": {
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "agence": {
         "lemma": "agence",
         "en": "agency / branch",
         "bn": "সংস্থা / এজেন্সি / শাখা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'agence"
       },
       "immobilière": {
         "lemma": "immobilier",
         "en": "real estate (agency)",
         "bn": "রিয়েল এস্টেট / আবাসন",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "du": {
         "lemma": "de + le",
         "en": "of the / from the",
         "bn": "দোকানের",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "quartier": {
         "lemma": "quartier",
         "en": "neighbourhood / district",
         "bn": "মহল্লা / এলাকা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le quartier"
       },
       "a": {
         "lemma": "avoir",
         "en": "has",
         "bn": "আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "finalement": {
         "lemma": "finalement",
@@ -8297,25 +10587,32 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "appeler",
         "en": "called (past participle)",
         "bn": "ডেকেছিল / কল করেছিল",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "lui": {
         "lemma": "lui",
         "en": "to him / her",
         "bn": "তাকে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "proposer": {
         "lemma": "proposer",
         "en": "to offer / propose",
         "bn": "প্রস্তাব দেওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "visite": {
         "lemma": "visite",
         "en": "visit / property viewing",
         "bn": "পরিদর্শন / দেখা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la visite"
       },
       "d": {
         "lemma": "de",
@@ -8327,25 +10624,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "cet": {
         "lemma": "ce",
         "en": "this (masculine vowel)",
         "bn": "এই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "après-midi": {
         "lemma": "après-midi",
         "en": "afternoon",
         "bn": "বিকাল / দুপুর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'après-midi"
       },
       "arrive": {
         "lemma": "arriver",
         "en": "arrives",
         "bn": "পৌঁছায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "devant": {
         "lemma": "devant",
@@ -8357,55 +10663,80 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "immeuble",
         "en": "apartment building",
         "bn": "বিল্ডিং / বহুতল ভবন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'immeuble"
       },
       "dix": {
         "lemma": "dix",
         "en": "ten",
         "bn": "দশ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "minutes": {
         "lemma": "minute",
         "en": "minutes",
         "bn": "মিনিট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la minute"
       },
       "avance": {
         "lemma": "avance",
         "en": "ahead / early",
         "bn": "আগে",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'avance"
       },
       "agent": {
         "lemma": "agent",
         "en": "officer / agent",
         "bn": "কর্মকর্তা / কর্মী",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'agent"
       },
       "immobilier": {
         "lemma": "immobilier",
         "en": "real estate agent",
         "bn": "রিয়েল এস্টেট এজেন্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'immobilier"
       },
       "monsieur": {
         "lemma": "monsieur",
         "en": "sir / gentleman",
         "bn": "জনাব / মহাশয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
       },
       "dupont": {
         "lemma": "Dupont",
         "en": "Dupont (surname)",
         "bn": "ডুপন্ট (পদবি)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Dupont"
       },
       "accueille": {
         "lemma": "accueillir",
         "en": "welcomes / receives",
         "bn": "স্বাগত জানায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "avec": {
         "lemma": "avec",
@@ -8417,19 +10748,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "poignée",
         "en": "handshake / handle",
         "bn": "করমর্দন / হাতল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la poignée"
       },
       "main": {
         "lemma": "main",
         "en": "hand",
         "bn": "হাত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la main"
       },
       "professionnelle": {
         "lemma": "professionnel",
         "en": "professional (feminine)",
         "bn": "পেশাদার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "ensemble": {
         "lemma": "ensemble",
@@ -8441,19 +10780,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "il",
         "en": "they (masculine)",
         "bn": "তারা",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "plural"
       },
       "prennent": {
         "lemma": "prendre",
         "en": "take (plural)",
         "bn": "নেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "ascenseur": {
         "lemma": "ascenseur",
         "en": "elevator / lift",
         "bn": "লিফট / এলিভেটর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ascenseur"
       },
       "jusqu'au": {
         "lemma": "jusque",
@@ -8465,67 +10811,92 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quatrième",
         "en": "fourth",
         "bn": "চতুর্থ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "étage": {
         "lemma": "étage",
         "en": "floor / storey",
         "bn": "তলা / ফ্লোর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'étage"
       },
       "découvrir": {
         "lemma": "découvrir",
         "en": "to discover / explore",
         "bn": "আবিষ্কার করা / দেখা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "le": {
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "logement": {
         "lemma": "logement",
         "en": "housing / accommodation",
         "bn": "বাসস্থান / থাকার ঘর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le logement"
       },
       "appartement": {
         "lemma": "appartement",
         "en": "apartment / flat",
         "bn": "অ্যাপার্টমেন্ট / ফ্ল্যাট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'appartement"
       },
       "est": {
         "lemma": "être",
         "en": "is",
         "bn": "হয় / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "meublé": {
         "lemma": "meublé",
         "en": "furnished (studio)",
         "bn": "আসবাবপত্র সজ্জিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "vingt-cinq": {
         "lemma": "vingt-cinq",
         "en": "twenty-five",
         "bn": "পঁচিশ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "mètres": {
         "lemma": "mètre",
         "en": "metres",
         "bn": "মিটার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le mètre"
       },
       "carrés": {
         "lemma": "carré",
         "en": "square (metres)",
         "bn": "বর্গ (মিটার)",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "très": {
         "lemma": "très",
@@ -8537,7 +10908,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "lumineux",
         "en": "bright / luminous",
         "bn": "উজ্জ্বল / আলোকময়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "bien": {
         "lemma": "bien",
@@ -8549,7 +10922,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "agencer",
         "en": "laid out / organized",
         "bn": "সাজানো / বিন্যস্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "après": {
         "lemma": "après",
@@ -8561,7 +10936,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "midi",
         "en": "midday / noon",
         "bn": "দুপুর / মধ্যাহ্ন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le midi"
       },
       "jusqu": {
         "lemma": "jusque",
@@ -8579,13 +10957,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "vingt",
         "en": "twenty",
         "bn": "বিশ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "cinq": {
         "lemma": "cinq",
         "en": "five",
         "bn": "পাঁচ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "pendant": {
         "lemma": "pendant",
@@ -8597,73 +10979,102 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "observe": {
         "lemma": "observer",
         "en": "observes / inspects",
         "bn": "পর্যবেক্ষণ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "chaque": {
         "lemma": "chaque",
         "en": "each / every",
         "bn": "প্রতিটি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "détail": {
         "lemma": "détail",
         "en": "detail",
         "bn": "খুঁটিনাটি / বিশদ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le détail"
       },
       "attention": {
         "lemma": "attention",
         "en": "attention / care",
         "bn": "মনোযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attention"
       },
       "pièce": {
         "lemma": "pièce",
         "en": "coin / room",
         "bn": "কয়েন / মুদ্রা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pièce"
       },
       "principale": {
         "lemma": "principal",
         "en": "main / principal",
         "bn": "প্রধান",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "possède": {
         "lemma": "posséder",
         "en": "features / owns",
         "bn": "রয়েছে / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "grande": {
         "lemma": "grand",
         "en": "large (feminine)",
         "bn": "বড়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "fenêtre": {
         "lemma": "fenêtre",
         "en": "window",
         "bn": "জানালা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fenêtre"
       },
       "double": {
         "lemma": "double",
         "en": "double (glazing)",
         "bn": "দ্বিগুণ / ডাবল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "vitrage": {
         "lemma": "vitrage",
         "en": "glazing (double vitrage)",
         "bn": "কাঁচের জানালা (ডাবল গ্লেজিং)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le vitrage"
       },
       "qui": {
         "lemma": "qui",
@@ -8675,7 +11086,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "donner",
         "en": "gives",
         "bn": "দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "sur": {
         "lemma": "sur",
@@ -8687,85 +11100,119 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "cour",
         "en": "courtyard",
         "bn": "আঙিনা / উঠান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la cour"
       },
       "intérieure": {
         "lemma": "intérieur",
         "en": "inner / interior (courtyard)",
         "bn": "অভ্যন্তরীণ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "calme": {
         "lemma": "calme",
         "en": "calm / quiet",
         "bn": "শান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "cuisine": {
         "lemma": "cuisine",
         "en": "kitchen",
         "bn": "রান্নাঘর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la cuisine"
       },
       "ouverte": {
         "lemma": "ouvert",
         "en": "open (feminine)",
         "bn": "খোলা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "équipée": {
         "lemma": "équiper",
         "en": "equipped (feminine)",
         "bn": "সুসজ্জিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "réfrigérateur": {
         "lemma": "réfrigérateur",
         "en": "refrigerator / fridge",
         "bn": "রেফ্রিজারেটর / ফ্রিজ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le réfrigérateur"
       },
       "plaques": {
         "lemma": "plaque",
         "en": "hobs / hotplates",
         "bn": "চুলা / কুকিং হব",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la plaque"
       },
       "cuisson": {
         "lemma": "cuisson",
         "en": "cooking",
         "bn": "রান্না",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la cuisson"
       },
       "électriques": {
         "lemma": "électrique",
         "en": "electric",
         "bn": "বৈদ্যুতিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "nombreux": {
         "lemma": "nombreux",
         "en": "numerous / many",
         "bn": "অনেক / প্রচুর",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "rangements": {
         "lemma": "rangement",
         "en": "storage cupboards",
         "bn": "আলমারি / স্টোরেজ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le rangement"
       },
       "pratiques": {
         "lemma": "pratique",
         "en": "practical (plural)",
         "bn": "ব্যবহারিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "vérifie": {
         "lemma": "vérifier",
         "en": "checks / verifies",
         "bn": "যাচাই করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "également": {
         "lemma": "également",
@@ -8777,13 +11224,19 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "pression",
         "en": "pressure (water)",
         "bn": "চাপ (পানির চাপ)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pression"
       },
       "eau": {
         "lemma": "eau",
         "en": "water",
         "bn": "পানি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'eau"
       },
       "dans": {
         "lemma": "dans",
@@ -8795,91 +11248,129 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "salle",
         "en": "room / hall",
         "bn": "কক্ষ / রুম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la salle"
       },
       "bain": {
         "lemma": "bain",
         "en": "bath",
         "bn": "গোসল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bain"
       },
       "fonctionnement": {
         "lemma": "fonctionnement",
         "en": "operation / functioning",
         "bn": "কার্যক্ষমতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le fonctionnement"
       },
       "radiateurs": {
         "lemma": "radiateur",
         "en": "radiators",
         "bn": "হিটারগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le radiateur"
       },
       "explique": {
         "lemma": "expliquer",
         "en": "explains",
         "bn": "ব্যাখ্যা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "conditions": {
         "lemma": "condition",
         "en": "terms / conditions",
         "bn": "শর্তাবলী / অবস্থা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la condition"
       },
       "financières": {
         "lemma": "financier",
         "en": "financial (plural)",
         "bn": "আর্থিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "loyer": {
         "lemma": "loyer",
         "en": "rent (monthly)",
         "bn": "মাসিক বাড়িভাড়া",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le loyer"
       },
       "mensuel": {
         "lemma": "mensuel",
         "en": "monthly",
         "bn": "মাসিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "six": {
         "lemma": "six",
         "en": "six",
         "bn": "ছয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "cent": {
         "lemma": "cent",
         "en": "hundred",
         "bn": "একশত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "cinquante": {
         "lemma": "cinquante",
         "en": "fifty",
         "bn": "পঞ্চাশ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "euros": {
         "lemma": "euro",
         "en": "euros",
         "bn": "ইউরো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'euro"
       },
       "charges": {
         "lemma": "charge",
         "en": "utility charges / maintenance fees",
         "bn": "ইউটিলিটি চার্জ / সার্ভিস চার্জ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la charge"
       },
       "comprises": {
         "lemma": "comprendre",
         "en": "included (charges comprises)",
         "bn": "অন্তর্ভুক্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "cela": {
         "lemma": "cela",
@@ -8891,37 +11382,52 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "inclure",
         "en": "includes",
         "bn": "অন্তর্ভুক্ত করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "chauffage": {
         "lemma": "chauffage",
         "en": "heating",
         "bn": "হিটিং ব্যবস্থা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le chauffage"
       },
       "collectif": {
         "lemma": "collectif",
         "en": "collective / communal",
         "bn": "সম্মিলিত / কেন্দ্রীয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "entretien": {
         "lemma": "entretien",
         "en": "interview / maintenance",
         "bn": "ইন্টারভিউ / রক্ষণাবেক্ষণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entretien"
       },
       "parties": {
         "lemma": "partie",
         "en": "parts / common areas",
         "bn": "অংশসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la partie"
       },
       "communes": {
         "lemma": "commun",
         "en": "shared / common (parts)",
         "bn": "সাধারণ / সবার ব্যবহার্য",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "si": {
         "lemma": "si",
@@ -8945,37 +11451,50 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "intéresser",
         "en": "interests",
         "bn": "আগ্রহী করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "devez": {
         "lemma": "devoir",
         "en": "must / have to (vous)",
         "bn": "আপনাকে অবশ্যই হবে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "déposer": {
         "lemma": "déposer",
         "en": "to submit / lodge (file)",
         "bn": "জমা দেওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "dossier": {
         "lemma": "dossier",
         "en": "application file / folder",
         "bn": "ফাইল / আবেদনপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le dossier"
       },
       "location": {
         "lemma": "location",
         "en": "rental",
         "bn": "ভাড়া",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la location"
       },
       "complet": {
         "lemma": "complet",
         "en": "complete / full",
         "bn": "সম্পূর্ণ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "plus": {
         "lemma": "plus",
@@ -8993,7 +11512,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "possible",
         "en": "possible",
         "bn": "সম্ভব",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "déjà": {
         "lemma": "déjà",
@@ -9005,7 +11526,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "préparer",
         "en": "prepared",
         "bn": "প্রস্তুত করেছে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "ses": {
         "lemma": "son",
@@ -9017,19 +11539,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "justificatif",
         "en": "supporting documents",
         "bn": "প্রমাণপত্রসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le justificatif"
       },
       "pochette": {
         "lemma": "pochette",
         "en": "folder / wallet file",
         "bn": "ফাইল ফোল্ডার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pochette"
       },
       "soignée": {
         "lemma": "soigner",
         "en": "neat / tidy (folder)",
         "bn": "পরিপাটি / যত্নসহকারে তৈরি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "sa": {
         "lemma": "son",
@@ -9041,91 +11571,133 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "identité",
         "en": "identity",
         "bn": "পরিচয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'identité"
       },
       "cours": {
         "lemma": "cours",
         "en": "class / course / in progress",
         "bn": "ক্লাস / কোর্স / চলমান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cours"
       },
       "validité": {
         "lemma": "validité",
         "en": "validity",
         "bn": "বৈধতা / মেয়াদ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la validité"
       },
       "contrat": {
         "lemma": "contrat",
         "en": "contract / agreement",
         "bn": "চুক্তিপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le contrat"
       },
       "entreprise": {
         "lemma": "entreprise",
         "en": "company / enterprise",
         "bn": "প্রতিষ্ঠান / কোম্পানি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entreprise"
       },
       "informatique": {
         "lemma": "informatique",
         "en": "IT / computing",
         "bn": "আইটি / কম্পিউটার বিজ্ঞান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'informatique"
       },
       "trois": {
         "lemma": "trois",
         "en": "three",
         "bn": "তিন",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "derniers": {
         "lemma": "dernier",
         "en": "last / recent (plural)",
         "bn": "শেষ / সাম্প্রতিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "bulletins": {
         "lemma": "bulletin",
         "en": "pay slips / report cards",
         "bn": "বেতন স্লিপ / বিবরণী",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le bulletin"
       },
       "salaire": {
         "lemma": "salaire",
         "en": "salary / wages",
         "bn": "বেতন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le salaire"
       },
       "attestation": {
         "lemma": "attestation",
         "en": "certificate / formal proof",
         "bn": "প্রত্যয়নপত্র / সনদ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attestation"
       },
       "garant": {
         "lemma": "garant",
         "en": "rental guarantor",
         "bn": "জামিনদার / গ্যারান্টর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le garant"
       },
       "remet": {
         "lemma": "remettre",
         "en": "hands over / gives",
         "bn": "হস্তান্তর করে / দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "copies": {
         "lemma": "copie",
         "en": "photocopies / copies",
         "bn": "ফটোকপি / অনুলিপি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la copie"
       },
       "conseiller": {
         "lemma": "conseiller",
         "en": "advisor / counselor",
         "bn": "পরামর্শক / কর্মকর্তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le conseiller"
       },
       "mon": {
         "lemma": "son",
@@ -9137,13 +11709,16 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "prêt",
         "en": "ready / loan",
         "bn": "প্রস্তুত / ঋণ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "espère": {
         "lemma": "espérer",
         "en": "hopes",
         "bn": "আশা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "vraiment": {
         "lemma": "vraiment",
@@ -9167,43 +11742,58 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "candidature",
         "en": "application / candidacy",
         "bn": "আবেদন / প্রার্থিতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la candidature"
       },
       "sera": {
         "lemma": "être",
         "en": "will be",
         "bn": "হবে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "retenue": {
         "lemma": "retenir",
         "en": "accepted / selected (candidacy)",
         "bn": "মনোনীত / গৃহীত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "félicite": {
         "lemma": "féliciter",
         "en": "compliments / congratulates",
         "bn": "প্রশংসা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "sérieux": {
         "lemma": "sérieux",
         "en": "seriousness / reliability",
         "bn": "দায়িত্বশীলতা / আন্তরিকতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sérieux"
       },
       "promet": {
         "lemma": "promettre",
         "en": "promises",
         "bn": "প্রতিশ্রুতি দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "répondre": {
         "lemma": "répondre",
         "en": "to answer / reply",
         "bn": "উত্তর দেওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "sous": {
         "lemma": "sous",
@@ -9215,13 +11805,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quarante-huit",
         "en": "forty-eight",
         "bn": "আটচল্লিশ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "heures": {
         "lemma": "heure",
         "en": "hours / o'clock",
         "bn": "ঘণ্টা / টা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'heure"
       },
       "j": {
         "lemma": "je",
@@ -9233,13 +11828,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quarante",
         "en": "forty",
         "bn": "চল্লিশ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "huit": {
         "lemma": "huit",
         "en": "eight",
         "bn": "আট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       }
     },
     "quiz": [
@@ -9314,13 +11913,16 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "avoir",
         "en": "to have",
         "bn": "থাকা / পাওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "signé": {
         "lemma": "signer",
         "en": "signed",
         "bn": "স্বাক্ষর করেছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "son": {
         "lemma": "son",
@@ -9332,19 +11934,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "premier",
         "en": "first",
         "bn": "প্রথম",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "contrat": {
         "lemma": "contrat",
         "en": "contract / agreement",
         "bn": "চুক্তিপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le contrat"
       },
       "professionnel": {
         "lemma": "professionnel",
         "en": "professional",
         "bn": "পেশাদার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "en": {
         "lemma": "en",
@@ -9356,19 +11965,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "France",
         "en": "France",
         "bn": "ফ্রান্স",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la France"
       },
       "kabir": {
         "lemma": "Kabir",
         "en": "Kabir (first name)",
         "bn": "কবীর (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Kabir"
       },
       "doit": {
         "lemma": "devoir",
         "en": "must / has to",
         "bn": "হবে / বাধ্য",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "impérativement": {
         "lemma": "impérativement",
@@ -9380,25 +11997,33 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "ouvrir",
         "en": "to open",
         "bn": "খোলা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "un": {
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "compte": {
         "lemma": "compte",
         "en": "bank account / count",
         "bn": "অ্যাকাউন্ট / হিসাব",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le compte"
       },
       "bancaire": {
         "lemma": "bancaire",
         "en": "banking / bank-related",
         "bn": "ব্যাংক সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "pour": {
         "lemma": "pour",
@@ -9410,13 +12035,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "percevoir",
         "en": "to receive / collect (salary)",
         "bn": "গ্রহণ করা (বেতন)",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "salaire": {
         "lemma": "salaire",
         "en": "salary / wages",
         "bn": "বেতন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le salaire"
       },
       "et": {
         "lemma": "et",
@@ -9428,7 +12057,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "régler",
         "en": "to settle / pay / adjust",
         "bn": "পরিশোধ করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "ses": {
         "lemma": "son",
@@ -9440,49 +12070,67 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "dépense",
         "en": "expenses",
         "bn": "খরচসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la dépense"
       },
       "du": {
         "lemma": "de + le",
         "en": "of the / from the",
         "bn": "দোকানের",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "quotidien": {
         "lemma": "quotidien",
         "en": "daily",
         "bn": "দৈনন্দিন",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "il": {
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "a": {
         "lemma": "avoir",
         "en": "has",
         "bn": "আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "pris": {
         "lemma": "prendre",
         "en": "taken / scheduled",
         "bn": "নিয়েছে / করেছে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "rendez-vous": {
         "lemma": "rendez-vous",
         "en": "appointment / meeting",
         "bn": "সাক্ষাৎ / অ্যাপয়েন্টমেন্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
       },
       "ligne": {
         "lemma": "ligne",
         "en": "line (metro / telephone / online)",
         "bn": "লাইন / সংযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ligne"
       },
       "sur": {
         "lemma": "sur",
@@ -9494,37 +12142,52 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "portail": {
         "lemma": "portail",
         "en": "web portal / gate",
         "bn": "ওয়েব পোর্টাল / গেট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le portail"
       },
       "internet": {
         "lemma": "internet",
         "en": "internet",
         "bn": "ইন্টারনেট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'internet"
       },
       "une": {
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "grande": {
         "lemma": "grand",
         "en": "large (feminine)",
         "bn": "বড়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "banque": {
         "lemma": "banque",
         "en": "bank",
         "bn": "ব্যাংক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la banque"
       },
       "de": {
         "lemma": "de",
@@ -9536,13 +12199,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "détail",
         "en": "detail",
         "bn": "খুঁটিনাটি / বিশদ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le détail"
       },
       "située": {
         "lemma": "situer",
         "en": "located / situated",
         "bn": "অবস্থিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "à": {
         "lemma": "à",
@@ -9554,13 +12222,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "pas": {
         "lemma": "pas",
         "en": "step / footsteps / not",
         "bn": "পদক্ষেপ / পায়ের আওয়াজ / না",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pas"
       },
       "chez": {
         "lemma": "chez",
@@ -9572,13 +12245,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "lui",
         "en": "to him / her",
         "bn": "তাকে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "rendez": {
         "lemma": "rendre",
         "en": "return / appointment (rendez-vous)",
         "bn": "সাক্ষাৎ / ফেরত দেওয়া",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
       },
       "vous": {
         "lemma": "vous",
@@ -9596,13 +12274,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "matin",
         "en": "morning",
         "bn": "সকাল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
       },
       "convenu": {
         "lemma": "convenir",
         "en": "agreed / scheduled (time)",
         "bn": "নির্ধারিত / সম্মত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "se": {
         "lemma": "se",
@@ -9614,61 +12297,87 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "présenter",
         "en": "presents / introduces",
         "bn": "উপস্থাপন করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "agence": {
         "lemma": "agence",
         "en": "agency / branch",
         "bn": "সংস্থা / এজেন্সি / শাখা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'agence"
       },
       "heure": {
         "lemma": "heure",
         "en": "hour / time",
         "bn": "ঘণ্টা / সময়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'heure"
       },
       "exacte": {
         "lemma": "exact",
         "en": "exact (feminine)",
         "bn": "সঠিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "la": {
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "conseillère": {
         "lemma": "conseiller",
         "en": "advisor (female)",
         "bn": "পরামর্শক (মহিলা)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le conseiller"
       },
       "clientèle": {
         "lemma": "clientèle",
         "en": "clientele / customers",
         "bn": "গ্রাহকবৃন্দ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la clientèle"
       },
       "madame": {
         "lemma": "madame",
         "en": "madam / ma'am",
         "bn": "ম্যাডাম / বেগম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "madame"
       },
       "martin": {
         "lemma": "Martin",
         "en": "Martin (surname)",
         "bn": "মার্টিন (পদবি)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Martin"
       },
       "invite": {
         "lemma": "inviter",
         "en": "invites",
         "bn": "আমন্ত্রণ জানায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "chaleureusement": {
         "lemma": "chaleureusement",
@@ -9680,7 +12389,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "entrer",
         "en": "to enter / come in",
         "bn": "প্রবেশ করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "dans": {
         "lemma": "dans",
@@ -9692,43 +12402,59 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "bureau",
         "en": "office / desk",
         "bn": "অফিস / পড়ার টেবিল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bureau"
       },
       "vitré": {
         "lemma": "vitré",
         "en": "glass (counter)",
         "bn": "কাঁচের",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "assoit": {
         "lemma": "asseoir",
         "en": "sits",
         "bn": "বসে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "face": {
         "lemma": "face",
         "en": "in front of / across",
         "bn": "মুখোমুখি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la face"
       },
       "elle": {
         "lemma": "elle",
         "en": "she",
         "bn": "সে (মহিলা)",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "feminine",
+        "number": "singular"
       },
       "explique": {
         "lemma": "expliquer",
         "en": "explains",
         "bn": "ব্যাখ্যা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "objet": {
         "lemma": "objet",
         "en": "object / purpose",
         "bn": "উদ্দেশ্য / বিষয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'objet"
       },
       "sa": {
         "lemma": "son",
@@ -9740,25 +12466,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "visite",
         "en": "visit / property viewing",
         "bn": "পরিদর্শন / দেখা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la visite"
       },
       "souhaite": {
         "lemma": "souhaiter",
         "en": "wishes / desires",
         "bn": "কামনা করে / চায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
       },
       "dépôt": {
         "lemma": "dépôt",
         "en": "deposit (account)",
         "bn": "আমানত / সঞ্চয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le dépôt"
       },
       "standard": {
         "lemma": "standard",
         "en": "standard",
         "bn": "মানসম্মত / সাধারণ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "avec": {
         "lemma": "avec",
@@ -9770,31 +12506,43 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "masculine"
       },
       "services": {
         "lemma": "service",
         "en": "services",
         "bn": "সেবাসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le service"
       },
       "bancaires": {
         "lemma": "bancaire",
         "en": "banking (plural)",
         "bn": "ব্যাংক সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "base": {
         "lemma": "base",
         "en": "base / basis / foundation",
         "bn": "ভিত্তি / মৌলিক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la base"
       },
       "l": {
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "s": {
         "lemma": "se",
@@ -9806,31 +12554,43 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "examiner",
         "en": "examines / reviews",
         "bn": "পরীক্ষা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "soin": {
         "lemma": "soin",
         "en": "care / diligence",
         "bn": "যত্ন / মনোযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le soin"
       },
       "pièces": {
         "lemma": "pièce",
         "en": "documents / coins / rooms",
         "bn": "নথিপত্র / মুদ্রা / কক্ষ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la pièce"
       },
       "justificatives": {
         "lemma": "justificatif",
         "en": "supporting (plural)",
         "bn": "প্রমাণপত্রমূলক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "apportées": {
         "lemma": "apporter",
         "en": "brought (feminine plural)",
         "bn": "আনা / নিয়ে আসা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "par": {
         "lemma": "par",
@@ -9842,73 +12602,103 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "contrôler",
         "en": "checks / inspects",
         "bn": "পরীক্ষা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "passeport": {
         "lemma": "passeport",
         "en": "passport",
         "bn": "পাসপোর্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le passeport"
       },
       "original": {
         "lemma": "original",
         "en": "original",
         "bn": "আসল / মূল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "visa": {
         "lemma": "visa",
         "en": "visa / entry permit",
         "bn": "ভিসা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le visa"
       },
       "cours": {
         "lemma": "cours",
         "en": "class / course / in progress",
         "bn": "ক্লাস / কোর্স / চলমান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cours"
       },
       "validité": {
         "lemma": "validité",
         "en": "validity",
         "bn": "বৈধতা / মেয়াদ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la validité"
       },
       "justificatif": {
         "lemma": "justificatif",
         "en": "supporting document / proof",
         "bn": "প্রমাণপত্র / প্রত্যয়ন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le justificatif"
       },
       "domicile": {
         "lemma": "domicile",
         "en": "home / residence",
         "bn": "বাসস্থান / ঠিকানা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le domicile"
       },
       "récent": {
         "lemma": "récent",
         "en": "recent",
         "bn": "সাম্প্রতিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "attestant": {
         "lemma": "attester",
         "en": "attesting / certifying",
         "bn": "প্রত্যয়নকারী / প্রমাণকারী",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "present participle"
       },
       "adresse": {
         "lemma": "adresse",
         "en": "address",
         "bn": "ঠিকানা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'adresse"
       },
       "postale": {
         "lemma": "postal",
         "en": "postal",
         "bn": "ডাক সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "ainsi": {
         "lemma": "ainsi",
@@ -9926,13 +12716,19 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "attestation",
         "en": "certificate / formal proof",
         "bn": "প্রত্যয়নপত্র / সনদ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attestation"
       },
       "embauche": {
         "lemma": "embauche",
         "en": "hiring / employment",
         "bn": "চাকরি নিয়োগ / নিয়োগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'embauche"
       },
       "tout": {
         "lemma": "tout",
@@ -9944,7 +12740,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "être",
         "en": "is",
         "bn": "হয় / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "parfaitement": {
         "lemma": "parfaitement",
@@ -9956,13 +12754,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "ordre",
         "en": "order / in order",
         "bn": "ক্রম / শৃঙ্খলা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ordre"
       },
       "conforme": {
         "lemma": "conforme",
         "en": "compliant / conforming",
         "bn": "যথাযথ / মানসম্মত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "aux": {
         "lemma": "à + les",
@@ -9974,25 +12777,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "exigence",
         "en": "requirements",
         "bn": "শর্তাবলী / প্রয়োজনীয়তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'exigence"
       },
       "réglementaires": {
         "lemma": "réglementaire",
         "en": "regulatory / legal",
         "bn": "আইনসম্মত / নিয়ন্ত্রণমূলক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "différentes": {
         "lemma": "différent",
         "en": "different (plural)",
         "bn": "বিভিন্ন / নানা ধরনের",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "options": {
         "lemma": "option",
         "en": "options",
         "bn": "বিকল্পসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'option"
       },
       "nous": {
         "lemma": "nous",
@@ -10004,49 +12817,68 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "proposer",
         "en": "offer (nous)",
         "bn": "অফার করি / দিই",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "courant": {
         "lemma": "courant",
         "en": "current (account) / everyday",
         "bn": "চলতি (হিসাব) / সাধারণ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "carte": {
         "lemma": "carte",
         "en": "card / menu",
         "bn": "কার্ড / মেনু",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carte"
       },
       "internationale": {
         "lemma": "international",
         "en": "international (feminine)",
         "bn": "আন্তর্জাতিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "débit": {
         "lemma": "débit",
         "en": "debit (immediate)",
         "bn": "ডেবিট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le débit"
       },
       "immédiat": {
         "lemma": "immédiat",
         "en": "immediate",
         "bn": "তাৎক্ষণিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "accès": {
         "lemma": "accès",
         "en": "access / entrance",
         "bn": "প্রবেশাধিকার / অ্যাক্সেস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'accès"
       },
       "illimité": {
         "lemma": "illimité",
         "en": "unlimited",
         "bn": "সীমাহীন / আনলিমিটেড",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "notre": {
         "lemma": "notre",
@@ -10058,31 +12890,41 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "application",
         "en": "app / application",
         "bn": "অ্যাপ্লিকেশন / অ্যাপ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'application"
       },
       "mobile": {
         "lemma": "mobile",
         "en": "mobile (phone/network)",
         "bn": "মোবাইল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "sécurisée": {
         "lemma": "sécuriser",
         "en": "secured / secure (feminine)",
         "bn": "সুরক্ষিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "pourrez": {
         "lemma": "pouvoir",
         "en": "will be able to (vous)",
         "bn": "পারবেন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "future"
       },
       "suivre": {
         "lemma": "suivre",
         "en": "to follow / track",
         "bn": "অনুসরণ করা / পর্যবেক্ষণ",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "vos": {
         "lemma": "votre",
@@ -10094,19 +12936,25 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "temps",
         "en": "time / weather / real-time",
         "bn": "সময় / আবহাওয়া",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le temps"
       },
       "réel": {
         "lemma": "réel",
         "en": "real / live",
         "bn": "বাস্তব",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "bloquer": {
         "lemma": "bloquer",
         "en": "to block / freeze (card)",
         "bn": "ব্লক করা / সাময়িক বন্ধ করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "temporairement": {
         "lemma": "temporairement",
@@ -10130,31 +12978,41 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "nécessaire",
         "en": "necessary",
         "bn": "প্রয়োজনীয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "effectuer": {
         "lemma": "effectuer",
         "en": "to carry out / make (transfer)",
         "bn": "সম্পন্ন করা / পাঠানো",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "des": {
         "lemma": "un",
         "en": "some / of the",
         "bn": "কিছু / গুলির",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "feminine"
       },
       "virements": {
         "lemma": "virement",
         "en": "bank transfers",
         "bn": "ব্যাংক ট্রান্সফারসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le virement"
       },
       "instantanés": {
         "lemma": "instantané",
         "en": "instant (transfers)",
         "bn": "তাৎক্ষণিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "gratuitement": {
         "lemma": "gratuitement",
@@ -10166,31 +13024,42 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "valider",
         "en": "validates / valid",
         "bn": "অনুমোদন করে / বৈধ",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "cette": {
         "lemma": "ce",
         "en": "this (feminine)",
         "bn": "এই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "formule": {
         "lemma": "formule",
         "en": "set deal / package",
         "bn": "প্যাকেজ / সেট মেনু",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la formule"
       },
       "moderne": {
         "lemma": "moderne",
         "en": "modern",
         "bn": "আধুনিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "pratique": {
         "lemma": "pratique",
         "en": "practical / practice",
         "bn": "বাস্তবমুখী / ব্যবহারিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "électroniquement": {
         "lemma": "électroniquement",
@@ -10202,37 +13071,52 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "convention",
         "en": "agreement / convention",
         "bn": "চুক্তি / সনদ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la convention"
       },
       "tablette": {
         "lemma": "tablette",
         "en": "tablet computer",
         "bn": "ট্যাবলেট কম্পিউটার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la tablette"
       },
       "tactile": {
         "lemma": "tactile",
         "en": "touch (screen)",
         "bn": "স্পর্শকাতর / টাচস্ক্রিন",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "imprime": {
         "lemma": "imprimer",
         "en": "prints",
         "bn": "প্রিন্ট করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "document": {
         "lemma": "document",
         "en": "document",
         "bn": "নথি / দলিল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le document"
       },
       "essentiel": {
         "lemma": "essentiel",
         "en": "essential / vital",
         "bn": "অত্যাবশ্যকীয় / মূল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "voici": {
         "lemma": "voici",
@@ -10244,13 +13128,19 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "relevé",
         "en": "statement (RIB / bank / grades)",
         "bn": "বিবরণী / স্টেটমেন্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le relevé"
       },
       "identité": {
         "lemma": "identité",
         "en": "identity",
         "bn": "পরিচয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'identité"
       },
       "on": {
         "lemma": "on",
@@ -10262,7 +13152,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "appeler",
         "en": "calls / names",
         "bn": "ডাকে / নাম",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "couramment": {
         "lemma": "couramment",
@@ -10275,19 +13167,25 @@ export const INITIAL_STORIES: Story[] = [
         "en": "bank account details statement",
         "bn": "আরআইবি (ব্যাংক বিবরণী)",
         "pos": "noun",
-        "ttsText": "Relevé d'identité bancaire"
+        "ttsText": "Relevé d'identité bancaire",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le RIB"
       },
       "devez": {
         "lemma": "devoir",
         "en": "must / have to (vous)",
         "bn": "আপনাকে অবশ্যই হবে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "transmettre": {
         "lemma": "transmettre",
         "en": "to transmit / hand over",
         "bn": "জমা দেওয়া / পাঠানো",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "ce": {
         "lemma": "ce",
@@ -10299,67 +13197,95 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "employeur",
         "en": "employer",
         "bn": "নিয়োগকর্তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'employeur"
       },
       "versement": {
         "lemma": "versement",
         "en": "payment / deposit (wages)",
         "bn": "টাকা জমা / বেতন প্রদান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le versement"
       },
       "automatique": {
         "lemma": "automatique",
         "en": "automatic",
         "bn": "স্বয়ংক্রিয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "fin": {
         "lemma": "fin",
         "en": "end",
         "bn": "শেষ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fin"
       },
       "mois": {
         "lemma": "mois",
         "en": "month / months",
         "bn": "মাস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mois"
       },
       "physique": {
         "lemma": "physique",
         "en": "physical (card)",
         "bn": "বাস্তব / দৃশ্যমান কার্ড",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "code": {
         "lemma": "code",
         "en": "PIN code / rule",
         "bn": "কোড / পিন নম্বর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le code"
       },
       "confidentiel": {
         "lemma": "confidentiel",
         "en": "confidential",
         "bn": "গোপনীয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "arriveront": {
         "lemma": "arriver",
         "en": "will arrive",
         "bn": "পৌঁছাবে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "courrier": {
         "lemma": "courrier",
         "en": "mail / letters",
         "bn": "চিঠিপত্র / ডাক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le courrier"
       },
       "sécurisé": {
         "lemma": "sécuriser",
         "en": "secure",
         "bn": "সুরক্ষিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "ici": {
         "lemma": "ici",
@@ -10371,37 +13297,52 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "semaine",
         "en": "week",
         "bn": "সপ্তাহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la semaine"
       },
       "repart": {
         "lemma": "repartir",
         "en": "leaves / goes away",
         "bn": "প্রস্থান করে / চলে যায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "ravi": {
         "lemma": "ravi",
         "en": "delighted / thrilled",
         "bn": "আনন্দিত / সন্তুষ্ট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "serein": {
         "lemma": "serein",
         "en": "serene / confident",
         "bn": "নিশ্চিন্ত / প্রশান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "suite": {
         "lemma": "suite",
         "en": "following / next steps",
         "bn": "পরবর্তী ধাপ / ধারাবাহিকতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la suite"
       },
       "démarches": {
         "lemma": "démarche",
         "en": "procedures / steps",
         "bn": "প্রশাসনিক পদক্ষেপসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la démarche"
       },
       "qu": {
         "lemma": "que",
@@ -10482,25 +13423,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "être",
         "en": "is",
         "bn": "হয় / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "un": {
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "grand": {
         "lemma": "grand",
         "en": "large / big",
         "bn": "বড়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "jour": {
         "lemma": "jour",
         "en": "day",
         "bn": "দিন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le jour"
       },
       "pour": {
         "lemma": "pour",
@@ -10512,7 +13462,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "Rahim",
         "en": "Rahim (first name)",
         "bn": "রহিম (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Rahim"
       },
       "après": {
         "lemma": "après",
@@ -10524,13 +13477,15 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "avoir",
         "en": "to have",
         "bn": "থাকা / পাওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "répondu": {
         "lemma": "répondre",
         "en": "answered / applied",
         "bn": "উত্তর দিয়েছে / আবেদন করেছে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "à": {
         "lemma": "à",
@@ -10542,19 +13497,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "offre": {
         "lemma": "offre",
         "en": "offer / job offer",
         "bn": "অফার / চাকরির সুযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'offre"
       },
       "emploi": {
         "lemma": "emploi",
         "en": "job / employment",
         "bn": "চাকরি / কর্মসংস্থান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'emploi"
       },
       "sur": {
         "lemma": "sur",
@@ -10566,49 +13529,67 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "site",
         "en": "website / site",
         "bn": "ওয়েবসাইট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le site"
       },
       "spécialisé": {
         "lemma": "spécialiser",
         "en": "specialized",
         "bn": "বিশেষায়িত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "il": {
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "a": {
         "lemma": "avoir",
         "en": "has",
         "bn": "আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "été": {
         "lemma": "être",
         "en": "been (past participle) / summer",
         "bn": "হয়েছে / গ্রীষ্ম",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "convoqué": {
         "lemma": "convoquer",
         "en": "summoned / invited",
         "bn": "আমন্ত্রিত / তলব করা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "entretien": {
         "lemma": "entretien",
         "en": "interview / maintenance",
         "bn": "ইন্টারভিউ / রক্ষণাবেক্ষণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entretien"
       },
       "embauche": {
         "lemma": "embauche",
         "en": "hiring / employment",
         "bn": "চাকরি নিয়োগ / নিয়োগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'embauche"
       },
       "au": {
         "lemma": "à + le",
@@ -10620,13 +13601,19 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "siège",
         "en": "headquarters / seat",
         "bn": "প্রধান কার্যালয় / হেডকোয়ার্টার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le siège"
       },
       "entreprise": {
         "lemma": "entreprise",
         "en": "company / enterprise",
         "bn": "প্রতিষ্ঠান / কোম্পানি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entreprise"
       },
       "de": {
         "lemma": "de",
@@ -10638,55 +13625,78 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "service",
         "en": "services",
         "bn": "সেবাসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le service"
       },
       "numériques": {
         "lemma": "numérique",
         "en": "digital (services)",
         "bn": "ডিজিটাল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "paris": {
         "lemma": "Paris",
         "en": "Paris",
         "bn": "প্যারিস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Paris"
       },
       "le": {
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "poste": {
         "lemma": "poste",
         "en": "job position / workstation / mail",
         "bn": "পদ / ওয়ার্কস্টেশন / ডাক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le poste"
       },
       "proposé": {
         "lemma": "proposer",
         "en": "offered / proposed",
         "bn": "প্রস্তাবিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "contrat": {
         "lemma": "contrat",
         "en": "contract / agreement",
         "bn": "চুক্তিপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le contrat"
       },
       "durée": {
         "lemma": "durée",
         "en": "duration / length",
         "bn": "মেয়াদ / সময়কাল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la durée"
       },
       "indéterminée": {
         "lemma": "indéterminé",
         "en": "permanent (contract CDI)",
         "bn": "স্থায়ী (চাকরির চুক্তি)",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "en": {
         "lemma": "en",
@@ -10710,25 +13720,37 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "technicien",
         "en": "technician",
         "bn": "টেকনিশিয়ান / কারিগরি কর্মী",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le technicien"
       },
       "support": {
         "lemma": "support",
         "en": "support (IT)",
         "bn": "আইটি সহায়তা / সাপোর্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le support"
       },
       "informatique": {
         "lemma": "informatique",
         "en": "IT / computing",
         "bn": "আইটি / কম্পিউটার বিজ্ঞান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'informatique"
       },
       "proximité": {
         "lemma": "proximité",
         "en": "proximity / on-site (support de proximité)",
         "bn": "নিকটবর্তী / অন-সাইট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la proximité"
       },
       "aujourd": {
         "lemma": "aujourd'hui",
@@ -10752,25 +13774,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "arriver",
         "en": "arrives",
         "bn": "পৌঁছায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "vêtu": {
         "lemma": "vêtir",
         "en": "dressed",
         "bn": "পোশাক পরিহিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "chemise": {
         "lemma": "chemise",
         "en": "shirt / paper folder",
         "bn": "শার্ট / ফাইল ফোল্ডার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la chemise"
       },
       "propre": {
         "lemma": "propre",
         "en": "clean / own",
         "bn": "পরিষ্কার / নিজস্ব",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "et": {
         "lemma": "et",
@@ -10782,25 +13813,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "pantalon",
         "en": "trousers / pants",
         "bn": "প্যান্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pantalon"
       },
       "élégant": {
         "lemma": "élégant",
         "en": "smart / elegant",
         "bn": "মার্জিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "accueil": {
         "lemma": "accueil",
         "en": "reception / welcome",
         "bn": "অভ্যর্থনা / স্বাগত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'accueil"
       },
       "annonce": {
         "lemma": "annoncer",
         "en": "announces / states",
         "bn": "জানায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "son": {
         "lemma": "son",
@@ -10812,13 +13853,19 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "arrivée",
         "en": "arrival",
         "bn": "আগমন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'arrivée"
       },
       "hôtesse": {
         "lemma": "hôte",
         "en": "receptionist / hostess",
         "bn": "অভ্যর্থনাকারী",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'hôte"
       },
       "qui": {
         "lemma": "qui",
@@ -10830,25 +13877,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "prévenir",
         "en": "notifies / informs",
         "bn": "জানায় / অবহিত করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "recruteur": {
         "lemma": "recruteur",
         "en": "recruiter / hiring manager",
         "bn": "নিয়োগকারী",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le recruteur"
       },
       "deux": {
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "minutes": {
         "lemma": "minute",
         "en": "minutes",
         "bn": "মিনিট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la minute"
       },
       "plus": {
         "lemma": "plus",
@@ -10866,49 +13923,67 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "monsieur",
         "en": "sir / gentleman",
         "bn": "জনাব / মহাশয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
       },
       "bernard": {
         "lemma": "Bernard",
         "en": "Bernard (name)",
         "bn": "বার্নার্ড (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Bernard"
       },
       "responsable": {
         "lemma": "responsable",
         "en": "manager / coordinator / responsible",
         "bn": "প্রধান কর্মকর্তা / দায়িত্বপ্রাপ্ত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le responsable"
       },
       "du": {
         "lemma": "de + le",
         "en": "of the / from the",
         "bn": "দোকানের",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "technique": {
         "lemma": "technique",
         "en": "technical / technique",
         "bn": "কারিগরি / টেকনিক্যাল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "vient": {
         "lemma": "venir",
         "en": "comes / has just (vient de)",
         "bn": "আসে / এইমাত্র",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "chercher": {
         "lemma": "chercher",
         "en": "to look for / fetch",
         "bn": "খোঁজা / নিয়ে আসা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "conduit": {
         "lemma": "conduire",
         "en": "leads / guides",
         "bn": "নিয়ে যায় / পরিচালনা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "dans": {
         "lemma": "dans",
@@ -10920,85 +13995,118 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "salle",
         "en": "room / hall",
         "bn": "কক্ষ / রুম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la salle"
       },
       "réunion": {
         "lemma": "réunion",
         "en": "meeting",
         "bn": "সভা / মিটিং",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la réunion"
       },
       "lumineuse": {
         "lemma": "lumineux",
         "en": "bright (feminine)",
         "bn": "উজ্জ্বল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "les": {
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "feminine"
       },
       "salutations": {
         "lemma": "salutation",
         "en": "greetings",
         "bn": "অভিবাদন / সম্ভাষণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la salutation"
       },
       "usage": {
         "lemma": "usage",
         "en": "customary / usage (d'usage)",
         "bn": "প্রচলিত রীতি / ব্যবহার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'usage"
       },
       "commence": {
         "lemma": "commencer",
         "en": "starts / begins",
         "bn": "শুরু হয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "ambiance": {
         "lemma": "ambiance",
         "en": "atmosphere / mood",
         "bn": "পরিবেশ / আবহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ambiance"
       },
       "bienveillante": {
         "lemma": "bienveillant",
         "en": "benevolent / kind / caring",
         "bn": "সহানুভূতিশীল / অমায়িক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "l": {
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "invite": {
         "lemma": "inviter",
         "en": "invites",
         "bn": "আমন্ত্রণ জানায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "retracer": {
         "lemma": "retracer",
         "en": "to recount / trace back",
         "bn": "তুলে ধরা / বর্ণনা করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "parcours": {
         "lemma": "parcours",
         "en": "career path / background",
         "bn": "অভিজ্ঞতার পথ / ক্যারিয়ার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le parcours"
       },
       "parlez-moi": {
         "lemma": "parler",
         "en": "tell me",
         "bn": "আমাকে বলুন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "peu": {
         "lemma": "peu",
@@ -11016,7 +14124,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "étude",
         "en": "studies / degree",
         "bn": "পড়াশোনা / উচ্চশিক্ষা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'étude"
       },
       "votre": {
         "lemma": "votre",
@@ -11028,13 +14139,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "expérience",
         "en": "experience",
         "bn": "অভিজ্ঞতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'expérience"
       },
       "exprime": {
         "lemma": "exprimer",
         "en": "expresses oneself",
         "bn": "ব্যক্ত করে / প্রকাশ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "avec": {
         "lemma": "avec",
@@ -11046,61 +14162,86 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "clarté",
         "en": "clarity",
         "bn": "স্পষ্টতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la clarté"
       },
       "assurance": {
         "lemma": "assurance",
         "en": "confidence / insurance",
         "bn": "আত্মবিশ্বাস / নিশ্চয়তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'assurance"
       },
       "ai": {
         "lemma": "avoir",
         "en": "have (first person: j'ai)",
         "bn": "আছে (আমার আছে)",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "obtenu": {
         "lemma": "obtenir",
         "en": "obtained / completed",
         "bn": "অর্জন করেছে / পেয়েছে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "diplôme": {
         "lemma": "diplôme",
         "en": "diploma / degree",
         "bn": "সনদ / ডিপ্লোমা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le diplôme"
       },
       "ingénierie": {
         "lemma": "ingénierie",
         "en": "engineering",
         "bn": "প্রকৌশল / ইঞ্জিনিয়ারিং",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ingénierie"
       },
       "technologie": {
         "lemma": "technologie",
         "en": "technology",
         "bn": "প্রযুক্তি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la technologie"
       },
       "quatre": {
         "lemma": "quatre",
         "en": "four",
         "bn": "চার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "ans": {
         "lemma": "an",
         "en": "years",
         "bn": "বছর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'an"
       },
       "cours": {
         "lemma": "cours",
         "en": "class / course / in progress",
         "bn": "ক্লাস / কোর্স / চলমান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cours"
       },
       "ma": {
         "lemma": "son",
@@ -11112,109 +14253,151 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "formation",
         "en": "training course / studies",
         "bn": "প্রশিক্ষণ / কোর্স",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la formation"
       },
       "pratique": {
         "lemma": "pratique",
         "en": "practical / practice",
         "bn": "বাস্তবমুখী / ব্যবহারিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "appris": {
         "lemma": "apprendre",
         "en": "learned",
         "bn": "শিখেছে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "configurer": {
         "lemma": "configurer",
         "en": "to configure / set up",
         "bn": "কনফিগার করা / সেটআপ করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "des": {
         "lemma": "un",
         "en": "some / of the",
         "bn": "কিছু / গুলির",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "feminine"
       },
       "réseaux": {
         "lemma": "réseau",
         "en": "networks",
         "bn": "নেটওয়ার্কসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le réseau"
       },
       "locaux": {
         "lemma": "local",
         "en": "premises / local (plural)",
         "bn": "কক্ষসমূহ / স্থানীয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le local"
       },
       "installer": {
         "lemma": "installer",
         "en": "to install / deploy",
         "bn": "ইনস্টল করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "systèmes": {
         "lemma": "système",
         "en": "systems",
         "bn": "সিস্টেমসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le système"
       },
       "exploitation": {
         "lemma": "système d'exploitation",
         "en": "operating system",
         "bn": "অপারেটিং সিস্টেম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le système d'exploitation"
       },
       "windows": {
         "lemma": "Windows",
         "en": "Microsoft Windows OS",
         "bn": "উইন্ডোজ অপারেটিং সিস্টেম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Windows"
       },
       "linux": {
         "lemma": "Linux",
         "en": "Linux operating system",
         "bn": "লিনাক্স অপারেটিং সিস্টেম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Linux"
       },
       "diagnostiquer": {
         "lemma": "diagnostiquer",
         "en": "to troubleshoot / diagnose",
         "bn": "ত্রুটি চিহ্নিত করা / নির্ণয় করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "pannes": {
         "lemma": "panne",
         "en": "breakdowns / hardware failures",
         "bn": "হার্ডওয়্যার ত্রুটিসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la panne"
       },
       "matérielles": {
         "lemma": "matériel",
         "en": "hardware (failures)",
         "bn": "হার্ডওয়্যার সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "ordinateurs": {
         "lemma": "ordinateur",
         "en": "computers",
         "bn": "কম্পিউটারসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'ordinateur"
       },
       "bureau": {
         "lemma": "bureau",
         "en": "office / desk",
         "bn": "অফিস / পড়ার টেবিল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bureau"
       },
       "parlez": {
         "lemma": "parler",
         "en": "speak / tell (parlez-moi)",
         "bn": "বলুন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "moi": {
         "lemma": "moi",
@@ -11238,7 +14421,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "poser",
         "en": "places / puts / asks",
         "bn": "রাখে / জিজ্ঞেস করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "ensuite": {
         "lemma": "ensuite",
@@ -11250,25 +14435,36 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "question",
         "en": "question",
         "bn": "প্রশ্ন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la question"
       },
       "la": {
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "relation": {
         "lemma": "relation",
         "en": "relationship / interaction",
         "bn": "সম্পর্ক / যোগাযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la relation"
       },
       "utilisateurs": {
         "lemma": "utilisateur",
         "en": "users",
         "bn": "ব্যবহারকারীগণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'utilisateur"
       },
       "comment": {
         "lemma": "comment",
@@ -11280,7 +14476,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "réagir",
         "en": "how do you react",
         "bn": "আপনি কীভাবে প্রতিক্রিয়া জানান",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "lorsqu'un": {
         "lemma": "lorsque",
@@ -11292,31 +14489,44 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "employé",
         "en": "employee",
         "bn": "কর্মচারী",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'employé"
       },
       "panique": {
         "lemma": "paniquer",
         "en": "panics",
         "bn": "আতঙ্কিত হয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "cause": {
         "lemma": "cause",
         "en": "cause / reason",
         "bn": "কারণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la cause"
       },
       "ordinateur": {
         "lemma": "ordinateur",
         "en": "computer",
         "bn": "কম্পিউটার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ordinateur"
       },
       "bloqué": {
         "lemma": "bloquer",
         "en": "blocked / frozen / stuck",
         "bn": "আটকে যাওয়া / বন্ধ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "avant": {
         "lemma": "avant",
@@ -11328,19 +14538,25 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "urgent",
         "en": "urgent (feminine)",
         "bn": "জরুরি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "répond": {
         "lemma": "répondre",
         "en": "answers / replies",
         "bn": "উত্তর দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "calme": {
         "lemma": "calme",
         "en": "calm / quiet",
         "bn": "শান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "je": {
         "lemma": "je",
@@ -11352,7 +14568,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "écouter",
         "en": "listens / active listening",
         "bn": "শোনে / মনোযোগ দিয়ে শোনা",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "abord": {
         "lemma": "d'abord",
@@ -11370,25 +14588,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "rassurer",
         "en": "to reassure",
         "bn": "আশ্বস্ত করা / সাহস দেওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "identifie": {
         "lemma": "identifier",
         "en": "identifies / detects",
         "bn": "চিহ্নিত করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "problème": {
         "lemma": "problème",
         "en": "problem / issue",
         "bn": "সমস্যা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le problème"
       },
       "méthode": {
         "lemma": "méthode",
         "en": "method / structured way",
         "bn": "পদ্ধতি / নিয়ম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la méthode"
       },
       "sans": {
         "lemma": "sans",
@@ -11400,7 +14627,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "précipitation",
         "en": "haste / rushing",
         "bn": "তাড়াহুড়ো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la précipitation"
       },
       "puis": {
         "lemma": "puis",
@@ -11412,19 +14642,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "proposer",
         "en": "offers / suggests",
         "bn": "প্রস্তাব দেয় / প্রদান করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "solution": {
         "lemma": "solution",
         "en": "solution",
         "bn": "সমাধান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la solution"
       },
       "rapide": {
         "lemma": "rapide",
         "en": "fast / quick",
         "bn": "দ্রুত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "ou": {
         "lemma": "ou",
@@ -11436,43 +14673,60 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "remplacement",
         "en": "replacement (loan machine)",
         "bn": "প্রতিস্থাপন / বিকল্প",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le remplacement"
       },
       "provisoire": {
         "lemma": "provisoire",
         "en": "provisional / temporary",
         "bn": "সাময়িক / অস্থায়ী",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "patience": {
         "lemma": "patience",
         "en": "patience",
         "bn": "ধৈর্য",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la patience"
       },
       "sont": {
         "lemma": "être",
         "en": "are (plural)",
         "bn": "হয় / আছেন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
       },
       "indispensables": {
         "lemma": "indispensable",
         "en": "indispensable (plural)",
         "bn": "অপরিহার্য",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "client": {
         "lemma": "client",
         "en": "customer / client",
         "bn": "গ্রাহক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le client"
       },
       "réagissez": {
         "lemma": "réagir",
         "en": "react (vous)",
         "bn": "প্রতিক্রিয়া জানান",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "vous": {
         "lemma": "vous",
@@ -11490,13 +14744,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "hocher",
         "en": "nods (head)",
         "bn": "মাথা নাড়ায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "tête": {
         "lemma": "tête",
         "en": "head / headache",
         "bn": "মাথা / মাথা ব্যথা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la tête"
       },
       "visiblement": {
         "lemma": "visiblement",
@@ -11508,7 +14767,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "conquérir",
         "en": "won over / impressed",
         "bn": "মুগ্ধ / সন্তুষ্ট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "par": {
         "lemma": "par",
@@ -11520,19 +14781,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "ce",
         "en": "this (feminine)",
         "bn": "এই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "attitude": {
         "lemma": "attitude",
         "en": "attitude / mindset",
         "bn": "মনোভাব / আচরণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attitude"
       },
       "professionnelle": {
         "lemma": "professionnel",
         "en": "professional (feminine)",
         "bn": "পেশাদার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "très": {
         "lemma": "très",
@@ -11544,25 +14812,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "bon",
         "en": "good",
         "bn": "ভালো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "réponse": {
         "lemma": "réponse",
         "en": "answer / reply / decision",
         "bn": "উত্তর / সিদ্ধান্ত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la réponse"
       },
       "profil": {
         "lemma": "profil",
         "en": "profile / background",
         "bn": "প্রোফাইল / যোগ্যতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le profil"
       },
       "correspond": {
         "lemma": "correspondre",
         "en": "matches / corresponds",
         "bn": "মিলে যায় / মানানসই হয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "tout": {
         "lemma": "tout",
@@ -11574,7 +14852,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "faire",
         "en": "makes / does / fact",
         "bn": "করে / ঘটনা",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "nos": {
         "lemma": "notre",
@@ -11586,13 +14866,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "besoin",
         "en": "needs / requirements",
         "bn": "প্রয়োজনীয়তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le besoin"
       },
       "actuels": {
         "lemma": "actuel",
         "en": "current / present",
         "bn": "বর্তমান / চলমান",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "nous": {
         "lemma": "nous",
@@ -11604,43 +14889,59 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "terminer",
         "en": "finish (nous)",
         "bn": "শেষ করছি",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "entretiens": {
         "lemma": "entretien",
         "en": "interviews",
         "bn": "ইন্টারভিউগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'entretien"
       },
       "semaine": {
         "lemma": "semaine",
         "en": "week",
         "bn": "সপ্তাহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la semaine"
       },
       "contacterons": {
         "lemma": "contacter",
         "en": "will contact (future)",
         "bn": "যোগাযোগ করব",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "lundi": {
         "lemma": "lundi",
         "en": "Monday",
         "bn": "সোমবার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le lundi"
       },
       "prochain": {
         "lemma": "prochain",
         "en": "next",
         "bn": "পরবর্তী",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "donner": {
         "lemma": "donner",
         "en": "to give",
         "bn": "দেওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "notre": {
         "lemma": "notre",
@@ -11652,13 +14953,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "définitif",
         "en": "final / definitive",
         "bn": "চূড়ান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "remercie": {
         "lemma": "remercier",
         "en": "thanks",
         "bn": "ধন্যবাদ জানায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "chaleureusement": {
         "lemma": "chaleureusement",
@@ -11670,19 +14975,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "interlocuteur",
         "en": "interviewer / conversational partner",
         "bn": "কথোপকথনকারী / কর্মকর্তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'interlocuteur"
       },
       "quitte": {
         "lemma": "quitter",
         "en": "leaves / exits",
         "bn": "বের হয় / ছেড়ে যায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "immeuble": {
         "lemma": "immeuble",
         "en": "apartment building",
         "bn": "বিল্ডিং / বহুতল ভবন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'immeuble"
       },
       "c": {
         "lemma": "ce",
@@ -11694,25 +15007,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "heure",
         "en": "hour",
         "bn": "ঘণ্টা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'heure"
       },
       "léger": {
         "lemma": "léger",
         "en": "light / carefree",
         "bn": "হালকা / ভারমুক্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "plein": {
         "lemma": "plein",
         "en": "full",
         "bn": "পূর্ণ / ভরা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "espoir": {
         "lemma": "espoir",
         "en": "hope",
         "bn": "আশা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'espoir"
       }
     },
     "quiz": [
@@ -11781,7 +15104,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "installer",
         "en": "settled in / installed",
         "bn": "বসবাস শুরু করেছে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "en": {
         "lemma": "en",
@@ -11793,7 +15117,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "France",
         "en": "France",
         "bn": "ফ্রান্স",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la France"
       },
       "depuis": {
         "lemma": "depuis",
@@ -11805,37 +15132,51 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quelque",
         "en": "a few / some",
         "bn": "কয়েকটি / কিছু",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "mois": {
         "lemma": "mois",
         "en": "month / months",
         "bn": "মাস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mois"
       },
       "fahim": {
         "lemma": "Fahim",
         "en": "Fahim (first name)",
         "bn": "ফাহিম (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Fahim"
       },
       "est": {
         "lemma": "être",
         "en": "is",
         "bn": "হয় / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "inscrit": {
         "lemma": "inscrire",
         "en": "enrolled / registered",
         "bn": "নিবন্ধিত করেছে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "ligne": {
         "lemma": "ligne",
         "en": "line (metro / telephone / online)",
         "bn": "লাইন / সংযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ligne"
       },
       "sur": {
         "lemma": "sur",
@@ -11847,19 +15188,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "portail": {
         "lemma": "portail",
         "en": "web portal / gate",
         "bn": "ওয়েব পোর্টাল / গেট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le portail"
       },
       "national": {
         "lemma": "national",
         "en": "national",
         "bn": "জাতীয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "de": {
         "lemma": "de",
@@ -11871,7 +15219,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "France Travail",
         "en": "France Travail (national employment agency)",
         "bn": "ফ্রান্স ত্রাভাই (কর্মসংস্থান সংস্থা)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "France Travail"
       },
       "pour": {
         "lemma": "pour",
@@ -11883,25 +15234,33 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "bénéficier",
         "en": "to benefit / receive",
         "bn": "সুবিধা পাওয়া / লাভ করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "un": {
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "accompagnement": {
         "lemma": "accompagnement",
         "en": "guidance / support / coaching",
         "bn": "দিকনির্দেশনা / সহায়তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'accompagnement"
       },
       "personnalisé": {
         "lemma": "personnaliser",
         "en": "personalized / tailored",
         "bn": "ব্যক্তিমাফিক / নিজস্বকৃত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "dans": {
         "lemma": "dans",
@@ -11919,13 +15278,19 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "recherche",
         "en": "search / job hunting",
         "bn": "অনুসন্ধান / খোঁজা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la recherche"
       },
       "emploi": {
         "lemma": "emploi",
         "en": "job / employment",
         "bn": "চাকরি / কর্মসংস্থান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'emploi"
       },
       "ce": {
         "lemma": "ce",
@@ -11937,13 +15302,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "matin",
         "en": "morning",
         "bn": "সকাল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
       },
       "il": {
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "se": {
         "lemma": "se",
@@ -11955,7 +15325,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "rendre",
         "en": "returns / gives back",
         "bn": "ফেরত দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "à": {
         "lemma": "à",
@@ -11973,37 +15345,52 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "premier",
         "en": "first",
         "bn": "প্রথম",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "entretien": {
         "lemma": "entretien",
         "en": "interview / maintenance",
         "bn": "ইন্টারভিউ / রক্ষণাবেক্ষণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entretien"
       },
       "obligatoire": {
         "lemma": "obligatoire",
         "en": "mandatory / compulsory",
         "bn": "বাধ্যতামূলক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "agence": {
         "lemma": "agence",
         "en": "agency / branch",
         "bn": "সংস্থা / এজেন্সি / শাখা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'agence"
       },
       "locale": {
         "lemma": "local",
         "en": "local (feminine)",
         "bn": "স্থানীয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "circonscription": {
         "lemma": "circonscription",
         "en": "district / area",
         "bn": "এলাকা / প্রশাসনিক এলাকা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la circonscription"
       },
       "s": {
         "lemma": "se",
@@ -12021,61 +15408,86 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "accueil": {
         "lemma": "accueil",
         "en": "reception / welcome",
         "bn": "অভ্যর্থনা / স্বাগত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'accueil"
       },
       "tape": {
         "lemma": "taper",
         "en": "types / keys in",
         "bn": "টাইপ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "numéro": {
         "lemma": "numéro",
         "en": "number / ticket number",
         "bn": "নম্বর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le numéro"
       },
       "identifiant": {
         "lemma": "identifiant",
         "en": "user ID / login number",
         "bn": "ব্যবহারকারী নম্বর / আইডি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'identifiant"
       },
       "huit": {
         "lemma": "huit",
         "en": "eight",
         "bn": "আট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "chiffres": {
         "lemma": "chiffre",
         "en": "digits / figures",
         "bn": "সংখ্যা / ডিজিট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le chiffre"
       },
       "la": {
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "borne": {
         "lemma": "borne",
         "en": "terminal / kiosk machine",
         "bn": "মেশিন / কিয়স্ক",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la borne"
       },
       "interactive": {
         "lemma": "interactif",
         "en": "interactive (feminine)",
         "bn": "ইন্টারেক্টিভ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "et": {
         "lemma": "et",
@@ -12087,25 +15499,36 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "installer",
         "en": "settles in / installs",
         "bn": "বসে / ইনস্টল করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "espace": {
         "lemma": "espace",
         "en": "space / area / user dashboard",
         "bn": "জায়গা / ড্যাশবোর্ড",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'espace"
       },
       "attente": {
         "lemma": "attente",
         "en": "waiting",
         "bn": "অপেক্ষা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attente"
       },
       "instants": {
         "lemma": "instant",
         "en": "moments",
         "bn": "মুহূর্তগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'instant"
       },
       "plus": {
         "lemma": "plus",
@@ -12123,31 +15546,45 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "conseiller",
         "en": "advisor / counselor",
         "bn": "পরামর্শক / কর্মকর্তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le conseiller"
       },
       "monsieur": {
         "lemma": "monsieur",
         "en": "sir / gentleman",
         "bn": "জনাব / মহাশয়",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
       },
       "vasseur": {
         "lemma": "Vasseur",
         "en": "Vasseur (surname)",
         "bn": "ভাসুর (পদবি)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Vasseur"
       },
       "vient": {
         "lemma": "venir",
         "en": "comes / has just (vient de)",
         "bn": "আসে / এইমাত্র",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "rencontre": {
         "lemma": "rencontre",
         "en": "meeting / encounter",
         "bn": "সাক্ষাৎ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la rencontre"
       },
       "avec": {
         "lemma": "avec",
@@ -12159,13 +15596,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "sourire",
         "en": "smile",
         "bn": "হাসি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sourire"
       },
       "encourageant": {
         "lemma": "encourager",
         "en": "encouraging",
         "bn": "উৎসাহব্যঞ্জক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "bonjour": {
         "lemma": "bonjour",
@@ -12183,7 +15625,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "venir",
         "en": "come (imperative/formal)",
         "bn": "আসুন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
       },
       "moi": {
         "lemma": "moi",
@@ -12201,7 +15645,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "bureau",
         "en": "office / desk",
         "bn": "অফিস / পড়ার টেবিল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bureau"
       },
       "que": {
         "lemma": "que",
@@ -12219,13 +15666,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "faire",
         "en": "make / do (subjunctive: que nous fassions)",
         "bn": "করি",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "point": {
         "lemma": "point",
         "en": "point / assessment (faire le point)",
         "bn": "পর্যালোচনা / বিন্দু",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le point"
       },
       "ensemble": {
         "lemma": "ensemble",
@@ -12243,13 +15695,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "situation",
         "en": "situation / circumstances",
         "bn": "পরিস্থিতি / অবস্থা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la situation"
       },
       "débute": {
         "lemma": "débuter",
         "en": "begins / starts",
         "bn": "শুরু হয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "par": {
         "lemma": "par",
@@ -12261,49 +15718,69 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "analyse",
         "en": "analysis / review",
         "bn": "বিশ্লেষণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'analyse"
       },
       "du": {
         "lemma": "de + le",
         "en": "of the / from the",
         "bn": "দোকানের",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "projet": {
         "lemma": "projet",
         "en": "project / professional plan",
         "bn": "প্রকল্প / পরিকল্পনা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le projet"
       },
       "professionnel": {
         "lemma": "professionnel",
         "en": "professional",
         "bn": "পেশাদার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "remet": {
         "lemma": "remettre",
         "en": "hands over / gives",
         "bn": "হস্তান্তর করে / দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "curriculum": {
         "lemma": "curriculum vitae",
         "en": "curriculum (CV)",
         "bn": "সিভি / জীবনবৃত্তান্ত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le curriculum vitae"
       },
       "vitae": {
         "lemma": "curriculum vitae",
         "en": "vitae (CV)",
         "bn": "জীবনবৃত্তান্ত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le curriculum vitae"
       },
       "imprimé": {
         "lemma": "imprimer",
         "en": "printed",
         "bn": "মুদ্রিত / প্রিন্ট করা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "au": {
         "lemma": "à + le",
@@ -12315,55 +15792,75 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "avoir",
         "en": "have (first person: j'ai)",
         "bn": "আছে (আমার আছে)",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "une": {
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "formation": {
         "lemma": "formation",
         "en": "training course / studies",
         "bn": "প্রশিক্ষণ / কোর্স",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la formation"
       },
       "solide": {
         "lemma": "solide",
         "en": "solid / sturdy",
         "bn": "শক্তিশালী / মজবুত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "quatre": {
         "lemma": "quatre",
         "en": "four",
         "bn": "চার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "ans": {
         "lemma": "an",
         "en": "years",
         "bn": "বছর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'an"
       },
       "technologie": {
         "lemma": "technologie",
         "en": "technology",
         "bn": "প্রযুক্তি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la technologie"
       },
       "informatique": {
         "lemma": "informatique",
         "en": "IT / computing",
         "bn": "আইটি / কম্পিউটার বিজ্ঞান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'informatique"
       },
       "aimerais": {
         "lemma": "aimer",
         "en": "would like",
         "bn": "চাই / পছন্দ করব",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "beaucoup": {
         "lemma": "beaucoup",
@@ -12375,19 +15872,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "travailler",
         "en": "to work",
         "bn": "কাজ করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "maintenance": {
         "lemma": "maintenance",
         "en": "maintenance (IT)",
         "bn": "রক্ষণাবেক্ষণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la maintenance"
       },
       "réseaux": {
         "lemma": "réseau",
         "en": "networks",
         "bn": "নেটওয়ার্কসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le réseau"
       },
       "ou": {
         "lemma": "ou",
@@ -12399,7 +15903,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "assistance",
         "en": "support / assistance",
         "bn": "সহায়তা / সাপোর্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'assistance"
       },
       "aux": {
         "lemma": "à + les",
@@ -12411,7 +15918,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "utilisateur",
         "en": "users",
         "bn": "ব্যবহারকারীগণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'utilisateur"
       },
       "cependant": {
         "lemma": "cependant",
@@ -12429,43 +15939,60 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "mal",
         "en": "pain / difficulty / bad",
         "bn": "ব্যথা / কষ্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mal"
       },
       "comprendre": {
         "lemma": "comprendre",
         "en": "to understand",
         "bn": "বোঝা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "tous": {
         "lemma": "tout",
         "en": "all",
         "bn": "সব",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "les": {
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "masculine"
       },
       "codes": {
         "lemma": "code",
         "en": "codes / social norms",
         "bn": "নিয়মাবলী / অলিখিত নিয়ম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le code"
       },
       "marché": {
         "lemma": "marché",
         "en": "market (job market)",
         "bn": "বাজার (চাকরির বাজার)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le marché"
       },
       "français": {
         "lemma": "français",
         "en": "French",
         "bn": "ফরাসি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le français"
       },
       "j": {
         "lemma": "je",
@@ -12477,26 +16004,36 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "étudier",
         "en": "studies / reviews",
         "bn": "পড়ে / পর্যবেক্ষণ করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "cv": {
         "lemma": "CV",
         "en": "curriculum vitae / resume",
         "bn": "জীবনবৃত্তান্ত / সিভি",
         "pos": "noun",
-        "ttsText": "cé vé"
+        "ttsText": "cé vé",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le CV"
       },
       "grand": {
         "lemma": "grand",
         "en": "large / big",
         "bn": "বড়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "intérêt": {
         "lemma": "intérêt",
         "en": "interest",
         "bn": "আগ্রহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'intérêt"
       },
       "vos": {
         "lemma": "votre",
@@ -12508,19 +16045,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "compétence",
         "en": "skills / competencies",
         "bn": "দক্ষতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la compétence"
       },
       "techniques": {
         "lemma": "technique",
         "en": "technical (plural)",
         "bn": "কারিগরি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "sont": {
         "lemma": "être",
         "en": "are (plural)",
         "bn": "হয় / আছেন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
       },
       "très": {
         "lemma": "très",
@@ -12532,79 +16076,108 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "apprécier",
         "en": "appreciated (plural)",
         "bn": "সমাদৃত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "recruteurs": {
         "lemma": "recruteur",
         "en": "recruiters",
         "bn": "নিয়োগকারীগণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le recruteur"
       },
       "secteur": {
         "lemma": "secteur",
         "en": "sector / industry",
         "bn": "খাত / সেক্টর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le secteur"
       },
       "maximiser": {
         "lemma": "maximiser",
         "en": "to maximize",
         "bn": "সর্বোচ্চ করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "chances": {
         "lemma": "chance",
         "en": "chances / luck",
         "bn": "সুযোগ / সম্ভাবনা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la chance"
       },
       "embauche": {
         "lemma": "embauche",
         "en": "hiring / employment",
         "bn": "চাকরি নিয়োগ / নিয়োগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'embauche"
       },
       "allons": {
         "lemma": "aller",
         "en": "are going (nous)",
         "bn": "যাচ্ছি",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "organiser": {
         "lemma": "organiser",
         "en": "to arrange / organize",
         "bn": "আয়োজন করা / ব্যবস্থা করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "demande": {
         "lemma": "demande",
         "en": "request / application",
         "bn": "অনুরোধ / আবেদন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la demande"
       },
       "attestation": {
         "lemma": "attestation",
         "en": "certificate / formal proof",
         "bn": "প্রত্যয়নপত্র / সনদ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attestation"
       },
       "comparabilité": {
         "lemma": "comparabilité",
         "en": "comparability (diploma recognition)",
         "bn": "সমতাকরণ / সমমান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la comparabilité"
       },
       "faire": {
         "lemma": "faire",
         "en": "to do / make",
         "bn": "করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "reconnaître": {
         "lemma": "reconnaître",
         "en": "to recognize officially",
         "bn": "স্বীকৃতি দেওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "officiellement": {
         "lemma": "officiellement",
@@ -12616,13 +16189,18 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "diplôme",
         "en": "diploma / degree",
         "bn": "সনদ / ডিপ্লোমা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le diplôme"
       },
       "étranger": {
         "lemma": "étranger",
         "en": "foreign / abroad",
         "bn": "বিদেশি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "je": {
         "lemma": "je",
@@ -12640,73 +16218,99 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "inscrire",
         "en": "enroll / sign up (j'inscris)",
         "bn": "নিবন্ধন করি / যুক্ত করি",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "atelier": {
         "lemma": "atelier",
         "en": "workshop",
         "bn": "কর্মশালা / ওয়ার্কশপ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'atelier"
       },
       "deux": {
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "demi-journées": {
         "lemma": "demi-journée",
         "en": "half-days",
         "bn": "অর্ধ-দিবস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la demi-journée"
       },
       "adapter": {
         "lemma": "adapter",
         "en": "to adapt / tailor",
         "bn": "উপযোগী করা / মানিয়ে নেওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "standards": {
         "lemma": "standard",
         "en": "standards / norms",
         "bn": "মানদণ্ড",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le standard"
       },
       "entraîner": {
         "lemma": "entraîner",
         "en": "to practice / train",
         "bn": "অনুশীলন করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "entretiens": {
         "lemma": "entretien",
         "en": "interviews",
         "bn": "ইন্টারভিউগুলো",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'entretien"
       },
       "oraux": {
         "lemma": "oral",
         "en": "oral (interviews plural)",
         "bn": "মৌখিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "demi": {
         "lemma": "demi",
         "en": "half",
         "bn": "অর্ধেক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "journées": {
         "lemma": "journée",
         "en": "days (demi-journées)",
         "bn": "দিনসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la journée"
       },
       "paramètre": {
         "lemma": "paramétrer",
         "en": "sets up / configures",
         "bn": "সেটআপ করে / কনফিগার করে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "également": {
         "lemma": "également",
@@ -12718,127 +16322,175 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "personnel",
         "en": "personal / staff",
         "bn": "ব্যক্তিগত / কর্মী",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "application": {
         "lemma": "application",
         "en": "app / application",
         "bn": "অ্যাপ্লিকেশন / অ্যাপ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'application"
       },
       "mobile": {
         "lemma": "mobile",
         "en": "mobile (phone/network)",
         "bn": "মোবাইল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "reçoive": {
         "lemma": "recevoir",
         "en": "receives (subjunctive)",
         "bn": "পায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "subjunctive"
       },
       "des": {
         "lemma": "un",
         "en": "some / of the",
         "bn": "কিছু / গুলির",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "feminine"
       },
       "alertes": {
         "lemma": "alerte",
         "en": "alerts / notifications",
         "bn": "সতর্কবার্তা / নোটিফিকেশন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'alerte"
       },
       "offres": {
         "lemma": "offre",
         "en": "offers / job listings",
         "bn": "চাকরির বিজ্ঞাপনসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'offre"
       },
       "ciblées": {
         "lemma": "cibler",
         "en": "targeted (alerts)",
         "bn": "লক্ষ্যভিত্তিক / সুনির্দিষ্ট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "chaque": {
         "lemma": "chaque",
         "en": "each / every",
         "bn": "প্রতিটি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "avez": {
         "lemma": "avoir",
         "en": "have (you have)",
         "bn": "আছে (আপনার আছে)",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
       },
       "excellent": {
         "lemma": "excellent",
         "en": "excellent",
         "bn": "চমৎকার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "profil": {
         "lemma": "profil",
         "en": "profile / background",
         "bn": "প্রোফাইল / যোগ্যতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le profil"
       },
       "motivation": {
         "lemma": "motivation",
         "en": "motivation",
         "bn": "প্রেরণা / উৎসাহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la motivation"
       },
       "remarquable": {
         "lemma": "remarquable",
         "en": "remarkable / outstanding",
         "bn": "অসাধারণ / প্রশংসনীয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "ces": {
         "lemma": "ce",
         "en": "these / those",
         "bn": "এইসব",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "démarches": {
         "lemma": "démarche",
         "en": "procedures / steps",
         "bn": "প্রশাসনিক পদক্ষেপসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la démarche"
       },
       "cet": {
         "lemma": "ce",
         "en": "this (masculine vowel)",
         "bn": "এই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "allez": {
         "lemma": "aller",
         "en": "go / are going (vous)",
         "bn": "যাচ্ছেন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
       },
       "trouver": {
         "lemma": "trouver",
         "en": "to find",
         "bn": "খুঁজে পাওয়া",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "opportunité": {
         "lemma": "opportunité",
         "en": "opportunity / job opening",
         "bn": "সুযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'opportunité"
       },
       "intéressante": {
         "lemma": "intéressant",
         "en": "interesting / attractive",
         "bn": "আকর্ষণীয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "prochainement": {
         "lemma": "prochainement",
@@ -12850,43 +16502,61 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quitter",
         "en": "leaves / exits",
         "bn": "বের হয় / ছেড়ে যায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "feuille": {
         "lemma": "feuille",
         "en": "sheet (of paper) / roadmap",
         "bn": "কাগজ / রোডম্যাপ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la feuille"
       },
       "route": {
         "lemma": "route",
         "en": "roadmap / road",
         "bn": "রোডম্যাপ / পথ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la route"
       },
       "claire": {
         "lemma": "clair",
         "en": "clear (feminine)",
         "bn": "পরিষ্কার / সুস্পষ্ট",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "confiance": {
         "lemma": "confiance",
         "en": "confidence / trust",
         "bn": "আত্মবিশ্বাস / ভরসা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la confiance"
       },
       "renforcée": {
         "lemma": "renforcer",
         "en": "reinforced / strengthened",
         "bn": "দৃঢ় / জোরদার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "avenir": {
         "lemma": "avenir",
         "en": "future",
         "bn": "ভবিষ্যত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'avenir"
       },
       "qu": {
         "lemma": "que",
@@ -12967,7 +16637,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "valoriser",
         "en": "to enhance / showcase (skills)",
         "bn": "মর্যাদা বৃদ্ধি করা / কাজে লাগানো",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "son": {
         "lemma": "son",
@@ -12979,19 +16650,26 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "diplôme",
         "en": "diploma / degree",
         "bn": "সনদ / ডিপ্লোমা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le diplôme"
       },
       "technique": {
         "lemma": "technique",
         "en": "technical / technique",
         "bn": "কারিগরি / টেকনিক্যাল",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "étranger": {
         "lemma": "étranger",
         "en": "foreign / abroad",
         "bn": "বিদেশি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "et": {
         "lemma": "et",
@@ -13003,7 +16681,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "accélérer",
         "en": "to accelerate / speed up",
         "bn": "গতিশীল করা / ত্বরান্বিত করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "sa": {
         "lemma": "son",
@@ -13015,7 +16694,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "carrière",
         "en": "career",
         "bn": "কর্মজীবন / ক্যারিয়ার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carrière"
       },
       "dans": {
         "lemma": "dans",
@@ -13027,7 +16709,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "ingénierie",
         "en": "engineering",
         "bn": "প্রকৌশল / ইঞ্জিনিয়ারিং",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ingénierie"
       },
       "en": {
         "lemma": "en",
@@ -13039,25 +16724,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "France",
         "en": "France",
         "bn": "ফ্রান্স",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la France"
       },
       "tariq": {
         "lemma": "Tariq",
         "en": "Tariq (first name)",
         "bn": "তারিক (নাম)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Tariq"
       },
       "a": {
         "lemma": "avoir",
         "en": "has",
         "bn": "আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "décidé": {
         "lemma": "décider",
         "en": "decided",
         "bn": "সিদ্ধান্ত নিয়েছে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "de": {
         "lemma": "de",
@@ -13069,7 +16763,8 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "reprendre",
         "en": "to resume (studies)",
         "bn": "পুনরায় শুরু করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "ses": {
         "lemma": "son",
@@ -13081,13 +16776,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "étude",
         "en": "studies / degree",
         "bn": "পড়াশোনা / উচ্চশিক্ষা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'étude"
       },
       "inscrivant": {
         "lemma": "inscrire",
         "en": "enrolling (by enrolling)",
         "bn": "ভর্তি হয়ে / নিবন্ধন করে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "present participle"
       },
       "à": {
         "lemma": "à",
@@ -13099,49 +16798,69 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "un",
         "en": "a / an (feminine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "licence": {
         "lemma": "licence",
         "en": "bachelor's degree (3-year)",
         "bn": "স্নাতক ডিগ্রি (লাইসেন্স)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la licence"
       },
       "professionnelle": {
         "lemma": "professionnel",
         "en": "professional (feminine)",
         "bn": "পেশাদার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "administration": {
         "lemma": "administration",
         "en": "administration / public office",
         "bn": "প্রশাসন / ব্যবস্থাপনা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'administration"
       },
       "sécurité": {
         "lemma": "sécurité",
         "en": "security",
         "bn": "নিরাপত্তা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la sécurité"
       },
       "des": {
         "lemma": "un",
         "en": "some / of the",
         "bn": "কিছু / গুলির",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "feminine"
       },
       "réseaux": {
         "lemma": "réseau",
         "en": "networks",
         "bn": "নেটওয়ার্কসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le réseau"
       },
       "informatiques": {
         "lemma": "informatique",
         "en": "computer / IT (plural)",
         "bn": "কম্পিউটার সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "ce": {
         "lemma": "ce",
@@ -13153,43 +16872,61 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "cursus",
         "en": "degree program / curriculum",
         "bn": "শিক্ষাক্রম / পাঠ্যক্রম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cursus"
       },
       "universitaire": {
         "lemma": "universitaire",
         "en": "university (campus/studies)",
         "bn": "বিশ্ববিদ্যালয় সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "un": {
         "lemma": "un",
         "en": "a / an (masculine)",
         "bn": "একটি",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "an": {
         "lemma": "an",
         "en": "year",
         "bn": "বছর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'an"
       },
       "offre": {
         "lemma": "offre",
         "en": "offer / job offer",
         "bn": "অফার / চাকরির সুযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'offre"
       },
       "formation": {
         "lemma": "formation",
         "en": "training course / studies",
         "bn": "প্রশিক্ষণ / কোর্স",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la formation"
       },
       "pointue": {
         "lemma": "pointu",
         "en": "advanced / sharp (training)",
         "bn": "উন্নত / বিশেষায়িত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "très": {
         "lemma": "très",
@@ -13201,25 +16938,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "apprécier",
         "en": "appreciated / valued",
         "bn": "প্রশংসিত / সমাদৃত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "entreprises": {
         "lemma": "entreprise",
         "en": "companies",
         "bn": "কোম্পানিসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'entreprise"
       },
       "technologiques": {
         "lemma": "technologique",
         "en": "technology (companies)",
         "bn": "প্রযুক্তিগত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "l": {
         "lemma": "le",
         "en": "the (elision)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "s": {
         "lemma": "se",
@@ -13237,7 +16983,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "matin",
         "en": "morning",
         "bn": "সকাল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
       },
       "se": {
         "lemma": "se",
@@ -13249,7 +16998,9 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "rendre",
         "en": "returns / gives back",
         "bn": "ফেরত দেয়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "sur": {
         "lemma": "sur",
@@ -13261,19 +17012,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (masculine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "campus": {
         "lemma": "campus",
         "en": "university campus",
         "bn": "ক্যাম্পাস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le campus"
       },
       "rendez-vous": {
         "lemma": "rendez-vous",
         "en": "appointment / meeting",
         "bn": "সাক্ষাৎ / অ্যাপয়েন্টমেন্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
       },
       "avec": {
         "lemma": "avec",
@@ -13285,61 +17044,84 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "le",
         "en": "the (feminine)",
         "bn": "টি / টা",
-        "pos": "article"
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
       },
       "responsable": {
         "lemma": "responsable",
         "en": "manager / coordinator / responsible",
         "bn": "প্রধান কর্মকর্তা / দায়িত্বপ্রাপ্ত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le responsable"
       },
       "pédagogique": {
         "lemma": "pédagogique",
         "en": "educational / academic",
         "bn": "শিক্ষাগত / পাঠদান সংক্রান্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "du": {
         "lemma": "de + le",
         "en": "of the / from the",
         "bn": "দোকানের",
-        "pos": "article"
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
       },
       "département": {
         "lemma": "département",
         "en": "department (academic)",
         "bn": "বিভাগ (বিশ্ববিদ্যালয়)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le département"
       },
       "informatique": {
         "lemma": "informatique",
         "en": "IT / computing",
         "bn": "আইটি / কম্পিউটার বিজ্ঞান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'informatique"
       },
       "est": {
         "lemma": "être",
         "en": "is",
         "bn": "হয় / আছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "vaste": {
         "lemma": "vaste",
         "en": "vast / spacious",
         "bn": "বিশাল / প্রশস্ত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "verdoyant": {
         "lemma": "verdoyant",
         "en": "green / lush",
         "bn": "সবুজ ঘেরা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "animé": {
         "lemma": "animer",
         "en": "lively / buzzing",
         "bn": "প্রাণবন্ত / মুখরিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "par": {
         "lemma": "par",
@@ -13351,31 +17133,44 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "centaine",
         "en": "hundreds",
         "bn": "শত শত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la centaine"
       },
       "étudiants": {
         "lemma": "étudiant",
         "en": "students",
         "bn": "শিক্ষার্থীবৃন্দ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'étudiant"
       },
       "toutes": {
         "lemma": "tout",
         "en": "all (feminine plural)",
         "bn": "সবগুলো",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "nationalités": {
         "lemma": "nationalité",
         "en": "nationalities",
         "bn": "জাতীয়তাসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la nationalité"
       },
       "trouve": {
         "lemma": "trouver",
         "en": "finds",
         "bn": "পায়",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "facilement": {
         "lemma": "facilement",
@@ -13387,13 +17182,19 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "secrétariat",
         "en": "secretariat / administration office",
         "bn": "সেক্রেটারিয়েট / প্রশাসনিক দপ্তর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le secrétariat"
       },
       "inscriptions": {
         "lemma": "inscription",
         "en": "admissions",
         "bn": "ভর্তি কার্যক্রম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'inscription"
       },
       "au": {
         "lemma": "à + le",
@@ -13405,37 +17206,53 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "deuxième",
         "en": "second",
         "bn": "দ্বিতীয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "étage": {
         "lemma": "étage",
         "en": "floor / storey",
         "bn": "তলা / ফ্লোর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'étage"
       },
       "bâtiment": {
         "lemma": "bâtiment",
         "en": "building",
         "bn": "ভবন / বিল্ডিং",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bâtiment"
       },
       "sciences": {
         "lemma": "science",
         "en": "sciences",
         "bn": "বিজ্ঞান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la science"
       },
       "appliquées": {
         "lemma": "appliquer",
         "en": "applied (sciences)",
         "bn": "ফলিত (বিজ্ঞান)",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "rendez": {
         "lemma": "rendre",
         "en": "return / appointment (rendez-vous)",
         "bn": "সাক্ষাৎ / ফেরত দেওয়া",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
       },
       "vous": {
         "lemma": "vous",
@@ -13447,25 +17264,35 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "coordinateur",
         "en": "program coordinator (female)",
         "bn": "সমন্বয়কারী (মহিলা)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le coordinateur"
       },
       "madame": {
         "lemma": "madame",
         "en": "madam / ma'am",
         "bn": "ম্যাডাম / বেগম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "madame"
       },
       "leroux": {
         "lemma": "Leroux",
         "en": "Leroux (surname)",
         "bn": "লারু (পদবি)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Leroux"
       },
       "reçoit": {
         "lemma": "recevoir",
         "en": "receives / welcomes",
         "bn": "গ্রহণ করে / স্বাগত জানায়",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "cordialement": {
         "lemma": "cordialement",
@@ -13477,7 +17304,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "bureau",
         "en": "office / desk",
         "bn": "অফিস / পড়ার টেবিল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bureau"
       },
       "bonjour": {
         "lemma": "bonjour",
@@ -13489,19 +17319,24 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "avoir",
         "en": "have (first person: j'ai)",
         "bn": "আছে (আমার আছে)",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "examiné": {
         "lemma": "examiner",
         "en": "reviewed / examined",
         "bn": "পর্যালোচনা করেছে",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "past participle"
       },
       "intérêt": {
         "lemma": "intérêt",
         "en": "interest",
         "bn": "আগ্রহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'intérêt"
       },
       "votre": {
         "lemma": "votre",
@@ -13513,19 +17348,27 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "dossier",
         "en": "application file / folder",
         "bn": "ফাইল / আবেদনপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le dossier"
       },
       "candidature": {
         "lemma": "candidature",
         "en": "application / candidacy",
         "bn": "আবেদন / প্রার্থিতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la candidature"
       },
       "préalable": {
         "lemma": "préalable",
         "en": "preliminary / prior",
         "bn": "প্রাথমিক / পূর্ববর্তী",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "vos": {
         "lemma": "votre",
@@ -13537,25 +17380,34 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "base",
         "en": "foundations / basics",
         "bn": "মৌলিক বিষয়সমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la base"
       },
       "techniques": {
         "lemma": "technique",
         "en": "technical (plural)",
         "bn": "কারিগরি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "sont": {
         "lemma": "être",
         "en": "are (plural)",
         "bn": "হয় / আছেন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
       },
       "solides": {
         "lemma": "solide",
         "en": "solid (plural)",
         "bn": "মজবুত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "mais": {
         "lemma": "mais",
@@ -13573,13 +17425,16 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "devoir",
         "en": "must / have to (nous)",
         "bn": "আমাদের অবশ্যই হবে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "vérifier": {
         "lemma": "vérifier",
         "en": "to check / verify",
         "bn": "যাচাই করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "ensemble": {
         "lemma": "ensemble",
@@ -13591,31 +17446,42 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "volet",
         "en": "aspect / section / component",
         "bn": "দিক / অংশ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le volet"
       },
       "administratif": {
         "lemma": "administratif",
         "en": "administrative",
         "bn": "প্রশাসনিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "finaliser": {
         "lemma": "finaliser",
         "en": "to finalize",
         "bn": "চূড়ান্ত করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "inscription": {
         "lemma": "inscription",
         "en": "enrollment / registration",
         "bn": "ভর্তি / নিবন্ধন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'inscription"
       },
       "officielle": {
         "lemma": "officiel",
         "en": "official (feminine)",
         "bn": "দাপ্তরিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "j": {
         "lemma": "je",
@@ -13627,13 +17493,17 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "présenter",
         "en": "presents / introduces",
         "bn": "উপস্থাপন করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "complet": {
         "lemma": "complet",
         "en": "complete / full",
         "bn": "সম্পূর্ণ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "qui": {
         "lemma": "qui",
@@ -13645,133 +17515,189 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "contenir",
         "en": "contains",
         "bn": "ধারণ করে / রয়েছে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "les": {
         "lemma": "les",
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
-        "pos": "article"
+        "pos": "article",
+        "number": "plural",
+        "gender": "feminine"
       },
       "pièces": {
         "lemma": "pièce",
         "en": "documents / coins / rooms",
         "bn": "নথিপত্র / মুদ্রা / কক্ষ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la pièce"
       },
       "requises": {
         "lemma": "requis",
         "en": "required (plural)",
         "bn": "প্রয়োজনীয় / আবশ্যকীয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "photocopies": {
         "lemma": "photocopie",
         "en": "photocopies",
         "bn": "ফটোকপি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la photocopie"
       },
       "certifiées": {
         "lemma": "certifier",
         "en": "certified (plural)",
         "bn": "সত্যায়িত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "diplômes": {
         "lemma": "diplôme",
         "en": "diplomas / degrees",
         "bn": "সনদসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le diplôme"
       },
       "accompagnées": {
         "lemma": "accompagner",
         "en": "accompanied (feminine plural)",
         "bn": "সংযুক্ত / সাথে থাকা",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "traduction": {
         "lemma": "traduction",
         "en": "translation",
         "bn": "অনুবাদ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la traduction"
       },
       "assermentée": {
         "lemma": "assermenter",
         "en": "sworn / certified (translation)",
         "bn": "অনুমোদিত / শপথবদ্ধ (অনুবাদ)",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "français": {
         "lemma": "français",
         "en": "French",
         "bn": "ফরাসি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le français"
       },
       "relevés": {
         "lemma": "relevé",
         "en": "statements / transcripts",
         "bn": "বিবরণীসমূহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le relevé"
       },
       "notes": {
         "lemma": "note",
         "en": "grades / transcripts / notes",
         "bn": "নম্বর / মার্কশিট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la note"
       },
       "détaillés": {
         "lemma": "détailler",
         "en": "detailed (transcripts)",
         "bn": "বিস্তারিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "lettre": {
         "lemma": "lettre",
         "en": "letter / cover letter",
         "bn": "চিঠি / আবেদনপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la lettre"
       },
       "motivation": {
         "lemma": "motivation",
         "en": "motivation",
         "bn": "প্রেরণা / উৎসাহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la motivation"
       },
       "rédigée": {
         "lemma": "rédiger",
         "en": "written / drafted",
         "bn": "লিখিত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "soin": {
         "lemma": "soin",
         "en": "care / diligence",
         "bn": "যত্ন / মনোযোগ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le soin"
       },
       "justificatif": {
         "lemma": "justificatif",
         "en": "supporting document / proof",
         "bn": "প্রমাণপত্র / প্রত্যয়ন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le justificatif"
       },
       "séjour": {
         "lemma": "séjour",
         "en": "residence / stay (permit)",
         "bn": "বসবাস / অবস্থান (পারমিট)",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le séjour"
       },
       "légal": {
         "lemma": "légal",
         "en": "legal / lawful",
         "bn": "আইনসম্মত / বৈধ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "vérifie": {
         "lemma": "vérifier",
         "en": "checks / verifies",
         "bn": "যাচাই করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "scrupuleusement": {
         "lemma": "scrupuleusement",
@@ -13783,55 +17709,76 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "chaque",
         "en": "each / every",
         "bn": "প্রতিটি",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "document": {
         "lemma": "document",
         "en": "document",
         "bn": "নথি / দলিল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le document"
       },
       "valide": {
         "lemma": "valider",
         "en": "validates / valid",
         "bn": "অনুমোদন করে / বৈধ",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "équivalence": {
         "lemma": "équivalence",
         "en": "equivalency",
         "bn": "সমমান / সমতাকরণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'équivalence"
       },
       "crédits": {
         "lemma": "crédit",
         "en": "academic credits / credit",
         "bn": "ক্রেডিট / পয়েন্ট",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le crédit"
       },
       "académiques": {
         "lemma": "académique",
         "en": "academic",
         "bn": "একাডেমিক / শিক্ষাগত",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "elle": {
         "lemma": "elle",
         "en": "she",
         "bn": "সে (মহিলা)",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "feminine",
+        "number": "singular"
       },
       "lui": {
         "lemma": "lui",
         "en": "to him / her",
         "bn": "তাকে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "explique": {
         "lemma": "expliquer",
         "en": "explains",
         "bn": "ব্যাখ্যা করে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "ensuite": {
         "lemma": "ensuite",
@@ -13843,217 +17790,306 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "déroulement",
         "en": "process / sequence / course",
         "bn": "ধারাবাহিকতা / প্রক্রিয়া",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le déroulement"
       },
       "passionnant": {
         "lemma": "passionnant",
         "en": "exciting / fascinating",
         "bn": "উত্তেজনাপূর্ণ / চিত্তাকর্ষক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "année": {
         "lemma": "année",
         "en": "year (duration)",
         "bn": "বছর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'année"
       },
       "cours": {
         "lemma": "cours",
         "en": "class / course / in progress",
         "bn": "ক্লাস / কোর্স / চলমান",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le cours"
       },
       "théoriques": {
         "lemma": "théorique",
         "en": "theoretical (classes)",
         "bn": "তাত্ত্বিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "auront": {
         "lemma": "avoir",
         "en": "will have (plural)",
         "bn": "থাকবে",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "lieu": {
         "lemma": "lieu",
         "en": "place / take place",
         "bn": "স্থান / অনুষ্ঠিত হওয়া",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le lieu"
       },
       "travaux": {
         "lemma": "travail",
         "en": "lab work / hands-on sessions (TP)",
         "bn": "বাস্তব কাজ / ল্যাব প্র্যাকটিক্যাল",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le travail"
       },
       "pratiques": {
         "lemma": "pratique",
         "en": "practical (plural)",
         "bn": "ব্যবহারিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
       },
       "laboratoire": {
         "lemma": "laboratoire",
         "en": "laboratory / computer lab",
         "bn": "ল্যাবরেটরি / ল্যাব",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le laboratoire"
       },
       "après-midi": {
         "lemma": "après-midi",
         "en": "afternoon",
         "bn": "বিকাল / দুপুর",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'après-midi"
       },
       "second": {
         "lemma": "second",
         "en": "second",
         "bn": "দ্বিতীয়",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "semestre": {
         "lemma": "semestre",
         "en": "semester / term",
         "bn": "সেমিস্টার",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le semestre"
       },
       "effectuerez": {
         "lemma": "effectuer",
         "en": "will carry out (future)",
         "bn": "সম্পন্ন করবেন",
-        "pos": "verb"
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
       },
       "stage": {
         "lemma": "stage",
         "en": "internship / practical training",
         "bn": "ইন্টার্নশিপ / বাস্তব প্রশিক্ষণ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le stage"
       },
       "professionnel": {
         "lemma": "professionnel",
         "en": "professional",
         "bn": "পেশাদার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "quatre": {
         "lemma": "quatre",
         "en": "four",
         "bn": "চার",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "mois": {
         "lemma": "mois",
         "en": "month / months",
         "bn": "মাস",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le mois"
       },
       "entreprise": {
         "lemma": "entreprise",
         "en": "company / enterprise",
         "bn": "প্রতিষ্ঠান / কোম্পানি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entreprise"
       },
       "mettre": {
         "lemma": "mettre",
         "en": "to put / apply",
         "bn": "রাখা / প্রয়োগ করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "pratique": {
         "lemma": "pratique",
         "en": "practical / practice",
         "bn": "বাস্তবমুখী / ব্যবহারিক",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "connaissances": {
         "lemma": "connaissance",
         "en": "knowledge / expertise",
         "bn": "জ্ঞান / অভিজ্ঞতা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la connaissance"
       },
       "infrastructures": {
         "lemma": "infrastructure",
         "en": "infrastructure / hardware systems",
         "bn": "অবকাঠামো / আইটি সিস্টেম",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'infrastructure"
       },
       "réelles": {
         "lemma": "réel",
         "en": "real / live (systems)",
         "bn": "বাস্তব",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
       },
       "signe": {
         "lemma": "signe",
         "en": "sign / signal",
         "bn": "ইশারা / সংকেত",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le signe"
       },
       "contrat": {
         "lemma": "contrat",
         "en": "contract / agreement",
         "bn": "চুক্তিপত্র",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le contrat"
       },
       "fierté": {
         "lemma": "fierté",
         "en": "pride",
         "bn": "গর্ব / আত্মতৃপ্তি",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fierté"
       },
       "immense": {
         "lemma": "immense",
         "en": "immense / huge",
         "bn": "বিশাল / অগাধ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "il": {
         "lemma": "il",
         "en": "he",
         "bn": "সে",
-        "pos": "pronoun"
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
       },
       "prêt": {
         "lemma": "prêt",
         "en": "ready / loan",
         "bn": "প্রস্তুত / ঋণ",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
       },
       "commencer": {
         "lemma": "commencer",
         "en": "to start / begin",
         "bn": "শুরু করা",
-        "pos": "verb"
+        "pos": "verb",
+        "tense": "infinitive"
       },
       "cette": {
         "lemma": "ce",
         "en": "this (feminine)",
         "bn": "এই",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "nouvelle": {
         "lemma": "nouveau",
         "en": "new (feminine) / news",
         "bn": "নতুন",
-        "pos": "adjective"
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
       },
       "aventure": {
         "lemma": "aventure",
         "en": "adventure / journey",
         "bn": "অভিযান / রোমাঞ্চকর যাত্রা",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'aventure"
       },
       "détermination": {
         "lemma": "détermination",
         "en": "determination",
         "bn": "দৃঢ় সংকল্প",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la détermination"
       },
       "enthousiasme": {
         "lemma": "enthousiasme",
         "en": "enthusiasm",
         "bn": "উদ্দীপনা / উৎসাহ",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'enthousiasme"
       },
       "après": {
         "lemma": "après",
@@ -14065,7 +18101,10 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "midi",
         "en": "midday / noon",
         "bn": "দুপুর / মধ্যাহ্ন",
-        "pos": "noun"
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le midi"
       }
     },
     "quiz": [

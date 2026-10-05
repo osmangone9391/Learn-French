@@ -166,7 +166,13 @@ export function validateAllStories(stories: Story[] = INITIAL_STORIES): {
     const vocabKeys = Object.keys(story.vocabulary || {});
     totalVocabEntries += vocabKeys.length;
 
-    // Validate vocab entries format
+    // Validate vocab entries format and grammatical annotations
+    const VALID_POS = new Set(['noun', 'verb', 'adjective', 'adverb', 'preposition', 'pronoun', 'conjunction', 'expression', 'article', 'interjection', 'number']);
+    const VALID_GENDERS = new Set(['masculine', 'feminine']);
+    const VALID_NUMBERS = new Set(['singular', 'plural']);
+    const VALID_TENSES = new Set(['present', 'imperfect', 'future', 'conditional', 'subjunctive', 'imperative', 'infinitive', 'past participle', 'present participle']);
+    const VALID_PERSONS = new Set(['1st person singular', '2nd person singular', '3rd person singular', '1st person plural', '2nd person plural', '3rd person plural']);
+
     for (const [key, entry] of Object.entries(story.vocabulary || {})) {
       if (!entry.lemma?.trim()) {
         errors.push({ storyId: story.id, storyTitle: story.title, type: 'missing_vocab', message: `Vocab entry "${key}" missing lemma` });
@@ -177,8 +183,62 @@ export function validateAllStories(stories: Story[] = INITIAL_STORIES): {
       if (!entry.bn?.trim()) {
         errors.push({ storyId: story.id, storyTitle: story.title, type: 'missing_vocab', message: `Vocab entry "${key}" missing Bangla translation` });
       }
-      if (!entry.pos) {
-        errors.push({ storyId: story.id, storyTitle: story.title, type: 'missing_vocab', message: `Vocab entry "${key}" missing part of speech` });
+      if (!entry.pos || !VALID_POS.has(entry.pos)) {
+        errors.push({ storyId: story.id, storyTitle: story.title, type: 'missing_vocab', message: `Vocab entry "${key}" has invalid or missing part of speech: "${entry.pos}"` });
+      }
+
+      // Grammar Validation Rules
+      if (entry.pos === 'noun' || entry.pos === 'adjective' || entry.pos === 'article') {
+        if (!entry.gender || !VALID_GENDERS.has(entry.gender)) {
+          errors.push({
+            storyId: story.id,
+            storyTitle: story.title,
+            type: 'missing_vocab',
+            message: `Vocab entry "${key}" (${entry.pos}): invalid or missing gender "${entry.gender}" (must be masculine or feminine)`
+          });
+        }
+        if (!entry.number || !VALID_NUMBERS.has(entry.number)) {
+          errors.push({
+            storyId: story.id,
+            storyTitle: story.title,
+            type: 'missing_vocab',
+            message: `Vocab entry "${key}" (${entry.pos}): invalid or missing number "${entry.number}" (must be singular or plural)`
+          });
+        }
+        if (entry.pos === 'noun' && (!entry.lemmaWithArticle || !entry.lemmaWithArticle.trim())) {
+          errors.push({
+            storyId: story.id,
+            storyTitle: story.title,
+            type: 'missing_vocab',
+            message: `Vocab entry "${key}" (noun): missing dictionary lemmaWithArticle`
+          });
+        }
+      } else if (entry.pos === 'verb') {
+        if (entry.gender || entry.number) {
+          errors.push({
+            storyId: story.id,
+            storyTitle: story.title,
+            type: 'missing_vocab',
+            message: `Vocab entry "${key}" (verb): verbs must not have gender or number`
+          });
+        }
+        if (!entry.tense || !VALID_TENSES.has(entry.tense)) {
+          errors.push({
+            storyId: story.id,
+            storyTitle: story.title,
+            type: 'missing_vocab',
+            message: `Vocab entry "${key}" (verb): invalid or missing tense "${entry.tense}"`
+          });
+        }
+        const isNonFinite = entry.tense === 'infinitive' || entry.tense === 'past participle' || entry.tense === 'present participle';
+        if (!isNonFinite && (!entry.person || !VALID_PERSONS.has(entry.person))) {
+          errors.push({
+            storyId: story.id,
+            storyTitle: story.title,
+            type: 'missing_vocab',
+            message: `Vocab entry "${key}" (verb): finite verb with tense "${entry.tense}" requires valid person (found "${entry.person}")`
+          });
+        }
       }
     }
 
@@ -227,7 +287,7 @@ export function validateAllStories(stories: Story[] = INITIAL_STORIES): {
 
 export function runValidation() {
   console.log('===============================================================');
-  console.log('           LIREFACILE — STORY DATA VALIDATION CHECK            ');
+  console.log('    LEARN FRENCH BY READING — STORY DATA VALIDATION CHECK      ');
   console.log('===============================================================\n');
 
   const result = validateAllStories();

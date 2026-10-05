@@ -65,7 +65,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
       const a = document.createElement('a');
       const dateStr = new Date().toISOString().split('T')[0];
       a.href = url;
-      a.download = `lirefacile-backup-${dateStr}.json`;
+      a.download = `learn-french-backup-${dateStr}.json`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);

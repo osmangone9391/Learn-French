@@ -1,6 +1,6 @@
 export const i18n = {
   common: {
-    appName: 'LireFacile',
+    appName: 'Learn French by Reading',
     tagline: 'Practical French for Daily Life & Study in France',
     stories: 'Stories',
     words: 'Words',

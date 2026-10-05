@@ -3,6 +3,8 @@ import { Volume2, Bookmark, Check, X, BookOpen } from 'lucide-react';
 import { VocabEntry, PartOfSpeech } from '../types';
 import { audioPlayer } from '../utils/audioPlayer';
 import { i18n } from '../i18n/en';
+import { getGrammarForVocab } from '../utils/grammarHelper';
+import { GrammarChips } from './GrammarChips';
 
 interface WordPopupProps {
   word: string;
@@ -25,6 +27,8 @@ const POS_LABELS: Record<PartOfSpeech, { label: string; bn: string; color: strin
   conjunction: { label: 'Conjunction', bn: 'সংযোজক অব্যয়', color: 'bg-teal-50 text-teal-700 border-teal-200' },
   expression: { label: 'Expression / Idiom', bn: 'বাগধারা', color: 'bg-orange-50 text-orange-700 border-orange-200' },
   article: { label: 'Article', bn: 'পদাশ্রিত নির্দেশক', color: 'bg-cyan-50 text-cyan-700 border-cyan-200' },
+  interjection: { label: 'Interjection', bn: 'আবেগসূচক অব্যয়', color: 'bg-yellow-50 text-yellow-700 border-yellow-200' },
+  number: { label: 'Number', bn: 'সংখ্যা', color: 'bg-stone-50 text-stone-700 border-stone-200' }
 };
 
 export const WordPopup: React.FC<WordPopupProps> = ({
@@ -39,6 +43,7 @@ export const WordPopup: React.FC<WordPopupProps> = ({
 }) => {
   const displayLemma = vocab?.lemma || lemma || word;
   const posInfo = vocab?.pos ? POS_LABELS[vocab.pos] : null;
+  const grammar = getGrammarForVocab(word, vocab);
 
   const handlePlayAudio = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -96,11 +101,9 @@ export const WordPopup: React.FC<WordPopupProps> = ({
                 <h3 className="text-2xl font-serif font-bold text-stone-900 tracking-tight">
                   {word}
                 </h3>
-                {displayLemma.toLowerCase() !== word.toLowerCase() && (
-                  <span className="text-xs text-stone-500 font-sans">
-                    ({i18n.wordPopup.infinitive} <span className="font-semibold text-stone-700">{displayLemma}</span>)
-                  </span>
-                )}
+              </div>
+              <div className="mt-2">
+                <GrammarChips grammar={grammar} />
               </div>
             </div>
 

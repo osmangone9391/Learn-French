@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { X, Volume2, Trash2, BookmarkCheck, BookOpen, Search } from 'lucide-react';
 import { SavedWord } from '../types';
 import { speechService } from '../utils/speech';
+import { getGrammarForSavedWord } from '../utils/grammarHelper';
+import { GrammarChips } from './GrammarChips';
 
 interface SavedWordsDrawerProps {
   isOpen: boolean;
@@ -114,14 +116,11 @@ export const SavedWordsDrawer: React.FC<SavedWordsDrawerProps> = ({
                       <span className="text-base font-serif font-bold text-stone-900">
                         {item.word}
                       </span>
-                      {item.lemma && item.lemma.toLowerCase() !== item.word.toLowerCase() && (
-                        <span className="text-xs text-stone-500">
-                          ({item.lemma})
-                        </span>
-                      )}
-                      <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-stone-200 text-stone-600 font-medium">
-                        {item.pos}
-                      </span>
+                    </div>
+
+                    {/* Grammar Chips */}
+                    <div className="mt-1">
+                      <GrammarChips grammar={getGrammarForSavedWord(item)} compact />
                     </div>
 
                     {/* Translations */}

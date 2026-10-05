@@ -1,5 +1,5 @@
 /**
- * Unified Two-Layer Audio Player for LireFacile:
+ * Unified Two-Layer Audio Player for Learn French by Reading:
  * Layer A (Primary): Pre-generated Human Neural MP3s (loaded from audio/manifest.json)
  * Layer B (Fallback): Highest-quality browser SpeechSynthesis voice (prioritizing Natural/Neural/Google/Siri)
  */

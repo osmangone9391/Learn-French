@@ -18,6 +18,8 @@ import {
 } from '../utils/srs';
 import { audioPlayer } from '../utils/audioPlayer';
 import { i18n } from '../i18n/en';
+import { getGrammarForSavedWord } from '../utils/grammarHelper';
+import { GrammarChips } from './GrammarChips';
 
 interface ReviewSessionProps {
   queue: SavedWord[];
@@ -376,6 +378,16 @@ export const ReviewSession: React.FC<ReviewSessionProps> = ({
                   >
                     <Volume2 size={13} /> {i18n.review.reListenBtn}
                   </button>
+                </div>
+
+                {/* Grammar details on answer reveal */}
+                <div className="py-2 px-3 bg-white/90 rounded-xl border border-stone-200/80 flex items-center justify-between gap-2 flex-wrap text-left">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="font-serif font-bold text-stone-900 text-sm">
+                      {currentCard.word}
+                    </span>
+                    <GrammarChips grammar={getGrammarForSavedWord(currentCard)} compact />
+                  </div>
                 </div>
 
                 {/* Original context sentence */}

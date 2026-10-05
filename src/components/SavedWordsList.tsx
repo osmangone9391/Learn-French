@@ -14,6 +14,8 @@ import { SavedWord, AppSettings } from '../types';
 import { audioPlayer } from '../utils/audioPlayer';
 import { LEITNER_INTERVALS_DAYS, toDateString, isCardDue } from '../utils/srs';
 import { i18n } from '../i18n/en';
+import { getGrammarForSavedWord } from '../utils/grammarHelper';
+import { GrammarChips } from './GrammarChips';
 
 interface SavedWordsListProps {
   savedWords: SavedWord[];
@@ -235,6 +237,7 @@ export const SavedWordsList: React.FC<SavedWordsListProps> = ({
             {filteredWords.map((item) => {
               const isMastered = item.srsStage >= 5;
               const due = isCardDue(item);
+              const grammar = getGrammarForSavedWord(item);
 
               return (
                 <div
@@ -248,14 +251,11 @@ export const SavedWordsList: React.FC<SavedWordsListProps> = ({
                         <span className="text-xl font-serif font-bold text-stone-950">
                           {item.word}
                         </span>
-                        {item.lemma && item.lemma.toLowerCase() !== item.word.toLowerCase() && (
-                          <span className="text-xs text-stone-500 font-sans">
-                            ({item.lemma})
-                          </span>
-                        )}
-                        <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded-full bg-stone-100 text-stone-600">
-                          {item.pos}
-                        </span>
+                      </div>
+
+                      {/* Grammar Chips line */}
+                      <div className="mt-1">
+                        <GrammarChips grammar={grammar} compact />
                       </div>
 
                       {/* Translations */}

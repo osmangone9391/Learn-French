@@ -1,5 +1,8 @@
 export type CEFRLevel = 'A1' | 'A2' | 'B1';
 
+export type Gender = 'masculine' | 'feminine';
+export type GrammaticalNumber = 'singular' | 'plural';
+
 export type PartOfSpeech =
   | 'noun'
   | 'verb'
@@ -9,7 +12,9 @@ export type PartOfSpeech =
   | 'pronoun'
   | 'conjunction'
   | 'expression'
-  | 'article';
+  | 'article'
+  | 'interjection'
+  | 'number';
 
 export interface VocabEntry {
   lemma: string;
@@ -18,6 +23,12 @@ export interface VocabEntry {
   pos: PartOfSpeech;
   note?: string;
   ttsText?: string; // Optional phonetic or expansion override for speech synthesis
+  gender?: Gender;
+  number?: GrammaticalNumber;
+  person?: string; // e.g. '1st person singular', '3rd person singular', '2nd person plural'
+  tense?: string; // e.g. 'present', 'imperfect', 'future', 'conditional', 'subjunctive', 'imperative', 'infinitive', 'past participle', 'present participle'
+  lemmaWithArticle?: string; // Dictionary article for noun lemmas e.g. "le croissant", "la baguette", "l'ami"
+  check?: boolean;
 }
 
 export interface QuizQuestion {
@@ -69,6 +80,11 @@ export interface SavedWord {
   timesCorrect: number;
   lastReviewedDate?: string;
   ttsText?: string;
+  gender?: Gender;
+  number?: GrammaticalNumber;
+  person?: string;
+  tense?: string;
+  lemmaWithArticle?: string;
 }
 
 export interface ReviewHistoryEntry {

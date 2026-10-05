@@ -35,6 +35,11 @@ interface StoryReaderProps {
     sentence: string;
     storyId: string;
     storyTitle: string;
+    gender?: SavedWord['gender'];
+    number?: SavedWord['number'];
+    person?: string;
+    tense?: string;
+    lemmaWithArticle?: string;
   }) => void;
   onUpdateSettings: (settings: Partial<AppSettings>) => void;
   onQuizCompleted: (scorePercentage: number) => void;
@@ -490,7 +495,12 @@ export const StoryReader: React.FC<StoryReaderProps> = ({
               pos: entry.pos,
               sentence: selectedWordToken.sentenceContext,
               storyId: story.id,
-              storyTitle: story.title
+              storyTitle: story.title,
+              gender: entry.gender,
+              number: entry.number,
+              person: entry.person,
+              tense: entry.tense,
+              lemmaWithArticle: entry.lemmaWithArticle
             });
           }}
           onClose={() => setSelectedWordToken(null)}
