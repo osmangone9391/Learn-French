@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { Story, SavedWord, UserStats, AppSettings, CEFRLevel } from './types';
+import { Story, SavedWord, UserStats, AppSettings, CEFRLevel, StoryGenerationSettings } from './types';
 import { INITIAL_STORIES } from './data/stories';
 import {
   getSavedWords,
@@ -19,7 +19,10 @@ import {
   savePlacementResult,
   dismissPlacementPrompt,
   getAppSettings,
-  updateAppSettings
+  updateAppSettings,
+  getCustomStories,
+  saveCustomStory,
+  deleteCustomStory
 } from './utils/storage';
 import { getDailyStudyQueue } from './utils/srs';
 import { Navbar } from './components/Navbar';
@@ -30,11 +33,15 @@ import { ReviewSession } from './components/ReviewSession';
 import { ProgressPage } from './components/ProgressPage';
 import { SettingsModal } from './components/SettingsModal';
 import { PlacementQuizModal } from './components/PlacementQuizModal';
+import { CreateStoryModal } from './components/CreateStoryModal';
+import { AudioSourceIndicator } from './components/AudioSourceIndicator';
 
 type AppView = 'library' | 'reader' | 'words' | 'review' | 'progress';
 
 export default function App() {
-  const [stories] = useState<Story[]>(INITIAL_STORIES);
+  const [customStories, setCustomStories] = useState<Story[]>(getCustomStories());
+  const allStories = useMemo(() => [...customStories, ...INITIAL_STORIES], [customStories]);
+
   const [activeView, setActiveView] = useState<AppView>('library');
   const [activeStory, setActiveStory] = useState<Story | null>(null);
   const [savedWords, setSavedWords] = useState<SavedWord[]>([]);
@@ -44,15 +51,21 @@ export default function App() {
   const [isPlacementQuizOpen, setIsPlacementQuizOpen] = useState(false);
   const [isFirstLaunchPlacement, setIsFirstLaunchPlacement] = useState(false);
 
+  // Personalized Story Creation state
+  const [isCreateStoryOpen, setIsCreateStoryOpen] = useState(false);
+  const [regenerateSettings, setRegenerateSettings] = useState<StoryGenerationSettings | undefined>(undefined);
+
   // Load persisted state on mount
   useEffect(() => {
     try {
       const words = getSavedWords();
       const stats = getUserStats();
       const sett = getAppSettings();
+      const custom = getCustomStories();
       setSavedWords(words);
       setUserStats(stats);
       setSettings(sett);
+      setCustomStories(custom);
 
       // Offer placement test on first launch if not seen yet
       if (!stats.hasSeenPlacementPrompt && !stats.placementResult) {
@@ -157,6 +170,33 @@ export default function App() {
     setSavedWords(getSavedWords());
     setUserStats(getUserStats());
     setSettings(getAppSettings());
+    setCustomStories(getCustomStories());
+  };
+
+  // Story Creation & Management Handlers
+  const handleStoryCreated = (newStory: Story) => {
+    saveCustomStory(newStory);
+    const updated = getCustomStories();
+    setCustomStories(updated);
+    setActiveStory(newStory);
+    setActiveView('reader');
+    setIsCreateStoryOpen(false);
+    setRegenerateSettings(undefined);
+  };
+
+  const handleDeleteCustomStory = (storyId: string) => {
+    deleteCustomStory(storyId);
+    const updated = getCustomStories();
+    setCustomStories(updated);
+    if (activeStory?.id === storyId) {
+      setActiveStory(null);
+      setActiveView('library');
+    }
+  };
+
+  const handleRegenerateStory = (storyGenSettings: StoryGenerationSettings) => {
+    setRegenerateSettings(storyGenSettings);
+    setIsCreateStoryOpen(true);
   };
 
   // Navigation handlers
@@ -210,6 +250,8 @@ export default function App() {
             onSaveWord={handleSaveWord}
             onUpdateSettings={handleUpdateSettings}
             onQuizCompleted={handleQuizCompleted}
+            onDeleteStory={handleDeleteCustomStory}
+            onRegenerateStory={handleRegenerateStory}
           />
         ) : activeView === 'words' ? (
           <SavedWordsList
@@ -229,7 +271,7 @@ export default function App() {
           />
         ) : activeView === 'progress' ? (
           <ProgressPage
-            stories={stories}
+            stories={allStories}
             userStats={userStats}
             savedWords={savedWords}
             onOpenPlacementQuiz={() => setIsPlacementQuizOpen(true)}
@@ -237,7 +279,7 @@ export default function App() {
           />
         ) : (
           <StoryLibrary
-            stories={stories}
+            stories={allStories}
             userStats={userStats}
             savedWords={savedWords}
             settings={settings}
@@ -246,6 +288,12 @@ export default function App() {
             onStartReview={handleStartReview}
             onOpenPlacementQuiz={() => setIsPlacementQuizOpen(true)}
             onOpenProgress={handleOpenProgress}
+            onOpenCreateStory={() => {
+              setRegenerateSettings(undefined);
+              setIsCreateStoryOpen(true);
+            }}
+            onDeleteCustomStory={handleDeleteCustomStory}
+            onRegenerateCustomStory={handleRegenerateStory}
           />
         )}
       </div>
@@ -269,6 +317,23 @@ export default function App() {
         onSkip={handlePlacementSkip}
         isFirstLaunch={isFirstLaunchPlacement}
       />
+
+      {/* Create Story Modal */}
+      <CreateStoryModal
+        isOpen={isCreateStoryOpen}
+        onClose={() => {
+          setIsCreateStoryOpen(false);
+          setRegenerateSettings(undefined);
+        }}
+        savedWords={savedWords}
+        recommendedLevel={userStats.recommendedLevel || 'A1'}
+        onStoryCreated={handleStoryCreated}
+        onOpenSettings={() => setIsSettingsOpen(true)}
+        initialSettings={regenerateSettings}
+      />
+
+      {/* Persistent Audio Source Indicator (Neural vs Browser Voice) */}
+      <AudioSourceIndicator />
     </div>
   );
 }

@@ -122,6 +122,25 @@ export function parseParagraph(
       };
     });
 
+    // Keep gender for l' only when the gender can be given from the noun it belongs to
+    for (let i = 0; i < tokens.length; i++) {
+      const tok = tokens[i];
+      if (tok.cleanWord === 'l' && tok.vocab && tok.vocab.pos === 'article') {
+        const nextWordTok = tokens.slice(i + 1).find(t => t.isWord);
+        if (nextWordTok?.vocab && nextWordTok.vocab.pos === 'noun' && nextWordTok.vocab.gender) {
+          tok.vocab = {
+            ...tok.vocab,
+            gender: nextWordTok.vocab.gender
+          };
+        } else if (nextWordTok?.vocab && nextWordTok.vocab.pos !== 'noun') {
+          tok.vocab = {
+            ...tok.vocab,
+            gender: undefined
+          };
+        }
+      }
+    }
+
     return {
       id: sentenceId,
       text: trimmedSentence,

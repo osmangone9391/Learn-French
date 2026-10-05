@@ -9,6 +9,17 @@ interface GrammarChipsProps {
 export const GrammarChips: React.FC<GrammarChipsProps> = ({ grammar, compact = false }) => {
   if (!grammar) return null;
 
+  // 1. Plural articles "les" and "des" must show only "article · plural" (no gender chip)
+  const isPluralArticle =
+    grammar.pos === 'article' &&
+    (grammar.number === 'plural' || grammar.lemmaDisplay === 'les' || grammar.lemmaDisplay === 'des');
+
+  // 2. Numbers (deux, trois, etc.) must show "number" as POS, with no gender and no singular/plural chip
+  const isNumber = grammar.pos === 'number';
+
+  const showGender = !isPluralArticle && !isNumber && Boolean(grammar.gender);
+  const showNumber = !isNumber && Boolean(grammar.number);
+
   const isMasculine = grammar.gender === 'masculine';
   const isFeminine = grammar.gender === 'feminine';
 
@@ -24,7 +35,7 @@ export const GrammarChips: React.FC<GrammarChipsProps> = ({ grammar, compact = f
       </span>
 
       {/* 2. Gender chip (masculine / feminine) with distinct soft colors */}
-      {grammar.gender && (
+      {showGender && (
         <span
           className={`font-semibold px-2 py-0.5 rounded-md border ${
             isFeminine
@@ -37,7 +48,7 @@ export const GrammarChips: React.FC<GrammarChipsProps> = ({ grammar, compact = f
       )}
 
       {/* 3. Number chip (singular / plural) */}
-      {grammar.number && (
+      {showNumber && (
         <span className="font-medium px-2 py-0.5 rounded-md border bg-stone-100 text-stone-600 border-stone-200">
           {grammar.number}
         </span>
@@ -58,7 +69,7 @@ export const GrammarChips: React.FC<GrammarChipsProps> = ({ grammar, compact = f
       )}
 
       {/* 6. Lemma with article (for nouns) or base lemma display */}
-      {grammar.lemmaDisplay && (
+      {!isNumber && grammar.lemmaDisplay && (
         <span className="text-stone-500 font-sans ml-0.5">
           (lemma: <span className="font-semibold text-stone-800">{grammar.lemmaDisplay}</span>)
         </span>

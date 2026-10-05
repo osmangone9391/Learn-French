@@ -40,19 +40,33 @@ export function getGrammarForVocab(
 ): GrammarDisplayInfo | null {
   if (!vocab) return null;
 
+  // Rule 1: The articles "les" and "des" must show only "article · plural" (no gender)
+  const isPluralArticle =
+    vocab.pos === 'article' &&
+    (vocab.number === 'plural' ||
+      word.toLowerCase() === 'les' ||
+      word.toLowerCase() === 'des' ||
+      vocab.lemma === 'les' ||
+      vocab.lemma === 'des');
+
+  // Rule 2: Numbers (deux, trois, etc.) must show "number" as POS with no gender and no singular/plural chip
+  const isNumber = vocab.pos === 'number';
+
   let lemmaDisplay: string | undefined = undefined;
-  if (vocab.pos === 'noun') {
-    lemmaDisplay = vocab.lemmaWithArticle || vocab.lemma;
-  } else if (vocab.pos === 'verb') {
-    lemmaDisplay = vocab.lemma;
-  } else if (vocab.lemma && vocab.lemma.toLowerCase() !== word.toLowerCase()) {
-    lemmaDisplay = vocab.lemma;
+  if (!isNumber) {
+    if (vocab.pos === 'noun') {
+      lemmaDisplay = vocab.lemmaWithArticle || vocab.lemma;
+    } else if (vocab.pos === 'verb') {
+      lemmaDisplay = vocab.lemma;
+    } else if (vocab.lemma && vocab.lemma.toLowerCase() !== word.toLowerCase()) {
+      lemmaDisplay = vocab.lemma;
+    }
   }
 
   return {
     pos: vocab.pos,
-    gender: vocab.gender,
-    number: vocab.number,
+    gender: isPluralArticle || isNumber ? undefined : vocab.gender,
+    number: isNumber ? undefined : (isPluralArticle ? 'plural' : vocab.number),
     person: vocab.person,
     tense: vocab.tense,
     lemmaDisplay
@@ -68,27 +82,56 @@ export function getGrammarForVocab(
 export function getGrammarForSavedWord(savedWord: SavedWord): GrammarDisplayInfo | null {
   if (!savedWord) return null;
 
+  const lowerWord = savedWord.word.toLowerCase().trim();
+  const isPluralArticle =
+    savedWord.pos === 'article' &&
+    (savedWord.number === 'plural' ||
+      lowerWord === 'les' ||
+      lowerWord === 'des' ||
+      savedWord.lemma === 'les' ||
+      savedWord.lemma === 'des');
+  const isNumber = savedWord.pos === 'number';
+
   // 1. Direct fields if already stored in savedWord
   if (
     savedWord.gender ||
     savedWord.number ||
     savedWord.person ||
     savedWord.tense ||
-    savedWord.lemmaWithArticle
+    savedWord.lemmaWithArticle ||
+    isNumber
   ) {
     let lemmaDisplay: string | undefined = undefined;
-    if (savedWord.pos === 'noun') {
-      lemmaDisplay = savedWord.lemmaWithArticle || savedWord.lemma;
-    } else if (savedWord.pos === 'verb') {
-      lemmaDisplay = savedWord.lemma;
-    } else if (savedWord.lemma && savedWord.lemma.toLowerCase() !== savedWord.word.toLowerCase()) {
-      lemmaDisplay = savedWord.lemma;
+    if (!isNumber) {
+      if (savedWord.pos === 'noun') {
+        lemmaDisplay = savedWord.lemmaWithArticle || savedWord.lemma;
+      } else if (savedWord.pos === 'verb') {
+        lemmaDisplay = savedWord.lemma;
+      } else if (savedWord.lemma && savedWord.lemma.toLowerCase() !== lowerWord) {
+        lemmaDisplay = savedWord.lemma;
+      }
+    }
+
+    let resolvedGender = isPluralArticle || isNumber ? undefined : savedWord.gender;
+
+    // For l', if gender is missing, check sentence for the noun it belongs to
+    if (!resolvedGender && (lowerWord === 'l' || lowerWord === "l'")) {
+      const match = savedWord.sentence?.match(/\bl['’]([a-zA-ZÀ-ÖØ-öø-ÿ]+)/i);
+      if (match) {
+        const nounKey = match[1].toLowerCase().trim();
+        const nounVocab =
+          (savedWord.storyId ? storyVocabLookup.get(`${savedWord.storyId}:${nounKey}`) : undefined) ||
+          globalVocabLookup.get(nounKey);
+        if (nounVocab && nounVocab.pos === 'noun' && nounVocab.gender) {
+          resolvedGender = nounVocab.gender;
+        }
+      }
     }
 
     return {
       pos: savedWord.pos,
-      gender: savedWord.gender,
-      number: savedWord.number,
+      gender: resolvedGender,
+      number: isNumber ? undefined : (isPluralArticle ? 'plural' : savedWord.number),
       person: savedWord.person,
       tense: savedWord.tense,
       lemmaDisplay
@@ -96,7 +139,7 @@ export function getGrammarForSavedWord(savedWord: SavedWord): GrammarDisplayInfo
   }
 
   // 2. Fallback: look up in story vocabulary cache
-  const wordKey = savedWord.word.toLowerCase().trim();
+  const wordKey = lowerWord;
   const lemmaKey = savedWord.lemma ? savedWord.lemma.toLowerCase().trim() : '';
 
   let match: VocabEntry | undefined;
@@ -110,15 +153,29 @@ export function getGrammarForSavedWord(savedWord: SavedWord): GrammarDisplayInfo
   }
 
   if (match) {
-    return getGrammarForVocab(savedWord.word, match);
+    const info = getGrammarForVocab(savedWord.word, match);
+    if (info && !info.gender && (lowerWord === 'l' || lowerWord === "l'")) {
+      const matchWord = savedWord.sentence?.match(/\bl['’]([a-zA-ZÀ-ÖØ-öø-ÿ]+)/i);
+      if (matchWord) {
+        const nounKey = matchWord[1].toLowerCase().trim();
+        const nounVocab =
+          (savedWord.storyId ? storyVocabLookup.get(`${savedWord.storyId}:${nounKey}`) : undefined) ||
+          globalVocabLookup.get(nounKey);
+        if (nounVocab && nounVocab.pos === 'noun' && nounVocab.gender) {
+          info.gender = nounVocab.gender;
+        }
+      }
+    }
+    return info;
   }
 
   // Older saved word not in any story data: return basic pos without crashing
   if (savedWord.pos) {
     return {
       pos: savedWord.pos,
+      number: isPluralArticle ? 'plural' : undefined,
       lemmaDisplay:
-        savedWord.lemma && savedWord.lemma.toLowerCase() !== savedWord.word.toLowerCase()
+        !isNumber && savedWord.lemma && savedWord.lemma.toLowerCase() !== lowerWord
           ? savedWord.lemma
           : undefined
     };

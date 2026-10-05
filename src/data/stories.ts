@@ -488,8 +488,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "masculine"
+        "number": "plural"
       },
       "produits": {
         "lemma": "produit",
@@ -587,9 +586,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "euros": {
         "lemma": "euro",
@@ -604,9 +601,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "soixante",
         "en": "sixty",
         "bn": "ষাট",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "centimes": {
         "lemma": "centime",
@@ -925,9 +920,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "cinq",
         "en": "five",
         "bn": "পাঁচ",
-        "pos": "adjective",
-        "gender": "feminine",
-        "number": "plural"
+        "pos": "number"
       },
       "minutes": {
         "lemma": "minute",
@@ -1068,8 +1061,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "masculine"
+        "number": "plural"
       },
       "escaliers": {
         "lemma": "escalier",
@@ -1220,7 +1212,6 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (elision)",
         "bn": "টি / টা",
         "pos": "article",
-        "gender": "feminine",
         "number": "singular"
       },
       "s": {
@@ -1940,8 +1931,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "some / of the",
         "bn": "কিছু / গুলির",
         "pos": "article",
-        "number": "plural",
-        "gender": "feminine"
+        "number": "plural"
       },
       "photos": {
         "lemma": "photo",
@@ -2017,9 +2007,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quinze",
         "en": "fifteen",
         "bn": "পনেরো",
-        "pos": "adjective",
-        "gender": "feminine",
-        "number": "plural"
+        "pos": "number"
       },
       "minutes": {
         "lemma": "minute",
@@ -2159,7 +2147,6 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (elision)",
         "bn": "টি / টা",
         "pos": "article",
-        "gender": "feminine",
         "number": "singular"
       },
       "entre": {
@@ -2278,8 +2265,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "masculine"
+        "number": "plural"
       },
       "autres": {
         "lemma": "autre",
@@ -2581,9 +2567,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "six",
         "en": "six",
         "bn": "ছয়",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "mois": {
         "lemma": "mois",
@@ -2982,8 +2966,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "some / of the",
         "bn": "কিছু / গুলির",
         "pos": "article",
-        "number": "plural",
-        "gender": "masculine"
+        "number": "plural"
       },
       "fruits": {
         "lemma": "fruit",
@@ -3029,9 +3012,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "six",
         "en": "six",
         "bn": "ছয়",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "bananes": {
         "lemma": "banane",
@@ -3054,9 +3035,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "trois",
         "en": "three",
         "bn": "তিন",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "tomates": {
         "lemma": "tomate",
@@ -3129,8 +3108,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "masculine"
+        "number": "plural"
       },
       "la": {
         "lemma": "le",
@@ -3319,9 +3297,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "briques": {
         "lemma": "brique",
@@ -3560,9 +3536,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "vingt",
         "en": "twenty",
         "bn": "বিশ",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "singular"
+        "pos": "number"
       },
       "euros": {
         "lemma": "euro",
@@ -3690,9 +3664,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "dix",
         "en": "ten",
         "bn": "দশ",
-        "pos": "adjective",
-        "gender": "feminine",
-        "number": "plural"
+        "pos": "number"
       },
       "heures": {
         "lemma": "heure",
@@ -3745,8 +3717,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "masculine"
+        "number": "plural"
       },
       "bureaux": {
         "lemma": "bureau",
@@ -3834,9 +3805,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "semaines": {
         "lemma": "semaine",
@@ -3944,7 +3913,6 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (elision)",
         "bn": "টি / টা",
         "pos": "article",
-        "gender": "feminine",
         "number": "singular"
       },
       "va": {
@@ -5116,8 +5084,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "some / of the",
         "bn": "কিছু / গুলির",
         "pos": "article",
-        "number": "plural",
-        "gender": "feminine"
+        "number": "plural"
       },
       "questions": {
         "lemma": "question",
@@ -5580,9 +5547,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "jours": {
         "lemma": "jour",
@@ -5899,8 +5864,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "feminine"
+        "number": "plural"
       },
       "tables": {
         "lemma": "table",
@@ -6452,8 +6416,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "some / of the",
         "bn": "কিছু / গুলির",
         "pos": "article",
-        "number": "plural",
-        "gender": "masculine"
+        "number": "plural"
       },
       "légumes": {
         "lemma": "légume",
@@ -7029,8 +6992,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "feminine"
+        "number": "plural"
       },
       "portes": {
         "lemma": "porte",
@@ -7119,9 +7081,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective",
-        "gender": "feminine",
-        "number": "plural"
+        "pos": "number"
       },
       "préparatrices": {
         "lemma": "préparateur",
@@ -7538,9 +7498,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "trois",
         "en": "three",
         "bn": "তিন",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "fois": {
         "lemma": "fois",
@@ -8501,8 +8459,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "masculine"
+        "number": "plural"
       },
       "forfaits": {
         "lemma": "forfait",
@@ -8585,9 +8542,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quinze",
         "en": "fifteen",
         "bn": "পনেরো",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "euros": {
         "lemma": "euro",
@@ -8642,9 +8597,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "cinquante",
         "en": "fifty",
         "bn": "পঞ্চাশ",
-        "pos": "adjective",
-        "gender": "feminine",
-        "number": "singular"
+        "pos": "number"
       },
       "gigaoctets": {
         "lemma": "gigaoctet",
@@ -9020,8 +8973,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "feminine"
+        "number": "plural"
       },
       "marches": {
         "lemma": "marche",
@@ -9270,8 +9222,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "some / of the",
         "bn": "কিছু / গুলির",
         "pos": "article",
-        "number": "plural",
-        "gender": "masculine"
+        "number": "plural"
       },
       "pas": {
         "lemma": "pas",
@@ -9564,9 +9515,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "trois",
         "en": "three",
         "bn": "তিন",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "jours": {
         "lemma": "jour",
@@ -10068,9 +10017,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "mille",
         "en": "thousand (merci mille fois)",
         "bn": "হাজার",
-        "pos": "adjective",
-        "gender": "feminine",
-        "number": "singular"
+        "pos": "number"
       },
       "fois": {
         "lemma": "fois",
@@ -10396,8 +10343,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "feminine"
+        "number": "plural"
       },
       "soirs": {
         "lemma": "soir",
@@ -10477,8 +10423,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "some / of the",
         "bn": "কিছু / গুলির",
         "pos": "article",
-        "number": "plural",
-        "gender": "feminine"
+        "number": "plural"
       },
       "loyers": {
         "lemma": "loyer",
@@ -10625,7 +10570,6 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (elision)",
         "bn": "টি / টা",
         "pos": "article",
-        "gender": "feminine",
         "number": "singular"
       },
       "cet": {
@@ -10672,9 +10616,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "dix",
         "en": "ten",
         "bn": "দশ",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "minutes": {
         "lemma": "minute",
@@ -10957,17 +10899,13 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "vingt",
         "en": "twenty",
         "bn": "বিশ",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "singular"
+        "pos": "number"
       },
       "cinq": {
         "lemma": "cinq",
         "en": "five",
         "bn": "পাঁচ",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "singular"
+        "pos": "number"
       },
       "pendant": {
         "lemma": "pendant",
@@ -11326,25 +11264,19 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "six",
         "en": "six",
         "bn": "ছয়",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "cent": {
         "lemma": "cent",
         "en": "hundred",
         "bn": "একশত",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "singular"
+        "pos": "number"
       },
       "cinquante": {
         "lemma": "cinquante",
         "en": "fifty",
         "bn": "পঞ্চাশ",
-        "pos": "adjective",
-        "gender": "feminine",
-        "number": "singular"
+        "pos": "number"
       },
       "euros": {
         "lemma": "euro",
@@ -11625,9 +11557,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "trois",
         "en": "three",
         "bn": "তিন",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "derniers": {
         "lemma": "dernier",
@@ -11828,17 +11758,13 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quarante",
         "en": "forty",
         "bn": "চল্লিশ",
-        "pos": "adjective",
-        "gender": "feminine",
-        "number": "singular"
+        "pos": "number"
       },
       "huit": {
         "lemma": "huit",
         "en": "eight",
         "bn": "আট",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "singular"
+        "pos": "number"
       }
     },
     "quiz": [
@@ -12222,9 +12148,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "pas": {
         "lemma": "pas",
@@ -12507,8 +12431,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "masculine"
+        "number": "plural"
       },
       "services": {
         "lemma": "service",
@@ -12541,7 +12464,6 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (elision)",
         "bn": "টি / টা",
         "pos": "article",
-        "gender": "feminine",
         "number": "singular"
       },
       "s": {
@@ -12994,8 +12916,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "some / of the",
         "bn": "কিছু / গুলির",
         "pos": "article",
-        "number": "plural",
-        "gender": "feminine"
+        "number": "plural"
       },
       "virements": {
         "lemma": "virement",
@@ -13894,9 +13815,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "minutes": {
         "lemma": "minute",
@@ -14022,8 +13941,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "feminine"
+        "number": "plural"
       },
       "salutations": {
         "lemma": "salutation",
@@ -14073,7 +13991,6 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (elision)",
         "bn": "টি / টা",
         "pos": "article",
-        "gender": "masculine",
         "number": "singular"
       },
       "invite": {
@@ -14221,9 +14138,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quatre",
         "en": "four",
         "bn": "চার",
-        "pos": "adjective",
-        "gender": "feminine",
-        "number": "singular"
+        "pos": "number"
       },
       "ans": {
         "lemma": "an",
@@ -14285,8 +14200,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "some / of the",
         "bn": "কিছু / গুলির",
         "pos": "article",
-        "number": "plural",
-        "gender": "feminine"
+        "number": "plural"
       },
       "réseaux": {
         "lemma": "réseau",
@@ -15409,7 +15323,6 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (elision)",
         "bn": "টি / টা",
         "pos": "article",
-        "gender": "feminine",
         "number": "singular"
       },
       "accueil": {
@@ -15451,9 +15364,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "huit",
         "en": "eight",
         "bn": "আট",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "singular"
+        "pos": "number"
       },
       "chiffres": {
         "lemma": "chiffre",
@@ -15824,9 +15735,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quatre",
         "en": "four",
         "bn": "চার",
-        "pos": "adjective",
-        "gender": "feminine",
-        "number": "singular"
+        "pos": "number"
       },
       "ans": {
         "lemma": "an",
@@ -15964,8 +15873,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "masculine"
+        "number": "plural"
       },
       "codes": {
         "lemma": "code",
@@ -16235,9 +16143,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "deux",
         "en": "two",
         "bn": "দুই",
-        "pos": "adjective",
-        "gender": "masculine",
-        "number": "plural"
+        "pos": "number"
       },
       "demi-journées": {
         "lemma": "demi-journée",
@@ -16356,8 +16262,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "some / of the",
         "bn": "কিছু / গুলির",
         "pos": "article",
-        "number": "plural",
-        "gender": "feminine"
+        "number": "plural"
       },
       "alertes": {
         "lemma": "alerte",
@@ -16842,8 +16747,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "some / of the",
         "bn": "কিছু / গুলির",
         "pos": "article",
-        "number": "plural",
-        "gender": "feminine"
+        "number": "plural"
       },
       "réseaux": {
         "lemma": "réseau",
@@ -16964,7 +16868,6 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (elision)",
         "bn": "টি / টা",
         "pos": "article",
-        "gender": "feminine",
         "number": "singular"
       },
       "s": {
@@ -17524,8 +17427,7 @@ export const INITIAL_STORIES: Story[] = [
         "en": "the (plural)",
         "bn": "গুলি / গুলো",
         "pos": "article",
-        "number": "plural",
-        "gender": "feminine"
+        "number": "plural"
       },
       "pièces": {
         "lemma": "pièce",
@@ -17927,9 +17829,7 @@ export const INITIAL_STORIES: Story[] = [
         "lemma": "quatre",
         "en": "four",
         "bn": "চার",
-        "pos": "adjective",
-        "gender": "feminine",
-        "number": "singular"
+        "pos": "number"
       },
       "mois": {
         "lemma": "mois",

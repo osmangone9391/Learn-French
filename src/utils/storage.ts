@@ -5,13 +5,18 @@ import {
   ReviewHistoryEntry,
   StoryQuizRecord,
   CEFRLevel,
-  PlacementResult
+  PlacementResult,
+  Story,
+  ReportedVocabItem
 } from '../types';
 
 const STORAGE_KEYS = {
   SAVED_WORDS: 'lirefacile_saved_words',
   STATS: 'lirefacile_user_stats',
-  SETTINGS: 'lirefacile_settings'
+  SETTINGS: 'lirefacile_settings',
+  CUSTOM_STORIES: 'lirefacile_custom_stories',
+  GEMINI_API_KEY: 'lirefacile_gemini_api_key',
+  REPORTED_VOCAB: 'lirefacile_reported_vocab'
 } as const;
 
 const DEFAULT_SETTINGS: AppSettings = {
@@ -132,19 +137,26 @@ export function saveWord(
     let savedItem: SavedWord;
 
     if (existingIndex >= 0) {
+      const isPluralArt = item.pos === 'article' && (item.number === 'plural' || item.word.toLowerCase() === 'les' || item.word.toLowerCase() === 'des');
+      const isNum = item.pos === 'number';
+
       savedItem = {
         ...words[existingIndex],
+        pos: item.pos || words[existingIndex].pos,
         sentence: item.sentence || words[existingIndex].sentence,
         storyId: item.storyId || words[existingIndex].storyId,
         storyTitle: item.storyTitle || words[existingIndex].storyTitle,
-        gender: item.gender || words[existingIndex].gender,
-        number: item.number || words[existingIndex].number,
+        gender: isPluralArt || isNum ? undefined : (item.gender ?? words[existingIndex].gender),
+        number: isNum ? undefined : (isPluralArt ? 'plural' : (item.number ?? words[existingIndex].number)),
         person: item.person || words[existingIndex].person,
         tense: item.tense || words[existingIndex].tense,
         lemmaWithArticle: item.lemmaWithArticle || words[existingIndex].lemmaWithArticle
       };
       words[existingIndex] = savedItem;
     } else {
+      const isPluralArt = item.pos === 'article' && (item.number === 'plural' || item.word.toLowerCase() === 'les' || item.word.toLowerCase() === 'des');
+      const isNum = item.pos === 'number';
+
       savedItem = {
         id: `vocab_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`,
         word: item.word,
@@ -160,8 +172,8 @@ export function saveWord(
         nextReviewDate: nextReview.toISOString(),
         timesReviewed: 0,
         timesCorrect: 0,
-        gender: item.gender,
-        number: item.number,
+        gender: isPluralArt || isNum ? undefined : item.gender,
+        number: isNum ? undefined : (isPluralArt ? 'plural' : item.number),
         person: item.person,
         tense: item.tense,
         lemmaWithArticle: item.lemmaWithArticle
@@ -479,16 +491,146 @@ export function updateAppSettings(partial: Partial<AppSettings>): AppSettings {
 }
 
 /**
- * Backup: Exports all application data into a JSON string
+ * Custom Stories Storage (AI-generated stories)
+ */
+export function getCustomStories(): Story[] {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEYS.CUSTOM_STORIES);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (error) {
+    console.error('Failed to get custom stories:', error);
+    return [];
+  }
+}
+
+export function saveCustomStory(story: Story): void {
+  try {
+    const current = getCustomStories();
+    const existingIndex = current.findIndex(s => s.id === story.id);
+    if (existingIndex >= 0) {
+      current[existingIndex] = story;
+    } else {
+      current.unshift(story);
+    }
+    localStorage.setItem(STORAGE_KEYS.CUSTOM_STORIES, JSON.stringify(current));
+  } catch (error) {
+    console.error('Failed to save custom story:', error);
+  }
+}
+
+export function deleteCustomStory(storyId: string): void {
+  try {
+    const current = getCustomStories();
+    const filtered = current.filter(s => s.id !== storyId);
+    localStorage.setItem(STORAGE_KEYS.CUSTOM_STORIES, JSON.stringify(filtered));
+  } catch (error) {
+    console.error('Failed to delete custom story:', error);
+  }
+}
+
+/**
+ * Gemini API Key Storage
+ * Stored strictly in browser localStorage under a dedicated key.
+ * Never in logs, never in backup files, never committed to git.
+ */
+export function getGeminiApiKey(): string | null {
+  try {
+    return localStorage.getItem(STORAGE_KEYS.GEMINI_API_KEY) || null;
+  } catch {
+    return null;
+  }
+}
+
+export function saveGeminiApiKey(key: string): void {
+  try {
+    localStorage.setItem(STORAGE_KEYS.GEMINI_API_KEY, key.trim());
+  } catch (error) {
+    console.error('Failed to save API key:', error);
+  }
+}
+
+export function deleteGeminiApiKey(): void {
+  try {
+    localStorage.removeItem(STORAGE_KEYS.GEMINI_API_KEY);
+  } catch (error) {
+    console.error('Failed to delete API key:', error);
+  }
+}
+
+/**
+ * Reported Vocabulary (for user-flagged AI story errors)
+ */
+export function getReportedVocab(): ReportedVocabItem[] {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEYS.REPORTED_VOCAB);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+export function reportVocabItem(item: Omit<ReportedVocabItem, 'id' | 'dateReported'>): ReportedVocabItem {
+  try {
+    const items = getReportedVocab();
+    const newItem: ReportedVocabItem = {
+      ...item,
+      id: `report_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`,
+      dateReported: new Date().toISOString()
+    };
+    items.unshift(newItem);
+    localStorage.setItem(STORAGE_KEYS.REPORTED_VOCAB, JSON.stringify(items));
+    return newItem;
+  } catch (error) {
+    console.error('Failed to report vocab item:', error);
+    return {
+      ...item,
+      id: `report_${Date.now()}`,
+      dateReported: new Date().toISOString()
+    };
+  }
+}
+
+export function deleteReportedVocabItem(id: string): void {
+  try {
+    const items = getReportedVocab().filter(i => i.id !== id);
+    localStorage.setItem(STORAGE_KEYS.REPORTED_VOCAB, JSON.stringify(items));
+  } catch (error) {
+    console.error('Failed to delete reported vocab item:', error);
+  }
+}
+
+/**
+ * Selects up to 8 of the user's saved words from Box 1 or Box 2,
+ * preferring those least recently seen, for inclusion in a personalized story.
+ */
+export function getWordsForPersonalizedStory(savedWords: SavedWord[], maxWords: number = 8): SavedWord[] {
+  const eligible = savedWords.filter(w => w.srsStage === 1 || w.srsStage === 2);
+  eligible.sort((a, b) => {
+    const aDate = a.lastReviewedDate || a.dateAdded || '';
+    const bDate = b.lastReviewedDate || b.dateAdded || '';
+    return aDate.localeCompare(bDate);
+  });
+  return eligible.slice(0, maxWords);
+}
+
+/**
+ * Backup: Exports all application data into a JSON string.
+ * CRITICAL: The user's Gemini API key is intentionally excluded.
  */
 export function exportAllData(): string {
   try {
     const backup = {
-      version: 3,
+      version: 4,
       exportDate: new Date().toISOString(),
       savedWords: getSavedWords(),
       userStats: getUserStats(),
-      settings: getAppSettings()
+      settings: getAppSettings(),
+      customStories: getCustomStories(),
+      reportedVocab: getReportedVocab()
     };
     return JSON.stringify(backup, null, 2);
   } catch (error) {
@@ -498,7 +640,8 @@ export function exportAllData(): string {
 }
 
 /**
- * Backup: Imports application data from a JSON string with safe validation
+ * Backup: Imports application data from a JSON string with safe validation.
+ * CRITICAL: Restores custom stories and progress without touching the user's API key.
  */
 export function importAllData(jsonString: string): { success: boolean; message: string } {
   try {
@@ -518,6 +661,14 @@ export function importAllData(jsonString: string): { success: boolean; message: 
 
     if (data.settings && typeof data.settings === 'object') {
       localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(data.settings));
+    }
+
+    if (Array.isArray(data.customStories)) {
+      localStorage.setItem(STORAGE_KEYS.CUSTOM_STORIES, JSON.stringify(data.customStories));
+    }
+
+    if (Array.isArray(data.reportedVocab)) {
+      localStorage.setItem(STORAGE_KEYS.REPORTED_VOCAB, JSON.stringify(data.reportedVocab));
     }
 
     return { success: true, message: 'Data imported successfully!' };

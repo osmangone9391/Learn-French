@@ -9,11 +9,16 @@ import {
   Languages,
   Type,
   Gauge,
-  VolumeX
+  VolumeX,
+  Sparkles,
+  RotateCcw,
+  Trash2,
+  Flag
 } from 'lucide-react';
-import { Story, SavedWord, AppSettings, VocabEntry, StoryQuizRecord } from '../types';
+import { Story, SavedWord, AppSettings, VocabEntry, StoryQuizRecord, StoryGenerationSettings } from '../types';
 import { parseParagraph, ParagraphStructure, WordToken, lookupWord } from '../utils/textParser';
 import { audioPlayer } from '../utils/audioPlayer';
+import { reportVocabItem } from '../utils/storage';
 import { WordPopup } from './WordPopup';
 import { QuizModal } from './QuizModal';
 import { i18n } from '../i18n/en';
@@ -43,6 +48,8 @@ interface StoryReaderProps {
   }) => void;
   onUpdateSettings: (settings: Partial<AppSettings>) => void;
   onQuizCompleted: (scorePercentage: number) => void;
+  onDeleteStory?: (storyId: string) => void;
+  onRegenerateStory?: (settings: StoryGenerationSettings) => void;
 }
 
 export const StoryReader: React.FC<StoryReaderProps> = ({
@@ -55,7 +62,9 @@ export const StoryReader: React.FC<StoryReaderProps> = ({
   onToggleRead,
   onSaveWord,
   onUpdateSettings,
-  onQuizCompleted
+  onQuizCompleted,
+  onDeleteStory,
+  onRegenerateStory
 }) => {
   // Parsing paragraphs and sentences
   const parsedParagraphs: ParagraphStructure[] = useMemo(() => {
@@ -304,6 +313,65 @@ export const StoryReader: React.FC<StoryReaderProps> = ({
       <main className="max-w-3xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8">
         {/* Story Metadata Card */}
         <div className="mb-8 pb-6 border-b border-stone-200">
+          {/* AI Story Banner */}
+          {story.isAiGenerated && (
+            <div className="mb-4 p-3.5 rounded-2xl bg-purple-50/80 border border-purple-200/90 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="inline-flex items-center gap-1 font-bold text-purple-900 bg-purple-100 px-2.5 py-0.5 rounded-full border border-purple-200 shrink-0">
+                  <Sparkles size={12} className="text-purple-700" />
+                  AI-generated
+                </span>
+                <span className="text-purple-900 font-medium">
+                  Not human-checked. Report a wrong meaning
+                </span>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="inline-flex items-center gap-1 text-[11px] text-stone-600 bg-white px-2 py-0.5 rounded-md border border-stone-200">
+                  <Volume2 size={12} className="text-sky-600" />
+                  Browser Voice
+                </span>
+                {onRegenerateStory && story.generationSettings && (
+                  <button
+                    onClick={() => onRegenerateStory(story.generationSettings!)}
+                    className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white hover:bg-stone-50 border border-stone-200 text-stone-700 text-[11px] font-semibold transition-colors cursor-pointer"
+                    title="Regenerate with same settings"
+                  >
+                    <RotateCcw size={12} />
+                    <span>Regenerate</span>
+                  </button>
+                )}
+                {onDeleteStory && (
+                  <button
+                    onClick={() => {
+                      onDeleteStory(story.id);
+                    }}
+                    className="p-1 rounded-lg text-stone-400 hover:text-rose-600 hover:bg-rose-50 transition-colors cursor-pointer"
+                    title="Delete this story"
+                  >
+                    <Trash2 size={14} />
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Reused words display */}
+          {story.reusedWords && story.reusedWords.length > 0 && (
+            <div className="mb-4 p-2.5 rounded-xl bg-amber-50/80 border border-amber-200/80 flex items-center gap-2 flex-wrap text-xs text-amber-900">
+              <span className="font-semibold shrink-0">Reused words from your reviews:</span>
+              <div className="flex flex-wrap gap-1">
+                {story.reusedWords.map((w) => (
+                  <span
+                    key={w}
+                    className="px-2 py-0.5 rounded-md bg-white border border-amber-200 font-medium text-[11px]"
+                  >
+                    {w}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div className="flex flex-wrap items-center gap-2 mb-2">
             <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-200">
               Level {story.level}
@@ -479,6 +547,20 @@ export const StoryReader: React.FC<StoryReaderProps> = ({
               savedWordKeys.has(selectedWordToken.vocab.lemma.toLowerCase()))
           }
           playbackRate={playbackRate}
+          isAiStory={story.isAiGenerated}
+          onReportMeaning={(w, l) => {
+            const v = selectedWordToken.vocab;
+            reportVocabItem({
+              storyId: story.id,
+              storyTitle: story.title,
+              word: w,
+              lemma: l,
+              en: v?.en || '',
+              bn: v?.bn || '',
+              pos: v?.pos || 'noun',
+              sentence: selectedWordToken.sentenceContext
+            });
+          }}
           onSave={() => {
             const entry = selectedWordToken.vocab || {
               lemma: selectedWordToken.cleanWord,

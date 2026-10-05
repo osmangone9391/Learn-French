@@ -188,13 +188,13 @@ export function validateAllStories(stories: Story[] = INITIAL_STORIES): {
       }
 
       // Grammar Validation Rules
-      if (entry.pos === 'noun' || entry.pos === 'adjective' || entry.pos === 'article') {
+      if (entry.pos === 'noun') {
         if (!entry.gender || !VALID_GENDERS.has(entry.gender)) {
           errors.push({
             storyId: story.id,
             storyTitle: story.title,
             type: 'missing_vocab',
-            message: `Vocab entry "${key}" (${entry.pos}): invalid or missing gender "${entry.gender}" (must be masculine or feminine)`
+            message: `Vocab entry "${key}" (noun): invalid or missing gender "${entry.gender}" (must be masculine or feminine)`
           });
         }
         if (!entry.number || !VALID_NUMBERS.has(entry.number)) {
@@ -202,15 +202,105 @@ export function validateAllStories(stories: Story[] = INITIAL_STORIES): {
             storyId: story.id,
             storyTitle: story.title,
             type: 'missing_vocab',
-            message: `Vocab entry "${key}" (${entry.pos}): invalid or missing number "${entry.number}" (must be singular or plural)`
+            message: `Vocab entry "${key}" (noun): invalid or missing number "${entry.number}" (must be singular or plural)`
           });
         }
-        if (entry.pos === 'noun' && (!entry.lemmaWithArticle || !entry.lemmaWithArticle.trim())) {
+        if (!entry.lemmaWithArticle || !entry.lemmaWithArticle.trim()) {
           errors.push({
             storyId: story.id,
             storyTitle: story.title,
             type: 'missing_vocab',
             message: `Vocab entry "${key}" (noun): missing dictionary lemmaWithArticle`
+          });
+        }
+      } else if (entry.pos === 'adjective') {
+        if (!entry.gender || !VALID_GENDERS.has(entry.gender)) {
+          errors.push({
+            storyId: story.id,
+            storyTitle: story.title,
+            type: 'missing_vocab',
+            message: `Vocab entry "${key}" (adjective): invalid or missing gender "${entry.gender}" (must be masculine or feminine)`
+          });
+        }
+        if (!entry.number || !VALID_NUMBERS.has(entry.number)) {
+          errors.push({
+            storyId: story.id,
+            storyTitle: story.title,
+            type: 'missing_vocab',
+            message: `Vocab entry "${key}" (adjective): invalid or missing number "${entry.number}" (must be singular or plural)`
+          });
+        }
+      } else if (entry.pos === 'article') {
+        // Plural articles "les" and "des" must show only "article · plural" (no gender)
+        if (key === 'les' || key === 'des' || entry.lemma === 'les') {
+          if (entry.gender) {
+            errors.push({
+              storyId: story.id,
+              storyTitle: story.title,
+              type: 'missing_vocab',
+              message: `Vocab entry "${key}" (article): "les" and "des" must not have gender (found "${entry.gender}")`
+            });
+          }
+          if (entry.number !== 'plural') {
+            errors.push({
+              storyId: story.id,
+              storyTitle: story.title,
+              type: 'missing_vocab',
+              message: `Vocab entry "${key}" (article): "les" and "des" must have number "plural" (found "${entry.number}")`
+            });
+          }
+        } else if (key === 'le' || key === 'la' || key === 'un' || key === 'une' || key === 'du') {
+          // Keep gender for le, la, un, une, du
+          if (!entry.gender || !VALID_GENDERS.has(entry.gender)) {
+            errors.push({
+              storyId: story.id,
+              storyTitle: story.title,
+              type: 'missing_vocab',
+              message: `Vocab entry "${key}" (article): invalid or missing gender "${entry.gender}"`
+            });
+          }
+          if (entry.number !== 'singular') {
+            errors.push({
+              storyId: story.id,
+              storyTitle: story.title,
+              type: 'missing_vocab',
+              message: `Vocab entry "${key}" (article): must have number "singular"`
+            });
+          }
+        } else if (key === 'l') {
+          if (entry.number !== 'singular') {
+            errors.push({
+              storyId: story.id,
+              storyTitle: story.title,
+              type: 'missing_vocab',
+              message: `Vocab entry "l" (article): must have number "singular"`
+            });
+          }
+          if (entry.gender && !VALID_GENDERS.has(entry.gender)) {
+            errors.push({
+              storyId: story.id,
+              storyTitle: story.title,
+              type: 'missing_vocab',
+              message: `Vocab entry "l" (article): invalid gender "${entry.gender}"`
+            });
+          }
+        }
+      } else if (entry.pos === 'number') {
+        // Numbers must show "number" as POS, with no gender and no singular/plural chip
+        if (entry.gender) {
+          errors.push({
+            storyId: story.id,
+            storyTitle: story.title,
+            type: 'missing_vocab',
+            message: `Vocab entry "${key}" (number): numbers must not have gender (found "${entry.gender}")`
+          });
+        }
+        if (entry.number) {
+          errors.push({
+            storyId: story.id,
+            storyTitle: story.title,
+            type: 'missing_vocab',
+            message: `Vocab entry "${key}" (number): numbers must not have singular/plural number chip (found "${entry.number}")`
           });
         }
       } else if (entry.pos === 'verb') {

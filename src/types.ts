@@ -47,6 +47,33 @@ export interface SentenceBreakdown {
   ttsTextEn?: string;
 }
 
+export interface StoryGenerationSettings {
+  topic: string;
+  level: CEFRLevel;
+  length: 'short' | 'medium' | 'long';
+  style: 'dialogue' | 'narrative';
+  grammarFocus?: string;
+  useMyWords: boolean;
+  reusedWords?: string[];
+  narrativeStructure?: string;
+  tone?: string;
+  timestamp?: string;
+}
+
+export interface ReportedVocabItem {
+  id: string;
+  storyId: string;
+  storyTitle: string;
+  word: string;
+  lemma: string;
+  en: string;
+  bn: string;
+  pos: PartOfSpeech;
+  sentence: string;
+  dateReported: string;
+  note?: string;
+}
+
 export interface Story {
   id: string;
   title: string;
@@ -61,6 +88,9 @@ export interface Story {
   sentenceBreakdowns?: SentenceBreakdown[][];
   vocabulary: Record<string, VocabEntry>;
   quiz: QuizQuestion[];
+  isAiGenerated?: boolean;
+  reusedWords?: string[];
+  generationSettings?: StoryGenerationSettings;
 }
 
 export interface SavedWord {
