@@ -15,8 +15,8 @@ const STORAGE_KEYS = {
   STATS: 'lirefacile_user_stats',
   SETTINGS: 'lirefacile_settings',
   CUSTOM_STORIES: 'lirefacile_custom_stories',
-  GEMINI_API_KEY: 'lirefacile_gemini_api_key',
-  REPORTED_VOCAB: 'lirefacile_reported_vocab'
+  REPORTED_VOCAB: 'lirefacile_reported_vocab',
+  ANONYMOUS_UID: 'lirefacile_anon_uid'
 } as const;
 
 const DEFAULT_SETTINGS: AppSettings = {
@@ -531,31 +531,30 @@ export function deleteCustomStory(storyId: string): void {
 }
 
 /**
- * Gemini API Key Storage
- * Stored strictly in browser localStorage under a dedicated key.
- * Never in logs, never in backup files, never committed to git.
+ * Cleans up legacy browser-stored API key on app start.
  */
-export function getGeminiApiKey(): string | null {
+export function cleanupOldApiKey(): void {
   try {
-    return localStorage.getItem(STORAGE_KEYS.GEMINI_API_KEY) || null;
+    localStorage.removeItem('lirefacile_gemini_api_key');
   } catch {
-    return null;
+    // Ignore storage errors
   }
 }
 
-export function saveGeminiApiKey(key: string): void {
+/**
+ * Gets or creates an anonymous random identifier stored strictly in browser localStorage
+ * for fair per-device daily story creation quotas.
+ */
+export function getAnonymousUserId(): string {
   try {
-    localStorage.setItem(STORAGE_KEYS.GEMINI_API_KEY, key.trim());
-  } catch (error) {
-    console.error('Failed to save API key:', error);
-  }
-}
-
-export function deleteGeminiApiKey(): void {
-  try {
-    localStorage.removeItem(STORAGE_KEYS.GEMINI_API_KEY);
-  } catch (error) {
-    console.error('Failed to delete API key:', error);
+    let uid = localStorage.getItem(STORAGE_KEYS.ANONYMOUS_UID);
+    if (!uid) {
+      uid = 'usr_' + Math.random().toString(36).substring(2, 10) + Date.now().toString(36);
+      localStorage.setItem(STORAGE_KEYS.ANONYMOUS_UID, uid);
+    }
+    return uid;
+  } catch {
+    return 'usr_' + Math.random().toString(36).substring(2, 10);
   }
 }
 
@@ -619,7 +618,6 @@ export function getWordsForPersonalizedStory(savedWords: SavedWord[], maxWords: 
 
 /**
  * Backup: Exports all application data into a JSON string.
- * CRITICAL: The user's Gemini API key is intentionally excluded.
  */
 export function exportAllData(): string {
   try {
@@ -641,7 +639,6 @@ export function exportAllData(): string {
 
 /**
  * Backup: Imports application data from a JSON string with safe validation.
- * CRITICAL: Restores custom stories and progress without touching the user's API key.
  */
 export function importAllData(jsonString: string): { success: boolean; message: string } {
   try {

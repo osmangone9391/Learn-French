@@ -1,8 +1,7 @@
-import { GoogleGenAI, Type } from '@google/genai';
 import { Story, CEFRLevel, SavedWord, VocabEntry, PartOfSpeech, Gender, GrammaticalNumber } from '../types';
 import { validateStory, ValidationResult } from './storyValidator';
 import { cleanFrenchWord } from './textParser';
-import { getGeminiApiKey } from './storage';
+import { getAnonymousUserId } from './storage';
 
 export const NARRATIVE_STRUCTURES = [
   'A small everyday problem solved with patience and communication',
@@ -56,16 +55,18 @@ export interface GenerateStoryParams {
   grammarFocus?: string;
   useMyWords: boolean;
   userWords?: SavedWord[];
+  turnstileToken?: string;
   onProgress?: (stepDescription: string) => void;
   signal?: AbortSignal;
 }
 
 export type GenerationErrorCode =
-  | 'NO_KEY'
-  | 'INVALID_KEY'
-  | 'QUOTA_EXCEEDED'
+  | 'DAILY_LIMIT_REACHED'
+  | 'GLOBAL_CAP_REACHED'
+  | 'FEATURE_DISABLED'
+  | 'MODEL_BUSY'
+  | 'SERVER_TIMEOUT'
   | 'NETWORK_ERROR'
-  | 'MALFORMED_OUTPUT'
   | 'VALIDATION_FAILED'
   | 'ABORTED'
   | 'UNKNOWN';
@@ -82,187 +83,48 @@ export class GenerationError extends Error {
   }
 }
 
-/**
- * Builds the exact prompt sent to Gemini.
- */
-export function buildPrompt(params: {
-  topic: string;
-  level: CEFRLevel;
-  length: 'short' | 'medium' | 'long';
-  style: 'dialogue' | 'narrative';
-  grammarFocus?: string;
-  reusedWords: SavedWord[];
-  narrativeStructure: string;
-  tone: string;
-}): string {
-  const targetWords =
-    params.length === 'short'
-      ? '120 to 160 words'
-      : params.length === 'medium'
-      ? '210 to 270 words'
-      : '330 to 420 words';
-
-  const levelRules =
-    params.level === 'A1'
-      ? `CEFR A1 LEVEL CONSTRAINTS:
-- Use primarily present tense (présent de l'indicatif) with very common, high-frequency everyday vocabulary.
-- Keep sentences short, direct, and straightforward.
-- Dialogues should use polite standard French (bonjour, s'il vous plaît, merci, au revoir).
-- Avoid complex subclauses or rare tenses.`
-      : `CEFR A2 LEVEL CONSTRAINTS:
-- May incorporate passé composé (avoir/être), futur proche (aller + infinitive), and common reflexive verbs (se réveiller, s'habiller...).
-- Use clear everyday connectors (parce que, donc, ensuite, mais, alors, d'abord).
-- Sentence length can be slightly more varied, while remaining crystal clear.
-- Introduce at most about 8 new lemmas per 100 words.`;
-
-  const grammarInstruction = params.grammarFocus && params.grammarFocus !== 'none'
-    ? `\nSPECIFIC GRAMMAR FOCUS:
-- Naturally emphasize and include multiple natural occurrences of: "${params.grammarFocus}".\n`
-    : '';
-
-  const wordsInstruction = params.reusedWords.length > 0
-    ? `\nMANDATORY VOCABULARY TO REUSE:
-You MUST naturally include the following French words/lemmas currently being learned by the student into the story:
-${params.reusedWords.map(w => `- "${w.word}" (lemma: "${w.lemma}", meaning: "${w.en}")`).join('\n')}
-Make sure each of these words appears in the paragraphs and has an accurate entry in the vocabulary array.\n`
-    : '';
-
-  return `You are an expert French educational author creating an authentic, personalized French graded reading story for a student living or preparing for daily life in France.
-
-STORY SPECIFICATIONS:
-- Topic: ${params.topic}
-- CEFR Level: ${params.level}
-- Target Length: ${targetWords} (strictly respect this range)
-- Format / Style: ${params.style === 'dialogue' ? 'Realistic Dialogue between characters' : 'Narrative Story with actions and thoughts'}
-- Narrative Structure: ${params.narrativeStructure}
-- Tone: ${params.tone}
-${grammarInstruction}${wordsInstruction}
-${levelRules}
-
-SAFETY & FACTUAL BOUNDARY:
-- Do NOT state rigid legal rules, specific government visa fees, strict administrative deadlines, medical prescriptions or dosages, or exhaustive official document lists. Keep all situations everyday, realistic, helpful, and general.
-
-STRICT GRAMMAR & VOCABULARY TAGGING RULES:
-1. Every single unique French word token that appears in your paragraphs MUST have an entry in the "vocabulary" array. Do not miss any word!
-2. The "key" field must be the lowercase word token without punctuation (e.g. for "boulangerie", key is "boulangerie"; for "j'achète", create key "j" and key "achète"; for "l'eau", create key "l" and key "eau").
-3. Articles "les" and "des":
-   - pos must be "article"
-   - number must be "plural"
-   - DO NOT include gender for "les" or "des"! (Must show only "article · plural").
-4. Numbers (deux, trois, cinq, dix, soixante, cent, etc.):
-   - pos must be "number"
-   - DO NOT include gender or number for numerals!
-   - Exception: "un" and "une" are articles and keep their gender ("masculine" for un, "feminine" for une, number "singular").
-5. Nouns:
-   - pos: "noun"
-   - gender: "masculine" or "feminine"
-   - number: "singular" or "plural" (reflecting whether it appears singular or plural in context)
-   - lemmaWithArticle: dictionary lemma preceded by singular definite article (e.g. "le croissant", "la baguette", "l'ami", "l'eau", or base name for proper nouns e.g. "Paris")
-6. Adjectives:
-   - pos: "adjective"
-   - gender: "masculine" or "feminine"
-   - number: "singular" or "plural"
-7. Verbs:
-   - pos: "verb"
-   - tense: "present", "imperfect", "future", "conditional", "subjunctive", "imperative", "infinitive", "past participle", or "present participle"
-   - person: for finite verbs, "1st person singular", "2nd person singular", "3rd person singular", "1st person plural", "2nd person plural", or "3rd person plural". (Omit for infinitive and participles)
-   - Verbs must NEVER have gender or number!
-8. Bangla & English Translations:
-   - Provide a clear, accurate English translation ("en") and an authentic, natural Bangla translation in Bengali script ("bn") for every vocabulary item and quiz explanation.
-9. Paragraphs and Sentence Alignment:
-   - Break the French story into 2 to 4 paragraphs.
-   - For every French paragraph, provide an exact English translation in "paragraphTranslations", aligned sentence by sentence.
-10. Comprehension Quiz:
-   - Exactly 3 multiple-choice questions testing reading comprehension.
-   - 4 options each, in French.
-   - "answer" is the 0-based index (0, 1, 2, or 3) of the correct option.
-   - Provide "explanation" (simple English) and "explanationBn" (Bangla).
-
-Return ONLY the structured JSON output adhering strictly to the schema.`;
+export interface StoryQuotaInfo {
+  enabled: boolean;
+  userRemaining: number;
+  userLimit: number;
+  globalRemaining: number;
+  globalCap: number;
+  globalPaused: boolean;
+  message?: string;
 }
 
-const STORY_RESPONSE_SCHEMA = {
-  type: Type.OBJECT,
-  properties: {
-    title: { type: Type.STRING, description: 'French title' },
-    subtitle: { type: Type.STRING, description: 'Short French subtitle or summary' },
-    topic: { type: Type.STRING, description: 'Topic category' },
-    paragraphs: {
-      type: Type.ARRAY,
-      items: { type: Type.STRING },
-      description: 'French paragraphs of the story'
-    },
-    paragraphTranslations: {
-      type: Type.ARRAY,
-      items: { type: Type.STRING },
-      description: 'English translations for each paragraph, sentence-aligned'
-    },
-    vocabulary: {
-      type: Type.ARRAY,
-      description: 'List of vocabulary entries covering EVERY word token in the paragraphs',
-      items: {
-        type: Type.OBJECT,
-        properties: {
-          key: { type: Type.STRING, description: 'Lowercase word token without punctuation' },
-          lemma: { type: Type.STRING, description: 'Base dictionary form' },
-          en: { type: Type.STRING, description: 'English translation in context' },
-          bn: { type: Type.STRING, description: 'Bangla translation (বাংলা অর্থ)' },
-          pos: {
-            type: Type.STRING,
-            enum: ['noun', 'verb', 'adjective', 'adverb', 'preposition', 'pronoun', 'conjunction', 'expression', 'article', 'interjection', 'number'],
-            description: 'Part of speech'
-          },
-          gender: {
-            type: Type.STRING,
-            enum: ['masculine', 'feminine'],
-            description: 'Gender (nouns, adjectives, singular articles)'
-          },
-          number: {
-            type: Type.STRING,
-            enum: ['singular', 'plural'],
-            description: 'Number (nouns, adjectives, articles)'
-          },
-          person: {
-            type: Type.STRING,
-            description: 'Person for finite verbs'
-          },
-          tense: {
-            type: Type.STRING,
-            description: 'Tense for verbs'
-          },
-          lemmaWithArticle: {
-            type: Type.STRING,
-            description: 'Dictionary lemma with article for nouns'
-          }
-        },
-        required: ['key', 'lemma', 'en', 'bn', 'pos']
-      }
-    },
-    quiz: {
-      type: Type.ARRAY,
-      description: 'Exactly 3 comprehension questions',
-      items: {
-        type: Type.OBJECT,
-        properties: {
-          question: { type: Type.STRING, description: 'Question text' },
-          options: {
-            type: Type.ARRAY,
-            items: { type: Type.STRING },
-            description: '4 options in French'
-          },
-          answer: { type: Type.INTEGER, description: '0-based index of correct option' },
-          explanation: { type: Type.STRING, description: 'Explanation in English' },
-          explanationBn: { type: Type.STRING, description: 'Explanation in Bangla' }
-        },
-        required: ['question', 'options', 'answer', 'explanation', 'explanationBn']
-      }
+/**
+ * Checks remaining daily stories and system status
+ */
+export async function getStoryQuotaStatus(): Promise<StoryQuotaInfo> {
+  const userId = getAnonymousUserId();
+  try {
+    const res = await fetch(`/api/story-quota?userId=${encodeURIComponent(userId)}`);
+    if (!res.ok) {
+      return {
+        enabled: true,
+        userRemaining: 3,
+        userLimit: 3,
+        globalRemaining: 100,
+        globalCap: 100,
+        globalPaused: false
+      };
     }
-  },
-  required: ['title', 'subtitle', 'topic', 'paragraphs', 'paragraphTranslations', 'vocabulary', 'quiz']
-};
+    return await res.json();
+  } catch (e) {
+    return {
+      enabled: true,
+      userRemaining: 3,
+      userLimit: 3,
+      globalRemaining: 100,
+      globalCap: 100,
+      globalPaused: false
+    };
+  }
+}
 
 /**
- * Transforms raw Gemini output into the application's Story data format.
+ * Transforms raw story output into the application's Story data format.
  */
 function transformRawStory(
   raw: any,
@@ -349,13 +211,14 @@ function transformRawStory(
 }
 
 /**
- * Handles error classification into user-friendly GenerationError.
+ * Handles client-side API error classification into friendly GenerationError.
  */
 function handleApiError(error: any): GenerationError {
   if (error instanceof GenerationError) return error;
 
-  const msg = error?.message || String(error);
-  const status = error?.status || error?.statusCode;
+  if (error?.name === 'AbortError') {
+    return new GenerationError('ABORTED', 'Story creation was cancelled.');
+  }
 
   if (typeof navigator !== 'undefined' && !navigator.onLine) {
     return new GenerationError(
@@ -364,147 +227,162 @@ function handleApiError(error: any): GenerationError {
     );
   }
 
-  if (
-    status === 400 ||
-    status === 401 ||
-    status === 403 ||
-    msg.includes('API_KEY_INVALID') ||
-    msg.includes('invalid API key') ||
-    msg.includes('API key not valid')
-  ) {
+  const msg = error?.message || String(error);
+  const status = error?.status || error?.statusCode;
+
+  if (status === 504 || msg.includes('timeout') || msg.includes('SERVER_TIMEOUT')) {
     return new GenerationError(
-      'INVALID_KEY',
-      'Your Gemini API key appears to be invalid or expired. Please check your key in Settings.'
+      'SERVER_TIMEOUT',
+      'The server took too long to create the story. Please try again.'
     );
   }
 
-  if (
-    status === 429 ||
-    msg.includes('RESOURCE_EXHAUSTED') ||
-    msg.includes('quota') ||
-    msg.includes('rate limit')
-  ) {
+  if (status === 429 || msg.includes('DAILY_LIMIT_REACHED')) {
     return new GenerationError(
-      'QUOTA_EXCEEDED',
-      'Gemini API quota exceeded or rate limit reached. Please wait a moment and try again.'
+      'DAILY_LIMIT_REACHED',
+      'You have reached your limit of 3 stories for today. Please come back tomorrow!'
     );
   }
 
-  if (msg.includes('Failed to fetch') || msg.includes('NetworkError') || msg.includes('Network request failed')) {
+  if (msg.includes('GLOBAL_CAP_REACHED')) {
     return new GenerationError(
-      'NETWORK_ERROR',
-      'Network connection to Gemini API failed. Please verify your connection.'
+      'GLOBAL_CAP_REACHED',
+      'Story creation is paused for today, please come back tomorrow.'
     );
   }
 
-  if (error instanceof SyntaxError || msg.includes('JSON')) {
+  if (status === 503 || msg.includes('FEATURE_DISABLED')) {
     return new GenerationError(
-      'MALFORMED_OUTPUT',
-      'The AI returned an unreadable response format. Please try generating again.'
+      'FEATURE_DISABLED',
+      'Story creation is temporarily unavailable.'
+    );
+  }
+
+  if (msg.includes('MODEL_BUSY') || msg.includes('RESOURCE_EXHAUSTED')) {
+    return new GenerationError(
+      'MODEL_BUSY',
+      'The story creator is temporarily busy. Please try again in a minute.'
     );
   }
 
   return new GenerationError(
     'UNKNOWN',
-    `Story generation failed: ${msg.slice(0, 150)}`
+    'Story generation encountered an error. Please try again.'
   );
 }
 
 /**
- * Generates an original personalized French story with client-side validation and 1-time retry.
+ * Generates an original personalized French story using the secure server endpoint.
+ * Splits generation into two phases (Phase 1: Draft + translations + quiz; Phase 2: Vocabulary map)
+ * to stay comfortably within standard free-tier execution limits and provide real-time step progress.
  */
 export async function generatePersonalizedStory(params: GenerateStoryParams): Promise<Story> {
-  const apiKey = getGeminiApiKey();
-  if (!apiKey || !apiKey.trim()) {
+  const userId = getAnonymousUserId();
+
+  if (typeof navigator !== 'undefined' && !navigator.onLine) {
     throw new GenerationError(
-      'NO_KEY',
-      'No Gemini API key found. Please add your API key in Settings to generate personalized stories.'
+      'NETWORK_ERROR',
+      'No internet connection detected. Please check your network and try again.'
     );
   }
 
-  // 1. Select Narrative Structure & Tone
+  // 1. Narrative outline and tone
   const narrativeStructure =
     NARRATIVE_STRUCTURES[Math.floor(Math.random() * NARRATIVE_STRUCTURES.length)];
   const tone = STORY_TONES[Math.floor(Math.random() * STORY_TONES.length)];
 
-  // 2. Select Reused Words
   const reusedWords = params.useMyWords && params.userWords ? params.userWords : [];
   const reusedKeys = reusedWords.map(w => w.word.toLowerCase());
 
-  params.onProgress?.('Designing narrative outline and character dialogue...');
+  // Function to execute one complete generation cycle (draft + vocabulary)
+  async function executeCycle(): Promise<Story> {
+    params.onProgress?.('Drafting French story and sentence translations (1/2)...');
 
-  const prompt = buildPrompt({
-    topic: params.topic,
-    level: params.level,
-    length: params.length,
-    style: params.style,
-    grammarFocus: params.grammarFocus,
-    reusedWords,
-    narrativeStructure,
-    tone
-  });
-
-  const ai = new GoogleGenAI({ apiKey: apiKey.trim() });
-
-  params.onProgress?.('Drafting French story with level-appropriate vocabulary...');
-
-  let rawStoryData: any;
-  try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
-      contents: prompt,
-      config: {
-        responseMimeType: 'application/json',
-        responseSchema: STORY_RESPONSE_SCHEMA,
-        temperature: 0.7
-      }
+    // Step 1: Request draft (paragraphs, translations, quiz)
+    const draftRes = await fetch('/api/generate-story', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        userId,
+        step: 'draft',
+        topic: params.topic,
+        level: params.level,
+        length: params.length,
+        style: params.style,
+        grammarFocus: params.grammarFocus !== 'none' ? params.grammarFocus : undefined,
+        userWords: reusedKeys,
+        turnstileToken: params.turnstileToken
+      }),
+      signal: params.signal
     });
 
-    const responseText = response.text?.trim() || '{}';
-    rawStoryData = JSON.parse(responseText);
+    if (!draftRes.ok) {
+      const errData = await draftRes.json().catch(() => ({}));
+      const code = errData.error || (draftRes.status === 429 ? 'DAILY_LIMIT_REACHED' : 'SERVER_ERROR');
+      const msg = errData.message || (draftRes.status === 504 ? 'The server took too long to create the story. Please try again.' : 'Story generation failed.');
+      throw new GenerationError(code as GenerationErrorCode, msg);
+    }
+
+    const draftData = await draftRes.json();
+    const draft = draftData.draft;
+
+    params.onProgress?.('Annotating bilingual vocabulary & grammar tags (2/2)...');
+
+    // Step 2: Request vocabulary annotations for the generated paragraphs
+    const vocabRes = await fetch('/api/generate-story', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        userId,
+        step: 'vocab',
+        paragraphs: draft.paragraphs,
+        tokens: draft.tokens,
+        turnstileToken: params.turnstileToken
+      }),
+      signal: params.signal
+    });
+
+    if (!vocabRes.ok) {
+      const errData = await vocabRes.json().catch(() => ({}));
+      const code = errData.error || 'SERVER_ERROR';
+      const msg = errData.message || 'Vocabulary generation failed.';
+      throw new GenerationError(code as GenerationErrorCode, msg);
+    }
+
+    const vocabData = await vocabRes.json();
+
+    const combinedRaw = {
+      title: draft.title,
+      subtitle: draft.subtitle,
+      topic: draft.topic,
+      paragraphs: draft.paragraphs,
+      paragraphTranslations: draft.paragraphTranslations,
+      quiz: draft.quiz,
+      vocabulary: vocabData.vocabulary
+    };
+
+    return transformRawStory(combinedRaw, params, narrativeStructure, tone, reusedKeys);
+  }
+
+  let story: Story;
+  try {
+    story = await executeCycle();
   } catch (err) {
     throw handleApiError(err);
   }
 
-  params.onProgress?.('Annotating bilingual meanings and validating grammar consistency...');
-
-  let story = transformRawStory(rawStoryData, params, narrativeStructure, tone, reusedKeys);
-
-  // 3. Client-Side Validation
+  // 2. Client-Side Validation
+  params.onProgress?.('Verifying story rules and grammar tags...');
   let validation = validateStory(story, {
     expectedLevel: params.level,
     expectedLength: params.length
   });
 
-  // 4. One-time Auto-Retry if validation failed
+  // 3. One-time Auto-Retry if initial generation fails client-side validation
   if (!validation.valid) {
     params.onProgress?.('Refining vocabulary coverage and correcting linguistic tags...');
-
-    const retryPrompt = `${prompt}
-
-IMPORTANT: The previous generation failed validation with the following specific issues:
-${validation.errors.map((e, idx) => `${idx + 1}. ${e}`).join('\n')}
-
-Please fix every single one of these errors:
-- Ensure EVERY word token appearing in the French text has an entry in the vocabulary array.
-- Follow all grammatical rules (no gender on "les", "des", or numerals; exact gender/number for nouns and adjectives; valid person/tense for verbs; lemmaWithArticle for nouns).
-- Ensure paragraph and sentence translation counts match.
-Return the complete corrected JSON output.`;
-
     try {
-      const retryResponse = await ai.models.generateContent({
-        model: 'gemini-3.8-flash',
-        contents: retryPrompt,
-        config: {
-          responseMimeType: 'application/json',
-          responseSchema: STORY_RESPONSE_SCHEMA,
-          temperature: 0.4
-        }
-      });
-
-      const retryText = retryResponse.text?.trim() || '{}';
-      const retryData = JSON.parse(retryText);
-      story = transformRawStory(retryData, params, narrativeStructure, tone, reusedKeys);
+      story = await executeCycle();
       validation = validateStory(story, {
         expectedLevel: params.level,
         expectedLength: params.length
@@ -514,15 +392,15 @@ Return the complete corrected JSON output.`;
     }
   }
 
-  // If still invalid after retry, report clear message
+  // If still invalid after 2 attempts
   if (!validation.valid) {
     throw new GenerationError(
       'VALIDATION_FAILED',
-      `The generated story did not pass quality checks: ${validation.errors.slice(0, 3).join('; ')}`,
+      'The story could not be verified for grammar and vocabulary accuracy. Please try another topic or level.',
       validation.errors.join('\n')
     );
   }
 
-  params.onProgress?.('Story generated and verified successfully!');
+  params.onProgress?.('Story verified and ready to read!');
   return story;
 }

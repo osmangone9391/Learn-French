@@ -12,9 +12,6 @@ import {
   CheckCircle2,
   AlertCircle,
   Radio,
-  Key,
-  Eye,
-  EyeOff,
   Trash2,
   Flag
 } from 'lucide-react';
@@ -23,9 +20,6 @@ import { INITIAL_STORIES } from '../data/stories';
 import {
   exportAllData,
   importAllData,
-  getGeminiApiKey,
-  saveGeminiApiKey,
-  deleteGeminiApiKey,
   getReportedVocab,
   deleteReportedVocabItem
 } from '../utils/storage';
@@ -54,10 +48,6 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const [importStatus, setImportStatus] = useState<{ success: boolean; message: string } | null>(null);
   const [frenchVoices, setFrenchVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [selectedVoiceURI, setSelectedVoiceURI] = useState<string>(settings.preferredVoiceURI || '');
-  const [apiKeyInput, setApiKeyInput] = useState<string>('');
-  const [hasApiKey, setHasApiKey] = useState<boolean>(false);
-  const [isKeyVisible, setIsKeyVisible] = useState<boolean>(false);
-  const [apiKeySavedNotice, setApiKeySavedNotice] = useState<string | null>(null);
   const [reportedList, setReportedList] = useState<ReportedVocabItem[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -69,32 +59,11 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
       if (current) {
         setSelectedVoiceURI(current.voiceURI);
       }
-      const key = getGeminiApiKey();
-      setHasApiKey(Boolean(key));
-      setApiKeyInput(key || '');
       setReportedList(getReportedVocab());
-      setApiKeySavedNotice(null);
     }
   }, [isOpen]);
 
   if (!isOpen) return null;
-
-  const handleSaveApiKey = () => {
-    if (apiKeyInput.trim()) {
-      saveGeminiApiKey(apiKeyInput.trim());
-      setHasApiKey(true);
-      setApiKeySavedNotice('✓ API key saved securely in your browser');
-      setTimeout(() => setApiKeySavedNotice(null), 3000);
-    }
-  };
-
-  const handleDeleteApiKey = () => {
-    deleteGeminiApiKey();
-    setApiKeyInput('');
-    setHasApiKey(false);
-    setApiKeySavedNotice('API key removed');
-    setTimeout(() => setApiKeySavedNotice(null), 3000);
-  };
 
   const handleDeleteReported = (id: string) => {
     deleteReportedVocabItem(id);
@@ -380,81 +349,6 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 </div>
               );
             })()}
-          </div>
-
-          {/* Gemini API Key (for personalized AI stories) */}
-          <div className="pt-4 border-t border-stone-100 space-y-3">
-            <div className="flex items-center justify-between">
-              <label className="text-xs font-bold uppercase tracking-wider text-stone-700 flex items-center gap-1.5">
-                <Key size={14} className="text-purple-600" />
-                Gemini API Key
-              </label>
-              <a
-                href="https://aistudio.google.com/app/apikey"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[11px] text-purple-700 hover:text-purple-900 font-medium underline"
-              >
-                Get free key ↗
-              </a>
-            </div>
-
-            <p className="text-[11px] text-stone-500 leading-relaxed">
-              Required for the "Create my story" personalized AI stories. Stored strictly in your browser's localStorage. Never sent to any server, never logged, and excluded from backup files.
-            </p>
-
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <div className="relative flex-1">
-                  <input
-                    type={isKeyVisible ? 'text' : 'password'}
-                    value={apiKeyInput}
-                    onChange={(e) => setApiKeyInput(e.target.value)}
-                    placeholder="AIzaSy..."
-                    className="w-full text-xs p-2.5 pr-8 bg-stone-50 border border-stone-200 rounded-xl text-stone-900 focus:outline-hidden focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 font-mono"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setIsKeyVisible(!isKeyVisible)}
-                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-700 cursor-pointer"
-                  >
-                    {isKeyVisible ? <EyeOff size={14} /> : <Eye size={14} />}
-                  </button>
-                </div>
-
-                <button
-                  onClick={handleSaveApiKey}
-                  disabled={!apiKeyInput.trim()}
-                  className="px-3 py-2.5 bg-stone-900 hover:bg-stone-800 disabled:opacity-40 text-white rounded-xl text-xs font-semibold transition-colors cursor-pointer shrink-0"
-                >
-                  Save
-                </button>
-
-                {hasApiKey && (
-                  <button
-                    onClick={handleDeleteApiKey}
-                    className="p-2.5 text-stone-400 hover:text-rose-600 hover:bg-rose-50 rounded-xl transition-colors cursor-pointer shrink-0"
-                    title="Remove API Key"
-                  >
-                    <Trash2 size={16} />
-                  </button>
-                )}
-              </div>
-
-              {apiKeySavedNotice && (
-                <p className="text-[11px] text-emerald-700 font-medium flex items-center gap-1">
-                  <CheckCircle2 size={13} />
-                  {apiKeySavedNotice}
-                </p>
-              )}
-
-              {hasApiKey && !apiKeySavedNotice && (
-                <div className="flex items-center gap-1 text-[11px] text-emerald-700 font-medium">
-                  <CheckCircle2 size={13} />
-                  <span>Key configured and ready for personalized story creation</span>
-                </div>
-              )}
-            </div>
           </div>
 
           {/* Reported AI Meanings (if any) */}

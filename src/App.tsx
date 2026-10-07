@@ -22,7 +22,8 @@ import {
   updateAppSettings,
   getCustomStories,
   saveCustomStory,
-  deleteCustomStory
+  deleteCustomStory,
+  cleanupOldApiKey
 } from './utils/storage';
 import { getDailyStudyQueue } from './utils/srs';
 import { Navbar } from './components/Navbar';
@@ -57,6 +58,9 @@ export default function App() {
 
   // Load persisted state on mount
   useEffect(() => {
+    // Delete old legacy browser-stored API key
+    cleanupOldApiKey();
+
     try {
       const words = getSavedWords();
       const stats = getUserStats();

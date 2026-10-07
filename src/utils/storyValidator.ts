@@ -1,4 +1,4 @@
-import { Story, VocabEntry } from '../types';
+import { Story, VocabEntry, CEFRLevel } from '../types';
 import { lookupWord, cleanFrenchWord } from './textParser';
 
 const VALID_POS = new Set([
@@ -46,7 +46,7 @@ export interface ValidationResult {
 export function validateStory(
   story: Story,
   options?: {
-    expectedLevel?: 'A1' | 'A2';
+    expectedLevel?: CEFRLevel;
     expectedLength?: 'short' | 'medium' | 'long';
   }
 ): ValidationResult {
