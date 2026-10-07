@@ -1,0 +1,18049 @@
+import { Story } from '../types';
+
+export const INITIAL_STORIES: Story[] = [
+  {
+    "id": "a-la-boulangerie",
+    "title": "À la boulangerie du quartier",
+    "subtitle": "Acheter du pain frais et des viennoiseries le matin",
+    "level": "A1",
+    "topic": "Vie quotidienne & Nourriture",
+    "wordCount": 142,
+    "estimatedMinutes": 2,
+    "paragraphs": [
+      "Chaque matin, Tariq marche dans sa rue à Paris. Il s'arrête devant la petite boulangerie artisanale. Une bonne odeur de pain chaud sort du magasin.",
+      "Tariq entre et sourit à la boulangère. La boulangère dit poliment : « Bonjour monsieur ! Qu'est-ce que vous désirez aujourd'hui ? »",
+      "Tariq répond calmement : « Bonjour madame. Je voudrais une baguette tradition pas trop cuite, s'il vous plaît. Et aussi un croissant au beurre. »",
+      "La boulangère met les produits dans un sachet en papier. Elle annonce le prix : « Très bien. Cela fait deux euros et soixante centimes au total. »",
+      "Tariq donne une pièce de deux euros et une pièce de un euro. La boulangère lui rend la monnaie avec le sourire. Tariq dit : « Merci beaucoup, bonne journée madame ! » et il rentre chez lui avec son petit-déjeuner."
+    ],
+    "paragraphTranslations": [
+      "Every morning, Tariq walks along his street in Paris. He stops in front of the small artisan bakery. A good smell of hot bread comes out of the shop.",
+      "Tariq enters and smiles at the baker. The baker says politely: \"Good morning sir! What would you like today?\"",
+      "Tariq answers calmly: \"Good morning madam. I would like a traditional baguette not too well-done, please. And also a butter croissant.\"",
+      "The baker puts the products in a paper bag. She announces the price: \"Very well. That is two euros and sixty cents in total.\"",
+      "Tariq gives a two-euro coin and a one-euro coin. The baker gives him the change with a smile. Tariq says: \"Thank you very much, have a nice day madam!\" and he returns home with his breakfast."
+    ],
+    "vocabulary": {
+      "chaque": {
+        "lemma": "chaque",
+        "en": "each / every",
+        "bn": "প্রতিটি",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "matin": {
+        "lemma": "matin",
+        "en": "morning",
+        "bn": "সকাল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
+      },
+      "tariq": {
+        "lemma": "Tariq",
+        "en": "Tariq (first name)",
+        "bn": "তারিক (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Tariq"
+      },
+      "marche": {
+        "lemma": "marcher",
+        "en": "walks",
+        "bn": "হাঁটে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "sa": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "rue": {
+        "lemma": "rue",
+        "en": "street",
+        "bn": "রাস্তা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la rue"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "paris": {
+        "lemma": "Paris",
+        "en": "Paris",
+        "bn": "প্যারিস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Paris"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "arrête": {
+        "lemma": "arrêter",
+        "en": "stops",
+        "bn": "থামে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "devant": {
+        "lemma": "devant",
+        "en": "in front of",
+        "bn": "সামনে",
+        "pos": "preposition"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "petite": {
+        "lemma": "petit",
+        "en": "small (feminine)",
+        "bn": "ছোট",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "boulangerie": {
+        "lemma": "boulangerie",
+        "en": "bakery",
+        "bn": "বেকারি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la boulangerie"
+      },
+      "artisanale": {
+        "lemma": "artisanal",
+        "en": "handcrafted / artisanal",
+        "bn": "হাতে তৈরি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "bonne": {
+        "lemma": "bon",
+        "en": "good",
+        "bn": "ভালো",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "odeur": {
+        "lemma": "odeur",
+        "en": "smell / aroma",
+        "bn": "গন্ধ / সুবাস",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'odeur"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "pain": {
+        "lemma": "pain",
+        "en": "bread",
+        "bn": "পাউরুটি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pain"
+      },
+      "chaud": {
+        "lemma": "chaud",
+        "en": "hot / warm",
+        "bn": "গরম",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "sort": {
+        "lemma": "sortir",
+        "en": "comes out / exits",
+        "bn": "বের হয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "du": {
+        "lemma": "de + le",
+        "en": "of the / from the",
+        "bn": "দোকানের",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "magasin": {
+        "lemma": "magasin",
+        "en": "shop / store",
+        "bn": "দোকান",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le magasin"
+      },
+      "s": {
+        "lemma": "se",
+        "en": "himself / herself (elision)",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "entre": {
+        "lemma": "entrer",
+        "en": "enters",
+        "bn": "প্রবেশ করে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "sourit": {
+        "lemma": "sourire",
+        "en": "smiles",
+        "bn": "হাসে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "boulangère": {
+        "lemma": "boulangère",
+        "en": "baker (female)",
+        "bn": "মহিলা রুটি প্রস্তুতকারক",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la boulangère"
+      },
+      "dit": {
+        "lemma": "dire",
+        "en": "says",
+        "bn": "বলে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "poliment": {
+        "lemma": "poliment",
+        "en": "politely",
+        "bn": "ভদ্রভাবে",
+        "pos": "adverb"
+      },
+      "bonjour": {
+        "lemma": "bonjour",
+        "en": "hello / good day",
+        "bn": "শুভ সকাল / নমস্কার",
+        "pos": "expression"
+      },
+      "monsieur": {
+        "lemma": "monsieur",
+        "en": "sir / gentleman",
+        "bn": "জনাব / মহাশয়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
+      },
+      "est-ce": {
+        "lemma": "est-ce que",
+        "en": "is it / (question marker)",
+        "bn": "কী / নাকি",
+        "pos": "expression"
+      },
+      "que": {
+        "lemma": "que",
+        "en": "that / what",
+        "bn": "কী / যে",
+        "pos": "pronoun"
+      },
+      "vous": {
+        "lemma": "vous",
+        "en": "you (formal/plural)",
+        "bn": "আপনি / আপনারা",
+        "pos": "pronoun"
+      },
+      "désirez": {
+        "lemma": "désirer",
+        "en": "desire / want",
+        "bn": "চান",
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
+      },
+      "aujourd'hui": {
+        "lemma": "aujourd'hui",
+        "en": "today",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "qu": {
+        "lemma": "que",
+        "en": "that / what (elision)",
+        "bn": "যা / কী",
+        "pos": "pronoun"
+      },
+      "est": {
+        "lemma": "être",
+        "en": "is",
+        "bn": "হয় / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "ce": {
+        "lemma": "ce",
+        "en": "this",
+        "bn": "এই",
+        "pos": "pronoun"
+      },
+      "aujourd": {
+        "lemma": "aujourd'hui",
+        "en": "today",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "hui": {
+        "lemma": "aujourd'hui",
+        "en": "today (part of aujourd'hui)",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "répond": {
+        "lemma": "répondre",
+        "en": "answers / replies",
+        "bn": "উত্তর দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "calmement": {
+        "lemma": "calmement",
+        "en": "calmly",
+        "bn": "শান্তভাবে",
+        "pos": "adverb"
+      },
+      "madame": {
+        "lemma": "madame",
+        "en": "madam / ma'am",
+        "bn": "ম্যাডাম / বেগম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "madame"
+      },
+      "je": {
+        "lemma": "je",
+        "en": "I",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "voudrais": {
+        "lemma": "vouloir",
+        "en": "would like",
+        "bn": "চাই / নিতে চাই",
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "conditional"
+      },
+      "baguette": {
+        "lemma": "baguette",
+        "en": "baguette (French bread)",
+        "bn": "বাগেট (ফরাসি লম্বা রুটি)",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la baguette"
+      },
+      "tradition": {
+        "lemma": "tradition",
+        "en": "traditional baguette",
+        "bn": "ঐতিহ্যবাহী বাগেট",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la tradition"
+      },
+      "pas": {
+        "lemma": "pas",
+        "en": "step / footsteps / not",
+        "bn": "পদক্ষেপ / পায়ের আওয়াজ / না",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pas"
+      },
+      "trop": {
+        "lemma": "trop",
+        "en": "too / overly",
+        "bn": "বেশি / অতিরিক্ত",
+        "pos": "adverb"
+      },
+      "cuite": {
+        "lemma": "cuit",
+        "en": "baked / cooked",
+        "bn": "পোড়া / সেঁকা",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "plaît": {
+        "lemma": "plaire",
+        "en": "pleases (s'il vous plaît)",
+        "bn": "পছন্দ হয় / দয়া করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "aussi": {
+        "lemma": "aussi",
+        "en": "also / too",
+        "bn": "আরও / ও",
+        "pos": "adverb"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "croissant": {
+        "lemma": "croissant",
+        "en": "croissant",
+        "bn": "ক্রোয়াসাঁ (চাঁদের মতো মাখনের পেস্ট্রি)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le croissant"
+      },
+      "au": {
+        "lemma": "à + le",
+        "en": "with / to the",
+        "bn": "দিয়ে",
+        "pos": "preposition"
+      },
+      "beurre": {
+        "lemma": "beurre",
+        "en": "butter",
+        "bn": "মাখন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le beurre"
+      },
+      "met": {
+        "lemma": "mettre",
+        "en": "puts",
+        "bn": "রাখে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "produits": {
+        "lemma": "produit",
+        "en": "products / items",
+        "bn": "জিনিসপত্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le produit"
+      },
+      "sachet": {
+        "lemma": "sachet",
+        "en": "bag / pouch",
+        "bn": "ছোট ব্যাগ / প্যাকেট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sachet"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "papier": {
+        "lemma": "papier",
+        "en": "paper",
+        "bn": "কাগজ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le papier"
+      },
+      "elle": {
+        "lemma": "elle",
+        "en": "she",
+        "bn": "সে (মহিলা)",
+        "pos": "pronoun",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "annonce": {
+        "lemma": "annoncer",
+        "en": "announces / states",
+        "bn": "জানায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "prix": {
+        "lemma": "prix",
+        "en": "price",
+        "bn": "দাম / মূল্য",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le prix"
+      },
+      "très": {
+        "lemma": "très",
+        "en": "very",
+        "bn": "খুব",
+        "pos": "adverb"
+      },
+      "bien": {
+        "lemma": "bien",
+        "en": "well / good",
+        "bn": "ভালো / ঠিক আছে",
+        "pos": "adverb"
+      },
+      "cela": {
+        "lemma": "cela",
+        "en": "that / this",
+        "bn": "এটা",
+        "pos": "pronoun"
+      },
+      "fait": {
+        "lemma": "faire",
+        "en": "makes / does / fact",
+        "bn": "করে / ঘটনা",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "deux": {
+        "lemma": "deux",
+        "en": "two",
+        "bn": "দুই",
+        "pos": "number"
+      },
+      "euros": {
+        "lemma": "euro",
+        "en": "euros",
+        "bn": "ইউরো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'euro"
+      },
+      "soixante": {
+        "lemma": "soixante",
+        "en": "sixty",
+        "bn": "ষাট",
+        "pos": "number"
+      },
+      "centimes": {
+        "lemma": "centime",
+        "en": "cents",
+        "bn": "সেন্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le centime"
+      },
+      "total": {
+        "lemma": "total",
+        "en": "total",
+        "bn": "মোট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le total"
+      },
+      "donne": {
+        "lemma": "donner",
+        "en": "gives",
+        "bn": "দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "pièce": {
+        "lemma": "pièce",
+        "en": "coin / room",
+        "bn": "কয়েন / মুদ্রা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pièce"
+      },
+      "euro": {
+        "lemma": "euro",
+        "en": "euro (currency)",
+        "bn": "ইউরো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'euro"
+      },
+      "lui": {
+        "lemma": "lui",
+        "en": "to him / her",
+        "bn": "তাকে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "rend": {
+        "lemma": "rendre",
+        "en": "returns / gives back",
+        "bn": "ফেরত দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "monnaie": {
+        "lemma": "monnaie",
+        "en": "change / currency",
+        "bn": "ভাঙতি টাকা / মুদ্রা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la monnaie"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "sourire": {
+        "lemma": "sourire",
+        "en": "smile",
+        "bn": "হাসি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sourire"
+      },
+      "merci": {
+        "lemma": "merci",
+        "en": "thank you",
+        "bn": "ধন্যবাদ",
+        "pos": "expression"
+      },
+      "beaucoup": {
+        "lemma": "beaucoup",
+        "en": "a lot / very much",
+        "bn": "অনেক",
+        "pos": "adverb"
+      },
+      "journée": {
+        "lemma": "journée",
+        "en": "day (duration)",
+        "bn": "দিন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la journée"
+      },
+      "rentre": {
+        "lemma": "rentrer",
+        "en": "returns / goes home",
+        "bn": "ফেরে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "chez": {
+        "lemma": "chez",
+        "en": "at the place of",
+        "bn": "বাসায় / কাছে",
+        "pos": "preposition"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "petit-déjeuner": {
+        "lemma": "petit-déjeuner",
+        "en": "breakfast",
+        "bn": "সকালের নাস্তা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le petit-déjeuner"
+      },
+      "petit": {
+        "lemma": "petit",
+        "en": "small / short",
+        "bn": "ছোট",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "déjeuner": {
+        "lemma": "déjeuner",
+        "en": "lunch / to have lunch",
+        "bn": "দুপুরের খাবার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le déjeuner"
+      }
+    },
+    "quiz": [
+      {
+        "question": "Où va Tariq chaque matin ?",
+        "options": [
+          "À la pharmacie",
+          "À la boulangerie",
+          "Au supermarché",
+          "À la gare"
+        ],
+        "answer": 1,
+        "explanation": "The story states that Tariq walks every morning and stops in front of the small artisan bakery.",
+        "explanationBn": "টেক্সটে বলা আছে যে তারিক প্রতিদিন সকালে ছোট কারিগরি বেকারির সামনে থামে।"
+      },
+      {
+        "question": "Que commande Tariq pour le petit-déjeuner ?",
+        "options": [
+          "Un thé et un gâteau",
+          "Une baguette tradition et un croissant",
+          "Deux sandwichs",
+          "Du pain complet seulement"
+        ],
+        "answer": 1,
+        "explanation": "Tariq asks: \"Je voudrais une baguette tradition... et aussi un croissant au beurre\" (A traditional baguette and a butter croissant).",
+        "explanationBn": "তারিক একটি ঐতিহ্যবাহী বাগেট এবং একটি মাখনের ক্রোয়াসাঁ অর্ডার করেছে।"
+      },
+      {
+        "question": "Combien coûte la commande au total ?",
+        "options": [
+          "1 euro 50",
+          "2 euros 60",
+          "3 euros",
+          "4 euros 20"
+        ],
+        "answer": 1,
+        "explanation": "The baker announces: \"Cela fait deux euros et soixante centimes au total\" (That is 2.60 euros in total).",
+        "explanationBn": "দোকানি বলেছে মোট দাম দুই ইউরো ষাট সেন্ট।"
+      }
+    ]
+  },
+  {
+    "id": "trajet-en-metro",
+    "title": "Mon trajet en métro",
+    "subtitle": "Prendre les transports en commun à Paris en toute confiance",
+    "level": "A1",
+    "topic": "Transports & Ville",
+    "wordCount": 163,
+    "estimatedMinutes": 3,
+    "paragraphs": [
+      "Aujourd'hui, Kabir doit aller à son école de français. La station de métro est à cinq minutes à pied de son studio. Il prend son sac à dos et ferme sa porte à clé.",
+      "Devant l'entrée de la station, Kabir descend les escaliers. Il regarde la borne automatique pour acheter un titre de transport. L'écran tactile propose plusieurs langues, mais Kabir choisit le français pour s'entraîner.",
+      "Il sélectionne l'option « Ticket de métro t+ ». Il paie avec sa carte bancaire sans contact. La machine délivre un petit ticket cartonné et un reçu.",
+      "Kabir passe le portillon automatique. Il regarde les grands panneaux bleus sur le quai : la ligne 4 va en direction de « Porte de Clignancourt ». Le métro arrive avec un bruit sourd et régulier.",
+      "Les portes coulissantes s'ouvrent. Kabir entre et trouve une place assise près de la sortie. La voix annonce la prochaine station : « Châtelet ». Kabir sourit, son voyage est simple et très rapide."
+    ],
+    "paragraphTranslations": [
+      "Today, Kabir must go to his French school. The metro station is five minutes walk from his studio. He takes his backpack and locks his door.",
+      "In front of the station entrance, Kabir goes down the stairs. He looks at the automatic ticket machine to buy a transport ticket. The touch screen offers several languages, but Kabir chooses French to practice.",
+      "He selects the option \"Metro ticket t+\". He pays with his contactless bank card. The machine dispenses a small cardboard ticket and a receipt.",
+      "Kabir goes through the automatic turnstile. He looks at the large blue signs on the platform: line 4 goes towards \"Porte de Clignancourt\". The subway train arrives with a steady, low rumble.",
+      "The sliding doors open. Kabir enters and finds a seat near the exit. The voice announces the next station: \"Châtelet\". Kabir smiles, his trip is simple and very fast."
+    ],
+    "vocabulary": {
+      "aujourd'hui": {
+        "lemma": "aujourd'hui",
+        "en": "today",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "kabir": {
+        "lemma": "Kabir",
+        "en": "Kabir (first name)",
+        "bn": "কবীর (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Kabir"
+      },
+      "doit": {
+        "lemma": "devoir",
+        "en": "must / has to",
+        "bn": "হবে / বাধ্য",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "aller": {
+        "lemma": "aller",
+        "en": "to go",
+        "bn": "যাওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "école": {
+        "lemma": "école",
+        "en": "school",
+        "bn": "স্কুল",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'école"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "français": {
+        "lemma": "français",
+        "en": "French",
+        "bn": "ফরাসি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le français"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "station": {
+        "lemma": "station",
+        "en": "station",
+        "bn": "স্টেশন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la station"
+      },
+      "métro": {
+        "lemma": "métro",
+        "en": "subway / underground train",
+        "bn": "পাতালরেল / মেট্রো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le métro"
+      },
+      "est": {
+        "lemma": "être",
+        "en": "is",
+        "bn": "হয় / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "cinq": {
+        "lemma": "cinq",
+        "en": "five",
+        "bn": "পাঁচ",
+        "pos": "number"
+      },
+      "minutes": {
+        "lemma": "minute",
+        "en": "minutes",
+        "bn": "মিনিট",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la minute"
+      },
+      "pied": {
+        "lemma": "pied",
+        "en": "foot (à pied = on foot)",
+        "bn": "পা (হাঁটা পথ)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pied"
+      },
+      "studio": {
+        "lemma": "studio",
+        "en": "studio flat",
+        "bn": "স্টুডিও অ্যাপার্টমেন্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le studio"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "prend": {
+        "lemma": "prendre",
+        "en": "takes",
+        "bn": "নেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "sac": {
+        "lemma": "sac",
+        "en": "bag / backpack",
+        "bn": "ব্যাগ / থলে",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sac"
+      },
+      "dos": {
+        "lemma": "dos",
+        "en": "back (backpack)",
+        "bn": "পিঠ / কাঁধ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le dos"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "ferme": {
+        "lemma": "fermer",
+        "en": "locks / closes",
+        "bn": "বন্ধ করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "sa": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "porte": {
+        "lemma": "porte",
+        "en": "door",
+        "bn": "দরজা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la porte"
+      },
+      "clé": {
+        "lemma": "clé",
+        "en": "key",
+        "bn": "চাবি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la clé"
+      },
+      "aujourd": {
+        "lemma": "aujourd'hui",
+        "en": "today",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "hui": {
+        "lemma": "aujourd'hui",
+        "en": "today (part of aujourd'hui)",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "devant": {
+        "lemma": "devant",
+        "en": "in front of",
+        "bn": "সামনে",
+        "pos": "preposition"
+      },
+      "entrée": {
+        "lemma": "entrée",
+        "en": "entrance / starter",
+        "bn": "প্রবেশদ্বার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entrée"
+      },
+      "descend": {
+        "lemma": "descendre",
+        "en": "goes down",
+        "bn": "নেমে যায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "escaliers": {
+        "lemma": "escalier",
+        "en": "stairs",
+        "bn": "সিঁড়ি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'escalier"
+      },
+      "regarde": {
+        "lemma": "regarder",
+        "en": "looks at / watches",
+        "bn": "তাকায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "borne": {
+        "lemma": "borne",
+        "en": "terminal / kiosk machine",
+        "bn": "মেশিন / কিয়স্ক",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la borne"
+      },
+      "automatique": {
+        "lemma": "automatique",
+        "en": "automatic",
+        "bn": "স্বয়ংক্রিয়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "pour": {
+        "lemma": "pour",
+        "en": "for / in order to",
+        "bn": "জন্য",
+        "pos": "preposition"
+      },
+      "acheter": {
+        "lemma": "acheter",
+        "en": "to buy",
+        "bn": "কেনা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "titre": {
+        "lemma": "titre",
+        "en": "transport ticket / title / permit",
+        "bn": "টিকিট / কার্ড / শিরোনাম",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le titre"
+      },
+      "transport": {
+        "lemma": "transport",
+        "en": "transportation",
+        "bn": "যাতায়াত / পরিবহন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le transport"
+      },
+      "écran": {
+        "lemma": "écran",
+        "en": "screen / display",
+        "bn": "পর্দা / স্ক্রিন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'écran"
+      },
+      "tactile": {
+        "lemma": "tactile",
+        "en": "touch (screen)",
+        "bn": "স্পর্শকাতর / টাচস্ক্রিন",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "propose": {
+        "lemma": "proposer",
+        "en": "offers / suggests",
+        "bn": "প্রস্তাব দেয় / প্রদান করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "plusieurs": {
+        "lemma": "plusieurs",
+        "en": "several",
+        "bn": "কয়েকটি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "langues": {
+        "lemma": "langue",
+        "en": "languages",
+        "bn": "ভাষাসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la langue"
+      },
+      "mais": {
+        "lemma": "mais",
+        "en": "but",
+        "bn": "কিন্তু",
+        "pos": "conjunction"
+      },
+      "choisit": {
+        "lemma": "choisir",
+        "en": "chooses",
+        "bn": "পছন্দ করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "entraîner": {
+        "lemma": "entraîner",
+        "en": "to practice / train",
+        "bn": "অনুশীলন করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "number": "singular"
+      },
+      "s": {
+        "lemma": "se",
+        "en": "himself / herself (elision)",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "sélectionne": {
+        "lemma": "sélectionner",
+        "en": "selects",
+        "bn": "নির্বাচন করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "option": {
+        "lemma": "option",
+        "en": "option",
+        "bn": "বিকল্প / অপশন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'option"
+      },
+      "ticket": {
+        "lemma": "ticket",
+        "en": "ticket / token",
+        "bn": "টিকিট / টোকেন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le ticket"
+      },
+      "t": {
+        "lemma": "te",
+        "en": "you (elision)",
+        "bn": "তোমাকে",
+        "pos": "pronoun"
+      },
+      "paie": {
+        "lemma": "payer",
+        "en": "pays / pay slip",
+        "bn": "অর্থ প্রদান করে / বেতন",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "carte": {
+        "lemma": "carte",
+        "en": "card / menu",
+        "bn": "কার্ড / মেনু",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carte"
+      },
+      "bancaire": {
+        "lemma": "bancaire",
+        "en": "banking / bank-related",
+        "bn": "ব্যাংক সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "sans": {
+        "lemma": "sans",
+        "en": "without",
+        "bn": "ছাড়া / বিহীন",
+        "pos": "preposition"
+      },
+      "contact": {
+        "lemma": "contact",
+        "en": "contact",
+        "bn": "যোগাযোগ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le contact"
+      },
+      "machine": {
+        "lemma": "machine",
+        "en": "machine",
+        "bn": "যন্ত্র / মেশিন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la machine"
+      },
+      "délivre": {
+        "lemma": "délivrer",
+        "en": "dispenses / issues",
+        "bn": "প্রদান করে / বের করে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "petit": {
+        "lemma": "petit",
+        "en": "small / short",
+        "bn": "ছোট",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "cartonné": {
+        "lemma": "cartonné",
+        "en": "cardboard / paper-based",
+        "bn": "কার্ডবোর্ডের",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "reçu": {
+        "lemma": "reçu",
+        "en": "receipt / received",
+        "bn": "রসিদ / পেয়েছে",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le reçu"
+      },
+      "passe": {
+        "lemma": "passer",
+        "en": "passes / goes through",
+        "bn": "যায় / অতিক্রম করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "portillon": {
+        "lemma": "portillon",
+        "en": "turnstile / subway barrier",
+        "bn": "মেট্রো গেট / ব্যারিয়ার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le portillon"
+      },
+      "grands": {
+        "lemma": "grand",
+        "en": "large (plural)",
+        "bn": "বড়",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "panneaux": {
+        "lemma": "panneau",
+        "en": "signs / boards",
+        "bn": "সাইনবোর্ডসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le panneau"
+      },
+      "bleus": {
+        "lemma": "bleu",
+        "en": "blue",
+        "bn": "নীল",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "sur": {
+        "lemma": "sur",
+        "en": "on / upon",
+        "bn": "উপর",
+        "pos": "preposition"
+      },
+      "quai": {
+        "lemma": "quai",
+        "en": "platform",
+        "bn": "প্ল্যাটফর্ম",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le quai"
+      },
+      "ligne": {
+        "lemma": "ligne",
+        "en": "line (metro / telephone / online)",
+        "bn": "লাইন / সংযোগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ligne"
+      },
+      "va": {
+        "lemma": "aller",
+        "en": "goes",
+        "bn": "যায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "direction": {
+        "lemma": "direction",
+        "en": "direction",
+        "bn": "দিক / অভিমুখ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la direction"
+      },
+      "clignancourt": {
+        "lemma": "Clignancourt",
+        "en": "Clignancourt (place in Paris)",
+        "bn": "ক্লিনিয়াঁকুর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Clignancourt"
+      },
+      "arrive": {
+        "lemma": "arriver",
+        "en": "arrives",
+        "bn": "পৌঁছায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "bruit": {
+        "lemma": "bruit",
+        "en": "noise / sound",
+        "bn": "শব্দ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bruit"
+      },
+      "sourd": {
+        "lemma": "sourd",
+        "en": "deep (rumble) / deaf",
+        "bn": "গম্ভীর (আওয়াজ) / বধির",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "régulier": {
+        "lemma": "régulier",
+        "en": "steady / regular",
+        "bn": "নিয়মিত / স্থির",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "portes": {
+        "lemma": "porte",
+        "en": "doors",
+        "bn": "দরজাগুলো",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la porte"
+      },
+      "coulissantes": {
+        "lemma": "coulissant",
+        "en": "sliding (doors)",
+        "bn": "স্লাইডিং (দরজা)",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "ouvrent": {
+        "lemma": "ouvrir",
+        "en": "open (plural)",
+        "bn": "খোলে",
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
+      },
+      "entre": {
+        "lemma": "entrer",
+        "en": "enters",
+        "bn": "প্রবেশ করে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "trouve": {
+        "lemma": "trouver",
+        "en": "finds",
+        "bn": "পায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "place": {
+        "lemma": "place",
+        "en": "seat / space",
+        "bn": "আসন / জায়গা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la place"
+      },
+      "assise": {
+        "lemma": "assis",
+        "en": "seated / sitting",
+        "bn": "বসার",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "près": {
+        "lemma": "près",
+        "en": "near / close to",
+        "bn": "কাছে / নিকটে",
+        "pos": "preposition"
+      },
+      "sortie": {
+        "lemma": "sortie",
+        "en": "exit",
+        "bn": "বের হওয়ার পথ / প্রস্থান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la sortie"
+      },
+      "voix": {
+        "lemma": "voix",
+        "en": "voice",
+        "bn": "কণ্ঠ / আওয়াজ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la voix"
+      },
+      "annonce": {
+        "lemma": "annoncer",
+        "en": "announces / states",
+        "bn": "জানায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "prochaine": {
+        "lemma": "prochain",
+        "en": "next (feminine)",
+        "bn": "পরবর্তী",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "châtelet": {
+        "lemma": "Châtelet",
+        "en": "Châtelet (metro station)",
+        "bn": "শাতলে (মেট্রো স্টেশন)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Châtelet"
+      },
+      "sourit": {
+        "lemma": "sourire",
+        "en": "smiles",
+        "bn": "হাসে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "voyage": {
+        "lemma": "voyage",
+        "en": "journey / trip",
+        "bn": "ভ্রমণ / যাত্রা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le voyage"
+      },
+      "simple": {
+        "lemma": "simple",
+        "en": "simple / easy",
+        "bn": "সহজ / সাধারণ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "très": {
+        "lemma": "très",
+        "en": "very",
+        "bn": "খুব",
+        "pos": "adverb"
+      },
+      "rapide": {
+        "lemma": "rapide",
+        "en": "fast / quick",
+        "bn": "দ্রুত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      }
+    },
+    "quiz": [
+      {
+        "question": "Comment Kabir paie-t-il son ticket de métro ?",
+        "options": [
+          "Avec des pièces de monnaie",
+          "Avec sa carte bancaire sans contact",
+          "Par chèque postal",
+          "Il ne paie pas"
+        ],
+        "answer": 1,
+        "explanation": "The story states: \"Il paie avec sa carte bancaire sans contact\" (He pays with his contactless bank card).",
+        "explanationBn": "গল্পে স্পষ্ট বলা আছে: সে তার স্পর্শহীন ব্যাংক কার্ড দিয়ে অর্থ প্রদান করে।"
+      },
+      {
+        "question": "Quelle est la direction de la ligne de métro ?",
+        "options": [
+          "Gare de Lyon",
+          "Aéroport Charles de Gaulle",
+          "Porte de Clignancourt",
+          "La Défense"
+        ],
+        "answer": 2,
+        "explanation": "The text says line 4 goes in the direction of Porte de Clignancourt.",
+        "explanationBn": "টেক্সটে উল্লেখ আছে ৪ নম্বর লাইনটি পোর্ত দ্য ক্লিনিয়াঁকুর অভিমুখে যায়।"
+      },
+      {
+        "question": "Quelle station est annoncée par la voix automatique ?",
+        "options": [
+          "Montparnasse",
+          "Châtelet",
+          "Bastille",
+          "République"
+        ],
+        "answer": 1,
+        "explanation": "The automated voice announces the next station: \"Châtelet\".",
+        "explanationBn": "স্বয়ংক্রিয় কণ্ঠ পরবর্তী স্টেশন হিসেবে 'শাতলে' ঘোষণা করে।"
+      }
+    ]
+  },
+  {
+    "id": "rendez-vous-prefecture",
+    "title": "Le rendez-vous pour les papiers",
+    "subtitle": "Se présenter à la sous-préfecture avec son dossier",
+    "level": "A1",
+    "topic": "Démarches administratives",
+    "wordCount": 156,
+    "estimatedMinutes": 3,
+    "paragraphs": [
+      "Ce matin, Rahim a un rendez-vous très important à la sous-préfecture. Il prépare une chemise cartonnée avec tous ses documents officiels : son passeport en cours de validité, un justificatif de domicile récent et des photos d'identité conformes.",
+      "Rahim arrive quinze minutes avant l'heure fixée. À l'entrée du bâtiment public, un agent de sécurité contrôle son sac et regarde sa convocation papier.",
+      "Rahim entre dans le hall d'accueil. Il prend un ticket avec un numéro d'ordre à la borne électronique. Il s'assoit calmement parmi les autres usagers et attend son tour.",
+      "Un écran lumineux affiche son numéro : « Ticket A-42, guichet 3 ». Rahim se lève et s'avance vers le guichet avec politesse. Une dame souriante vérifie chaque pièce justificative de son dossier.",
+      "La dame tamponne le formulaire officiel et lui remet un récépissé de demande : « Votre dossier est complet monsieur. Ce document provisoire est valable six mois. » Rahim remercie l'agent chaleureusement."
+    ],
+    "paragraphTranslations": [
+      "This morning, Rahim has a very important appointment at the sub-prefecture. He prepares a cardboard folder with all his official documents: his valid passport, a recent proof of address, and compliant identity photos.",
+      "Rahim arrives fifteen minutes before the scheduled time. At the entrance of the public building, a security officer checks his bag and looks at his printed summons notice.",
+      "Rahim enters the reception hall. He takes a ticket with a sequence number at the electronic kiosk. He sits calmly among the other visitors and waits for his turn.",
+      "A lighted screen displays his number: \"Ticket A-42, window 3\". Rahim gets up and walks to the counter politely. A smiling lady checks each supporting document in his file.",
+      "The lady stamps the official form and hands him an application receipt: \"Your file is complete sir. This provisional document is valid for six months.\" Rahim thanks the officer warmly."
+    ],
+    "vocabulary": {
+      "ce": {
+        "lemma": "ce",
+        "en": "this",
+        "bn": "এই",
+        "pos": "pronoun"
+      },
+      "matin": {
+        "lemma": "matin",
+        "en": "morning",
+        "bn": "সকাল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
+      },
+      "rahim": {
+        "lemma": "Rahim",
+        "en": "Rahim (first name)",
+        "bn": "রহিম (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Rahim"
+      },
+      "a": {
+        "lemma": "avoir",
+        "en": "has",
+        "bn": "আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "rendez-vous": {
+        "lemma": "rendez-vous",
+        "en": "appointment / meeting",
+        "bn": "সাক্ষাৎ / অ্যাপয়েন্টমেন্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
+      },
+      "très": {
+        "lemma": "très",
+        "en": "very",
+        "bn": "খুব",
+        "pos": "adverb"
+      },
+      "important": {
+        "lemma": "important",
+        "en": "important",
+        "bn": "গুরুত্বপূর্ণ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "sous-préfecture": {
+        "lemma": "sous-préfecture",
+        "en": "sub-prefecture",
+        "bn": "সাব-প্রিফেকচার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la sous-préfecture"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "prépare": {
+        "lemma": "préparer",
+        "en": "prepares",
+        "bn": "প্রস্তুত করে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "chemise": {
+        "lemma": "chemise",
+        "en": "shirt / paper folder",
+        "bn": "শার্ট / ফাইল ফোল্ডার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la chemise"
+      },
+      "cartonnée": {
+        "lemma": "cartonné",
+        "en": "made of cardboard / stiff paper",
+        "bn": "কার্ডবোর্ডের তৈরি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "tous": {
+        "lemma": "tout",
+        "en": "all",
+        "bn": "সব",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "ses": {
+        "lemma": "son",
+        "en": "his / her / its (plural)",
+        "bn": "তার (বহুবচন)",
+        "pos": "pronoun"
+      },
+      "documents": {
+        "lemma": "document",
+        "en": "documents",
+        "bn": "নথিপত্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le document"
+      },
+      "officiels": {
+        "lemma": "officiel",
+        "en": "official (plural)",
+        "bn": "দাপ্তরিক / অফিসিয়াল",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "passeport": {
+        "lemma": "passeport",
+        "en": "passport",
+        "bn": "পাসপোর্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le passeport"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "cours": {
+        "lemma": "cours",
+        "en": "class / course / in progress",
+        "bn": "ক্লাস / কোর্স / চলমান",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cours"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "validité": {
+        "lemma": "validité",
+        "en": "validity",
+        "bn": "বৈধতা / মেয়াদ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la validité"
+      },
+      "justificatif": {
+        "lemma": "justificatif",
+        "en": "supporting document / proof",
+        "bn": "প্রমাণপত্র / প্রত্যয়ন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le justificatif"
+      },
+      "domicile": {
+        "lemma": "domicile",
+        "en": "home / residence",
+        "bn": "বাসস্থান / ঠিকানা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le domicile"
+      },
+      "récent": {
+        "lemma": "récent",
+        "en": "recent",
+        "bn": "সাম্প্রতিক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "des": {
+        "lemma": "un",
+        "en": "some / of the",
+        "bn": "কিছু / গুলির",
+        "pos": "article",
+        "number": "plural"
+      },
+      "photos": {
+        "lemma": "photo",
+        "en": "photos",
+        "bn": "ছবি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la photo"
+      },
+      "identité": {
+        "lemma": "identité",
+        "en": "identity",
+        "bn": "পরিচয়",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'identité"
+      },
+      "conformes": {
+        "lemma": "conforme",
+        "en": "compliant (plural)",
+        "bn": "যথাযথ",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "rendez": {
+        "lemma": "rendre",
+        "en": "return / appointment (rendez-vous)",
+        "bn": "সাক্ষাৎ / ফেরত দেওয়া",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
+      },
+      "vous": {
+        "lemma": "vous",
+        "en": "you (formal/plural)",
+        "bn": "আপনি / আপনারা",
+        "pos": "pronoun"
+      },
+      "sous": {
+        "lemma": "sous",
+        "en": "under / within (sous 48h)",
+        "bn": "নিচে / এর মধ্যে",
+        "pos": "preposition"
+      },
+      "préfecture": {
+        "lemma": "préfecture",
+        "en": "prefecture (government office)",
+        "bn": "প্রিফেকচার (সরকারি অফিস)",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la préfecture"
+      },
+      "d": {
+        "lemma": "de",
+        "en": "of / from (elision)",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "arrive": {
+        "lemma": "arriver",
+        "en": "arrives",
+        "bn": "পৌঁছায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "quinze": {
+        "lemma": "quinze",
+        "en": "fifteen",
+        "bn": "পনেরো",
+        "pos": "number"
+      },
+      "minutes": {
+        "lemma": "minute",
+        "en": "minutes",
+        "bn": "মিনিট",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la minute"
+      },
+      "avant": {
+        "lemma": "avant",
+        "en": "before",
+        "bn": "আগে",
+        "pos": "preposition"
+      },
+      "heure": {
+        "lemma": "heure",
+        "en": "hour / time",
+        "bn": "ঘণ্টা / সময়",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'heure"
+      },
+      "fixée": {
+        "lemma": "fixer",
+        "en": "scheduled / fixed (feminine)",
+        "bn": "নির্ধারিত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "entrée": {
+        "lemma": "entrée",
+        "en": "entrance / starter",
+        "bn": "প্রবেশদ্বার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entrée"
+      },
+      "du": {
+        "lemma": "de + le",
+        "en": "of the / from the",
+        "bn": "দোকানের",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "bâtiment": {
+        "lemma": "bâtiment",
+        "en": "building",
+        "bn": "ভবন / বিল্ডিং",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bâtiment"
+      },
+      "public": {
+        "lemma": "public",
+        "en": "public",
+        "bn": "সরকারি / গণ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "agent": {
+        "lemma": "agent",
+        "en": "officer / agent",
+        "bn": "কর্মকর্তা / কর্মী",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'agent"
+      },
+      "sécurité": {
+        "lemma": "sécurité",
+        "en": "security",
+        "bn": "নিরাপত্তা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la sécurité"
+      },
+      "contrôle": {
+        "lemma": "contrôler",
+        "en": "checks / inspects",
+        "bn": "পরীক্ষা করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "sac": {
+        "lemma": "sac",
+        "en": "bag / backpack",
+        "bn": "ব্যাগ / থলে",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sac"
+      },
+      "regarde": {
+        "lemma": "regarder",
+        "en": "looks at / watches",
+        "bn": "তাকায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "sa": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "convocation": {
+        "lemma": "convocation",
+        "en": "appointment summons letter",
+        "bn": "সমন / হাজিরার চিঠি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la convocation"
+      },
+      "papier": {
+        "lemma": "papier",
+        "en": "paper",
+        "bn": "কাগজ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le papier"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "number": "singular"
+      },
+      "entre": {
+        "lemma": "entrer",
+        "en": "enters",
+        "bn": "প্রবেশ করে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "hall": {
+        "lemma": "hall",
+        "en": "entrance lobby / hall",
+        "bn": "প্রবেশ লবি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le hall"
+      },
+      "accueil": {
+        "lemma": "accueil",
+        "en": "reception / welcome",
+        "bn": "অভ্যর্থনা / স্বাগত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'accueil"
+      },
+      "prend": {
+        "lemma": "prendre",
+        "en": "takes",
+        "bn": "নেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "ticket": {
+        "lemma": "ticket",
+        "en": "ticket / token",
+        "bn": "টিকিট / টোকেন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le ticket"
+      },
+      "numéro": {
+        "lemma": "numéro",
+        "en": "number / ticket number",
+        "bn": "নম্বর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le numéro"
+      },
+      "ordre": {
+        "lemma": "ordre",
+        "en": "order / in order",
+        "bn": "ক্রম / শৃঙ্খলা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ordre"
+      },
+      "borne": {
+        "lemma": "borne",
+        "en": "terminal / kiosk machine",
+        "bn": "মেশিন / কিয়স্ক",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la borne"
+      },
+      "électronique": {
+        "lemma": "électronique",
+        "en": "electronic",
+        "bn": "ইলেকট্রনিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "assoit": {
+        "lemma": "asseoir",
+        "en": "sits",
+        "bn": "বসে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "calmement": {
+        "lemma": "calmement",
+        "en": "calmly",
+        "bn": "শান্তভাবে",
+        "pos": "adverb"
+      },
+      "parmi": {
+        "lemma": "parmi",
+        "en": "among / amidst",
+        "bn": "মাঝে / মধ্যে",
+        "pos": "preposition"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "autres": {
+        "lemma": "autre",
+        "en": "other / others",
+        "bn": "অন্যান্য / অন্যরা",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "usagers": {
+        "lemma": "usager",
+        "en": "service users / citizens",
+        "bn": "সেবাগ্রহীতা / নাগরিক",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'usager"
+      },
+      "attend": {
+        "lemma": "attendre",
+        "en": "waits for",
+        "bn": "অপেক্ষা করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "tour": {
+        "lemma": "tour",
+        "en": "turn (waiting turn)",
+        "bn": "পালা / সিরিয়াল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le tour"
+      },
+      "s": {
+        "lemma": "se",
+        "en": "himself / herself (elision)",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "écran": {
+        "lemma": "écran",
+        "en": "screen / display",
+        "bn": "পর্দা / স্ক্রিন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'écran"
+      },
+      "lumineux": {
+        "lemma": "lumineux",
+        "en": "bright / luminous",
+        "bn": "উজ্জ্বল / আলোকময়",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "affiche": {
+        "lemma": "afficher",
+        "en": "displays / shows",
+        "bn": "প্রদর্শন করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "a-42": {
+        "lemma": "A-42",
+        "en": "ticket number A-42",
+        "bn": "টিকেট নম্বর এ-৪২",
+        "pos": "noun",
+        "ttsText": "Ticket A quarante-deux",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le A-42"
+      },
+      "guichet": {
+        "lemma": "guichet",
+        "en": "counter / service window",
+        "bn": "কাউন্টার / টিকিট জানালা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le guichet"
+      },
+      "se": {
+        "lemma": "se",
+        "en": "himself / herself / oneself",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "lève": {
+        "lemma": "lever",
+        "en": "stands up / rises",
+        "bn": "ওঠে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "avance": {
+        "lemma": "avance",
+        "en": "ahead / early",
+        "bn": "আগে",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'avance"
+      },
+      "vers": {
+        "lemma": "vers",
+        "en": "towards",
+        "bn": "দিকে",
+        "pos": "preposition"
+      },
+      "politesse": {
+        "lemma": "politesse",
+        "en": "courtesy / politeness",
+        "bn": "ভদ্রতা / শিষ্টাচার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la politesse"
+      },
+      "dame": {
+        "lemma": "dame",
+        "en": "lady / woman",
+        "bn": "ভদ্রমহিলা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la dame"
+      },
+      "souriante": {
+        "lemma": "souriant",
+        "en": "smiling (feminine)",
+        "bn": "হাস্যোজ্জ্বল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "vérifie": {
+        "lemma": "vérifier",
+        "en": "checks / verifies",
+        "bn": "যাচাই করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "chaque": {
+        "lemma": "chaque",
+        "en": "each / every",
+        "bn": "প্রতিটি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "pièce": {
+        "lemma": "pièce",
+        "en": "coin / room",
+        "bn": "কয়েন / মুদ্রা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pièce"
+      },
+      "justificative": {
+        "lemma": "justificatif",
+        "en": "supporting (piece justificative)",
+        "bn": "প্রমাণপত্রমূলক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "dossier": {
+        "lemma": "dossier",
+        "en": "application file / folder",
+        "bn": "ফাইল / আবেদনপত্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le dossier"
+      },
+      "tamponne": {
+        "lemma": "tamponner",
+        "en": "stamps (seal)",
+        "bn": "সিলমোহর মারে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "formulaire": {
+        "lemma": "formulaire",
+        "en": "official form",
+        "bn": "ফর্ম / আবেদনপত্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le formulaire"
+      },
+      "officiel": {
+        "lemma": "officiel",
+        "en": "official",
+        "bn": "সরকারি / দাপ্তরিক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "lui": {
+        "lemma": "lui",
+        "en": "to him / her",
+        "bn": "তাকে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "remet": {
+        "lemma": "remettre",
+        "en": "hands over / gives",
+        "bn": "হস্তান্তর করে / দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "récépissé": {
+        "lemma": "récépissé",
+        "en": "official filing receipt / temporary permit",
+        "bn": "প্রাপ্তিস্বীকার রসিদ / সাময়িক সনদ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le récépissé"
+      },
+      "demande": {
+        "lemma": "demande",
+        "en": "request / application",
+        "bn": "অনুরোধ / আবেদন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la demande"
+      },
+      "votre": {
+        "lemma": "votre",
+        "en": "your (formal)",
+        "bn": "আপনার",
+        "pos": "pronoun"
+      },
+      "est": {
+        "lemma": "être",
+        "en": "is",
+        "bn": "হয় / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "complet": {
+        "lemma": "complet",
+        "en": "complete / full",
+        "bn": "সম্পূর্ণ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "monsieur": {
+        "lemma": "monsieur",
+        "en": "sir / gentleman",
+        "bn": "জনাব / মহাশয়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
+      },
+      "document": {
+        "lemma": "document",
+        "en": "document",
+        "bn": "নথি / দলিল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le document"
+      },
+      "provisoire": {
+        "lemma": "provisoire",
+        "en": "provisional / temporary",
+        "bn": "সাময়িক / অস্থায়ী",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "valable": {
+        "lemma": "valable",
+        "en": "valid",
+        "bn": "বৈধ / মেয়াদযুক্ত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "six": {
+        "lemma": "six",
+        "en": "six",
+        "bn": "ছয়",
+        "pos": "number"
+      },
+      "mois": {
+        "lemma": "mois",
+        "en": "month / months",
+        "bn": "মাস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le mois"
+      },
+      "remercie": {
+        "lemma": "remercier",
+        "en": "thanks",
+        "bn": "ধন্যবাদ জানায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "chaleureusement": {
+        "lemma": "chaleureusement",
+        "en": "warmly",
+        "bn": "উষ্ণভাবে / আন্তরিকভাবে",
+        "pos": "adverb"
+      }
+    },
+    "quiz": [
+      {
+        "question": "À quelle heure Rahim arrive-t-il à la sous-préfecture ?",
+        "options": [
+          "En retard de dix minutes",
+          "Quinze minutes avant l'heure fixée",
+          "Une heure après le rendez-vous",
+          "À midi pile"
+        ],
+        "answer": 1,
+        "explanation": "The story states: \"Rahim arrive quinze minutes avant l'heure\" (Rahim arrives 15 minutes before time).",
+        "explanationBn": "গল্পে বলা আছে: রহিম নির্ধারিত সময়ের পনেরো মিনিট আগে পৌঁছায়।"
+      },
+      {
+        "question": "À quel guichet Rahim doit-il se présenter ?",
+        "options": [
+          "Au guichet 1",
+          "Au guichet 3",
+          "Au guichet 7",
+          "Au guichet 12"
+        ],
+        "answer": 1,
+        "explanation": "The electronic display shows: \"Ticket A-42, guichet 3\" (Window / counter 3).",
+        "explanationBn": "স্ক্রিনে ভেসে ওঠে: টিকেট এ-৪২, কাউন্টার ৩।"
+      },
+      {
+        "question": "Combien de temps le récépissé provisoire est-il valable ?",
+        "options": [
+          "Un mois",
+          "Trois mois",
+          "Six mois",
+          "Un an"
+        ],
+        "answer": 2,
+        "explanation": "The administrative officer says: \"Il est valable six mois\" (It is valid for 6 months).",
+        "explanationBn": "কর্মকর্তা বলেছেন: এই সাময়িক নথিটি ছয় মাসের জন্য বৈধ।"
+      }
+    ]
+  },
+  {
+    "id": "au-supermarche",
+    "title": "Faire les courses au supermarché",
+    "subtitle": "Acheter des produits alimentaires et payer à la caisse",
+    "level": "A1",
+    "topic": "Vie quotidienne & Achats",
+    "wordCount": 163,
+    "estimatedMinutes": 3,
+    "paragraphs": [
+      "Le samedi après-midi, Fahim fait ses courses dans un grand supermarché du centre-ville. Il a une petite liste sur son téléphone portable pour ne rien oublier.",
+      "À l'entrée du magasin, Fahim prend un panier rouge. Il commence par le rayon des fruits et légumes frais. Il choisit six bananes jaunes, trois tomates rouges et un sachet de pommes de terre.",
+      "Fahim pèse les tomates sur la balance automatique. La machine imprime une étiquette adhésive avec le code-barres et le prix exact. Il colle l'étiquette sur le sac transparent.",
+      "Ensuite, Fahim va dans les allées des produits laitiers et de l'épicerie. Il prend deux briques de lait demi-écrémé, une boîte d'œufs frais et un paquet de riz blanc de bonne qualité.",
+      "Fahim se dirige vers les caisses. La caissière passe chaque article sous le lecteur optique : « Bip ! Bip ! ». Fahim paie en espèces avec un billet de vingt euros et range ses achats dans un grand sac en toile réutilisable."
+    ],
+    "paragraphTranslations": [
+      "On Saturday afternoon, Fahim does his grocery shopping in a large supermarket downtown. He has a short list on his mobile phone so he forgets nothing.",
+      "At the shop entrance, Fahim takes a red basket. He starts with the fresh fruit and vegetable aisle. He chooses six yellow bananas, three red tomatoes, and a bag of potatoes.",
+      "Fahim weighs the tomatoes on the automatic scale. The machine prints an adhesive label with the barcode and the exact price. He sticks the label on the clear plastic bag.",
+      "Then, Fahim goes to the dairy and dry grocery aisles. He takes two cartons of semi-skimmed milk, a box of fresh eggs, and a packet of good quality white rice.",
+      "Fahim heads to the checkouts. The cashier scans each item under the optical reader: \"Beep! Beep!\". Fahim pays in cash with a twenty-euro banknote and packs his groceries into a reusable canvas bag."
+    ],
+    "vocabulary": {
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "samedi": {
+        "lemma": "samedi",
+        "en": "Saturday",
+        "bn": "শনিবার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le samedi"
+      },
+      "après-midi": {
+        "lemma": "après-midi",
+        "en": "afternoon",
+        "bn": "বিকাল / দুপুর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'après-midi"
+      },
+      "fahim": {
+        "lemma": "Fahim",
+        "en": "Fahim (first name)",
+        "bn": "ফাহিম (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Fahim"
+      },
+      "fait": {
+        "lemma": "faire",
+        "en": "makes / does / fact",
+        "bn": "করে / ঘটনা",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "ses": {
+        "lemma": "son",
+        "en": "his / her / its (plural)",
+        "bn": "তার (বহুবচন)",
+        "pos": "pronoun"
+      },
+      "courses": {
+        "lemma": "course",
+        "en": "shopping / errands",
+        "bn": "বাজার / কেনাকাটা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la course"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "grand": {
+        "lemma": "grand",
+        "en": "large / big",
+        "bn": "বড়",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "supermarché": {
+        "lemma": "supermarché",
+        "en": "supermarket",
+        "bn": "সুপারমার্কেট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le supermarché"
+      },
+      "du": {
+        "lemma": "de + le",
+        "en": "of the / from the",
+        "bn": "দোকানের",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "centre-ville": {
+        "lemma": "centre-ville",
+        "en": "city centre / downtown",
+        "bn": "শহরের কেন্দ্রস্থল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le centre-ville"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "a": {
+        "lemma": "avoir",
+        "en": "has",
+        "bn": "আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "petite": {
+        "lemma": "petit",
+        "en": "small (feminine)",
+        "bn": "ছোট",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "liste": {
+        "lemma": "liste",
+        "en": "list",
+        "bn": "তালিকা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la liste"
+      },
+      "sur": {
+        "lemma": "sur",
+        "en": "on / upon",
+        "bn": "উপর",
+        "pos": "preposition"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "téléphone": {
+        "lemma": "téléphone",
+        "en": "telephone / mobile phone",
+        "bn": "টেলিফোন / ফোন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le téléphone"
+      },
+      "portable": {
+        "lemma": "portable",
+        "en": "mobile / laptop",
+        "bn": "মোবাইল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "pour": {
+        "lemma": "pour",
+        "en": "for / in order to",
+        "bn": "জন্য",
+        "pos": "preposition"
+      },
+      "ne": {
+        "lemma": "ne",
+        "en": "not (part 1)",
+        "bn": "না",
+        "pos": "adverb"
+      },
+      "rien": {
+        "lemma": "rien",
+        "en": "nothing",
+        "bn": "কিছু না",
+        "pos": "pronoun"
+      },
+      "oublier": {
+        "lemma": "oublier",
+        "en": "to forget",
+        "bn": "ভুলে যাওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "après": {
+        "lemma": "après",
+        "en": "after",
+        "bn": "পরে",
+        "pos": "preposition"
+      },
+      "midi": {
+        "lemma": "midi",
+        "en": "midday / noon",
+        "bn": "দুপুর / মধ্যাহ্ন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le midi"
+      },
+      "centre": {
+        "lemma": "centre",
+        "en": "center",
+        "bn": "কেন্দ্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le centre"
+      },
+      "ville": {
+        "lemma": "ville",
+        "en": "city / town",
+        "bn": "শহর",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ville"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "entrée": {
+        "lemma": "entrée",
+        "en": "entrance / starter",
+        "bn": "প্রবেশদ্বার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entrée"
+      },
+      "magasin": {
+        "lemma": "magasin",
+        "en": "shop / store",
+        "bn": "দোকান",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le magasin"
+      },
+      "prend": {
+        "lemma": "prendre",
+        "en": "takes",
+        "bn": "নেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "panier": {
+        "lemma": "panier",
+        "en": "shopping basket",
+        "bn": "কেনাকাটার ঝুড়ি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le panier"
+      },
+      "rouge": {
+        "lemma": "rouge",
+        "en": "red",
+        "bn": "লাল",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "commence": {
+        "lemma": "commencer",
+        "en": "starts / begins",
+        "bn": "শুরু হয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "par": {
+        "lemma": "par",
+        "en": "by",
+        "bn": "দ্বারা / দিয়ে",
+        "pos": "preposition"
+      },
+      "rayon": {
+        "lemma": "rayon",
+        "en": "supermarket section / aisle",
+        "bn": "বিভাগ / সেকশন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rayon"
+      },
+      "des": {
+        "lemma": "un",
+        "en": "some / of the",
+        "bn": "কিছু / গুলির",
+        "pos": "article",
+        "number": "plural"
+      },
+      "fruits": {
+        "lemma": "fruit",
+        "en": "fruits",
+        "bn": "ফলমূল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le fruit"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "légumes": {
+        "lemma": "légume",
+        "en": "vegetables",
+        "bn": "শাকসবজি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le légume"
+      },
+      "frais": {
+        "lemma": "frais",
+        "en": "fresh / cool",
+        "bn": "তাজা / ঠান্ডা",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "choisit": {
+        "lemma": "choisir",
+        "en": "chooses",
+        "bn": "পছন্দ করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "six": {
+        "lemma": "six",
+        "en": "six",
+        "bn": "ছয়",
+        "pos": "number"
+      },
+      "bananes": {
+        "lemma": "banane",
+        "en": "bananas",
+        "bn": "কলা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la banane"
+      },
+      "jaunes": {
+        "lemma": "jaune",
+        "en": "yellow (plural)",
+        "bn": "হলুদ",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "trois": {
+        "lemma": "trois",
+        "en": "three",
+        "bn": "তিন",
+        "pos": "number"
+      },
+      "tomates": {
+        "lemma": "tomate",
+        "en": "tomatoes",
+        "bn": "টমেটো",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la tomate"
+      },
+      "rouges": {
+        "lemma": "rouge",
+        "en": "red (plural)",
+        "bn": "লাল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "sachet": {
+        "lemma": "sachet",
+        "en": "bag / pouch",
+        "bn": "ছোট ব্যাগ / প্যাকেট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sachet"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "pommes": {
+        "lemma": "pomme",
+        "en": "apples / potatoes (pommes de terre)",
+        "bn": "আলু / আপেল",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la pomme"
+      },
+      "terre": {
+        "lemma": "terre",
+        "en": "earth / potatoes (pommes de terre)",
+        "bn": "মাটি / আলু",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la terre"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "pèse": {
+        "lemma": "peser",
+        "en": "weighs",
+        "bn": "ওজন করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "balance": {
+        "lemma": "balance",
+        "en": "scale / balance",
+        "bn": "ওজন মাপার যন্ত্র",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la balance"
+      },
+      "automatique": {
+        "lemma": "automatique",
+        "en": "automatic",
+        "bn": "স্বয়ংক্রিয়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "machine": {
+        "lemma": "machine",
+        "en": "machine",
+        "bn": "যন্ত্র / মেশিন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la machine"
+      },
+      "imprime": {
+        "lemma": "imprimer",
+        "en": "prints",
+        "bn": "প্রিন্ট করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "étiquette": {
+        "lemma": "étiquette",
+        "en": "label / sticker",
+        "bn": "লেবেল / স্টিকার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'étiquette"
+      },
+      "adhésive": {
+        "lemma": "adhésif",
+        "en": "adhesive / sticky",
+        "bn": "আঠালো",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "code-barres": {
+        "lemma": "code-barres",
+        "en": "barcode",
+        "bn": "বারকোড",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le code-barres"
+      },
+      "prix": {
+        "lemma": "prix",
+        "en": "price",
+        "bn": "দাম / মূল্য",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le prix"
+      },
+      "exact": {
+        "lemma": "exact",
+        "en": "exact / accurate",
+        "bn": "সঠিক / নির্ভুল",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "colle": {
+        "lemma": "coller",
+        "en": "sticks / glues",
+        "bn": "আঠা দিয়ে লাগায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "sac": {
+        "lemma": "sac",
+        "en": "bag / backpack",
+        "bn": "ব্যাগ / থলে",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sac"
+      },
+      "transparent": {
+        "lemma": "transparent",
+        "en": "transparent / clear",
+        "bn": "স্বচ্ছ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "code": {
+        "lemma": "code",
+        "en": "PIN code / rule",
+        "bn": "কোড / পিন নম্বর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le code"
+      },
+      "barres": {
+        "lemma": "barre",
+        "en": "bars (code-barres)",
+        "bn": "বারকোড",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la barre"
+      },
+      "ensuite": {
+        "lemma": "ensuite",
+        "en": "then / next",
+        "bn": "তারপর",
+        "pos": "adverb"
+      },
+      "va": {
+        "lemma": "aller",
+        "en": "goes",
+        "bn": "যায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "allées": {
+        "lemma": "allée",
+        "en": "aisles / walkways",
+        "bn": "সারি / করিডোর",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'allée"
+      },
+      "produits": {
+        "lemma": "produit",
+        "en": "products / items",
+        "bn": "জিনিসপত্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le produit"
+      },
+      "laitiers": {
+        "lemma": "laitier",
+        "en": "dairy (products)",
+        "bn": "দুগ্ধজাত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "épicerie": {
+        "lemma": "épicerie",
+        "en": "grocery section",
+        "bn": "মুদি দোকান বিভাগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'épicerie"
+      },
+      "deux": {
+        "lemma": "deux",
+        "en": "two",
+        "bn": "দুই",
+        "pos": "number"
+      },
+      "briques": {
+        "lemma": "brique",
+        "en": "cartons (of milk)",
+        "bn": "দুধের প্যাকেট / কার্টন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la brique"
+      },
+      "lait": {
+        "lemma": "lait",
+        "en": "milk",
+        "bn": "দুধ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le lait"
+      },
+      "demi-écrémé": {
+        "lemma": "demi-écrémé",
+        "en": "semi-skimmed (milk)",
+        "bn": "সেমি-স্কিমড (দুধ)",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "boîte": {
+        "lemma": "boîte",
+        "en": "box",
+        "bn": "বাক্স",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la boîte"
+      },
+      "d": {
+        "lemma": "de",
+        "en": "of / from (elision)",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "ufs": {
+        "lemma": "œuf",
+        "en": "eggs (oeufs)",
+        "bn": "ডিম",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'œuf"
+      },
+      "paquet": {
+        "lemma": "paquet",
+        "en": "packet / package",
+        "bn": "প্যাকেট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le paquet"
+      },
+      "riz": {
+        "lemma": "riz",
+        "en": "rice",
+        "bn": "চাল / ভাত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le riz"
+      },
+      "blanc": {
+        "lemma": "blanc",
+        "en": "white (masculine)",
+        "bn": "সাদা",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "bonne": {
+        "lemma": "bon",
+        "en": "good",
+        "bn": "ভালো",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "qualité": {
+        "lemma": "qualité",
+        "en": "quality",
+        "bn": "মান / গুণগত মান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la qualité"
+      },
+      "demi": {
+        "lemma": "demi",
+        "en": "half",
+        "bn": "অর্ধেক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "écrémé": {
+        "lemma": "écrémé",
+        "en": "semi-skimmed (milk)",
+        "bn": "সেমি-স্কিমড (দুধ)",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "se": {
+        "lemma": "se",
+        "en": "himself / herself / oneself",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "dirige": {
+        "lemma": "diriger",
+        "en": "heads towards / directs",
+        "bn": "অগ্রসর হয় / যায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "vers": {
+        "lemma": "vers",
+        "en": "towards",
+        "bn": "দিকে",
+        "pos": "preposition"
+      },
+      "caisses": {
+        "lemma": "caisse",
+        "en": "checkouts",
+        "bn": "ক্যাশ কাউন্টারগুলো",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la caisse"
+      },
+      "caissière": {
+        "lemma": "caissière",
+        "en": "cashier (female)",
+        "bn": "মহিলা ক্যাশিয়ার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la caissière"
+      },
+      "passe": {
+        "lemma": "passer",
+        "en": "passes / goes through",
+        "bn": "যায় / অতিক্রম করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "chaque": {
+        "lemma": "chaque",
+        "en": "each / every",
+        "bn": "প্রতিটি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "article": {
+        "lemma": "article",
+        "en": "item / article",
+        "bn": "পণ্য / জিনিস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'article"
+      },
+      "sous": {
+        "lemma": "sous",
+        "en": "under / within (sous 48h)",
+        "bn": "নিচে / এর মধ্যে",
+        "pos": "preposition"
+      },
+      "lecteur": {
+        "lemma": "lecteur",
+        "en": "scanner / reader",
+        "bn": "স্ক্যানার / রিডার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le lecteur"
+      },
+      "optique": {
+        "lemma": "optique",
+        "en": "optical (scanner)",
+        "bn": "অপটিক্যাল / স্ক্যানার",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "bip": {
+        "lemma": "bip",
+        "en": "beep sound",
+        "bn": "বিপ আওয়াজ",
+        "pos": "expression"
+      },
+      "paie": {
+        "lemma": "payer",
+        "en": "pays / pay slip",
+        "bn": "অর্থ প্রদান করে / বেতন",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "espèces": {
+        "lemma": "espèce",
+        "en": "cash (en espèces)",
+        "bn": "নগদ টাকা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'espèce"
+      },
+      "billet": {
+        "lemma": "billet",
+        "en": "banknote / ticket",
+        "bn": "টাকার নোট / টিকিট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le billet"
+      },
+      "vingt": {
+        "lemma": "vingt",
+        "en": "twenty",
+        "bn": "বিশ",
+        "pos": "number"
+      },
+      "euros": {
+        "lemma": "euro",
+        "en": "euros",
+        "bn": "ইউরো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'euro"
+      },
+      "range": {
+        "lemma": "ranger",
+        "en": "packs / puts away",
+        "bn": "গুছিয়ে রাখে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "achats": {
+        "lemma": "achat",
+        "en": "purchases / shopping",
+        "bn": "কেনাকাটা / পণ্য",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'achat"
+      },
+      "toile": {
+        "lemma": "toile",
+        "en": "canvas / fabric",
+        "bn": "ক্যানভাস কাপড়ের তৈরি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la toile"
+      },
+      "réutilisable": {
+        "lemma": "réutilisable",
+        "en": "reusable",
+        "bn": "পুনর্ব্যবহারযোগ্য",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      }
+    },
+    "quiz": [
+      {
+        "question": "Où Fahim a-t-il écrit sa liste de courses ?",
+        "options": [
+          "Sur un carnet en papier",
+          "Sur son téléphone portable",
+          "Sur un ticket de caisse",
+          "Il n'a pas de liste"
+        ],
+        "answer": 1,
+        "explanation": "The text says: \"Il a une petite liste sur son téléphone portable\" (He has a shopping list on his phone).",
+        "explanationBn": "টেক্সটে বলা আছে: তার মোবাইল ফোনে একটি ছোট তালিকা আছে।"
+      },
+      {
+        "question": "Pourquoi Fahim utilise-t-il la balance automatique ?",
+        "options": [
+          "Pour vérifier son propre poids",
+          "Pour peser les légumes et imprimer l'étiquette",
+          "Pour payer ses articles",
+          "Pour nettoyer les fruits"
+        ],
+        "answer": 1,
+        "explanation": "Fahim weighs the fruits and vegetables on the automatic scale to print the barcode sticker.",
+        "explanationBn": "ফাহিম ওজন মাপার মেশিনে শাকসবজি ওজন করে বারকোড স্টিকার প্রিন্ট করে।"
+      },
+      {
+        "question": "Comment Fahim paie-t-il ses courses à la caisse ?",
+        "options": [
+          "Par carte bancaire",
+          "Par virement",
+          "En espèces avec un billet de vingt euros",
+          "Avec un chèque"
+        ],
+        "answer": 2,
+        "explanation": "The story states: \"Il paie en espèces avec un billet de vingt euros\" (He pays in cash with a 20-euro banknote).",
+        "explanationBn": "গল্পে বলা আছে: সে নগদ বিশ ইউরোর একটি নোট দিয়ে অর্থ প্রদান করে।"
+      }
+    ]
+  },
+  {
+    "id": "pause-cafe-informatique",
+    "title": "La pause café entre collègues",
+    "subtitle": "Échanger sur le travail technique pendant la pause du matin",
+    "level": "A1",
+    "topic": "Travail & Entreprise",
+    "wordCount": 171,
+    "estimatedMinutes": 3,
+    "paragraphs": [
+      "Il est dix heures et demie du matin dans les bureaux d'une société informatique. Samir travaille comme technicien support depuis deux semaines. C'est le moment de la pause café pour toute l'équipe technique.",
+      "Samir va dans la salle de détente avec son collègue Thomas. La pièce est lumineuse et conviviale. Deux ingénieurs discutent calmement autour de la grande machine à café en métal.",
+      "Thomas propose amicalement : « Samir, tu veux un café chaud ou un thé à la menthe ? » Samir répond avec un sourire : « Un café noir sans sucre, s'il te plaît Thomas ! »",
+      "Thomas appuie sur le bouton de l'appareil. Le café coule avec une bonne odeur torréfiée. Thomas demande : « Comment se passe ta matinée sur le parc informatique ? »",
+      "Samir explique avec enthousiasme : « Très bien ! Ce matin, je résous deux problèmes de réseau local et je change un mot de passe oublié pour un utilisateur. Les collègues sont très accueillants et m'aident quand j'ai une question. »"
+    ],
+    "paragraphTranslations": [
+      "It is half past ten in the morning in the offices of an IT company. Samir has been working as a support technician for two weeks. It is time for the coffee break for the entire technical team.",
+      "Samir goes to the break room with his colleague Thomas. The room is bright and friendly. Two engineers are chatting calmly around the large metal coffee machine.",
+      "Thomas offers in a friendly way: \"Samir, do you want a hot coffee or a mint tea?\" Samir answers with a smile: \"A black coffee with no sugar, please Thomas!\"",
+      "Thomas presses the machine's button. The coffee pours with a good roasted aroma. Thomas asks: \"How is your morning going on the computer workstations?\"",
+      "Samir explains enthusiastically: \"Very well! This morning, I resolved two local network issues and changed a forgotten password for a user. The colleagues are very welcoming and help me whenever I have a question.\""
+    ],
+    "vocabulary": {
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "est": {
+        "lemma": "être",
+        "en": "is",
+        "bn": "হয় / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "dix": {
+        "lemma": "dix",
+        "en": "ten",
+        "bn": "দশ",
+        "pos": "number"
+      },
+      "heures": {
+        "lemma": "heure",
+        "en": "hours / o'clock",
+        "bn": "ঘণ্টা / টা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'heure"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "demie": {
+        "lemma": "demi",
+        "en": "half (hour)",
+        "bn": "আধ / সাড়ে",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "du": {
+        "lemma": "de + le",
+        "en": "of the / from the",
+        "bn": "দোকানের",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "matin": {
+        "lemma": "matin",
+        "en": "morning",
+        "bn": "সকাল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "bureaux": {
+        "lemma": "bureau",
+        "en": "offices",
+        "bn": "অফিসসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le bureau"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "société": {
+        "lemma": "société",
+        "en": "company / society",
+        "bn": "কোম্পানি / সমাজ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la société"
+      },
+      "informatique": {
+        "lemma": "informatique",
+        "en": "IT / computing",
+        "bn": "আইটি / কম্পিউটার বিজ্ঞান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'informatique"
+      },
+      "samir": {
+        "lemma": "Samir",
+        "en": "Samir (first name)",
+        "bn": "সমীর (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Samir"
+      },
+      "travaille": {
+        "lemma": "travailler",
+        "en": "works",
+        "bn": "কাজ করে",
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
+      },
+      "comme": {
+        "lemma": "comme",
+        "en": "as / like",
+        "bn": "হিসেবে",
+        "pos": "preposition"
+      },
+      "technicien": {
+        "lemma": "technicien",
+        "en": "technician",
+        "bn": "টেকনিশিয়ান / কারিগরি কর্মী",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le technicien"
+      },
+      "support": {
+        "lemma": "support",
+        "en": "support (IT)",
+        "bn": "আইটি সহায়তা / সাপোর্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le support"
+      },
+      "depuis": {
+        "lemma": "depuis",
+        "en": "since / for",
+        "bn": "ধরে / যাবত",
+        "pos": "preposition"
+      },
+      "deux": {
+        "lemma": "deux",
+        "en": "two",
+        "bn": "দুই",
+        "pos": "number"
+      },
+      "semaines": {
+        "lemma": "semaine",
+        "en": "weeks",
+        "bn": "সপ্তাহসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la semaine"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "moment": {
+        "lemma": "moment",
+        "en": "moment / time",
+        "bn": "মুহূর্ত / সময়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le moment"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "pause": {
+        "lemma": "pause",
+        "en": "break / pause",
+        "bn": "বিরতি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pause"
+      },
+      "café": {
+        "lemma": "café",
+        "en": "coffee / café",
+        "bn": "কফি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le café"
+      },
+      "pour": {
+        "lemma": "pour",
+        "en": "for / in order to",
+        "bn": "জন্য",
+        "pos": "preposition"
+      },
+      "toute": {
+        "lemma": "tout",
+        "en": "all / entire (feminine)",
+        "bn": "পুরো / সমস্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "équipe": {
+        "lemma": "équipe",
+        "en": "team",
+        "bn": "দল / টিম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'équipe"
+      },
+      "technique": {
+        "lemma": "technique",
+        "en": "technical / technique",
+        "bn": "কারিগরি / টেকনিক্যাল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "d": {
+        "lemma": "de",
+        "en": "of / from (elision)",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "c": {
+        "lemma": "ce",
+        "en": "it / this (c'est)",
+        "bn": "এটা / এই",
+        "pos": "pronoun"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "number": "singular"
+      },
+      "va": {
+        "lemma": "aller",
+        "en": "goes",
+        "bn": "যায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "salle": {
+        "lemma": "salle",
+        "en": "room / hall",
+        "bn": "কক্ষ / রুম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la salle"
+      },
+      "détente": {
+        "lemma": "détente",
+        "en": "relaxation / break",
+        "bn": "বিশ্রাম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la détente"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "collègue": {
+        "lemma": "collègue",
+        "en": "colleague",
+        "bn": "সহকর্মী",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le collègue"
+      },
+      "thomas": {
+        "lemma": "Thomas",
+        "en": "Thomas (first name)",
+        "bn": "টমাস (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Thomas"
+      },
+      "pièce": {
+        "lemma": "pièce",
+        "en": "coin / room",
+        "bn": "কয়েন / মুদ্রা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pièce"
+      },
+      "lumineuse": {
+        "lemma": "lumineux",
+        "en": "bright (feminine)",
+        "bn": "উজ্জ্বল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "conviviale": {
+        "lemma": "convivial",
+        "en": "friendly / cozy (feminine)",
+        "bn": "আন্তরিক ও প্রফুল্ল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "ingénieurs": {
+        "lemma": "ingénieur",
+        "en": "engineers",
+        "bn": "প্রকৌশলীবৃন্দ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'ingénieur"
+      },
+      "discutent": {
+        "lemma": "discuter",
+        "en": "chat / discuss",
+        "bn": "কথা বলে / আলোচনা করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "calmement": {
+        "lemma": "calmement",
+        "en": "calmly",
+        "bn": "শান্তভাবে",
+        "pos": "adverb"
+      },
+      "autour": {
+        "lemma": "autour",
+        "en": "around",
+        "bn": "চারপাশে / ঘিরে",
+        "pos": "preposition"
+      },
+      "grande": {
+        "lemma": "grand",
+        "en": "large (feminine)",
+        "bn": "বড়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "machine": {
+        "lemma": "machine",
+        "en": "machine",
+        "bn": "যন্ত্র / মেশিন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la machine"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "métal": {
+        "lemma": "métal",
+        "en": "metal",
+        "bn": "ধাতু",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le métal"
+      },
+      "propose": {
+        "lemma": "proposer",
+        "en": "offers / suggests",
+        "bn": "প্রস্তাব দেয় / প্রদান করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "amicalement": {
+        "lemma": "amicalement",
+        "en": "in a friendly manner",
+        "bn": "বন্ধুত্বপূর্ণভাবে",
+        "pos": "adverb"
+      },
+      "tu": {
+        "lemma": "tu",
+        "en": "you (informal)",
+        "bn": "তুমি / তুই",
+        "pos": "pronoun"
+      },
+      "veux": {
+        "lemma": "vouloir",
+        "en": "want (je/tu)",
+        "bn": "চাই / চাও",
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "chaud": {
+        "lemma": "chaud",
+        "en": "hot / warm",
+        "bn": "গরম",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "ou": {
+        "lemma": "ou",
+        "en": "or",
+        "bn": "অথবা",
+        "pos": "conjunction"
+      },
+      "thé": {
+        "lemma": "thé",
+        "en": "tea",
+        "bn": "চা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le thé"
+      },
+      "menthe": {
+        "lemma": "menthe",
+        "en": "mint",
+        "bn": "পুদিনা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la menthe"
+      },
+      "répond": {
+        "lemma": "répondre",
+        "en": "answers / replies",
+        "bn": "উত্তর দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "sourire": {
+        "lemma": "sourire",
+        "en": "smile",
+        "bn": "হাসি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sourire"
+      },
+      "noir": {
+        "lemma": "noir",
+        "en": "black",
+        "bn": "কালো",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "sans": {
+        "lemma": "sans",
+        "en": "without",
+        "bn": "ছাড়া / বিহীন",
+        "pos": "preposition"
+      },
+      "sucre": {
+        "lemma": "sucre",
+        "en": "sugar",
+        "bn": "চিনি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sucre"
+      },
+      "te": {
+        "lemma": "te",
+        "en": "you (to you)",
+        "bn": "তোমাকে",
+        "pos": "pronoun"
+      },
+      "plaît": {
+        "lemma": "plaire",
+        "en": "pleases (s'il vous plaît)",
+        "bn": "পছন্দ হয় / দয়া করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "s": {
+        "lemma": "se",
+        "en": "himself / herself (elision)",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "appuie": {
+        "lemma": "appuyer",
+        "en": "presses (a button)",
+        "bn": "চাপ দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "sur": {
+        "lemma": "sur",
+        "en": "on / upon",
+        "bn": "উপর",
+        "pos": "preposition"
+      },
+      "bouton": {
+        "lemma": "bouton",
+        "en": "button",
+        "bn": "বোতাম / বাটন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bouton"
+      },
+      "appareil": {
+        "lemma": "appareil",
+        "en": "device / appliance",
+        "bn": "যন্ত্র / ডিভাইস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'appareil"
+      },
+      "coule": {
+        "lemma": "couler",
+        "en": "pours / flows",
+        "bn": "পড়ে / প্রবাহিত হয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "bonne": {
+        "lemma": "bon",
+        "en": "good",
+        "bn": "ভালো",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "odeur": {
+        "lemma": "odeur",
+        "en": "smell / aroma",
+        "bn": "গন্ধ / সুবাস",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'odeur"
+      },
+      "torréfiée": {
+        "lemma": "torréfier",
+        "en": "roasted (feminine)",
+        "bn": "রোস্ট করা",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "demande": {
+        "lemma": "demande",
+        "en": "request / application",
+        "bn": "অনুরোধ / আবেদন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la demande"
+      },
+      "comment": {
+        "lemma": "comment",
+        "en": "how / what",
+        "bn": "কেমন / কীভাবে / কী",
+        "pos": "adverb"
+      },
+      "se": {
+        "lemma": "se",
+        "en": "himself / herself / oneself",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "passe": {
+        "lemma": "passer",
+        "en": "passes / goes through",
+        "bn": "যায় / অতিক্রম করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "ta": {
+        "lemma": "son",
+        "en": "your (feminine)",
+        "bn": "তোমার",
+        "pos": "pronoun"
+      },
+      "matinée": {
+        "lemma": "matinée",
+        "en": "morning (duration)",
+        "bn": "সকালবেলা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la matinée"
+      },
+      "parc": {
+        "lemma": "parc",
+        "en": "park / computer workstation pool",
+        "bn": "পার্ক / আইটি সিস্টেম পুল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le parc"
+      },
+      "explique": {
+        "lemma": "expliquer",
+        "en": "explains",
+        "bn": "ব্যাখ্যা করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "enthousiasme": {
+        "lemma": "enthousiasme",
+        "en": "enthusiasm",
+        "bn": "উদ্দীপনা / উৎসাহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'enthousiasme"
+      },
+      "très": {
+        "lemma": "très",
+        "en": "very",
+        "bn": "খুব",
+        "pos": "adverb"
+      },
+      "bien": {
+        "lemma": "bien",
+        "en": "well / good",
+        "bn": "ভালো / ঠিক আছে",
+        "pos": "adverb"
+      },
+      "ce": {
+        "lemma": "ce",
+        "en": "this",
+        "bn": "এই",
+        "pos": "pronoun"
+      },
+      "je": {
+        "lemma": "je",
+        "en": "I",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "résous": {
+        "lemma": "résoudre",
+        "en": "resolve / solve",
+        "bn": "সমাধান করি",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "problèmes": {
+        "lemma": "problème",
+        "en": "problems / issues",
+        "bn": "সমস্যাসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le problème"
+      },
+      "réseau": {
+        "lemma": "réseau",
+        "en": "network",
+        "bn": "নেটওয়ার্ক",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le réseau"
+      },
+      "local": {
+        "lemma": "local",
+        "en": "local / storage room",
+        "bn": "স্থানীয় / সাধারণ স্টোররুম",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le local"
+      },
+      "change": {
+        "lemma": "changer",
+        "en": "change / reset",
+        "bn": "পরিবর্তন করি",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "mot": {
+        "lemma": "mot",
+        "en": "word",
+        "bn": "শব্দ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mot"
+      },
+      "oublié": {
+        "lemma": "oublié",
+        "en": "forgotten",
+        "bn": "ভুলে যাওয়া",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "utilisateur": {
+        "lemma": "utilisateur",
+        "en": "user (IT user)",
+        "bn": "ব্যবহারকারী",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'utilisateur"
+      },
+      "collègues": {
+        "lemma": "collègue",
+        "en": "colleagues",
+        "bn": "সহকর্মীবৃন্দ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le collègue"
+      },
+      "sont": {
+        "lemma": "être",
+        "en": "are (plural)",
+        "bn": "হয় / আছেন",
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
+      },
+      "accueillants": {
+        "lemma": "accueillant",
+        "en": "welcoming (plural)",
+        "bn": "আন্তরিক / বন্ধুবৎসল",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "aident": {
+        "lemma": "aider",
+        "en": "help (plural)",
+        "bn": "সাহায্য করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "quand": {
+        "lemma": "quand",
+        "en": "when",
+        "bn": "যখন",
+        "pos": "conjunction"
+      },
+      "ai": {
+        "lemma": "avoir",
+        "en": "have (first person: j'ai)",
+        "bn": "আছে (আমার আছে)",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "question": {
+        "lemma": "question",
+        "en": "question",
+        "bn": "প্রশ্ন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la question"
+      },
+      "m": {
+        "lemma": "me",
+        "en": "me (elision)",
+        "bn": "আমাকে",
+        "pos": "pronoun"
+      },
+      "j": {
+        "lemma": "je",
+        "en": "I (elision)",
+        "bn": "আমি",
+        "pos": "pronoun"
+      }
+    },
+    "quiz": [
+      {
+        "question": "Quel est le métier de Samir dans l'entreprise ?",
+        "options": [
+          "Directeur général",
+          "Technicien support informatique",
+          "Comptable",
+          "Cuisinier"
+        ],
+        "answer": 1,
+        "explanation": "The story states that Samir works as an IT support technician (\"technicien support\") for two weeks.",
+        "explanationBn": "গল্পে বলা আছে যে সমীর দুই সপ্তাহ ধরে আইটি সাপোর্ট টেকনিশিয়ান হিসেবে কাজ করছে।"
+      },
+      {
+        "question": "Quelle boisson Samir choisit-il ?",
+        "options": [
+          "Un chocolat chaud",
+          "Un café sans sucre",
+          "Un jus d'orange",
+          "Un grand thé sucré"
+        ],
+        "answer": 1,
+        "explanation": "The story mentions: \"Samir prend un café sans sucre\" (Samir takes coffee without sugar).",
+        "explanationBn": "গল্পে উল্লেখ আছে: সমীর চিনি ছাড়া একটি ব্ল্যাক কফি নেয়।"
+      },
+      {
+        "question": "Quelles tâches techniques Samir a-t-il faites ce matin ?",
+        "options": [
+          "Acheter des écrans neufs",
+          "Résoudre des problèmes réseau et changer un mot de passe",
+          "Nettoyer les bureaux",
+          "Faire une livraison"
+        ],
+        "answer": 1,
+        "explanation": "Samir says: \"Ce matin, je résous deux problèmes de réseau et je change un mot de passe oublié\" (Resolved 2 network issues and reset a forgotten password).",
+        "explanationBn": "সমীর বলেছে সে দুটি লোকাল নেটওয়ার্ক সমস্যার সমাধান করেছে এবং একটি ভুলে যাওয়া পাসওয়ার্ড রিসেট করেছে।"
+      }
+    ]
+  },
+  {
+    "id": "chez-le-medecin",
+    "title": "Chez le médecin",
+    "subtitle": "Expliquer ses symptômes et obtenir une ordonnance",
+    "level": "A1",
+    "topic": "Santé & Vie quotidienne",
+    "wordCount": 214,
+    "estimatedMinutes": 3,
+    "paragraphs": [
+      "Ce matin, Tariq ne se sent pas très bien dans son corps. Il a mal à la gorge depuis hier soir et il a un peu de fièvre. Il prend son téléphone pour réserver un rendez-vous chez le docteur Laurent dans son cabinet médical de quartier.",
+      "Tariq arrive à l'heure précise et s'assoit calmement dans la salle d'attente. Quelques minutes plus tard, le médecin ouvre la porte et dit : « Bonjour monsieur, entrez je vous en prie. Asseyez-vous sur ce fauteuil confortable. »",
+      "Le docteur pose des questions claires avec gentillesse : « Qu'est-ce qui ne va pas aujourd'hui ? Où avez-vous mal exactement ? » Tariq répond posément : « J'ai de la fièvre, mal à la tête et je tousse beaucoup la nuit. »",
+      "Le médecin ausculte Tariq avec son stéthoscope moderne. Il regarde sa gorge rouge et prend sa température avec un petit thermomètre frontal : « Vous avez une petite angine virale. Ne vous inquiétez pas, ce n'est rien de grave. »",
+      "Le praticien rédige une ordonnance avec du paracétamol pour calmer la douleur et un sirop doux pour la toux. Il conseille à Tariq de bien boire de l'eau tiède et de rester au lit pendant deux jours. Tariq le remercie chaleureusement et paie avec sa carte bancaire."
+    ],
+    "paragraphTranslations": [
+      "This morning, Tariq does not feel very well in his body. He has had a sore throat since yesterday evening and has a slight fever. He takes his phone to book an appointment with Dr. Laurent in his neighbourhood medical clinic.",
+      "Tariq arrives on time and sits down calmly in the waiting room. A few minutes later, the doctor opens the door and says: \"Good morning sir, please come in. Take a seat on this comfortable armchair.\"",
+      "The doctor asks clear questions with kindness: \"What seems to be the problem today? Where does it hurt exactly?\" Tariq replies calmly: \"I have a fever, a headache, and I cough a lot at night.\"",
+      "The doctor examines Tariq with his modern stethoscope. He looks at his red throat and takes his temperature with a small forehead thermometer: \"You have a mild viral throat infection. Don't worry, it is nothing serious.\"",
+      "The practitioner writes a prescription with paracetamol to soothe the pain and a gentle syrup for the cough. He advises Tariq to drink plenty of warm water and stay in bed for two days. Tariq thanks him warmly and pays with his bank card."
+    ],
+    "vocabulary": {
+      "ce": {
+        "lemma": "ce",
+        "en": "this",
+        "bn": "এই",
+        "pos": "pronoun"
+      },
+      "matin": {
+        "lemma": "matin",
+        "en": "morning",
+        "bn": "সকাল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
+      },
+      "tariq": {
+        "lemma": "Tariq",
+        "en": "Tariq (first name)",
+        "bn": "তারিক (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Tariq"
+      },
+      "ne": {
+        "lemma": "ne",
+        "en": "not (part 1)",
+        "bn": "না",
+        "pos": "adverb"
+      },
+      "se": {
+        "lemma": "se",
+        "en": "himself / herself / oneself",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "sent": {
+        "lemma": "sentir",
+        "en": "feels",
+        "bn": "অনুভব করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "pas": {
+        "lemma": "pas",
+        "en": "step / footsteps / not",
+        "bn": "পদক্ষেপ / পায়ের আওয়াজ / না",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pas"
+      },
+      "très": {
+        "lemma": "très",
+        "en": "very",
+        "bn": "খুব",
+        "pos": "adverb"
+      },
+      "bien": {
+        "lemma": "bien",
+        "en": "well / good",
+        "bn": "ভালো / ঠিক আছে",
+        "pos": "adverb"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "corps": {
+        "lemma": "corps",
+        "en": "body",
+        "bn": "শরীর / দেহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le corps"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "a": {
+        "lemma": "avoir",
+        "en": "has",
+        "bn": "আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "mal": {
+        "lemma": "mal",
+        "en": "pain / difficulty / bad",
+        "bn": "ব্যথা / কষ্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mal"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "gorge": {
+        "lemma": "gorge",
+        "en": "throat",
+        "bn": "গলা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la gorge"
+      },
+      "depuis": {
+        "lemma": "depuis",
+        "en": "since / for",
+        "bn": "ধরে / যাবত",
+        "pos": "preposition"
+      },
+      "hier": {
+        "lemma": "hier",
+        "en": "yesterday",
+        "bn": "গতকাল",
+        "pos": "adverb"
+      },
+      "soir": {
+        "lemma": "soir",
+        "en": "evening",
+        "bn": "সন্ধ্যা / রাত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le soir"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "peu": {
+        "lemma": "peu",
+        "en": "little / slight",
+        "bn": "একটু / অল্প",
+        "pos": "adverb"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "fièvre": {
+        "lemma": "fièvre",
+        "en": "fever",
+        "bn": "জ্বর",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fièvre"
+      },
+      "prend": {
+        "lemma": "prendre",
+        "en": "takes",
+        "bn": "নেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "téléphone": {
+        "lemma": "téléphone",
+        "en": "telephone / mobile phone",
+        "bn": "টেলিফোন / ফোন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le téléphone"
+      },
+      "pour": {
+        "lemma": "pour",
+        "en": "for / in order to",
+        "bn": "জন্য",
+        "pos": "preposition"
+      },
+      "réserver": {
+        "lemma": "réserver",
+        "en": "to book / reserve",
+        "bn": "বুকিং করা / সময় নেওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "rendez-vous": {
+        "lemma": "rendez-vous",
+        "en": "appointment / meeting",
+        "bn": "সাক্ষাৎ / অ্যাপয়েন্টমেন্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
+      },
+      "chez": {
+        "lemma": "chez",
+        "en": "at the place of",
+        "bn": "বাসায় / কাছে",
+        "pos": "preposition"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "docteur": {
+        "lemma": "docteur",
+        "en": "doctor",
+        "bn": "ডাক্তার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le docteur"
+      },
+      "laurent": {
+        "lemma": "Laurent",
+        "en": "Laurent (name)",
+        "bn": "লরেন্ট (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Laurent"
+      },
+      "cabinet": {
+        "lemma": "cabinet",
+        "en": "doctor's surgery / practice",
+        "bn": "ডাক্তারখানা / চেম্বার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cabinet"
+      },
+      "médical": {
+        "lemma": "médical",
+        "en": "medical",
+        "bn": "চিকিৎসা সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "quartier": {
+        "lemma": "quartier",
+        "en": "neighbourhood / district",
+        "bn": "মহল্লা / এলাকা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le quartier"
+      },
+      "rendez": {
+        "lemma": "rendre",
+        "en": "return / appointment (rendez-vous)",
+        "bn": "সাক্ষাৎ / ফেরত দেওয়া",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
+      },
+      "vous": {
+        "lemma": "vous",
+        "en": "you (formal/plural)",
+        "bn": "আপনি / আপনারা",
+        "pos": "pronoun"
+      },
+      "arrive": {
+        "lemma": "arriver",
+        "en": "arrives",
+        "bn": "পৌঁছায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "heure": {
+        "lemma": "heure",
+        "en": "hour / time",
+        "bn": "ঘণ্টা / সময়",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'heure"
+      },
+      "précise": {
+        "lemma": "préciser",
+        "en": "specifies / exact (feminine)",
+        "bn": "স্পষ্ট করে বলে / সঠিক",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "assoit": {
+        "lemma": "asseoir",
+        "en": "sits",
+        "bn": "বসে",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "calmement": {
+        "lemma": "calmement",
+        "en": "calmly",
+        "bn": "শান্তভাবে",
+        "pos": "adverb"
+      },
+      "salle": {
+        "lemma": "salle",
+        "en": "room / hall",
+        "bn": "কক্ষ / রুম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la salle"
+      },
+      "attente": {
+        "lemma": "attente",
+        "en": "waiting",
+        "bn": "অপেক্ষা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attente"
+      },
+      "quelques": {
+        "lemma": "quelque",
+        "en": "a few / some",
+        "bn": "কয়েকটি / কিছু",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "minutes": {
+        "lemma": "minute",
+        "en": "minutes",
+        "bn": "মিনিট",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la minute"
+      },
+      "plus": {
+        "lemma": "plus",
+        "en": "more / plus",
+        "bn": "আরও",
+        "pos": "adverb"
+      },
+      "tard": {
+        "lemma": "tard",
+        "en": "late (plus tard = later)",
+        "bn": "দেরিতে (পরে)",
+        "pos": "adverb"
+      },
+      "médecin": {
+        "lemma": "médecin",
+        "en": "doctor / physician",
+        "bn": "চিকিৎসক / ডাক্তার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le médecin"
+      },
+      "ouvre": {
+        "lemma": "ouvrir",
+        "en": "opens",
+        "bn": "খোলে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "porte": {
+        "lemma": "porte",
+        "en": "door",
+        "bn": "দরজা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la porte"
+      },
+      "dit": {
+        "lemma": "dire",
+        "en": "says",
+        "bn": "বলে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "bonjour": {
+        "lemma": "bonjour",
+        "en": "hello / good day",
+        "bn": "শুভ সকাল / নমস্কার",
+        "pos": "expression"
+      },
+      "monsieur": {
+        "lemma": "monsieur",
+        "en": "sir / gentleman",
+        "bn": "জনাব / মহাশয়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
+      },
+      "entrez": {
+        "lemma": "entrer",
+        "en": "come in / enter (formal)",
+        "bn": "আসুন / ভেতরে আসুন",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "je": {
+        "lemma": "je",
+        "en": "I",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "prie": {
+        "lemma": "prier",
+        "en": "please (je vous en prie)",
+        "bn": "দয়া করে আসুন / অনুরোধ",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "asseyez-vous": {
+        "lemma": "asseoir",
+        "en": "take a seat / sit down",
+        "bn": "বসুন",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "sur": {
+        "lemma": "sur",
+        "en": "on / upon",
+        "bn": "উপর",
+        "pos": "preposition"
+      },
+      "fauteuil": {
+        "lemma": "fauteuil",
+        "en": "armchair",
+        "bn": "আরামদায়ক চেয়ার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le fauteuil"
+      },
+      "confortable": {
+        "lemma": "confortable",
+        "en": "comfortable",
+        "bn": "আরামদায়ক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "s": {
+        "lemma": "se",
+        "en": "himself / herself (elision)",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "d": {
+        "lemma": "de",
+        "en": "of / from (elision)",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "asseyez": {
+        "lemma": "asseoir",
+        "en": "sit (asseyez-vous)",
+        "bn": "বসুন",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "pose": {
+        "lemma": "poser",
+        "en": "places / puts / asks",
+        "bn": "রাখে / জিজ্ঞেস করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "des": {
+        "lemma": "un",
+        "en": "some / of the",
+        "bn": "কিছু / গুলির",
+        "pos": "article",
+        "number": "plural"
+      },
+      "questions": {
+        "lemma": "question",
+        "en": "questions",
+        "bn": "প্রশ্নসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la question"
+      },
+      "claires": {
+        "lemma": "clair",
+        "en": "clear (plural)",
+        "bn": "সুস্পষ্ট",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "gentillesse": {
+        "lemma": "gentillesse",
+        "en": "kindness",
+        "bn": "সদয়তা / ভদ্রতা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la gentillesse"
+      },
+      "est-ce": {
+        "lemma": "est-ce que",
+        "en": "is it / (question marker)",
+        "bn": "কী / নাকি",
+        "pos": "expression"
+      },
+      "qui": {
+        "lemma": "qui",
+        "en": "who / which",
+        "bn": "যে / কে",
+        "pos": "pronoun"
+      },
+      "va": {
+        "lemma": "aller",
+        "en": "goes",
+        "bn": "যায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "aujourd'hui": {
+        "lemma": "aujourd'hui",
+        "en": "today",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "où": {
+        "lemma": "où",
+        "en": "where",
+        "bn": "কোথায় / যেখানে",
+        "pos": "adverb"
+      },
+      "avez-vous": {
+        "lemma": "avoir",
+        "en": "do you have",
+        "bn": "আপনার কি আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "exactement": {
+        "lemma": "exactement",
+        "en": "exactly",
+        "bn": "ঠিক / নিখুঁতভাবে",
+        "pos": "adverb"
+      },
+      "répond": {
+        "lemma": "répondre",
+        "en": "answers / replies",
+        "bn": "উত্তর দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "posément": {
+        "lemma": "posément",
+        "en": "composedly / calmly",
+        "bn": "ধীরস্থিরভাবে",
+        "pos": "adverb"
+      },
+      "ai": {
+        "lemma": "avoir",
+        "en": "have (first person: j'ai)",
+        "bn": "আছে (আমার আছে)",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "tête": {
+        "lemma": "tête",
+        "en": "head / headache",
+        "bn": "মাথা / মাথা ব্যথা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la tête"
+      },
+      "tousse": {
+        "lemma": "tousser",
+        "en": "coughs",
+        "bn": "কাশি দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "beaucoup": {
+        "lemma": "beaucoup",
+        "en": "a lot / very much",
+        "bn": "অনেক",
+        "pos": "adverb"
+      },
+      "nuit": {
+        "lemma": "nuit",
+        "en": "night",
+        "bn": "রাত",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la nuit"
+      },
+      "qu": {
+        "lemma": "que",
+        "en": "that / what (elision)",
+        "bn": "যা / কী",
+        "pos": "pronoun"
+      },
+      "est": {
+        "lemma": "être",
+        "en": "is",
+        "bn": "হয় / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "aujourd": {
+        "lemma": "aujourd'hui",
+        "en": "today",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "hui": {
+        "lemma": "aujourd'hui",
+        "en": "today (part of aujourd'hui)",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "avez": {
+        "lemma": "avoir",
+        "en": "have (you have)",
+        "bn": "আছে (আপনার আছে)",
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
+      },
+      "j": {
+        "lemma": "je",
+        "en": "I (elision)",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "ausculte": {
+        "lemma": "ausculter",
+        "en": "examines / listens with stethoscope",
+        "bn": "স্টেথোস্কোপ দিয়ে পরীক্ষা করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "stéthoscope": {
+        "lemma": "stéthoscope",
+        "en": "stethoscope",
+        "bn": "স্টেথোস্কোপ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le stéthoscope"
+      },
+      "moderne": {
+        "lemma": "moderne",
+        "en": "modern",
+        "bn": "আধুনিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "regarde": {
+        "lemma": "regarder",
+        "en": "looks at / watches",
+        "bn": "তাকায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "sa": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "rouge": {
+        "lemma": "rouge",
+        "en": "red",
+        "bn": "লাল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "température": {
+        "lemma": "température",
+        "en": "temperature",
+        "bn": "তাপমাত্রা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la température"
+      },
+      "petit": {
+        "lemma": "petit",
+        "en": "small / short",
+        "bn": "ছোট",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "thermomètre": {
+        "lemma": "thermomètre",
+        "en": "thermometer",
+        "bn": "থার্মোমিটার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le thermomètre"
+      },
+      "frontal": {
+        "lemma": "frontal",
+        "en": "forehead (thermometer)",
+        "bn": "কপালে ধরার (থার্মোমিটার)",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "petite": {
+        "lemma": "petit",
+        "en": "small (feminine)",
+        "bn": "ছোট",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "angine": {
+        "lemma": "angine",
+        "en": "throat infection / angina",
+        "bn": "গলার ইনফেকশন / টনসিল",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'angine"
+      },
+      "virale": {
+        "lemma": "viral",
+        "en": "viral (infection)",
+        "bn": "ভাইরাল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "inquiétez": {
+        "lemma": "inquiéter",
+        "en": "worry (ne vous inquiétez pas)",
+        "bn": "চিন্তা করবেন না",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "rien": {
+        "lemma": "rien",
+        "en": "nothing",
+        "bn": "কিছু না",
+        "pos": "pronoun"
+      },
+      "grave": {
+        "lemma": "grave",
+        "en": "serious / severe",
+        "bn": "গুরুতর",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "n": {
+        "lemma": "ne",
+        "en": "not (elision)",
+        "bn": "না",
+        "pos": "adverb"
+      },
+      "praticien": {
+        "lemma": "praticien",
+        "en": "medical practitioner / doctor",
+        "bn": "চিকিৎসক",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le praticien"
+      },
+      "rédige": {
+        "lemma": "rédiger",
+        "en": "writes / drafts (prescription)",
+        "bn": "লেখে / প্রস্তুত করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "ordonnance": {
+        "lemma": "ordonnance",
+        "en": "prescription",
+        "bn": "প্রেসক্রিপশন / ব্যবস্থাপত্র",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ordonnance"
+      },
+      "du": {
+        "lemma": "de + le",
+        "en": "of the / from the",
+        "bn": "দোকানের",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "paracétamol": {
+        "lemma": "paracétamol",
+        "en": "paracetamol",
+        "bn": "প্যারাসিটামল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le paracétamol"
+      },
+      "calmer": {
+        "lemma": "calmer",
+        "en": "to soothe / calm down",
+        "bn": "উপশম করা / শান্ত করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "douleur": {
+        "lemma": "douleur",
+        "en": "pain / ache",
+        "bn": "ব্যথা / যন্ত্রণা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la douleur"
+      },
+      "sirop": {
+        "lemma": "sirop",
+        "en": "cough syrup",
+        "bn": "কাশির সিরাপ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sirop"
+      },
+      "doux": {
+        "lemma": "doux",
+        "en": "gentle / sweet / mild",
+        "bn": "মৃদু / মিষ্টি",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "toux": {
+        "lemma": "toux",
+        "en": "cough",
+        "bn": "কাশি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la toux"
+      },
+      "conseille": {
+        "lemma": "conseiller",
+        "en": "advises / recommends",
+        "bn": "পরামর্শ দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "boire": {
+        "lemma": "boire",
+        "en": "to drink",
+        "bn": "পান করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "eau": {
+        "lemma": "eau",
+        "en": "water",
+        "bn": "পানি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'eau"
+      },
+      "tiède": {
+        "lemma": "tiède",
+        "en": "lukewarm / warm",
+        "bn": "কুসুম গরম",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "rester": {
+        "lemma": "rester",
+        "en": "to stay / remain",
+        "bn": "থাকা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "au": {
+        "lemma": "à + le",
+        "en": "with / to the",
+        "bn": "দিয়ে",
+        "pos": "preposition"
+      },
+      "lit": {
+        "lemma": "lire",
+        "en": "reads / bed",
+        "bn": "পড়ে / বিছানা",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "pendant": {
+        "lemma": "pendant",
+        "en": "during",
+        "bn": "চলাকালীন / সময়ে",
+        "pos": "preposition"
+      },
+      "deux": {
+        "lemma": "deux",
+        "en": "two",
+        "bn": "দুই",
+        "pos": "number"
+      },
+      "jours": {
+        "lemma": "jour",
+        "en": "days",
+        "bn": "দিনগুলো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le jour"
+      },
+      "remercie": {
+        "lemma": "remercier",
+        "en": "thanks",
+        "bn": "ধন্যবাদ জানায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "chaleureusement": {
+        "lemma": "chaleureusement",
+        "en": "warmly",
+        "bn": "উষ্ণভাবে / আন্তরিকভাবে",
+        "pos": "adverb"
+      },
+      "paie": {
+        "lemma": "payer",
+        "en": "pays / pay slip",
+        "bn": "অর্থ প্রদান করে / বেতন",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "carte": {
+        "lemma": "carte",
+        "en": "card / menu",
+        "bn": "কার্ড / মেনু",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carte"
+      },
+      "bancaire": {
+        "lemma": "bancaire",
+        "en": "banking / bank-related",
+        "bn": "ব্যাংক সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      }
+    },
+    "quiz": [
+      {
+        "question": "De quoi souffre Tariq dans cette histoire ?",
+        "options": [
+          "D'une jambe cassée",
+          "D'une angine virale avec de la fièvre",
+          "D'un mal de dents",
+          "D'une allergie alimentaire"
+        ],
+        "answer": 1,
+        "explanation": "The doctor examines him and diagnoses: \"Vous avez une petite angine virale\" (You have a mild viral throat infection).",
+        "explanationBn": "ডাক্তার তাকে পরীক্ষা করে জানান যে তার সামান্য ভাইরাল অ্যানজাইনা বা গলার সংক্রমণ হয়েছে।"
+      },
+      {
+        "question": "Quels médicaments le docteur prescrit-il sur l'ordonnance ?",
+        "options": [
+          "Des antibiotiques forts",
+          "Du paracétamol et un sirop pour la toux",
+          "Des vitamines seulement",
+          "Des somnifères"
+        ],
+        "answer": 1,
+        "explanation": "The text states: \"Le docteur rédige une ordonnance avec du paracétamol et un sirop pour la toux\".",
+        "explanationBn": "টেক্সটে বলা আছে: ডাক্তার প্যারাসিটামল এবং কাশির সিরাপের প্রেসক্রিপশন লিখেছেন।"
+      },
+      {
+        "question": "Que conseille le médecin pour guérir vite ?",
+        "options": [
+          "Faire du sport intensif",
+          "Boire de l'eau tiède et se reposer au lit deux jours",
+          "Manger des glaces froides",
+          "Prendre le train"
+        ],
+        "answer": 1,
+        "explanation": "The doctor advises Tariq to drink warm water and stay in bed for two days (\"boire de l'eau tiède et de rester au lit pendant deux jours\").",
+        "explanationBn": "ডাক্তার কুসুম গরম পানি পান করতে এবং দুই দিন বিছানায় বিশ্রাম নিতে পরামর্শ দেন।"
+      }
+    ]
+  },
+  {
+    "id": "au-restaurant",
+    "title": "Au restaurant",
+    "subtitle": "Commander un plat du jour et une carafe d'eau",
+    "level": "A1",
+    "topic": "Restauration & Vie quotidienne",
+    "wordCount": 208,
+    "estimatedMinutes": 3,
+    "paragraphs": [
+      "À midi, Kabir a très faim après son cours de français intensif. Il entre dans une petite brasserie conviviale près de la mairie. La salle est propre et les tables en bois sont élégamment dressées.",
+      "Le serveur s'approche avec un carnet et un menu imprimé : « Bonjour monsieur, vous êtes seul pour déjeuner ? Choisissez une jolie table près de la grande fenêtre. » Kabir s'installe confortablement et pose son manteau.",
+      "Le serveur revient rapidement : « Avez-vous choisi votre repas ? Qu'est-ce qui vous ferait plaisir aujourd'hui ? » Kabir regarde l'ardoise murale et répond : « Oui, je voudrais la formule du midi avec le plat du jour, s'il vous plaît. »",
+      "Le serveur précise le menu : « Parfait. Aujourd'hui, notre chef prépare un délicieux poulet rôti avec du riz blanc parfumé et des légumes de saison. Et pour la boisson ? » Kabir demande poliment : « Une carafe d'eau fraîche, s'il vous plaît. »",
+      "Le repas arrive fumant sur la table. La viande est tendre et savoureuse. À la fin du repas, Kabir fait un petit signe discret au serveur : « Excusez-moi monsieur, l'addition s'il vous plaît. » Kabir paie par carte bancaire et laisse une pièce de monnaie comme pourboire."
+    ],
+    "paragraphTranslations": [
+      "At noon, Kabir is very hungry after his intensive French class. He enters a friendly little brasserie near the town hall. The room is clean and the wooden tables are elegantly set.",
+      "The waiter comes over with a notepad and a printed menu: \"Good day sir, are you alone for lunch? Pick a nice table near the big window.\" Kabir settles in comfortably and puts down his coat.",
+      "The waiter returns quickly: \"Have you chosen your meal? What would you like today?\" Kabir looks at the chalkboard menu on the wall and answers: \"Yes, I would like the lunch deal with the dish of the day, please.\"",
+      "The waiter details the menu: \"Perfect. Today, our chef is preparing delicious roast chicken with fragrant white rice and seasonal vegetables. And for the drink?\" Kabir asks politely: \"A pitcher of fresh tap water, please.\"",
+      "The meal arrives steaming on the table. The meat is tender and tasty. At the end of the meal, Kabir makes a small discreet sign to the waiter: \"Excuse me sir, the bill please.\" Kabir pays by bank card and leaves a coin as a tip."
+    ],
+    "vocabulary": {
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "midi": {
+        "lemma": "midi",
+        "en": "midday / noon",
+        "bn": "দুপুর / মধ্যাহ্ন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le midi"
+      },
+      "kabir": {
+        "lemma": "Kabir",
+        "en": "Kabir (first name)",
+        "bn": "কবীর (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Kabir"
+      },
+      "a": {
+        "lemma": "avoir",
+        "en": "has",
+        "bn": "আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "très": {
+        "lemma": "très",
+        "en": "very",
+        "bn": "খুব",
+        "pos": "adverb"
+      },
+      "faim": {
+        "lemma": "faim",
+        "en": "hunger",
+        "bn": "ক্ষুধা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la faim"
+      },
+      "après": {
+        "lemma": "après",
+        "en": "after",
+        "bn": "পরে",
+        "pos": "preposition"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "cours": {
+        "lemma": "cours",
+        "en": "class / course / in progress",
+        "bn": "ক্লাস / কোর্স / চলমান",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cours"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "français": {
+        "lemma": "français",
+        "en": "French",
+        "bn": "ফরাসি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le français"
+      },
+      "intensif": {
+        "lemma": "intensif",
+        "en": "intensive",
+        "bn": "নিবিড় / গভীর",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "entre": {
+        "lemma": "entrer",
+        "en": "enters",
+        "bn": "প্রবেশ করে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "petite": {
+        "lemma": "petit",
+        "en": "small (feminine)",
+        "bn": "ছোট",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "brasserie": {
+        "lemma": "brasserie",
+        "en": "brasserie / casual French restaurant",
+        "bn": "ফরাসি রেস্তোরাঁ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la brasserie"
+      },
+      "conviviale": {
+        "lemma": "convivial",
+        "en": "friendly / cozy (feminine)",
+        "bn": "আন্তরিক ও প্রফুল্ল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "près": {
+        "lemma": "près",
+        "en": "near / close to",
+        "bn": "কাছে / নিকটে",
+        "pos": "preposition"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "mairie": {
+        "lemma": "mairie",
+        "en": "town hall / mayor's office",
+        "bn": "পৌরসভা / টাউন হল",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la mairie"
+      },
+      "salle": {
+        "lemma": "salle",
+        "en": "room / hall",
+        "bn": "কক্ষ / রুম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la salle"
+      },
+      "est": {
+        "lemma": "être",
+        "en": "is",
+        "bn": "হয় / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "propre": {
+        "lemma": "propre",
+        "en": "clean / own",
+        "bn": "পরিষ্কার / নিজস্ব",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "tables": {
+        "lemma": "table",
+        "en": "tables",
+        "bn": "টেবিলগুলো",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la table"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "bois": {
+        "lemma": "bois",
+        "en": "wood",
+        "bn": "কাঠ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bois"
+      },
+      "sont": {
+        "lemma": "être",
+        "en": "are (plural)",
+        "bn": "হয় / আছেন",
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
+      },
+      "élégamment": {
+        "lemma": "élégamment",
+        "en": "elegantly",
+        "bn": "মার্জিতভাবে",
+        "pos": "adverb"
+      },
+      "dressées": {
+        "lemma": "dresser",
+        "en": "set (tables plural)",
+        "bn": "সাজানো",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "serveur": {
+        "lemma": "serveur",
+        "en": "waiter / server",
+        "bn": "ওয়েটার / পরিবেশক",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le serveur"
+      },
+      "approche": {
+        "lemma": "approcher",
+        "en": "approaches / comes closer",
+        "bn": "কাছে আসে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "carnet": {
+        "lemma": "carnet",
+        "en": "notebook / notepad",
+        "bn": "নোটবুক / খাতা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le carnet"
+      },
+      "menu": {
+        "lemma": "menu",
+        "en": "menu",
+        "bn": "খাবার তালিকা / মেনু",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le menu"
+      },
+      "imprimé": {
+        "lemma": "imprimer",
+        "en": "printed",
+        "bn": "মুদ্রিত / প্রিন্ট করা",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "bonjour": {
+        "lemma": "bonjour",
+        "en": "hello / good day",
+        "bn": "শুভ সকাল / নমস্কার",
+        "pos": "expression"
+      },
+      "monsieur": {
+        "lemma": "monsieur",
+        "en": "sir / gentleman",
+        "bn": "জনাব / মহাশয়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
+      },
+      "vous": {
+        "lemma": "vous",
+        "en": "you (formal/plural)",
+        "bn": "আপনি / আপনারা",
+        "pos": "pronoun"
+      },
+      "êtes": {
+        "lemma": "être",
+        "en": "are (vous)",
+        "bn": "হন / আছেন",
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
+      },
+      "seul": {
+        "lemma": "seul",
+        "en": "alone / single",
+        "bn": "একা",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "pour": {
+        "lemma": "pour",
+        "en": "for / in order to",
+        "bn": "জন্য",
+        "pos": "preposition"
+      },
+      "déjeuner": {
+        "lemma": "déjeuner",
+        "en": "lunch / to have lunch",
+        "bn": "দুপুরের খাবার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le déjeuner"
+      },
+      "choisissez": {
+        "lemma": "choisir",
+        "en": "choose (formal)",
+        "bn": "পছন্দ করুন",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "jolie": {
+        "lemma": "joli",
+        "en": "pretty (feminine)",
+        "bn": "সুন্দর",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "table": {
+        "lemma": "table",
+        "en": "table",
+        "bn": "টেবিল",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la table"
+      },
+      "grande": {
+        "lemma": "grand",
+        "en": "large (feminine)",
+        "bn": "বড়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "fenêtre": {
+        "lemma": "fenêtre",
+        "en": "window",
+        "bn": "জানালা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fenêtre"
+      },
+      "installe": {
+        "lemma": "installer",
+        "en": "settles in / installs",
+        "bn": "বসে / ইনস্টল করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "confortablement": {
+        "lemma": "confortablement",
+        "en": "comfortably",
+        "bn": "আরামদায়কভাবে",
+        "pos": "adverb"
+      },
+      "pose": {
+        "lemma": "poser",
+        "en": "places / puts / asks",
+        "bn": "রাখে / জিজ্ঞেস করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "manteau": {
+        "lemma": "manteau",
+        "en": "coat / overcoat",
+        "bn": "কোট / ওভারকোট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le manteau"
+      },
+      "s": {
+        "lemma": "se",
+        "en": "himself / herself (elision)",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "revient": {
+        "lemma": "revenir",
+        "en": "comes back / returns",
+        "bn": "ফিরে আসে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "rapidement": {
+        "lemma": "rapidement",
+        "en": "promptly / quickly",
+        "bn": "দ্রুততার সাথে",
+        "pos": "adverb"
+      },
+      "avez-vous": {
+        "lemma": "avoir",
+        "en": "do you have",
+        "bn": "আপনার কি আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "choisi": {
+        "lemma": "choisir",
+        "en": "chosen",
+        "bn": "পছন্দ করেছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "votre": {
+        "lemma": "votre",
+        "en": "your (formal)",
+        "bn": "আপনার",
+        "pos": "pronoun"
+      },
+      "repas": {
+        "lemma": "repas",
+        "en": "meal",
+        "bn": "খাবার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le repas"
+      },
+      "est-ce": {
+        "lemma": "est-ce que",
+        "en": "is it / (question marker)",
+        "bn": "কী / নাকি",
+        "pos": "expression"
+      },
+      "qui": {
+        "lemma": "qui",
+        "en": "who / which",
+        "bn": "যে / কে",
+        "pos": "pronoun"
+      },
+      "ferait": {
+        "lemma": "faire",
+        "en": "would do / please (plaisir)",
+        "bn": "করবে / পছন্দ হবে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "plaisir": {
+        "lemma": "plaisir",
+        "en": "pleasure",
+        "bn": "আনন্দ (avec plaisir = আনন্দের সাথে)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le plaisir"
+      },
+      "aujourd'hui": {
+        "lemma": "aujourd'hui",
+        "en": "today",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "regarde": {
+        "lemma": "regarder",
+        "en": "looks at / watches",
+        "bn": "তাকায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "ardoise": {
+        "lemma": "ardoise",
+        "en": "chalkboard / slate menu",
+        "bn": "কালো স্লেট বোর্ড / মেন্যু বোর্ড",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ardoise"
+      },
+      "murale": {
+        "lemma": "mural",
+        "en": "wall-mounted / on the wall",
+        "bn": "দেয়ালে ঝুলানো",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "répond": {
+        "lemma": "répondre",
+        "en": "answers / replies",
+        "bn": "উত্তর দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "oui": {
+        "lemma": "oui",
+        "en": "yes",
+        "bn": "হ্যাঁ",
+        "pos": "expression"
+      },
+      "je": {
+        "lemma": "je",
+        "en": "I",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "voudrais": {
+        "lemma": "vouloir",
+        "en": "would like",
+        "bn": "চাই / নিতে চাই",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "formule": {
+        "lemma": "formule",
+        "en": "set deal / package",
+        "bn": "প্যাকেজ / সেট মেনু",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la formule"
+      },
+      "du": {
+        "lemma": "de + le",
+        "en": "of the / from the",
+        "bn": "দোকানের",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "plat": {
+        "lemma": "plat",
+        "en": "dish / main course",
+        "bn": "খাবারের পদ / ডিশ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le plat"
+      },
+      "jour": {
+        "lemma": "jour",
+        "en": "day",
+        "bn": "দিন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le jour"
+      },
+      "plaît": {
+        "lemma": "plaire",
+        "en": "pleases (s'il vous plaît)",
+        "bn": "পছন্দ হয় / দয়া করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "avez": {
+        "lemma": "avoir",
+        "en": "have (you have)",
+        "bn": "আছে (আপনার আছে)",
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
+      },
+      "qu": {
+        "lemma": "que",
+        "en": "that / what (elision)",
+        "bn": "যা / কী",
+        "pos": "pronoun"
+      },
+      "ce": {
+        "lemma": "ce",
+        "en": "this",
+        "bn": "এই",
+        "pos": "pronoun"
+      },
+      "aujourd": {
+        "lemma": "aujourd'hui",
+        "en": "today",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "hui": {
+        "lemma": "aujourd'hui",
+        "en": "today (part of aujourd'hui)",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "précise": {
+        "lemma": "préciser",
+        "en": "specifies / exact (feminine)",
+        "bn": "স্পষ্ট করে বলে / সঠিক",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "parfait": {
+        "lemma": "parfait",
+        "en": "perfect",
+        "bn": "নিখুঁত / চমৎকার",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "notre": {
+        "lemma": "notre",
+        "en": "our",
+        "bn": "আমাদের",
+        "pos": "pronoun"
+      },
+      "chef": {
+        "lemma": "chef",
+        "en": "chef / boss",
+        "bn": "প্রধান বাবুর্চি / প্রধান",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le chef"
+      },
+      "prépare": {
+        "lemma": "préparer",
+        "en": "prepares",
+        "bn": "প্রস্তুত করে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "délicieux": {
+        "lemma": "délicieux",
+        "en": "delicious",
+        "bn": "সুস্বাদু / মজাদার",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "poulet": {
+        "lemma": "poulet",
+        "en": "chicken",
+        "bn": "মুরগির মাংস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le poulet"
+      },
+      "rôti": {
+        "lemma": "rôtir",
+        "en": "roasted",
+        "bn": "রোস্ট করা",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "riz": {
+        "lemma": "riz",
+        "en": "rice",
+        "bn": "চাল / ভাত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le riz"
+      },
+      "blanc": {
+        "lemma": "blanc",
+        "en": "white (masculine)",
+        "bn": "সাদা",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "parfumé": {
+        "lemma": "parfumer",
+        "en": "fragrant / scented",
+        "bn": "সুগন্ধযুক্ত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "des": {
+        "lemma": "un",
+        "en": "some / of the",
+        "bn": "কিছু / গুলির",
+        "pos": "article",
+        "number": "plural"
+      },
+      "légumes": {
+        "lemma": "légume",
+        "en": "vegetables",
+        "bn": "শাকসবজি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le légume"
+      },
+      "saison": {
+        "lemma": "saison",
+        "en": "season",
+        "bn": "ঋতু / মৌসুম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la saison"
+      },
+      "boisson": {
+        "lemma": "boisson",
+        "en": "drink / beverage",
+        "bn": "পানীয়",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la boisson"
+      },
+      "demande": {
+        "lemma": "demande",
+        "en": "request / application",
+        "bn": "অনুরোধ / আবেদন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la demande"
+      },
+      "poliment": {
+        "lemma": "poliment",
+        "en": "politely",
+        "bn": "ভদ্রভাবে",
+        "pos": "adverb"
+      },
+      "carafe": {
+        "lemma": "carafe",
+        "en": "pitcher / water jug",
+        "bn": "পানির জগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carafe"
+      },
+      "eau": {
+        "lemma": "eau",
+        "en": "water",
+        "bn": "পানি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'eau"
+      },
+      "fraîche": {
+        "lemma": "frais",
+        "en": "fresh / cool (feminine)",
+        "bn": "তাজা / ঠান্ডা",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "d": {
+        "lemma": "de",
+        "en": "of / from (elision)",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "arrive": {
+        "lemma": "arriver",
+        "en": "arrives",
+        "bn": "পৌঁছায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "fumant": {
+        "lemma": "fumer",
+        "en": "steaming hot",
+        "bn": "ধোঁয়া ওঠা গরম",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "sur": {
+        "lemma": "sur",
+        "en": "on / upon",
+        "bn": "উপর",
+        "pos": "preposition"
+      },
+      "viande": {
+        "lemma": "viande",
+        "en": "meat",
+        "bn": "মাংস",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la viande"
+      },
+      "tendre": {
+        "lemma": "tendre",
+        "en": "tender / soft",
+        "bn": "নরম / কোমল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "savoureuse": {
+        "lemma": "savoureux",
+        "en": "tasty / flavourful",
+        "bn": "সুস্বাদু",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "fin": {
+        "lemma": "fin",
+        "en": "end",
+        "bn": "শেষ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fin"
+      },
+      "fait": {
+        "lemma": "faire",
+        "en": "makes / does / fact",
+        "bn": "করে / ঘটনা",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "petit": {
+        "lemma": "petit",
+        "en": "small / short",
+        "bn": "ছোট",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "signe": {
+        "lemma": "signe",
+        "en": "sign / signal",
+        "bn": "ইশারা / সংকেত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le signe"
+      },
+      "discret": {
+        "lemma": "discret",
+        "en": "discreet",
+        "bn": "বিচক্ষণ / শান্ত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "au": {
+        "lemma": "à + le",
+        "en": "with / to the",
+        "bn": "দিয়ে",
+        "pos": "preposition"
+      },
+      "excusez-moi": {
+        "lemma": "excuser",
+        "en": "excuse me",
+        "bn": "মাফ করবেন",
+        "pos": "expression"
+      },
+      "addition": {
+        "lemma": "addition",
+        "en": "restaurant bill",
+        "bn": "খাবারের বিল",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'addition"
+      },
+      "paie": {
+        "lemma": "payer",
+        "en": "pays / pay slip",
+        "bn": "অর্থ প্রদান করে / বেতন",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "par": {
+        "lemma": "par",
+        "en": "by",
+        "bn": "দ্বারা / দিয়ে",
+        "pos": "preposition"
+      },
+      "carte": {
+        "lemma": "carte",
+        "en": "card / menu",
+        "bn": "কার্ড / মেনু",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carte"
+      },
+      "bancaire": {
+        "lemma": "bancaire",
+        "en": "banking / bank-related",
+        "bn": "ব্যাংক সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "laisse": {
+        "lemma": "laisser",
+        "en": "leaves (behind)",
+        "bn": "রেখে যায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "pièce": {
+        "lemma": "pièce",
+        "en": "coin / room",
+        "bn": "কয়েন / মুদ্রা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pièce"
+      },
+      "monnaie": {
+        "lemma": "monnaie",
+        "en": "change / currency",
+        "bn": "ভাঙতি টাকা / মুদ্রা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la monnaie"
+      },
+      "comme": {
+        "lemma": "comme",
+        "en": "as / like",
+        "bn": "হিসেবে",
+        "pos": "preposition"
+      },
+      "pourboire": {
+        "lemma": "pourboire",
+        "en": "tip / gratuity",
+        "bn": "বকশিশ / টিপস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pourboire"
+      },
+      "excusez": {
+        "lemma": "excuser",
+        "en": "excuse (excusez-moi)",
+        "bn": "ক্ষমা করবেন",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "moi": {
+        "lemma": "moi",
+        "en": "me",
+        "bn": "আমাকে / আমি",
+        "pos": "pronoun"
+      }
+    },
+    "quiz": [
+      {
+        "question": "Quel plat Kabir choisit-il pour son déjeuner ?",
+        "options": [
+          "Un plat de pâtes au fromage",
+          "Le plat du jour : poulet rôti avec du riz et légumes",
+          "Une pizza quatre saisons",
+          "Un bol de soupe froide"
+        ],
+        "answer": 1,
+        "explanation": "The waiter describes the dish of the day: \"notre chef prépare un délicieux poulet rôti avec du riz blanc et des légumes\".",
+        "explanationBn": "ওয়েটার দিনের প্রধান খাবার সম্পর্কে জানায়: শেফ রোস্ট চিকেন সাথে সাদা ভাত ও শাকসবজি তৈরি করেছেন।"
+      },
+      {
+        "question": "Quelle boisson Kabir demande-t-il au serveur ?",
+        "options": [
+          "Un soda très sucré",
+          "Une bouteille de jus d'orange",
+          "Une carafe d'eau fraîche",
+          "Un café glacé"
+        ],
+        "answer": 2,
+        "explanation": "Kabir requests: \"Une carafe d'eau fraîche, s'il vous plaît\" (A pitcher of cool tap water, please).",
+        "explanationBn": "কবীর বিনীতভাবে এক জগ ঠান্ডা সাধারণ খাবার পানি চেয়েছেন।"
+      },
+      {
+        "question": "Que laisse Kabir sur la table avant de partir ?",
+        "options": [
+          "Son téléphone portable",
+          "Une pièce de monnaie pour le pourboire",
+          "Son écharpe en laine",
+          "Son parapluie"
+        ],
+        "answer": 1,
+        "explanation": "The text states: \"Kabir paie par carte bancaire et laisse une pièce de monnaie comme pourboire\" (leaves a coin as a tip).",
+        "explanationBn": "টেক্সটে বলা আছে: কবীর বকশিশ (tips) হিসেবে টেবিলে একটি মুদ্রা রেখে যায়।"
+      }
+    ]
+  },
+  {
+    "id": "a-la-pharmacie",
+    "title": "À la pharmacie",
+    "subtitle": "Présenter une ordonnance et demander conseil",
+    "level": "A1",
+    "topic": "Santé & Achats",
+    "wordCount": 194,
+    "estimatedMinutes": 3,
+    "paragraphs": [
+      "Rahim sort du cabinet médical avec son ordonnance pliée dans la poche de sa veste. Dans l'avenue principale, il aperçoit la grande croix verte lumineuse qui indique une pharmacie de garde ouverte.",
+      "Les portes vitrées s'ouvrent silencieusement. Rahim entre dans une officine claire, propre et impeccablement rangée. Deux préparatrices en pharmacie vêtues d'une blouse blanche accueillent les clients derrière le comptoir vitré.",
+      "Une pharmacienne sourit aimablement à Rahim : « Bonjour monsieur, comment puis-je vous aider ce matin ? » Rahim pose son document médical sur le comptoir : « Bonjour madame, voici l'ordonnance que le docteur vient de me donner. »",
+      "La professionnelle lit la prescription avec attention. Elle va chercher les boîtes requises dans les tiroirs métalliques : « Voici votre paracétamol et votre sirop. Prenez un comprimé trois fois par jour après les repas, et une cuillère de sirop le soir avant de dormir. »",
+      "Elle écrit la posologie clairement au feutre noir sur le carton de chaque médicament. Rahim présente sa carte Vitale et règle le reste à payer. La pharmacienne met tout dans un petit sachet en papier : « Bon rétablissement monsieur ! » Rahim la remercie poliment."
+    ],
+    "paragraphTranslations": [
+      "Rahim leaves the doctor's office with his prescription folded in his jacket pocket. Along the main avenue, he spots the large illuminated green cross that indicates an open duty pharmacy.",
+      "The glass sliding doors open silently. Rahim enters a bright, clean, and impeccably organized pharmacy store. Two pharmacy assistants in white coats welcome customers behind the glass counter.",
+      "A pharmacist smiles kindly at Rahim: \"Good morning sir, how may I help you this morning?\" Rahim places his medical document on the counter: \"Good morning ma'am, here is the prescription the doctor just gave me.\"",
+      "The professional reads the prescription carefully. She retrieves the required boxes from the metal drawers: \"Here is your paracetamol and your syrup. Take one tablet three times a day after meals, and a spoonful of syrup in the evening before sleeping.\"",
+      "She writes the dosage clearly with a black felt pen on each medicine box. Rahim presents his health insurance card (carte Vitale) and pays the remaining amount. The pharmacist places everything into a small paper bag: \"Get well soon sir!\" Rahim thanks her politely."
+    ],
+    "vocabulary": {
+      "rahim": {
+        "lemma": "Rahim",
+        "en": "Rahim (first name)",
+        "bn": "রহিম (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Rahim"
+      },
+      "sort": {
+        "lemma": "sortir",
+        "en": "comes out / exits",
+        "bn": "বের হয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "du": {
+        "lemma": "de + le",
+        "en": "of the / from the",
+        "bn": "দোকানের",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "cabinet": {
+        "lemma": "cabinet",
+        "en": "doctor's surgery / practice",
+        "bn": "ডাক্তারখানা / চেম্বার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cabinet"
+      },
+      "médical": {
+        "lemma": "médical",
+        "en": "medical",
+        "bn": "চিকিৎসা সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "ordonnance": {
+        "lemma": "ordonnance",
+        "en": "prescription",
+        "bn": "প্রেসক্রিপশন / ব্যবস্থাপত্র",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ordonnance"
+      },
+      "pliée": {
+        "lemma": "plier",
+        "en": "folded",
+        "bn": "ভাঁজ করা",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "poche": {
+        "lemma": "poche",
+        "en": "pocket",
+        "bn": "পকেট",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la poche"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "sa": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "veste": {
+        "lemma": "veste",
+        "en": "jacket",
+        "bn": "জ্যাকেট / কোট",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la veste"
+      },
+      "avenue": {
+        "lemma": "avenue",
+        "en": "avenue / wide street",
+        "bn": "প্রধান প্রশস্ত রাস্তা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'avenue"
+      },
+      "principale": {
+        "lemma": "principal",
+        "en": "main / principal",
+        "bn": "প্রধান",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "aperçoit": {
+        "lemma": "apercevoir",
+        "en": "spots / notices / catches sight of",
+        "bn": "দেখতে পায় / চোখে পড়ে",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "grande": {
+        "lemma": "grand",
+        "en": "large (feminine)",
+        "bn": "বড়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "croix": {
+        "lemma": "croix",
+        "en": "cross",
+        "bn": "ক্রস চিহ্ন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la croix"
+      },
+      "verte": {
+        "lemma": "vert",
+        "en": "green (feminine)",
+        "bn": "সবুজ",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "lumineuse": {
+        "lemma": "lumineux",
+        "en": "bright (feminine)",
+        "bn": "উজ্জ্বল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "qui": {
+        "lemma": "qui",
+        "en": "who / which",
+        "bn": "যে / কে",
+        "pos": "pronoun"
+      },
+      "indique": {
+        "lemma": "indiquer",
+        "en": "indicates / shows",
+        "bn": "নির্দেশ করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "pharmacie": {
+        "lemma": "pharmacie",
+        "en": "pharmacy / chemist",
+        "bn": "ফার্মেসি / ওষুধের দোকান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pharmacie"
+      },
+      "garde": {
+        "lemma": "garde",
+        "en": "duty (pharmacie de garde)",
+        "bn": "ডিউটি / জরুরি সেবা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la garde"
+      },
+      "ouverte": {
+        "lemma": "ouvert",
+        "en": "open (feminine)",
+        "bn": "খোলা",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "portes": {
+        "lemma": "porte",
+        "en": "doors",
+        "bn": "দরজাগুলো",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la porte"
+      },
+      "vitrées": {
+        "lemma": "vitré",
+        "en": "glass (doors)",
+        "bn": "কাঁচের তৈরি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "ouvrent": {
+        "lemma": "ouvrir",
+        "en": "open (plural)",
+        "bn": "খোলে",
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
+      },
+      "silencieusement": {
+        "lemma": "silencieusement",
+        "en": "silently",
+        "bn": "নীরবে",
+        "pos": "adverb"
+      },
+      "entre": {
+        "lemma": "entrer",
+        "en": "enters",
+        "bn": "প্রবেশ করে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "officine": {
+        "lemma": "officine",
+        "en": "dispensary / pharmacy premises",
+        "bn": "ফার্মেসি দোকান / ডিসপেনসারি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'officine"
+      },
+      "claire": {
+        "lemma": "clair",
+        "en": "clear (feminine)",
+        "bn": "পরিষ্কার / সুস্পষ্ট",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "propre": {
+        "lemma": "propre",
+        "en": "clean / own",
+        "bn": "পরিষ্কার / নিজস্ব",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "impeccablement": {
+        "lemma": "impeccablement",
+        "en": "impeccably",
+        "bn": "নিখুঁতভাবে",
+        "pos": "adverb"
+      },
+      "rangée": {
+        "lemma": "ranger",
+        "en": "tidy / organized",
+        "bn": "পরিপাটি / সাজানো",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "deux": {
+        "lemma": "deux",
+        "en": "two",
+        "bn": "দুই",
+        "pos": "number"
+      },
+      "préparatrices": {
+        "lemma": "préparateur",
+        "en": "pharmacy assistants",
+        "bn": "ফার্মেসি সহকারীগণ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le préparateur"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "vêtues": {
+        "lemma": "vêtir",
+        "en": "dressed (feminine plural)",
+        "bn": "পরিহিত / পোশাক পরিধানকারী",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "blouse": {
+        "lemma": "blouse",
+        "en": "lab coat / medical coat",
+        "bn": "মেডিকেল কোট / অ্যাপ্রোন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la blouse"
+      },
+      "blanche": {
+        "lemma": "blanc",
+        "en": "white (feminine)",
+        "bn": "সাদা",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "accueillent": {
+        "lemma": "accueillir",
+        "en": "welcome (plural)",
+        "bn": "স্বাগত জানায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "clients": {
+        "lemma": "client",
+        "en": "customers",
+        "bn": "গ্রাহকগণ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le client"
+      },
+      "derrière": {
+        "lemma": "derrière",
+        "en": "behind",
+        "bn": "পেছনে",
+        "pos": "preposition"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "comptoir": {
+        "lemma": "comptoir",
+        "en": "counter",
+        "bn": "কাউন্টার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le comptoir"
+      },
+      "vitré": {
+        "lemma": "vitré",
+        "en": "glass (counter)",
+        "bn": "কাঁচের",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "s": {
+        "lemma": "se",
+        "en": "himself / herself (elision)",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "d": {
+        "lemma": "de",
+        "en": "of / from (elision)",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "pharmacienne": {
+        "lemma": "pharmacien",
+        "en": "pharmacist (female)",
+        "bn": "ফার্মাসিস্ট (মহিলা)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pharmacien"
+      },
+      "sourit": {
+        "lemma": "sourire",
+        "en": "smiles",
+        "bn": "হাসে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "aimablement": {
+        "lemma": "aimablement",
+        "en": "kindly / pleasantly",
+        "bn": "অমায়িকতার সাথে",
+        "pos": "adverb"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "bonjour": {
+        "lemma": "bonjour",
+        "en": "hello / good day",
+        "bn": "শুভ সকাল / নমস্কার",
+        "pos": "expression"
+      },
+      "monsieur": {
+        "lemma": "monsieur",
+        "en": "sir / gentleman",
+        "bn": "জনাব / মহাশয়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
+      },
+      "comment": {
+        "lemma": "comment",
+        "en": "how / what",
+        "bn": "কেমন / কীভাবে / কী",
+        "pos": "adverb"
+      },
+      "puis-je": {
+        "lemma": "pouvoir",
+        "en": "may I / can I",
+        "bn": "আমি কি পারি",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "vous": {
+        "lemma": "vous",
+        "en": "you (formal/plural)",
+        "bn": "আপনি / আপনারা",
+        "pos": "pronoun"
+      },
+      "aider": {
+        "lemma": "aider",
+        "en": "to help / assist",
+        "bn": "সাহায্য করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "ce": {
+        "lemma": "ce",
+        "en": "this",
+        "bn": "এই",
+        "pos": "pronoun"
+      },
+      "matin": {
+        "lemma": "matin",
+        "en": "morning",
+        "bn": "সকাল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
+      },
+      "pose": {
+        "lemma": "poser",
+        "en": "places / puts / asks",
+        "bn": "রাখে / জিজ্ঞেস করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "document": {
+        "lemma": "document",
+        "en": "document",
+        "bn": "নথি / দলিল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le document"
+      },
+      "sur": {
+        "lemma": "sur",
+        "en": "on / upon",
+        "bn": "উপর",
+        "pos": "preposition"
+      },
+      "madame": {
+        "lemma": "madame",
+        "en": "madam / ma'am",
+        "bn": "ম্যাডাম / বেগম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "madame"
+      },
+      "voici": {
+        "lemma": "voici",
+        "en": "here is / here are",
+        "bn": "এই যে / এখানে",
+        "pos": "preposition"
+      },
+      "que": {
+        "lemma": "que",
+        "en": "that / what",
+        "bn": "কী / যে",
+        "pos": "pronoun"
+      },
+      "docteur": {
+        "lemma": "docteur",
+        "en": "doctor",
+        "bn": "ডাক্তার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le docteur"
+      },
+      "vient": {
+        "lemma": "venir",
+        "en": "comes / has just (vient de)",
+        "bn": "আসে / এইমাত্র",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "me": {
+        "lemma": "me",
+        "en": "me / to me",
+        "bn": "আমাকে",
+        "pos": "pronoun"
+      },
+      "donner": {
+        "lemma": "donner",
+        "en": "to give",
+        "bn": "দেওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "puis": {
+        "lemma": "puis",
+        "en": "then",
+        "bn": "তারপর",
+        "pos": "adverb"
+      },
+      "je": {
+        "lemma": "je",
+        "en": "I",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "professionnelle": {
+        "lemma": "professionnel",
+        "en": "professional (feminine)",
+        "bn": "পেশাদার",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "lit": {
+        "lemma": "lire",
+        "en": "reads / bed",
+        "bn": "পড়ে / বিছানা",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "prescription": {
+        "lemma": "prescription",
+        "en": "medical prescription",
+        "bn": "প্রেসক্রিপশন / নির্দেশপত্র",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la prescription"
+      },
+      "attention": {
+        "lemma": "attention",
+        "en": "attention / care",
+        "bn": "মনোযোগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attention"
+      },
+      "elle": {
+        "lemma": "elle",
+        "en": "she",
+        "bn": "সে (মহিলা)",
+        "pos": "pronoun",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "va": {
+        "lemma": "aller",
+        "en": "goes",
+        "bn": "যায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "chercher": {
+        "lemma": "chercher",
+        "en": "to look for / fetch",
+        "bn": "খোঁজা / নিয়ে আসা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "boîtes": {
+        "lemma": "boîte",
+        "en": "boxes / mailboxes",
+        "bn": "বাক্সগুলো / চিঠির বাক্স",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la boîte"
+      },
+      "requises": {
+        "lemma": "requis",
+        "en": "required (plural)",
+        "bn": "প্রয়োজনীয় / আবশ্যকীয়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "tiroirs": {
+        "lemma": "tiroir",
+        "en": "drawers",
+        "bn": "ড্রয়ারসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le tiroir"
+      },
+      "métalliques": {
+        "lemma": "métallique",
+        "en": "metallic (plural)",
+        "bn": "ধাতব",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "votre": {
+        "lemma": "votre",
+        "en": "your (formal)",
+        "bn": "আপনার",
+        "pos": "pronoun"
+      },
+      "paracétamol": {
+        "lemma": "paracétamol",
+        "en": "paracetamol",
+        "bn": "প্যারাসিটামল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le paracétamol"
+      },
+      "sirop": {
+        "lemma": "sirop",
+        "en": "cough syrup",
+        "bn": "কাশির সিরাপ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sirop"
+      },
+      "prenez": {
+        "lemma": "prendre",
+        "en": "take (imperative/formal)",
+        "bn": "নিন / গ্রহণ করুন",
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "comprimé": {
+        "lemma": "comprimé",
+        "en": "tablet / pill",
+        "bn": "ট্যাবলেট / বড়ি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le comprimé"
+      },
+      "trois": {
+        "lemma": "trois",
+        "en": "three",
+        "bn": "তিন",
+        "pos": "number"
+      },
+      "fois": {
+        "lemma": "fois",
+        "en": "time / times (trois fois)",
+        "bn": "বার (তিন বার)",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la fois"
+      },
+      "par": {
+        "lemma": "par",
+        "en": "by",
+        "bn": "দ্বারা / দিয়ে",
+        "pos": "preposition"
+      },
+      "jour": {
+        "lemma": "jour",
+        "en": "day",
+        "bn": "দিন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le jour"
+      },
+      "après": {
+        "lemma": "après",
+        "en": "after",
+        "bn": "পরে",
+        "pos": "preposition"
+      },
+      "repas": {
+        "lemma": "repas",
+        "en": "meal",
+        "bn": "খাবার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le repas"
+      },
+      "cuillère": {
+        "lemma": "cuillère",
+        "en": "spoon / spoonful",
+        "bn": "চামচ / এক চামচ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la cuillère"
+      },
+      "soir": {
+        "lemma": "soir",
+        "en": "evening",
+        "bn": "সন্ধ্যা / রাত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le soir"
+      },
+      "avant": {
+        "lemma": "avant",
+        "en": "before",
+        "bn": "আগে",
+        "pos": "preposition"
+      },
+      "dormir": {
+        "lemma": "dormir",
+        "en": "to sleep",
+        "bn": "ঘুমানো",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "écrit": {
+        "lemma": "écrire",
+        "en": "writes / written",
+        "bn": "লেখে / লিখিত",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "posologie": {
+        "lemma": "posologie",
+        "en": "dosage / medicine instructions",
+        "bn": "ওষুধ সেবনের নিয়ম ও মাত্রা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la posologie"
+      },
+      "clairement": {
+        "lemma": "clairement",
+        "en": "clearly",
+        "bn": "পরিষ্কারভাবে / স্পষ্টভাবে",
+        "pos": "adverb"
+      },
+      "au": {
+        "lemma": "à + le",
+        "en": "with / to the",
+        "bn": "দিয়ে",
+        "pos": "preposition"
+      },
+      "feutre": {
+        "lemma": "feutre",
+        "en": "felt pen / marker",
+        "bn": "মার্কার কলম",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le feutre"
+      },
+      "noir": {
+        "lemma": "noir",
+        "en": "black",
+        "bn": "কালো",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "carton": {
+        "lemma": "carton",
+        "en": "cardboard box",
+        "bn": "কার্ডবোর্ড / শক্ত কাগজ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le carton"
+      },
+      "chaque": {
+        "lemma": "chaque",
+        "en": "each / every",
+        "bn": "প্রতিটি",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "médicament": {
+        "lemma": "médicament",
+        "en": "medicine / drug",
+        "bn": "ওষুধ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le médicament"
+      },
+      "présente": {
+        "lemma": "présenter",
+        "en": "presents / introduces",
+        "bn": "উপস্থাপন করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "carte": {
+        "lemma": "carte",
+        "en": "card / menu",
+        "bn": "কার্ড / মেনু",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carte"
+      },
+      "vitale": {
+        "lemma": "vital",
+        "en": "vital (carte Vitale: French healthcare card)",
+        "bn": "ফরাসি স্বাস্থ্যসেবা কার্ড",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "règle": {
+        "lemma": "régler",
+        "en": "pays / settles / adjusts",
+        "bn": "পরিশোধ করে / মেটায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "reste": {
+        "lemma": "reste",
+        "en": "remainder / balance / stays",
+        "bn": "অবশিষ্টাংশ / থাকে",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le reste"
+      },
+      "payer": {
+        "lemma": "payer",
+        "en": "to pay",
+        "bn": "টাকা দেওয়া / পরিশোধ করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "met": {
+        "lemma": "mettre",
+        "en": "puts",
+        "bn": "রাখে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "tout": {
+        "lemma": "tout",
+        "en": "all / everything",
+        "bn": "সবকিছু",
+        "pos": "pronoun"
+      },
+      "petit": {
+        "lemma": "petit",
+        "en": "small / short",
+        "bn": "ছোট",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "sachet": {
+        "lemma": "sachet",
+        "en": "bag / pouch",
+        "bn": "ছোট ব্যাগ / প্যাকেট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sachet"
+      },
+      "papier": {
+        "lemma": "papier",
+        "en": "paper",
+        "bn": "কাগজ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le papier"
+      },
+      "bon": {
+        "lemma": "bon",
+        "en": "good / fine",
+        "bn": "ঠিক / ভালো",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "rétablissement": {
+        "lemma": "rétablissement",
+        "en": "recovery (bon rétablissement)",
+        "bn": "আরোগ্য / সুস্থতা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rétablissement"
+      },
+      "remercie": {
+        "lemma": "remercier",
+        "en": "thanks",
+        "bn": "ধন্যবাদ জানায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "poliment": {
+        "lemma": "poliment",
+        "en": "politely",
+        "bn": "ভদ্রভাবে",
+        "pos": "adverb"
+      }
+    },
+    "quiz": [
+      {
+        "question": "Quel signe visuel indique l'emplacement de la pharmacie dans la rue ?",
+        "options": [
+          "Un panneau rouge avec un cercle",
+          "Une grande croix verte lumineuse",
+          "Un drapeau bleu et blanc",
+          "Une horloge dorée"
+        ],
+        "answer": 1,
+        "explanation": "The story mentions: \"il aperçoit la grande croix verte lumineuse qui indique une pharmacie\".",
+        "explanationBn": "গল্পে উল্লেখ আছে: সে একটি বড় আলোকিত সবুজ ক্রস দেখতে পায় যা ফার্মেসি নির্দেশ করে।"
+      },
+      {
+        "question": "Comment Rahim doit-il prendre ses comprimés de paracétamol ?",
+        "options": [
+          "À jeun le matin",
+          "Un comprimé trois fois par jour après les repas",
+          "Deux comprimés avant de courir",
+          "Une seule fois par semaine"
+        ],
+        "answer": 1,
+        "explanation": "The pharmacist explains: \"Prenez un comprimé trois fois par jour après les repas\".",
+        "explanationBn": "ফার্মাসিস্ট বুঝিয়ে বলেন: খাবারের পর দিনে তিনবার একটি করে ট্যাবলেট খাবেন।"
+      },
+      {
+        "question": "Quelle carte Rahim présente-t-il avec son moyen de paiement ?",
+        "options": [
+          "Sa carte de bibliothèque",
+          "Sa carte de transport Navigo",
+          "Sa carte Vitale",
+          "Sa carte étudiante étrangère"
+        ],
+        "answer": 2,
+        "explanation": "The text states: \"Rahim présente sa carte Vitale et règle le reste à payer\".",
+        "explanationBn": "টেক্সটে বলা হয়েছে: রহিম তার স্বাস্থ্যসেবা কার্ড (carte Vitale) জমা দেয়।"
+      }
+    ]
+  },
+  {
+    "id": "acheter-carte-sim",
+    "title": "Acheter une carte SIM",
+    "subtitle": "Choisir un forfait mobile prépayé dans une boutique",
+    "level": "A1",
+    "topic": "Téléphonie & Vie pratique",
+    "wordCount": 193,
+    "estimatedMinutes": 3,
+    "paragraphs": [
+      "Fahim vient d'arriver en France pour poursuivre ses études supérieures. Sa première priorité pratique est d'obtenir un numéro de téléphone mobile français et une bonne connexion internet pour contacter ses proches et s'orienter dans la ville.",
+      "Il se rend dans une boutique d'opérateur téléphonique située dans une grande galerie marchande. Un conseiller commercial souriant s'avance vers lui : « Bonjour monsieur ! Bienvenue dans notre boutique. Que désirez-vous aujourd'hui ? »",
+      "Fahim expose son besoin avec simplicité : « Bonjour. Je cherche une carte SIM prépayée sans engagement de durée, avec une bonne quantité de données internet pour mon smartphone. »",
+      "Le vendeur consulte les forfaits disponibles sur son écran tactile : « Nous avons une formule idéale à quinze euros par mois. Vous avez les appels illimités en France et cinquante gigaoctets de données 4G et 5G. » Fahim trouve cette offre tout à fait adaptée à son budget.",
+      "Le conseiller demande une pièce d'identité officielle. Fahim présente son passeport original. En quelques minutes, le vendeur active la ligne téléphonique et insère la puce nano-SIM dans l'appareil. Fahim compose le numéro de son frère pour essayer : la tonalité sonne immédiatement !"
+    ],
+    "paragraphTranslations": [
+      "Fahim has just arrived in France to pursue his higher education studies. His first practical priority is getting a French mobile phone number and a reliable internet connection to stay in touch with his family and navigate the city.",
+      "He goes to a telecom operator store located inside a large shopping mall. A smiling sales advisor approaches him: \"Hello sir! Welcome to our store. What are you looking for today?\"",
+      "Fahim explains his need straightforwardly: \"Hello. I am looking for a prepaid SIM card with no contract commitment, featuring a generous amount of mobile internet data for my smartphone.\"",
+      "The salesman checks the available plans on his touch screen: \"We have an ideal package for fifteen euros per month. You get unlimited calls in France and fifty gigabytes of 4G and 5G data.\" Fahim finds this offer completely suited to his budget.",
+      "The advisor asks for an official piece of identification. Fahim presents his original passport. Within minutes, the salesman activates the phone line and inserts the nano-SIM chip into the device. Fahim dials his brother's number to test: the ringtone sounds right away!"
+    ],
+    "vocabulary": {
+      "fahim": {
+        "lemma": "Fahim",
+        "en": "Fahim (first name)",
+        "bn": "ফাহিম (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Fahim"
+      },
+      "vient": {
+        "lemma": "venir",
+        "en": "comes / has just (vient de)",
+        "bn": "আসে / এইমাত্র",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "arriver": {
+        "lemma": "arriver",
+        "en": "to arrive",
+        "bn": "পৌঁছানো",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "france": {
+        "lemma": "France",
+        "en": "France",
+        "bn": "ফ্রান্স",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la France"
+      },
+      "pour": {
+        "lemma": "pour",
+        "en": "for / in order to",
+        "bn": "জন্য",
+        "pos": "preposition"
+      },
+      "poursuivre": {
+        "lemma": "poursuivre",
+        "en": "to pursue / continue",
+        "bn": "অব্যাহত রাখা / চালিয়ে যাওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "ses": {
+        "lemma": "son",
+        "en": "his / her / its (plural)",
+        "bn": "তার (বহুবচন)",
+        "pos": "pronoun"
+      },
+      "études": {
+        "lemma": "étude",
+        "en": "studies / degree",
+        "bn": "পড়াশোনা / উচ্চশিক্ষা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'étude"
+      },
+      "supérieures": {
+        "lemma": "supérieur",
+        "en": "higher (education)",
+        "bn": "উচ্চ (শিক্ষা)",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "sa": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "première": {
+        "lemma": "premier",
+        "en": "first (feminine)",
+        "bn": "প্রথম",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "priorité": {
+        "lemma": "priorité",
+        "en": "priority",
+        "bn": "অগ্রাধিকার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la priorité"
+      },
+      "pratique": {
+        "lemma": "pratique",
+        "en": "practical / practice",
+        "bn": "বাস্তবমুখী / ব্যবহারিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "est": {
+        "lemma": "être",
+        "en": "is",
+        "bn": "হয় / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "obtenir": {
+        "lemma": "obtenir",
+        "en": "to obtain / get",
+        "bn": "পাওয়া / অর্জন করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "numéro": {
+        "lemma": "numéro",
+        "en": "number / ticket number",
+        "bn": "নম্বর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le numéro"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "téléphone": {
+        "lemma": "téléphone",
+        "en": "telephone / mobile phone",
+        "bn": "টেলিফোন / ফোন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le téléphone"
+      },
+      "mobile": {
+        "lemma": "mobile",
+        "en": "mobile (phone/network)",
+        "bn": "মোবাইল",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "français": {
+        "lemma": "français",
+        "en": "French",
+        "bn": "ফরাসি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le français"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "bonne": {
+        "lemma": "bon",
+        "en": "good",
+        "bn": "ভালো",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "connexion": {
+        "lemma": "connexion",
+        "en": "internet connection",
+        "bn": "সংযোগ / কানেকশন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la connexion"
+      },
+      "internet": {
+        "lemma": "internet",
+        "en": "internet",
+        "bn": "ইন্টারনেট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'internet"
+      },
+      "contacter": {
+        "lemma": "contacter",
+        "en": "to contact",
+        "bn": "যোগাযোগ করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "proches": {
+        "lemma": "proche",
+        "en": "close relatives / family",
+        "bn": "নিকটাত্মীয় / পরিবার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le proche"
+      },
+      "orienter": {
+        "lemma": "orienter",
+        "en": "to find one's way / navigate",
+        "bn": "দিক ঠিক করা / পথ খোঁজা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "ville": {
+        "lemma": "ville",
+        "en": "city / town",
+        "bn": "শহর",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ville"
+      },
+      "d": {
+        "lemma": "de",
+        "en": "of / from (elision)",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "s": {
+        "lemma": "se",
+        "en": "himself / herself (elision)",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "se": {
+        "lemma": "se",
+        "en": "himself / herself / oneself",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "rend": {
+        "lemma": "rendre",
+        "en": "returns / gives back",
+        "bn": "ফেরত দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "boutique": {
+        "lemma": "boutique",
+        "en": "store / boutique",
+        "bn": "দোকান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la boutique"
+      },
+      "opérateur": {
+        "lemma": "opérateur",
+        "en": "telecom operator",
+        "bn": "টেলিকম অপারেটর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'opérateur"
+      },
+      "téléphonique": {
+        "lemma": "téléphonique",
+        "en": "telephone (line)",
+        "bn": "টেলিফোন সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "située": {
+        "lemma": "situer",
+        "en": "located / situated",
+        "bn": "অবস্থিত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "grande": {
+        "lemma": "grand",
+        "en": "large (feminine)",
+        "bn": "বড়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "galerie": {
+        "lemma": "galerie",
+        "en": "shopping mall / gallery",
+        "bn": "মার্কেট / গ্যালারি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la galerie"
+      },
+      "marchande": {
+        "lemma": "marchand",
+        "en": "commercial (mall)",
+        "bn": "বাণিজ্যিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "conseiller": {
+        "lemma": "conseiller",
+        "en": "advisor / counselor",
+        "bn": "পরামর্শক / কর্মকর্তা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le conseiller"
+      },
+      "commercial": {
+        "lemma": "commercial",
+        "en": "sales / commercial",
+        "bn": "বাণিজ্যিক / বিক্রয় প্রতিনিধি",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "souriant": {
+        "lemma": "sourire",
+        "en": "smiling",
+        "bn": "হেসে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "avance": {
+        "lemma": "avance",
+        "en": "ahead / early",
+        "bn": "আগে",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'avance"
+      },
+      "vers": {
+        "lemma": "vers",
+        "en": "towards",
+        "bn": "দিকে",
+        "pos": "preposition"
+      },
+      "lui": {
+        "lemma": "lui",
+        "en": "to him / her",
+        "bn": "তাকে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "bonjour": {
+        "lemma": "bonjour",
+        "en": "hello / good day",
+        "bn": "শুভ সকাল / নমস্কার",
+        "pos": "expression"
+      },
+      "monsieur": {
+        "lemma": "monsieur",
+        "en": "sir / gentleman",
+        "bn": "জনাব / মহাশয়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
+      },
+      "bienvenue": {
+        "lemma": "bienvenue",
+        "en": "welcome",
+        "bn": "স্বাগতম",
+        "pos": "expression"
+      },
+      "notre": {
+        "lemma": "notre",
+        "en": "our",
+        "bn": "আমাদের",
+        "pos": "pronoun"
+      },
+      "que": {
+        "lemma": "que",
+        "en": "that / what",
+        "bn": "কী / যে",
+        "pos": "pronoun"
+      },
+      "désirez-vous": {
+        "lemma": "désirer",
+        "en": "would you like",
+        "bn": "আপনি কি চান",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "aujourd'hui": {
+        "lemma": "aujourd'hui",
+        "en": "today",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "désirez": {
+        "lemma": "désirer",
+        "en": "desire / want",
+        "bn": "চান",
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
+      },
+      "vous": {
+        "lemma": "vous",
+        "en": "you (formal/plural)",
+        "bn": "আপনি / আপনারা",
+        "pos": "pronoun"
+      },
+      "aujourd": {
+        "lemma": "aujourd'hui",
+        "en": "today",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "hui": {
+        "lemma": "aujourd'hui",
+        "en": "today (part of aujourd'hui)",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "expose": {
+        "lemma": "exposer",
+        "en": "lays out / states",
+        "bn": "তুলে ধরে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "besoin": {
+        "lemma": "besoin",
+        "en": "need",
+        "bn": "প্রয়োজন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le besoin"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "simplicité": {
+        "lemma": "simplicité",
+        "en": "simplicity",
+        "bn": "সরলতা / অনাড়ম্বর",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la simplicité"
+      },
+      "je": {
+        "lemma": "je",
+        "en": "I",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "cherche": {
+        "lemma": "chercher",
+        "en": "searches / looks for",
+        "bn": "খোঁজে",
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
+      },
+      "carte": {
+        "lemma": "carte",
+        "en": "card / menu",
+        "bn": "কার্ড / মেনু",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carte"
+      },
+      "sim": {
+        "lemma": "SIM",
+        "en": "SIM card",
+        "bn": "সিম কার্ড",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la SIM"
+      },
+      "prépayée": {
+        "lemma": "prépayé",
+        "en": "prepaid",
+        "bn": "প্রিপেইড",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "sans": {
+        "lemma": "sans",
+        "en": "without",
+        "bn": "ছাড়া / বিহীন",
+        "pos": "preposition"
+      },
+      "engagement": {
+        "lemma": "engagement",
+        "en": "commitment / contract obligation",
+        "bn": "চুক্তিবদ্ধতা / বাধ্যবাধকতা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'engagement"
+      },
+      "durée": {
+        "lemma": "durée",
+        "en": "duration / length",
+        "bn": "মেয়াদ / সময়কাল",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la durée"
+      },
+      "quantité": {
+        "lemma": "quantité",
+        "en": "quantity / amount",
+        "bn": "পরিমাণ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la quantité"
+      },
+      "données": {
+        "lemma": "donnée",
+        "en": "data (gigabytes)",
+        "bn": "মোবাইল ডেটা / ইন্টারনেট",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la donnée"
+      },
+      "mon": {
+        "lemma": "son",
+        "en": "my (masculine)",
+        "bn": "আমার",
+        "pos": "pronoun"
+      },
+      "smartphone": {
+        "lemma": "smartphone",
+        "en": "smartphone",
+        "bn": "স্মার্টফোন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le smartphone"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "vendeur": {
+        "lemma": "vendeur",
+        "en": "salesperson / clerk",
+        "bn": "বিক্রেতা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le vendeur"
+      },
+      "consulte": {
+        "lemma": "consulter",
+        "en": "checks / consults",
+        "bn": "দেখে / পরামর্শ নেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "forfaits": {
+        "lemma": "forfait",
+        "en": "mobile plans",
+        "bn": "মোবাইল প্যাকেজসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le forfait"
+      },
+      "disponibles": {
+        "lemma": "disponible",
+        "en": "available (plural)",
+        "bn": "উপলব্ধ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "sur": {
+        "lemma": "sur",
+        "en": "on / upon",
+        "bn": "উপর",
+        "pos": "preposition"
+      },
+      "écran": {
+        "lemma": "écran",
+        "en": "screen / display",
+        "bn": "পর্দা / স্ক্রিন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'écran"
+      },
+      "tactile": {
+        "lemma": "tactile",
+        "en": "touch (screen)",
+        "bn": "স্পর্শকাতর / টাচস্ক্রিন",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "nous": {
+        "lemma": "nous",
+        "en": "we / us",
+        "bn": "আমরা / আমাদের",
+        "pos": "pronoun"
+      },
+      "avons": {
+        "lemma": "avoir",
+        "en": "have (we have)",
+        "bn": "আছে (আমাদের আছে)",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "formule": {
+        "lemma": "formule",
+        "en": "set deal / package",
+        "bn": "প্যাকেজ / সেট মেনু",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la formule"
+      },
+      "idéale": {
+        "lemma": "idéal",
+        "en": "ideal (feminine)",
+        "bn": "আদর্শ",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "quinze": {
+        "lemma": "quinze",
+        "en": "fifteen",
+        "bn": "পনেরো",
+        "pos": "number"
+      },
+      "euros": {
+        "lemma": "euro",
+        "en": "euros",
+        "bn": "ইউরো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'euro"
+      },
+      "par": {
+        "lemma": "par",
+        "en": "by",
+        "bn": "দ্বারা / দিয়ে",
+        "pos": "preposition"
+      },
+      "mois": {
+        "lemma": "mois",
+        "en": "month / months",
+        "bn": "মাস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mois"
+      },
+      "avez": {
+        "lemma": "avoir",
+        "en": "have (you have)",
+        "bn": "আছে (আপনার আছে)",
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
+      },
+      "appels": {
+        "lemma": "appel",
+        "en": "phone calls",
+        "bn": "ফোন কল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'appel"
+      },
+      "illimités": {
+        "lemma": "illimité",
+        "en": "unlimited",
+        "bn": "সীমাহীন / আনলিমিটেড",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "cinquante": {
+        "lemma": "cinquante",
+        "en": "fifty",
+        "bn": "পঞ্চাশ",
+        "pos": "number"
+      },
+      "gigaoctets": {
+        "lemma": "gigaoctet",
+        "en": "gigabytes (GB)",
+        "bn": "গিগাবাইট (জিবি)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le gigaoctet"
+      },
+      "4g": {
+        "lemma": "4G",
+        "en": "4G mobile network",
+        "bn": "৪জি মোবাইল নেটওয়ার্ক",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la 4G"
+      },
+      "5g": {
+        "lemma": "5G",
+        "en": "5G mobile network",
+        "bn": "৫জি মোবাইল নেটওয়ার্ক",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la 5G"
+      },
+      "trouve": {
+        "lemma": "trouver",
+        "en": "finds",
+        "bn": "পায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "cette": {
+        "lemma": "ce",
+        "en": "this (feminine)",
+        "bn": "এই",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "offre": {
+        "lemma": "offre",
+        "en": "offer / job offer",
+        "bn": "অফার / চাকরির সুযোগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'offre"
+      },
+      "tout": {
+        "lemma": "tout",
+        "en": "all / everything",
+        "bn": "সবকিছু",
+        "pos": "pronoun"
+      },
+      "fait": {
+        "lemma": "faire",
+        "en": "makes / does / fact",
+        "bn": "করে / ঘটনা",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "adaptée": {
+        "lemma": "adapter",
+        "en": "adapted / suited",
+        "bn": "উপযোগী / উপযুক্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "budget": {
+        "lemma": "budget",
+        "en": "budget",
+        "bn": "বাজেট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le budget"
+      },
+      "g": {
+        "lemma": "gigaoctet",
+        "en": "gigabyte / G (4G, 5G)",
+        "bn": "জিবি / জি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le gigaoctet"
+      },
+      "demande": {
+        "lemma": "demande",
+        "en": "request / application",
+        "bn": "অনুরোধ / আবেদন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la demande"
+      },
+      "pièce": {
+        "lemma": "pièce",
+        "en": "coin / room",
+        "bn": "কয়েন / মুদ্রা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pièce"
+      },
+      "identité": {
+        "lemma": "identité",
+        "en": "identity",
+        "bn": "পরিচয়",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'identité"
+      },
+      "officielle": {
+        "lemma": "officiel",
+        "en": "official (feminine)",
+        "bn": "দাপ্তরিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "présente": {
+        "lemma": "présenter",
+        "en": "presents / introduces",
+        "bn": "উপস্থাপন করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "passeport": {
+        "lemma": "passeport",
+        "en": "passport",
+        "bn": "পাসপোর্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le passeport"
+      },
+      "original": {
+        "lemma": "original",
+        "en": "original",
+        "bn": "আসল / মূল",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "quelques": {
+        "lemma": "quelque",
+        "en": "a few / some",
+        "bn": "কয়েকটি / কিছু",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "minutes": {
+        "lemma": "minute",
+        "en": "minutes",
+        "bn": "মিনিট",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la minute"
+      },
+      "active": {
+        "lemma": "activer",
+        "en": "activates",
+        "bn": "সক্রিয় করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "ligne": {
+        "lemma": "ligne",
+        "en": "line (metro / telephone / online)",
+        "bn": "লাইন / সংযোগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ligne"
+      },
+      "insère": {
+        "lemma": "insérer",
+        "en": "inserts",
+        "bn": "প্রবেশ করায় / ঢোকায়",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "puce": {
+        "lemma": "puce",
+        "en": "SIM chip / microchip",
+        "bn": "সিম চিপ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la puce"
+      },
+      "nano-sim": {
+        "lemma": "nano-SIM",
+        "en": "nano-SIM card",
+        "bn": "ন্যানো সিম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la nano-SIM"
+      },
+      "appareil": {
+        "lemma": "appareil",
+        "en": "device / appliance",
+        "bn": "যন্ত্র / ডিভাইস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'appareil"
+      },
+      "compose": {
+        "lemma": "composer",
+        "en": "dials (a phone number)",
+        "bn": "ডায়াল করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "frère": {
+        "lemma": "frère",
+        "en": "brother",
+        "bn": "ভাই",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le frère"
+      },
+      "essayer": {
+        "lemma": "essayer",
+        "en": "to try / test",
+        "bn": "চেষ্টা করা / পরীক্ষা করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "tonalité": {
+        "lemma": "tonalité",
+        "en": "dial tone / ringtone",
+        "bn": "রিংটোন / ডায়াল টোন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la tonalité"
+      },
+      "sonne": {
+        "lemma": "sonner",
+        "en": "rings / sounds",
+        "bn": "বেজে ওঠে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "immédiatement": {
+        "lemma": "immédiatement",
+        "en": "immediately",
+        "bn": "তাৎক্ষণিকভাবে",
+        "pos": "adverb"
+      },
+      "nano": {
+        "lemma": "nano",
+        "en": "nano (SIM)",
+        "bn": "ন্যানো",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      }
+    },
+    "quiz": [
+      {
+        "question": "Quel type d'offre téléphonique Fahim recherche-t-il ?",
+        "options": [
+          "Un abonnement avec engagement de deux ans",
+          "Une carte SIM prépayée sans engagement",
+          "Un téléphone fixe pour sa chambre",
+          "Une boîte postale"
+        ],
+        "answer": 1,
+        "explanation": "Fahim says: \"Je cherche une carte SIM prépayée sans engagement de durée\" (a prepaid SIM without commitment).",
+        "explanationBn": "ফাহিম বলে: আমি কোনো দীর্ঘমেয়াদি চুক্তি ছাড়া একটি প্রিপেইড সিম কার্ড খুঁজছি।"
+      },
+      {
+        "question": "Quel document d'identité Fahim montre-t-il au vendeur ?",
+        "options": [
+          "Son permis de conduire étranger",
+          "Son passeport original",
+          "Une carte de bus scolaire",
+          "Un certificat de naissance"
+        ],
+        "answer": 1,
+        "explanation": "The text states: \"Fahim présente son passeport original\" (Fahim presents his original passport).",
+        "explanationBn": "টেক্সটে স্পষ্টভাবে বলা হয়েছে: ফাহিম তার মূল পাসপোর্ট উপস্থাপন করে।"
+      },
+      {
+        "question": "Que fait Fahim pour vérifier que sa nouvelle ligne fonctionne ?",
+        "options": [
+          "Il redémarre son ordinateur portable",
+          "Il compose le numéro de son frère pour faire un appel test",
+          "Il regarde une vidéo longue",
+          "Il envoie un courrier postal"
+        ],
+        "answer": 1,
+        "explanation": "The story concludes: \"Fahim compose le numéro de son frère pour essayer : la tonalité sonne immédiatement !\".",
+        "explanationBn": "ফাহিম লাইনটি সচল হয়েছে কিনা পরীক্ষা করার জন্য তার ভাইয়ের ফোন নম্বরে কল করে।"
+      }
+    ]
+  },
+  {
+    "id": "bonjour-voisin",
+    "title": "Bonjour, voisin !",
+    "subtitle": "Faire connaissance dans le couloir de l'immeuble",
+    "level": "A1",
+    "topic": "Logement & Voisinage",
+    "wordCount": 231,
+    "estimatedMinutes": 3,
+    "paragraphs": [
+      "Tariq descend lentement les marches de son nouvel immeuble résidentiel pour relever son courrier quotidien. Dans le hall d'entrée lumineux, un monsieur d'une cinquantaine d'années ouvre sa boîte aux lettres avec sa petite clé.",
+      "L'homme entend des pas, se retourne et sourit chaleureusement à Tariq : « Bonjour ! Vous devez être notre nouveau voisin du troisième étage, n'est-ce pas ? Soyez le bienvenu dans notre petite résidence calme ! »",
+      "Tariq répond avec une politesse naturelle : « Bonjour monsieur ! Oui, tout à fait, je m'appelle Tariq. Je viens d'emménager il y a trois jours à peine. Je suis très heureux de faire votre connaissance. » L'homme lui serre la main : « Enchanté Tariq, moi c'est Pierre, j'habite juste en dessous au deuxième. »",
+      "Pierre donne alors quelques conseils pratiques et précieux : « Le local pour les vélos et les poubelles se trouve au sous-sol. Les éboueurs ramassent le bac vert le mardi et le bac jaune pour le tri sélectif le jeudi. Si vous avez besoin d'un outil pour monter un meuble, n'hésitez surtout pas à frapper chez moi. »",
+      "Tariq est sincèrement touché par cette gentillesse spontanée : « C'est extrêmement aimable à vous Pierre, merci mille fois pour toutes ces explications claires. Je vous souhaite une excellente journée ! » Tariq remonte chez lui avec la certitude d'avoir trouvé un environnement paisible et accueillant."
+    ],
+    "paragraphTranslations": [
+      "Tariq walks slowly down the stairs of his new residential building to collect his daily mail. In the bright entrance hall, a man in his fifties is opening his mailbox with his small key.",
+      "The man hears footsteps, turns around, and smiles warmly at Tariq: \"Hello! You must be our new neighbour from the third floor, aren't you? Welcome to our quiet little residence!\"",
+      "Tariq responds with natural courtesy: \"Hello sir! Yes, indeed, my name is Tariq. I moved in just three days ago. I am very pleased to meet you.\" The man shakes his hand: \"Pleased to meet you Tariq, I'm Pierre, I live right below on the second floor.\"",
+      "Pierre then provides some valuable practical advice: \"The storage room for bikes and trash bins is in the basement. The collectors pick up the green bin on Tuesday and the yellow bin for recycling on Thursday. If you need any tool to assemble furniture, please don't hesitate to knock on my door.\"",
+      "Tariq is genuinely touched by this spontaneous kindness: \"That is extremely kind of you Pierre, thank you so much for all these clear explanations. Have a wonderful day!\" Tariq heads back up to his apartment feeling certain he has found a peaceful and welcoming environment."
+    ],
+    "vocabulary": {
+      "tariq": {
+        "lemma": "Tariq",
+        "en": "Tariq (first name)",
+        "bn": "তারিক (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Tariq"
+      },
+      "descend": {
+        "lemma": "descendre",
+        "en": "goes down",
+        "bn": "নেমে যায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "lentement": {
+        "lemma": "lentement",
+        "en": "slowly",
+        "bn": "ধীরে ধীরে",
+        "pos": "adverb"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "marches": {
+        "lemma": "marche",
+        "en": "steps / stairs",
+        "bn": "সিঁড়ির ধাপ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la marche"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "nouvel": {
+        "lemma": "nouveau",
+        "en": "new (before vowel)",
+        "bn": "নতুন",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "immeuble": {
+        "lemma": "immeuble",
+        "en": "apartment building",
+        "bn": "বিল্ডিং / বহুতল ভবন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'immeuble"
+      },
+      "résidentiel": {
+        "lemma": "résidentiel",
+        "en": "residential",
+        "bn": "আবাসিক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "pour": {
+        "lemma": "pour",
+        "en": "for / in order to",
+        "bn": "জন্য",
+        "pos": "preposition"
+      },
+      "relever": {
+        "lemma": "relever",
+        "en": "to collect (mail)",
+        "bn": "তুলে নেওয়া / সংগ্রহ করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "courrier": {
+        "lemma": "courrier",
+        "en": "mail / letters",
+        "bn": "চিঠিপত্র / ডাক",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le courrier"
+      },
+      "quotidien": {
+        "lemma": "quotidien",
+        "en": "daily",
+        "bn": "দৈনন্দিন",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "hall": {
+        "lemma": "hall",
+        "en": "entrance lobby / hall",
+        "bn": "প্রবেশ লবি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le hall"
+      },
+      "entrée": {
+        "lemma": "entrée",
+        "en": "entrance / starter",
+        "bn": "প্রবেশদ্বার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entrée"
+      },
+      "lumineux": {
+        "lemma": "lumineux",
+        "en": "bright / luminous",
+        "bn": "উজ্জ্বল / আলোকময়",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "monsieur": {
+        "lemma": "monsieur",
+        "en": "sir / gentleman",
+        "bn": "জনাব / মহাশয়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "cinquantaine": {
+        "lemma": "cinquantaine",
+        "en": "about fifty years old",
+        "bn": "পঞ্চাশোর্ধ্ব / প্রায় পঞ্চাশ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la cinquantaine"
+      },
+      "années": {
+        "lemma": "année",
+        "en": "years",
+        "bn": "বছরগুলো",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'année"
+      },
+      "ouvre": {
+        "lemma": "ouvrir",
+        "en": "opens",
+        "bn": "খোলে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "sa": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "boîte": {
+        "lemma": "boîte",
+        "en": "box",
+        "bn": "বাক্স",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la boîte"
+      },
+      "aux": {
+        "lemma": "à + les",
+        "en": "to the / at the (plural)",
+        "bn": "তে / প্রতি",
+        "pos": "preposition"
+      },
+      "lettres": {
+        "lemma": "lettre",
+        "en": "letters / mail",
+        "bn": "চিঠিপত্র",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la lettre"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "petite": {
+        "lemma": "petit",
+        "en": "small (feminine)",
+        "bn": "ছোট",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "clé": {
+        "lemma": "clé",
+        "en": "key",
+        "bn": "চাবি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la clé"
+      },
+      "d": {
+        "lemma": "de",
+        "en": "of / from (elision)",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "homme": {
+        "lemma": "homme",
+        "en": "man",
+        "bn": "পুরুষ / মানুষ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'homme"
+      },
+      "entend": {
+        "lemma": "entendre",
+        "en": "hears",
+        "bn": "শোনে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "des": {
+        "lemma": "un",
+        "en": "some / of the",
+        "bn": "কিছু / গুলির",
+        "pos": "article",
+        "number": "plural"
+      },
+      "pas": {
+        "lemma": "pas",
+        "en": "step / footsteps / not",
+        "bn": "পদক্ষেপ / পায়ের আওয়াজ / না",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le pas"
+      },
+      "se": {
+        "lemma": "se",
+        "en": "himself / herself / oneself",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "retourne": {
+        "lemma": "retourner",
+        "en": "turns around / returns",
+        "bn": "ঘোরে / ফেরে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "sourit": {
+        "lemma": "sourire",
+        "en": "smiles",
+        "bn": "হাসে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "chaleureusement": {
+        "lemma": "chaleureusement",
+        "en": "warmly",
+        "bn": "উষ্ণভাবে / আন্তরিকভাবে",
+        "pos": "adverb"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "bonjour": {
+        "lemma": "bonjour",
+        "en": "hello / good day",
+        "bn": "শুভ সকাল / নমস্কার",
+        "pos": "expression"
+      },
+      "vous": {
+        "lemma": "vous",
+        "en": "you (formal/plural)",
+        "bn": "আপনি / আপনারা",
+        "pos": "pronoun"
+      },
+      "devez": {
+        "lemma": "devoir",
+        "en": "must / have to (vous)",
+        "bn": "আপনাকে অবশ্যই হবে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "être": {
+        "lemma": "être",
+        "en": "to be",
+        "bn": "হওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "notre": {
+        "lemma": "notre",
+        "en": "our",
+        "bn": "আমাদের",
+        "pos": "pronoun"
+      },
+      "nouveau": {
+        "lemma": "nouveau",
+        "en": "new (masculine)",
+        "bn": "নতুন",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "voisin": {
+        "lemma": "voisin",
+        "en": "neighbour (masculine)",
+        "bn": "প্রতিবেশী",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le voisin"
+      },
+      "du": {
+        "lemma": "de + le",
+        "en": "of the / from the",
+        "bn": "দোকানের",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "troisième": {
+        "lemma": "troisième",
+        "en": "third",
+        "bn": "তৃতীয়",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "étage": {
+        "lemma": "étage",
+        "en": "floor / storey",
+        "bn": "তলা / ফ্লোর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'étage"
+      },
+      "est-ce": {
+        "lemma": "est-ce que",
+        "en": "is it / (question marker)",
+        "bn": "কী / নাকি",
+        "pos": "expression"
+      },
+      "soyez": {
+        "lemma": "être",
+        "en": "be (subjunctive/imperative)",
+        "bn": "হোন",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "bienvenu": {
+        "lemma": "bienvenu",
+        "en": "welcome",
+        "bn": "স্বাগত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "résidence": {
+        "lemma": "résidence",
+        "en": "residence / housing building",
+        "bn": "আবাসন ভবন / বাসভবন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la résidence"
+      },
+      "calme": {
+        "lemma": "calme",
+        "en": "calm / quiet",
+        "bn": "শান্ত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "n": {
+        "lemma": "ne",
+        "en": "not (elision)",
+        "bn": "না",
+        "pos": "adverb"
+      },
+      "est": {
+        "lemma": "être",
+        "en": "is",
+        "bn": "হয় / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "ce": {
+        "lemma": "ce",
+        "en": "this",
+        "bn": "এই",
+        "pos": "pronoun"
+      },
+      "répond": {
+        "lemma": "répondre",
+        "en": "answers / replies",
+        "bn": "উত্তর দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "politesse": {
+        "lemma": "politesse",
+        "en": "courtesy / politeness",
+        "bn": "ভদ্রতা / শিষ্টাচার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la politesse"
+      },
+      "naturelle": {
+        "lemma": "naturel",
+        "en": "natural (feminine)",
+        "bn": "স্বাভাবিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "oui": {
+        "lemma": "oui",
+        "en": "yes",
+        "bn": "হ্যাঁ",
+        "pos": "expression"
+      },
+      "tout": {
+        "lemma": "tout",
+        "en": "all / everything",
+        "bn": "সবকিছু",
+        "pos": "pronoun"
+      },
+      "fait": {
+        "lemma": "faire",
+        "en": "makes / does / fact",
+        "bn": "করে / ঘটনা",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "je": {
+        "lemma": "je",
+        "en": "I",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "appelle": {
+        "lemma": "appeler",
+        "en": "calls / names",
+        "bn": "ডাকে / নাম",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "viens": {
+        "lemma": "venir",
+        "en": "come / have just (vient de)",
+        "bn": "আসি / এইমাত্র",
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
+      },
+      "emménager": {
+        "lemma": "emménager",
+        "en": "to move in (housing)",
+        "bn": "নতুন বাসায় ওঠা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "y": {
+        "lemma": "y",
+        "en": "there",
+        "bn": "সেখানে",
+        "pos": "pronoun"
+      },
+      "a": {
+        "lemma": "avoir",
+        "en": "has",
+        "bn": "আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "trois": {
+        "lemma": "trois",
+        "en": "three",
+        "bn": "তিন",
+        "pos": "number"
+      },
+      "jours": {
+        "lemma": "jour",
+        "en": "days",
+        "bn": "দিনগুলো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le jour"
+      },
+      "peine": {
+        "lemma": "peine",
+        "en": "scarcely / barely (à peine)",
+        "bn": "মাত্র / সবেমাত্র",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la peine"
+      },
+      "suis": {
+        "lemma": "être",
+        "en": "am (je suis)",
+        "bn": "হই / আছি",
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
+      },
+      "très": {
+        "lemma": "très",
+        "en": "very",
+        "bn": "খুব",
+        "pos": "adverb"
+      },
+      "heureux": {
+        "lemma": "heureux",
+        "en": "happy / pleased",
+        "bn": "খুশি / আনন্দিত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "faire": {
+        "lemma": "faire",
+        "en": "to do / make",
+        "bn": "করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "votre": {
+        "lemma": "votre",
+        "en": "your (formal)",
+        "bn": "আপনার",
+        "pos": "pronoun"
+      },
+      "connaissance": {
+        "lemma": "connaissance",
+        "en": "acquaintance / knowledge",
+        "bn": "পরিচয় / জ্ঞান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la connaissance"
+      },
+      "lui": {
+        "lemma": "lui",
+        "en": "to him / her",
+        "bn": "তাকে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "serre": {
+        "lemma": "serrer",
+        "en": "shakes (hand)",
+        "bn": "হাতে হাত মেলায়",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "main": {
+        "lemma": "main",
+        "en": "hand",
+        "bn": "হাত",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la main"
+      },
+      "enchanté": {
+        "lemma": "enchanté",
+        "en": "pleased to meet you",
+        "bn": "পরিচিত হয়ে আনন্দিত",
+        "pos": "expression"
+      },
+      "moi": {
+        "lemma": "moi",
+        "en": "me",
+        "bn": "আমাকে / আমি",
+        "pos": "pronoun"
+      },
+      "pierre": {
+        "lemma": "Pierre",
+        "en": "Pierre (first name)",
+        "bn": "পিয়ের (ফরাসি নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Pierre"
+      },
+      "habite": {
+        "lemma": "habiter",
+        "en": "lives",
+        "bn": "বাস করে",
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
+      },
+      "juste": {
+        "lemma": "juste",
+        "en": "just / right",
+        "bn": "ঠিক / মাত্র",
+        "pos": "adverb"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "dessous": {
+        "lemma": "dessous",
+        "en": "below / underneath",
+        "bn": "নিচে",
+        "pos": "adverb"
+      },
+      "au": {
+        "lemma": "à + le",
+        "en": "with / to the",
+        "bn": "দিয়ে",
+        "pos": "preposition"
+      },
+      "deuxième": {
+        "lemma": "deuxième",
+        "en": "second",
+        "bn": "দ্বিতীয়",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "m": {
+        "lemma": "me",
+        "en": "me (elision)",
+        "bn": "আমাকে",
+        "pos": "pronoun"
+      },
+      "c": {
+        "lemma": "ce",
+        "en": "it / this (c'est)",
+        "bn": "এটা / এই",
+        "pos": "pronoun"
+      },
+      "j": {
+        "lemma": "je",
+        "en": "I (elision)",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "donne": {
+        "lemma": "donner",
+        "en": "gives",
+        "bn": "দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "alors": {
+        "lemma": "alors",
+        "en": "then / so",
+        "bn": "তখন / তাহলে",
+        "pos": "conjunction"
+      },
+      "quelques": {
+        "lemma": "quelque",
+        "en": "a few / some",
+        "bn": "কয়েকটি / কিছু",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "conseils": {
+        "lemma": "conseil",
+        "en": "advice / tips",
+        "bn": "পরামর্শসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le conseil"
+      },
+      "pratiques": {
+        "lemma": "pratique",
+        "en": "practical (plural)",
+        "bn": "ব্যবহারিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "précieux": {
+        "lemma": "précieux",
+        "en": "precious / valuable",
+        "bn": "মূল্যবান",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "local": {
+        "lemma": "local",
+        "en": "local / storage room",
+        "bn": "স্থানীয় / সাধারণ স্টোররুম",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le local"
+      },
+      "vélos": {
+        "lemma": "vélo",
+        "en": "bicycles / bikes",
+        "bn": "সাইকেলগুলো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le vélo"
+      },
+      "poubelles": {
+        "lemma": "poubelle",
+        "en": "trash bins",
+        "bn": "ময়লার পাত্রগুলো",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la poubelle"
+      },
+      "trouve": {
+        "lemma": "trouver",
+        "en": "finds",
+        "bn": "পায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "sous-sol": {
+        "lemma": "sous-sol",
+        "en": "basement",
+        "bn": "বেজমেন্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sous-sol"
+      },
+      "éboueurs": {
+        "lemma": "éboueur",
+        "en": "garbage collectors",
+        "bn": "পরিচ্ছন্নতাকর্মী",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'éboueur"
+      },
+      "ramassent": {
+        "lemma": "ramasser",
+        "en": "collect (garbage)",
+        "bn": "সংগ্রহ করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "bac": {
+        "lemma": "bac",
+        "en": "recycling bin / container",
+        "bn": "ময়লার বিন / পাত্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bac"
+      },
+      "vert": {
+        "lemma": "vert",
+        "en": "green",
+        "bn": "সবুজ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "mardi": {
+        "lemma": "mardi",
+        "en": "Tuesday",
+        "bn": "মঙ্গলবার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mardi"
+      },
+      "jaune": {
+        "lemma": "jaune",
+        "en": "yellow",
+        "bn": "হলুদ",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "tri": {
+        "lemma": "tri",
+        "en": "sorting / recycling",
+        "bn": "বাছাইকরণ / রিসাইক্লিং",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le tri"
+      },
+      "sélectif": {
+        "lemma": "sélectif",
+        "en": "selective (recycling)",
+        "bn": "বাছাইকরণ (রিসাইক্লিং)",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "jeudi": {
+        "lemma": "jeudi",
+        "en": "Thursday",
+        "bn": "বৃহস্পতিবার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le jeudi"
+      },
+      "si": {
+        "lemma": "si",
+        "en": "if",
+        "bn": "যদি",
+        "pos": "conjunction"
+      },
+      "avez": {
+        "lemma": "avoir",
+        "en": "have (you have)",
+        "bn": "আছে (আপনার আছে)",
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
+      },
+      "besoin": {
+        "lemma": "besoin",
+        "en": "need",
+        "bn": "প্রয়োজন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le besoin"
+      },
+      "outil": {
+        "lemma": "outil",
+        "en": "tool",
+        "bn": "টুলস / হাতিয়ার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'outil"
+      },
+      "monter": {
+        "lemma": "monter",
+        "en": "to assemble / go up",
+        "bn": "জোড়া লাগানো / ওঠা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "meuble": {
+        "lemma": "meuble",
+        "en": "piece of furniture",
+        "bn": "আসবাবপত্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le meuble"
+      },
+      "hésitez": {
+        "lemma": "hésiter",
+        "en": "hesitate",
+        "bn": "দ্বিধা করা",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "surtout": {
+        "lemma": "surtout",
+        "en": "above all / especially",
+        "bn": "বিশেষ করে",
+        "pos": "adverb"
+      },
+      "frapper": {
+        "lemma": "frapper",
+        "en": "to knock (on door)",
+        "bn": "দরজায় কড়া নাড়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "chez": {
+        "lemma": "chez",
+        "en": "at the place of",
+        "bn": "বাসায় / কাছে",
+        "pos": "preposition"
+      },
+      "sous": {
+        "lemma": "sous",
+        "en": "under / within (sous 48h)",
+        "bn": "নিচে / এর মধ্যে",
+        "pos": "preposition"
+      },
+      "sol": {
+        "lemma": "sol",
+        "en": "ground / floor",
+        "bn": "মেঝে / মাটি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sol"
+      },
+      "sincèrement": {
+        "lemma": "sincèrement",
+        "en": "sincerely",
+        "bn": "আন্তরিকভাবে",
+        "pos": "adverb"
+      },
+      "touché": {
+        "lemma": "toucher",
+        "en": "touched / moved emotionally",
+        "bn": "অভিভূত / আবেগাপ্লুত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "par": {
+        "lemma": "par",
+        "en": "by",
+        "bn": "দ্বারা / দিয়ে",
+        "pos": "preposition"
+      },
+      "cette": {
+        "lemma": "ce",
+        "en": "this (feminine)",
+        "bn": "এই",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "gentillesse": {
+        "lemma": "gentillesse",
+        "en": "kindness",
+        "bn": "সদয়তা / ভদ্রতা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la gentillesse"
+      },
+      "spontanée": {
+        "lemma": "spontané",
+        "en": "spontaneous",
+        "bn": "স্বতঃস্ফূর্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "extrêmement": {
+        "lemma": "extrêmement",
+        "en": "extremely",
+        "bn": "অত্যন্ত / খুব",
+        "pos": "adverb"
+      },
+      "aimable": {
+        "lemma": "aimable",
+        "en": "kind / amiable",
+        "bn": "দয়ালু / অমায়িক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "merci": {
+        "lemma": "merci",
+        "en": "thank you",
+        "bn": "ধন্যবাদ",
+        "pos": "expression"
+      },
+      "mille": {
+        "lemma": "mille",
+        "en": "thousand (merci mille fois)",
+        "bn": "হাজার",
+        "pos": "number"
+      },
+      "fois": {
+        "lemma": "fois",
+        "en": "time / times (trois fois)",
+        "bn": "বার (তিন বার)",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fois"
+      },
+      "toutes": {
+        "lemma": "tout",
+        "en": "all (feminine plural)",
+        "bn": "সবগুলো",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "ces": {
+        "lemma": "ce",
+        "en": "these / those",
+        "bn": "এইসব",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "explications": {
+        "lemma": "explication",
+        "en": "explanations",
+        "bn": "ব্যাখ্যাসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'explication"
+      },
+      "claires": {
+        "lemma": "clair",
+        "en": "clear (plural)",
+        "bn": "সুস্পষ্ট",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "souhaite": {
+        "lemma": "souhaiter",
+        "en": "wishes / desires",
+        "bn": "কামনা করে / চায়",
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
+      },
+      "excellente": {
+        "lemma": "excellent",
+        "en": "excellent (feminine)",
+        "bn": "চমৎকার",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "journée": {
+        "lemma": "journée",
+        "en": "day (duration)",
+        "bn": "দিন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la journée"
+      },
+      "remonte": {
+        "lemma": "remonter",
+        "en": "goes back up",
+        "bn": "উপরে উঠে যায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "certitude": {
+        "lemma": "certitude",
+        "en": "certainty",
+        "bn": "নিশ্চয়তা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la certitude"
+      },
+      "avoir": {
+        "lemma": "avoir",
+        "en": "to have",
+        "bn": "থাকা / পাওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "trouvé": {
+        "lemma": "trouver",
+        "en": "found",
+        "bn": "পেয়েছে",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "environnement": {
+        "lemma": "environnement",
+        "en": "environment / surroundings",
+        "bn": "পরিবেশ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'environnement"
+      },
+      "paisible": {
+        "lemma": "paisible",
+        "en": "peaceful",
+        "bn": "শান্তিপূর্ণ / নিরিবিলি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "accueillant": {
+        "lemma": "accueillant",
+        "en": "welcoming / friendly",
+        "bn": "উষ্ণ অভ্যর্থনাকারী",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      }
+    },
+    "quiz": [
+      {
+        "question": "À quel étage habite le voisin Pierre par rapport à Tariq ?",
+        "options": [
+          "Au cinquième étage sous le toit",
+          "Juste au deuxième étage en dessous de Tariq",
+          "Au rez-de-chaussée dans la cour",
+          "Dans un autre immeuble voisin"
+        ],
+        "answer": 1,
+        "explanation": "Pierre explains: \"j'habite juste en dessous au deuxième\" (I live right below on the second floor).",
+        "explanationBn": "পিয়ের জানায়: আমি ঠিক তারিকের নিচে দ্বিতীয় তলায় থাকি।"
+      },
+      {
+        "question": "Quel jour de la semaine les éboueurs ramassent-ils le bac jaune de recyclage ?",
+        "options": [
+          "Le lundi matin",
+          "Le jeudi",
+          "Le samedi soir",
+          "Le dimanche"
+        ],
+        "answer": 1,
+        "explanation": "Pierre notes: \"et le bac jaune pour le tri sélectif le jeudi\" (yellow bin on Thursday).",
+        "explanationBn": "পিয়ের বুঝিয়ে দেয় যে পুনর্ব্যবহারযোগ্য হলুদ বিন বৃহস্পতিবার সংগ্রহ করা হয়।"
+      },
+      {
+        "question": "Que propose généreusement Pierre si Tariq a besoin d'aide ?",
+        "options": [
+          "De lui prêter sa voiture",
+          "De lui prêter un outil pour monter un meuble",
+          "De payer son loyer",
+          "De faire ses devoirs"
+        ],
+        "answer": 1,
+        "explanation": "Pierre offers: \"Si vous avez besoin d'un outil pour monter un meuble, n'hésitez pas\" (If you need a tool to assemble furniture).",
+        "explanationBn": "পিয়ের আসবাবপত্র সাজানোর জন্য দরকার হলে টুলস ধার দেওয়ার প্রস্তাব দেয়।"
+      }
+    ]
+  },
+  {
+    "id": "chercher-appartement",
+    "title": "Chercher un appartement",
+    "subtitle": "Visiter un studio et préparer son dossier de location",
+    "level": "A2",
+    "topic": "Logement & Démarches",
+    "wordCount": 281,
+    "estimatedMinutes": 4,
+    "paragraphs": [
+      "Depuis plusieurs semaines, Samir cherche activement un studio à louer pour se rapprocher de son travail d'informaticien. Tous les soirs, il consulte les annonces immobilières en ligne, compare les prix des loyers et contacte les propriétaires. Hier matin, une agence immobilière du quartier l'a finalement appelé pour lui proposer une visite.",
+      "Cet après-midi, Samir arrive devant l'immeuble dix minutes en avance. L'agent immobilier, monsieur Dupont, l'accueille avec une poignée de main professionnelle. Ensemble, ils prennent l'ascenseur jusqu'au quatrième étage pour découvrir le logement. L'appartement est un studio meublé de vingt-cinq mètres carrés, très lumineux et bien agencé.",
+      "Pendant la visite, Samir observe chaque détail avec attention. La pièce principale possède une grande fenêtre double vitrage qui donne sur une cour intérieure calme. La cuisine ouverte est équipée d'un réfrigérateur, de plaques de cuisson électriques et de nombreux rangements pratiques. Samir vérifie également la pression de l'eau dans la salle de bain et le fonctionnement des radiateurs.",
+      "L'agent immobilier lui explique les conditions financières : « Le loyer mensuel est de six cent cinquante euros, charges comprises. Cela inclut le chauffage collectif et l'entretien des parties communes de l'immeuble. Si ce logement vous intéresse, vous devez déposer un dossier de location complet le plus rapidement possible. »",
+      "Samir a déjà préparé tous ses justificatifs dans une pochette soignée : sa pièce d'identité en cours de validité, son contrat de travail dans l'entreprise informatique, ses trois derniers bulletins de salaire et l'attestation de son garant. Il remet les copies au conseiller : « Mon dossier est prêt et complet monsieur. J'espère vraiment que ma candidature sera retenue ! » L'agent le félicite pour son sérieux et promet de lui répondre sous quarante-huit heures."
+    ],
+    "paragraphTranslations": [
+      "For several weeks, Samir has been actively looking for a studio apartment to rent in order to be closer to his IT job. Every evening, he browses online real estate listings, compares rental prices, and contacts landlords. Yesterday morning, a local real estate agency finally called him to offer a viewing.",
+      "This afternoon, Samir arrives in front of the building ten minutes early. The estate agent, Mr. Dupont, welcomes him with a professional handshake. Together, they take the elevator up to the fourth floor to explore the accommodation. The apartment is a furnished twenty-five square metre studio, very bright and well laid out.",
+      "During the visit, Samir observes every detail attentively. The main living room features a large double-glazed window overlooking a quiet inner courtyard. The open-plan kitchen is equipped with a refrigerator, electric cooking hobs, and plenty of practical storage space. Samir also checks the water pressure in the bathroom and the heating radiators.",
+      "The real estate agent explains the financial terms to him: \"The monthly rent is six hundred and fifty euros, charges included. That covers communal central heating and the maintenance of the building's common areas. If you are interested in this apartment, you must submit a complete rental application file as quickly as possible.\"",
+      "Samir has already assembled all his supporting documents inside a neat folder: his valid ID document, his employment contract with the IT company, his three most recent pay slips, and his guarantor's certificate. He hands the copies over to the agent: \"My application is ready and complete sir. I truly hope my candidacy will be accepted!\" The agent compliments him on his thoroughness and promises an answer within forty-eight hours."
+    ],
+    "vocabulary": {
+      "depuis": {
+        "lemma": "depuis",
+        "en": "since / for",
+        "bn": "ধরে / যাবত",
+        "pos": "preposition"
+      },
+      "plusieurs": {
+        "lemma": "plusieurs",
+        "en": "several",
+        "bn": "কয়েকটি",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "semaines": {
+        "lemma": "semaine",
+        "en": "weeks",
+        "bn": "সপ্তাহসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la semaine"
+      },
+      "samir": {
+        "lemma": "Samir",
+        "en": "Samir (first name)",
+        "bn": "সমীর (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Samir"
+      },
+      "cherche": {
+        "lemma": "chercher",
+        "en": "searches / looks for",
+        "bn": "খোঁজে",
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
+      },
+      "activement": {
+        "lemma": "activement",
+        "en": "actively",
+        "bn": "সক্রিয়ভাবে",
+        "pos": "adverb"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "studio": {
+        "lemma": "studio",
+        "en": "studio flat",
+        "bn": "স্টুডিও অ্যাপার্টমেন্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le studio"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "louer": {
+        "lemma": "louer",
+        "en": "to rent",
+        "bn": "ভাড়া নেওয়া / ভাড়া দেওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "pour": {
+        "lemma": "pour",
+        "en": "for / in order to",
+        "bn": "জন্য",
+        "pos": "preposition"
+      },
+      "se": {
+        "lemma": "se",
+        "en": "himself / herself / oneself",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "rapprocher": {
+        "lemma": "rapprocher",
+        "en": "to get closer to",
+        "bn": "কাছে আসা / কাছাকাছি হওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "travail": {
+        "lemma": "France Travail",
+        "en": "France Travail (national employment agency)",
+        "bn": "ফ্রান্স ত্রাভাই (কর্মসংস্থান সংস্থা)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "France Travail"
+      },
+      "informaticien": {
+        "lemma": "informaticien",
+        "en": "IT professional / computer scientist",
+        "bn": "কম্পিউটার বিশেষজ্ঞ / আইটি কর্মী",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'informaticien"
+      },
+      "tous": {
+        "lemma": "tout",
+        "en": "all",
+        "bn": "সব",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "soirs": {
+        "lemma": "soir",
+        "en": "evenings",
+        "bn": "সন্ধ্যাগুলো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le soir"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "consulte": {
+        "lemma": "consulter",
+        "en": "checks / consults",
+        "bn": "দেখে / পরামর্শ নেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "annonces": {
+        "lemma": "annonce",
+        "en": "listings / advertisements",
+        "bn": "বিজ্ঞাপন / তালিকা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'annonce"
+      },
+      "immobilières": {
+        "lemma": "immobilier",
+        "en": "real estate (listings)",
+        "bn": "আবাসন সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "ligne": {
+        "lemma": "ligne",
+        "en": "line (metro / telephone / online)",
+        "bn": "লাইন / সংযোগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ligne"
+      },
+      "compare": {
+        "lemma": "comparer",
+        "en": "compares",
+        "bn": "তুলনা করে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "prix": {
+        "lemma": "prix",
+        "en": "price",
+        "bn": "দাম / মূল্য",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le prix"
+      },
+      "des": {
+        "lemma": "un",
+        "en": "some / of the",
+        "bn": "কিছু / গুলির",
+        "pos": "article",
+        "number": "plural"
+      },
+      "loyers": {
+        "lemma": "loyer",
+        "en": "rents",
+        "bn": "বাড়িভাড়াগুলো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le loyer"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "contacte": {
+        "lemma": "contacter",
+        "en": "contacts",
+        "bn": "যোগাযোগ করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "propriétaires": {
+        "lemma": "propriétaire",
+        "en": "landlords / owners",
+        "bn": "বাড়িওয়ালাগণ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le propriétaire"
+      },
+      "hier": {
+        "lemma": "hier",
+        "en": "yesterday",
+        "bn": "গতকাল",
+        "pos": "adverb"
+      },
+      "matin": {
+        "lemma": "matin",
+        "en": "morning",
+        "bn": "সকাল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "agence": {
+        "lemma": "agence",
+        "en": "agency / branch",
+        "bn": "সংস্থা / এজেন্সি / শাখা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'agence"
+      },
+      "immobilière": {
+        "lemma": "immobilier",
+        "en": "real estate (agency)",
+        "bn": "রিয়েল এস্টেট / আবাসন",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "du": {
+        "lemma": "de + le",
+        "en": "of the / from the",
+        "bn": "দোকানের",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "quartier": {
+        "lemma": "quartier",
+        "en": "neighbourhood / district",
+        "bn": "মহল্লা / এলাকা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le quartier"
+      },
+      "a": {
+        "lemma": "avoir",
+        "en": "has",
+        "bn": "আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "finalement": {
+        "lemma": "finalement",
+        "en": "finally / eventually",
+        "bn": "অবশেষে",
+        "pos": "adverb"
+      },
+      "appelé": {
+        "lemma": "appeler",
+        "en": "called (past participle)",
+        "bn": "ডেকেছিল / কল করেছিল",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "lui": {
+        "lemma": "lui",
+        "en": "to him / her",
+        "bn": "তাকে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "proposer": {
+        "lemma": "proposer",
+        "en": "to offer / propose",
+        "bn": "প্রস্তাব দেওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "visite": {
+        "lemma": "visite",
+        "en": "visit / property viewing",
+        "bn": "পরিদর্শন / দেখা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la visite"
+      },
+      "d": {
+        "lemma": "de",
+        "en": "of / from (elision)",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "number": "singular"
+      },
+      "cet": {
+        "lemma": "ce",
+        "en": "this (masculine vowel)",
+        "bn": "এই",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "après-midi": {
+        "lemma": "après-midi",
+        "en": "afternoon",
+        "bn": "বিকাল / দুপুর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'après-midi"
+      },
+      "arrive": {
+        "lemma": "arriver",
+        "en": "arrives",
+        "bn": "পৌঁছায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "devant": {
+        "lemma": "devant",
+        "en": "in front of",
+        "bn": "সামনে",
+        "pos": "preposition"
+      },
+      "immeuble": {
+        "lemma": "immeuble",
+        "en": "apartment building",
+        "bn": "বিল্ডিং / বহুতল ভবন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'immeuble"
+      },
+      "dix": {
+        "lemma": "dix",
+        "en": "ten",
+        "bn": "দশ",
+        "pos": "number"
+      },
+      "minutes": {
+        "lemma": "minute",
+        "en": "minutes",
+        "bn": "মিনিট",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la minute"
+      },
+      "avance": {
+        "lemma": "avance",
+        "en": "ahead / early",
+        "bn": "আগে",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'avance"
+      },
+      "agent": {
+        "lemma": "agent",
+        "en": "officer / agent",
+        "bn": "কর্মকর্তা / কর্মী",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'agent"
+      },
+      "immobilier": {
+        "lemma": "immobilier",
+        "en": "real estate agent",
+        "bn": "রিয়েল এস্টেট এজেন্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'immobilier"
+      },
+      "monsieur": {
+        "lemma": "monsieur",
+        "en": "sir / gentleman",
+        "bn": "জনাব / মহাশয়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
+      },
+      "dupont": {
+        "lemma": "Dupont",
+        "en": "Dupont (surname)",
+        "bn": "ডুপন্ট (পদবি)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Dupont"
+      },
+      "accueille": {
+        "lemma": "accueillir",
+        "en": "welcomes / receives",
+        "bn": "স্বাগত জানায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "poignée": {
+        "lemma": "poignée",
+        "en": "handshake / handle",
+        "bn": "করমর্দন / হাতল",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la poignée"
+      },
+      "main": {
+        "lemma": "main",
+        "en": "hand",
+        "bn": "হাত",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la main"
+      },
+      "professionnelle": {
+        "lemma": "professionnel",
+        "en": "professional (feminine)",
+        "bn": "পেশাদার",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "ensemble": {
+        "lemma": "ensemble",
+        "en": "together",
+        "bn": "একসাথে",
+        "pos": "adverb"
+      },
+      "ils": {
+        "lemma": "il",
+        "en": "they (masculine)",
+        "bn": "তারা",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "prennent": {
+        "lemma": "prendre",
+        "en": "take (plural)",
+        "bn": "নেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "ascenseur": {
+        "lemma": "ascenseur",
+        "en": "elevator / lift",
+        "bn": "লিফট / এলিভেটর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ascenseur"
+      },
+      "jusqu'au": {
+        "lemma": "jusque",
+        "en": "up to / until",
+        "bn": "পর্যন্ত",
+        "pos": "preposition"
+      },
+      "quatrième": {
+        "lemma": "quatrième",
+        "en": "fourth",
+        "bn": "চতুর্থ",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "étage": {
+        "lemma": "étage",
+        "en": "floor / storey",
+        "bn": "তলা / ফ্লোর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'étage"
+      },
+      "découvrir": {
+        "lemma": "découvrir",
+        "en": "to discover / explore",
+        "bn": "আবিষ্কার করা / দেখা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "logement": {
+        "lemma": "logement",
+        "en": "housing / accommodation",
+        "bn": "বাসস্থান / থাকার ঘর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le logement"
+      },
+      "appartement": {
+        "lemma": "appartement",
+        "en": "apartment / flat",
+        "bn": "অ্যাপার্টমেন্ট / ফ্ল্যাট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'appartement"
+      },
+      "est": {
+        "lemma": "être",
+        "en": "is",
+        "bn": "হয় / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "meublé": {
+        "lemma": "meublé",
+        "en": "furnished (studio)",
+        "bn": "আসবাবপত্র সজ্জিত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "vingt-cinq": {
+        "lemma": "vingt-cinq",
+        "en": "twenty-five",
+        "bn": "পঁচিশ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "mètres": {
+        "lemma": "mètre",
+        "en": "metres",
+        "bn": "মিটার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le mètre"
+      },
+      "carrés": {
+        "lemma": "carré",
+        "en": "square (metres)",
+        "bn": "বর্গ (মিটার)",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "très": {
+        "lemma": "très",
+        "en": "very",
+        "bn": "খুব",
+        "pos": "adverb"
+      },
+      "lumineux": {
+        "lemma": "lumineux",
+        "en": "bright / luminous",
+        "bn": "উজ্জ্বল / আলোকময়",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "bien": {
+        "lemma": "bien",
+        "en": "well / good",
+        "bn": "ভালো / ঠিক আছে",
+        "pos": "adverb"
+      },
+      "agencé": {
+        "lemma": "agencer",
+        "en": "laid out / organized",
+        "bn": "সাজানো / বিন্যস্ত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "après": {
+        "lemma": "après",
+        "en": "after",
+        "bn": "পরে",
+        "pos": "preposition"
+      },
+      "midi": {
+        "lemma": "midi",
+        "en": "midday / noon",
+        "bn": "দুপুর / মধ্যাহ্ন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le midi"
+      },
+      "jusqu": {
+        "lemma": "jusque",
+        "en": "until / up to",
+        "bn": "পর্যন্ত",
+        "pos": "preposition"
+      },
+      "au": {
+        "lemma": "à + le",
+        "en": "with / to the",
+        "bn": "দিয়ে",
+        "pos": "preposition"
+      },
+      "vingt": {
+        "lemma": "vingt",
+        "en": "twenty",
+        "bn": "বিশ",
+        "pos": "number"
+      },
+      "cinq": {
+        "lemma": "cinq",
+        "en": "five",
+        "bn": "পাঁচ",
+        "pos": "number"
+      },
+      "pendant": {
+        "lemma": "pendant",
+        "en": "during",
+        "bn": "চলাকালীন / সময়ে",
+        "pos": "preposition"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "observe": {
+        "lemma": "observer",
+        "en": "observes / inspects",
+        "bn": "পর্যবেক্ষণ করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "chaque": {
+        "lemma": "chaque",
+        "en": "each / every",
+        "bn": "প্রতিটি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "détail": {
+        "lemma": "détail",
+        "en": "detail",
+        "bn": "খুঁটিনাটি / বিশদ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le détail"
+      },
+      "attention": {
+        "lemma": "attention",
+        "en": "attention / care",
+        "bn": "মনোযোগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attention"
+      },
+      "pièce": {
+        "lemma": "pièce",
+        "en": "coin / room",
+        "bn": "কয়েন / মুদ্রা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pièce"
+      },
+      "principale": {
+        "lemma": "principal",
+        "en": "main / principal",
+        "bn": "প্রধান",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "possède": {
+        "lemma": "posséder",
+        "en": "features / owns",
+        "bn": "রয়েছে / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "grande": {
+        "lemma": "grand",
+        "en": "large (feminine)",
+        "bn": "বড়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "fenêtre": {
+        "lemma": "fenêtre",
+        "en": "window",
+        "bn": "জানালা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fenêtre"
+      },
+      "double": {
+        "lemma": "double",
+        "en": "double (glazing)",
+        "bn": "দ্বিগুণ / ডাবল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "vitrage": {
+        "lemma": "vitrage",
+        "en": "glazing (double vitrage)",
+        "bn": "কাঁচের জানালা (ডাবল গ্লেজিং)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le vitrage"
+      },
+      "qui": {
+        "lemma": "qui",
+        "en": "who / which",
+        "bn": "যে / কে",
+        "pos": "pronoun"
+      },
+      "donne": {
+        "lemma": "donner",
+        "en": "gives",
+        "bn": "দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "sur": {
+        "lemma": "sur",
+        "en": "on / upon",
+        "bn": "উপর",
+        "pos": "preposition"
+      },
+      "cour": {
+        "lemma": "cour",
+        "en": "courtyard",
+        "bn": "আঙিনা / উঠান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la cour"
+      },
+      "intérieure": {
+        "lemma": "intérieur",
+        "en": "inner / interior (courtyard)",
+        "bn": "অভ্যন্তরীণ",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "calme": {
+        "lemma": "calme",
+        "en": "calm / quiet",
+        "bn": "শান্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "cuisine": {
+        "lemma": "cuisine",
+        "en": "kitchen",
+        "bn": "রান্নাঘর",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la cuisine"
+      },
+      "ouverte": {
+        "lemma": "ouvert",
+        "en": "open (feminine)",
+        "bn": "খোলা",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "équipée": {
+        "lemma": "équiper",
+        "en": "equipped (feminine)",
+        "bn": "সুসজ্জিত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "réfrigérateur": {
+        "lemma": "réfrigérateur",
+        "en": "refrigerator / fridge",
+        "bn": "রেফ্রিজারেটর / ফ্রিজ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le réfrigérateur"
+      },
+      "plaques": {
+        "lemma": "plaque",
+        "en": "hobs / hotplates",
+        "bn": "চুলা / কুকিং হব",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la plaque"
+      },
+      "cuisson": {
+        "lemma": "cuisson",
+        "en": "cooking",
+        "bn": "রান্না",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la cuisson"
+      },
+      "électriques": {
+        "lemma": "électrique",
+        "en": "electric",
+        "bn": "বৈদ্যুতিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "nombreux": {
+        "lemma": "nombreux",
+        "en": "numerous / many",
+        "bn": "অনেক / প্রচুর",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "rangements": {
+        "lemma": "rangement",
+        "en": "storage cupboards",
+        "bn": "আলমারি / স্টোরেজ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le rangement"
+      },
+      "pratiques": {
+        "lemma": "pratique",
+        "en": "practical (plural)",
+        "bn": "ব্যবহারিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "vérifie": {
+        "lemma": "vérifier",
+        "en": "checks / verifies",
+        "bn": "যাচাই করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "également": {
+        "lemma": "également",
+        "en": "also / equally",
+        "bn": "এছাড়াও",
+        "pos": "adverb"
+      },
+      "pression": {
+        "lemma": "pression",
+        "en": "pressure (water)",
+        "bn": "চাপ (পানির চাপ)",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pression"
+      },
+      "eau": {
+        "lemma": "eau",
+        "en": "water",
+        "bn": "পানি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'eau"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "salle": {
+        "lemma": "salle",
+        "en": "room / hall",
+        "bn": "কক্ষ / রুম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la salle"
+      },
+      "bain": {
+        "lemma": "bain",
+        "en": "bath",
+        "bn": "গোসল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bain"
+      },
+      "fonctionnement": {
+        "lemma": "fonctionnement",
+        "en": "operation / functioning",
+        "bn": "কার্যক্ষমতা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le fonctionnement"
+      },
+      "radiateurs": {
+        "lemma": "radiateur",
+        "en": "radiators",
+        "bn": "হিটারগুলো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le radiateur"
+      },
+      "explique": {
+        "lemma": "expliquer",
+        "en": "explains",
+        "bn": "ব্যাখ্যা করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "conditions": {
+        "lemma": "condition",
+        "en": "terms / conditions",
+        "bn": "শর্তাবলী / অবস্থা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la condition"
+      },
+      "financières": {
+        "lemma": "financier",
+        "en": "financial (plural)",
+        "bn": "আর্থিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "loyer": {
+        "lemma": "loyer",
+        "en": "rent (monthly)",
+        "bn": "মাসিক বাড়িভাড়া",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le loyer"
+      },
+      "mensuel": {
+        "lemma": "mensuel",
+        "en": "monthly",
+        "bn": "মাসিক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "six": {
+        "lemma": "six",
+        "en": "six",
+        "bn": "ছয়",
+        "pos": "number"
+      },
+      "cent": {
+        "lemma": "cent",
+        "en": "hundred",
+        "bn": "একশত",
+        "pos": "number"
+      },
+      "cinquante": {
+        "lemma": "cinquante",
+        "en": "fifty",
+        "bn": "পঞ্চাশ",
+        "pos": "number"
+      },
+      "euros": {
+        "lemma": "euro",
+        "en": "euros",
+        "bn": "ইউরো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'euro"
+      },
+      "charges": {
+        "lemma": "charge",
+        "en": "utility charges / maintenance fees",
+        "bn": "ইউটিলিটি চার্জ / সার্ভিস চার্জ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la charge"
+      },
+      "comprises": {
+        "lemma": "comprendre",
+        "en": "included (charges comprises)",
+        "bn": "অন্তর্ভুক্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "cela": {
+        "lemma": "cela",
+        "en": "that / this",
+        "bn": "এটা",
+        "pos": "pronoun"
+      },
+      "inclut": {
+        "lemma": "inclure",
+        "en": "includes",
+        "bn": "অন্তর্ভুক্ত করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "chauffage": {
+        "lemma": "chauffage",
+        "en": "heating",
+        "bn": "হিটিং ব্যবস্থা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le chauffage"
+      },
+      "collectif": {
+        "lemma": "collectif",
+        "en": "collective / communal",
+        "bn": "সম্মিলিত / কেন্দ্রীয়",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "entretien": {
+        "lemma": "entretien",
+        "en": "interview / maintenance",
+        "bn": "ইন্টারভিউ / রক্ষণাবেক্ষণ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entretien"
+      },
+      "parties": {
+        "lemma": "partie",
+        "en": "parts / common areas",
+        "bn": "অংশসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la partie"
+      },
+      "communes": {
+        "lemma": "commun",
+        "en": "shared / common (parts)",
+        "bn": "সাধারণ / সবার ব্যবহার্য",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "si": {
+        "lemma": "si",
+        "en": "if",
+        "bn": "যদি",
+        "pos": "conjunction"
+      },
+      "ce": {
+        "lemma": "ce",
+        "en": "this",
+        "bn": "এই",
+        "pos": "pronoun"
+      },
+      "vous": {
+        "lemma": "vous",
+        "en": "you (formal/plural)",
+        "bn": "আপনি / আপনারা",
+        "pos": "pronoun"
+      },
+      "intéresse": {
+        "lemma": "intéresser",
+        "en": "interests",
+        "bn": "আগ্রহী করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "devez": {
+        "lemma": "devoir",
+        "en": "must / have to (vous)",
+        "bn": "আপনাকে অবশ্যই হবে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "déposer": {
+        "lemma": "déposer",
+        "en": "to submit / lodge (file)",
+        "bn": "জমা দেওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "dossier": {
+        "lemma": "dossier",
+        "en": "application file / folder",
+        "bn": "ফাইল / আবেদনপত্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le dossier"
+      },
+      "location": {
+        "lemma": "location",
+        "en": "rental",
+        "bn": "ভাড়া",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la location"
+      },
+      "complet": {
+        "lemma": "complet",
+        "en": "complete / full",
+        "bn": "সম্পূর্ণ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "plus": {
+        "lemma": "plus",
+        "en": "more / plus",
+        "bn": "আরও",
+        "pos": "adverb"
+      },
+      "rapidement": {
+        "lemma": "rapidement",
+        "en": "promptly / quickly",
+        "bn": "দ্রুততার সাথে",
+        "pos": "adverb"
+      },
+      "possible": {
+        "lemma": "possible",
+        "en": "possible",
+        "bn": "সম্ভব",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "déjà": {
+        "lemma": "déjà",
+        "en": "already",
+        "bn": "ইতিমধ্যে",
+        "pos": "adverb"
+      },
+      "préparé": {
+        "lemma": "préparer",
+        "en": "prepared",
+        "bn": "প্রস্তুত করেছে",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "ses": {
+        "lemma": "son",
+        "en": "his / her / its (plural)",
+        "bn": "তার (বহুবচন)",
+        "pos": "pronoun"
+      },
+      "justificatifs": {
+        "lemma": "justificatif",
+        "en": "supporting documents",
+        "bn": "প্রমাণপত্রসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le justificatif"
+      },
+      "pochette": {
+        "lemma": "pochette",
+        "en": "folder / wallet file",
+        "bn": "ফাইল ফোল্ডার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la pochette"
+      },
+      "soignée": {
+        "lemma": "soigner",
+        "en": "neat / tidy (folder)",
+        "bn": "পরিপাটি / যত্নসহকারে তৈরি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "sa": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "identité": {
+        "lemma": "identité",
+        "en": "identity",
+        "bn": "পরিচয়",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'identité"
+      },
+      "cours": {
+        "lemma": "cours",
+        "en": "class / course / in progress",
+        "bn": "ক্লাস / কোর্স / চলমান",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cours"
+      },
+      "validité": {
+        "lemma": "validité",
+        "en": "validity",
+        "bn": "বৈধতা / মেয়াদ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la validité"
+      },
+      "contrat": {
+        "lemma": "contrat",
+        "en": "contract / agreement",
+        "bn": "চুক্তিপত্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le contrat"
+      },
+      "entreprise": {
+        "lemma": "entreprise",
+        "en": "company / enterprise",
+        "bn": "প্রতিষ্ঠান / কোম্পানি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entreprise"
+      },
+      "informatique": {
+        "lemma": "informatique",
+        "en": "IT / computing",
+        "bn": "আইটি / কম্পিউটার বিজ্ঞান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'informatique"
+      },
+      "trois": {
+        "lemma": "trois",
+        "en": "three",
+        "bn": "তিন",
+        "pos": "number"
+      },
+      "derniers": {
+        "lemma": "dernier",
+        "en": "last / recent (plural)",
+        "bn": "শেষ / সাম্প্রতিক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "bulletins": {
+        "lemma": "bulletin",
+        "en": "pay slips / report cards",
+        "bn": "বেতন স্লিপ / বিবরণী",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le bulletin"
+      },
+      "salaire": {
+        "lemma": "salaire",
+        "en": "salary / wages",
+        "bn": "বেতন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le salaire"
+      },
+      "attestation": {
+        "lemma": "attestation",
+        "en": "certificate / formal proof",
+        "bn": "প্রত্যয়নপত্র / সনদ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attestation"
+      },
+      "garant": {
+        "lemma": "garant",
+        "en": "rental guarantor",
+        "bn": "জামিনদার / গ্যারান্টর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le garant"
+      },
+      "remet": {
+        "lemma": "remettre",
+        "en": "hands over / gives",
+        "bn": "হস্তান্তর করে / দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "copies": {
+        "lemma": "copie",
+        "en": "photocopies / copies",
+        "bn": "ফটোকপি / অনুলিপি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la copie"
+      },
+      "conseiller": {
+        "lemma": "conseiller",
+        "en": "advisor / counselor",
+        "bn": "পরামর্শক / কর্মকর্তা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le conseiller"
+      },
+      "mon": {
+        "lemma": "son",
+        "en": "my (masculine)",
+        "bn": "আমার",
+        "pos": "pronoun"
+      },
+      "prêt": {
+        "lemma": "prêt",
+        "en": "ready / loan",
+        "bn": "প্রস্তুত / ঋণ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "espère": {
+        "lemma": "espérer",
+        "en": "hopes",
+        "bn": "আশা করে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "vraiment": {
+        "lemma": "vraiment",
+        "en": "truly / really",
+        "bn": "সত্যিই / প্রকৃতপক্ষে",
+        "pos": "adverb"
+      },
+      "que": {
+        "lemma": "que",
+        "en": "that / what",
+        "bn": "কী / যে",
+        "pos": "pronoun"
+      },
+      "ma": {
+        "lemma": "son",
+        "en": "my (feminine)",
+        "bn": "আমার",
+        "pos": "pronoun"
+      },
+      "candidature": {
+        "lemma": "candidature",
+        "en": "application / candidacy",
+        "bn": "আবেদন / প্রার্থিতা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la candidature"
+      },
+      "sera": {
+        "lemma": "être",
+        "en": "will be",
+        "bn": "হবে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "retenue": {
+        "lemma": "retenir",
+        "en": "accepted / selected (candidacy)",
+        "bn": "মনোনীত / গৃহীত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "félicite": {
+        "lemma": "féliciter",
+        "en": "compliments / congratulates",
+        "bn": "প্রশংসা করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "sérieux": {
+        "lemma": "sérieux",
+        "en": "seriousness / reliability",
+        "bn": "দায়িত্বশীলতা / আন্তরিকতা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sérieux"
+      },
+      "promet": {
+        "lemma": "promettre",
+        "en": "promises",
+        "bn": "প্রতিশ্রুতি দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "répondre": {
+        "lemma": "répondre",
+        "en": "to answer / reply",
+        "bn": "উত্তর দেওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "sous": {
+        "lemma": "sous",
+        "en": "under / within (sous 48h)",
+        "bn": "নিচে / এর মধ্যে",
+        "pos": "preposition"
+      },
+      "quarante-huit": {
+        "lemma": "quarante-huit",
+        "en": "forty-eight",
+        "bn": "আটচল্লিশ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "heures": {
+        "lemma": "heure",
+        "en": "hours / o'clock",
+        "bn": "ঘণ্টা / টা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'heure"
+      },
+      "j": {
+        "lemma": "je",
+        "en": "I (elision)",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "quarante": {
+        "lemma": "quarante",
+        "en": "forty",
+        "bn": "চল্লিশ",
+        "pos": "number"
+      },
+      "huit": {
+        "lemma": "huit",
+        "en": "eight",
+        "bn": "আট",
+        "pos": "number"
+      }
+    },
+    "quiz": [
+      {
+        "question": "Pourquoi Samir cherche-t-il un nouvel appartement ?",
+        "options": [
+          "Pour partir en vacances à la mer",
+          "Pour se rapprocher de son travail de technicien informatique",
+          "Pour ouvrir un restaurant",
+          "Pour acheter des meubles neufs"
+        ],
+        "answer": 1,
+        "explanation": "The text states: \"Samir cherche activement un studio à louer pour se rapprocher de son travail d'informaticien\".",
+        "explanationBn": "টেক্সটে বলা আছে: সমীর তার আইটি চাকরির কাছাকাছি থাকার জন্য সক্রিয়ভাবে একটি স্টুডিও বাসা খুঁজছে।"
+      },
+      {
+        "question": "Que comprend le loyer mensuel de six cent cinquante euros ?",
+        "options": [
+          "L'électricité privée seulement",
+          "Les charges, le chauffage collectif et l'entretien des parties communes",
+          "Les repas du restaurant",
+          "L'abonnement de transport en commun"
+        ],
+        "answer": 1,
+        "explanation": "The agent specifies that charges are included (\"charges comprises\"), covering communal heating and building maintenance.",
+        "explanationBn": "রিয়েল এস্টেট এজেন্ট জানায় ভাড়ার মধ্যে বিল্ডিংয়ের সাধারণ মেইনটেন্যান্স ও হিটিং অন্তর্ভুক্ত রয়েছে।"
+      },
+      {
+        "question": "Quels documents Samir a-t-il préparés dans son dossier de location ?",
+        "options": [
+          "Juste une photo d'identité",
+          "Sa pièce d'identité, contrat de travail, fiches de paie et garant",
+          "Une facture de supermarché",
+          "Son carnet de santé de naissance"
+        ],
+        "answer": 1,
+        "explanation": "The text enumerates: \"sa pièce d'identité, son contrat de travail, ses trois derniers bulletins de salaire et l'attestation de son garant\".",
+        "explanationBn": "নথির তালিকায় পরিচয়পত্র, কাজের চুক্তিপত্র, বেতন স্লিপ ও গ্যারান্টারের প্রত্যয়নপত্র রয়েছে।"
+      }
+    ]
+  },
+  {
+    "id": "ouvrir-compte-bancaire",
+    "title": "Ouvrir un compte bancaire",
+    "subtitle": "Obtenir un compte courant et un relevé d'identité bancaire",
+    "level": "A2",
+    "topic": "Banque & Démarches",
+    "wordCount": 287,
+    "estimatedMinutes": 4,
+    "paragraphs": [
+      "Après avoir signé son premier contrat professionnel en France, Kabir doit impérativement ouvrir un compte bancaire pour percevoir son salaire et régler ses dépenses du quotidien. Il a pris rendez-vous en ligne sur le portail internet d'une grande banque de détail située à deux pas de chez lui.",
+      "Le matin convenu, Kabir se présente à l'agence bancaire à l'heure exacte. La conseillère clientèle, madame Martin, l'invite chaleureusement à entrer dans son bureau vitré. Kabir s'assoit en face d'elle et explique l'objet de sa visite : il souhaite ouvrir un compte de dépôt standard avec les services bancaires de base.",
+      "La conseillère examine avec soin les pièces justificatives apportées par Kabir. Elle contrôle son passeport original avec son visa en cours de validité, un justificatif de domicile récent attestant de son adresse postale, ainsi que son attestation d'embauche. Tout est parfaitement en ordre et conforme aux exigences réglementaires.",
+      "Madame Martin lui présente les différentes options de compte : « Nous proposons un compte courant avec une carte bancaire internationale à débit immédiat et un accès illimité à notre application mobile sécurisée. Vous pourrez ainsi suivre vos dépenses en temps réel, bloquer temporairement votre carte si nécessaire et effectuer des virements instantanés gratuitement. » Kabir valide cette formule moderne et pratique.",
+      "Après avoir signé électroniquement la convention de compte sur une tablette tactile, la conseillère imprime un document essentiel : « Voici votre Relevé d'Identité Bancaire, qu'on appelle couramment le RIB. Vous devez transmettre ce document à votre employeur pour le versement automatique de votre salaire à la fin du mois. Votre carte physique et votre code confidentiel arriveront par courrier sécurisé d'ici une semaine. » Kabir repart ravi et serein pour la suite de ses démarches en France."
+    ],
+    "paragraphTranslations": [
+      "After signing his first employment contract in France, Kabir urgently needs to open a bank account to receive his salary and handle his everyday expenses. He scheduled an appointment online on the web portal of a major retail bank situated just steps away from his home.",
+      "On the agreed morning, Kabir turns up at the bank branch right on time. The customer advisor, Mrs. Martin, warmly invites him into her glass office. Kabir sits down across from her and explains the purpose of his visit: he wishes to open a standard checking account with basic banking services.",
+      "The advisor examines with care the supporting documents brought by Kabir. She checks his original passport with his valid visa, a recent proof of address verifying his postal domicile, as well as his hiring certificate. Everything is in perfect order and complies with standard regulations.",
+      "Mrs. Martin introduces the various account options to him: \"We offer a current checking account paired with an international debit card and unlimited access to our secure mobile banking app. You will be able to monitor your spending in real time, temporarily freeze your card if necessary, and make instant money transfers free of charge.\" Kabir approves this modern, practical package.",
+      "After electronically signing the account agreement on a touch tablet, the advisor prints out an essential document: \"Here is your bank identity statement, commonly called the RIB. You must hand this document to your employer for the automatic deposit of your wages at the end of the month. Your physical card and confidential PIN code will arrive by secure post within a week.\" Kabir leaves delighted and confident for his upcoming life in France."
+    ],
+    "vocabulary": {
+      "après": {
+        "lemma": "après",
+        "en": "after",
+        "bn": "পরে",
+        "pos": "preposition"
+      },
+      "avoir": {
+        "lemma": "avoir",
+        "en": "to have",
+        "bn": "থাকা / পাওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "signé": {
+        "lemma": "signer",
+        "en": "signed",
+        "bn": "স্বাক্ষর করেছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "premier": {
+        "lemma": "premier",
+        "en": "first",
+        "bn": "প্রথম",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "contrat": {
+        "lemma": "contrat",
+        "en": "contract / agreement",
+        "bn": "চুক্তিপত্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le contrat"
+      },
+      "professionnel": {
+        "lemma": "professionnel",
+        "en": "professional",
+        "bn": "পেশাদার",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "france": {
+        "lemma": "France",
+        "en": "France",
+        "bn": "ফ্রান্স",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la France"
+      },
+      "kabir": {
+        "lemma": "Kabir",
+        "en": "Kabir (first name)",
+        "bn": "কবীর (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Kabir"
+      },
+      "doit": {
+        "lemma": "devoir",
+        "en": "must / has to",
+        "bn": "হবে / বাধ্য",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "impérativement": {
+        "lemma": "impérativement",
+        "en": "imperatively / urgently",
+        "bn": "অবশ্যই / অত্যন্ত জরুরিভাবে",
+        "pos": "adverb"
+      },
+      "ouvrir": {
+        "lemma": "ouvrir",
+        "en": "to open",
+        "bn": "খোলা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "compte": {
+        "lemma": "compte",
+        "en": "bank account / count",
+        "bn": "অ্যাকাউন্ট / হিসাব",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le compte"
+      },
+      "bancaire": {
+        "lemma": "bancaire",
+        "en": "banking / bank-related",
+        "bn": "ব্যাংক সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "pour": {
+        "lemma": "pour",
+        "en": "for / in order to",
+        "bn": "জন্য",
+        "pos": "preposition"
+      },
+      "percevoir": {
+        "lemma": "percevoir",
+        "en": "to receive / collect (salary)",
+        "bn": "গ্রহণ করা (বেতন)",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "salaire": {
+        "lemma": "salaire",
+        "en": "salary / wages",
+        "bn": "বেতন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le salaire"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "régler": {
+        "lemma": "régler",
+        "en": "to settle / pay / adjust",
+        "bn": "পরিশোধ করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "ses": {
+        "lemma": "son",
+        "en": "his / her / its (plural)",
+        "bn": "তার (বহুবচন)",
+        "pos": "pronoun"
+      },
+      "dépenses": {
+        "lemma": "dépense",
+        "en": "expenses",
+        "bn": "খরচসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la dépense"
+      },
+      "du": {
+        "lemma": "de + le",
+        "en": "of the / from the",
+        "bn": "দোকানের",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "quotidien": {
+        "lemma": "quotidien",
+        "en": "daily",
+        "bn": "দৈনন্দিন",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "a": {
+        "lemma": "avoir",
+        "en": "has",
+        "bn": "আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "pris": {
+        "lemma": "prendre",
+        "en": "taken / scheduled",
+        "bn": "নিয়েছে / করেছে",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "rendez-vous": {
+        "lemma": "rendez-vous",
+        "en": "appointment / meeting",
+        "bn": "সাক্ষাৎ / অ্যাপয়েন্টমেন্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
+      },
+      "ligne": {
+        "lemma": "ligne",
+        "en": "line (metro / telephone / online)",
+        "bn": "লাইন / সংযোগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ligne"
+      },
+      "sur": {
+        "lemma": "sur",
+        "en": "on / upon",
+        "bn": "উপর",
+        "pos": "preposition"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "portail": {
+        "lemma": "portail",
+        "en": "web portal / gate",
+        "bn": "ওয়েব পোর্টাল / গেট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le portail"
+      },
+      "internet": {
+        "lemma": "internet",
+        "en": "internet",
+        "bn": "ইন্টারনেট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'internet"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "grande": {
+        "lemma": "grand",
+        "en": "large (feminine)",
+        "bn": "বড়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "banque": {
+        "lemma": "banque",
+        "en": "bank",
+        "bn": "ব্যাংক",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la banque"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "détail": {
+        "lemma": "détail",
+        "en": "detail",
+        "bn": "খুঁটিনাটি / বিশদ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le détail"
+      },
+      "située": {
+        "lemma": "situer",
+        "en": "located / situated",
+        "bn": "অবস্থিত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "deux": {
+        "lemma": "deux",
+        "en": "two",
+        "bn": "দুই",
+        "pos": "number"
+      },
+      "pas": {
+        "lemma": "pas",
+        "en": "step / footsteps / not",
+        "bn": "পদক্ষেপ / পায়ের আওয়াজ / না",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pas"
+      },
+      "chez": {
+        "lemma": "chez",
+        "en": "at the place of",
+        "bn": "বাসায় / কাছে",
+        "pos": "preposition"
+      },
+      "lui": {
+        "lemma": "lui",
+        "en": "to him / her",
+        "bn": "তাকে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "rendez": {
+        "lemma": "rendre",
+        "en": "return / appointment (rendez-vous)",
+        "bn": "সাক্ষাৎ / ফেরত দেওয়া",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
+      },
+      "vous": {
+        "lemma": "vous",
+        "en": "you (formal/plural)",
+        "bn": "আপনি / আপনারা",
+        "pos": "pronoun"
+      },
+      "d": {
+        "lemma": "de",
+        "en": "of / from (elision)",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "matin": {
+        "lemma": "matin",
+        "en": "morning",
+        "bn": "সকাল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
+      },
+      "convenu": {
+        "lemma": "convenir",
+        "en": "agreed / scheduled (time)",
+        "bn": "নির্ধারিত / সম্মত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "se": {
+        "lemma": "se",
+        "en": "himself / herself / oneself",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "présente": {
+        "lemma": "présenter",
+        "en": "presents / introduces",
+        "bn": "উপস্থাপন করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "agence": {
+        "lemma": "agence",
+        "en": "agency / branch",
+        "bn": "সংস্থা / এজেন্সি / শাখা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'agence"
+      },
+      "heure": {
+        "lemma": "heure",
+        "en": "hour / time",
+        "bn": "ঘণ্টা / সময়",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'heure"
+      },
+      "exacte": {
+        "lemma": "exact",
+        "en": "exact (feminine)",
+        "bn": "সঠিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "conseillère": {
+        "lemma": "conseiller",
+        "en": "advisor (female)",
+        "bn": "পরামর্শক (মহিলা)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le conseiller"
+      },
+      "clientèle": {
+        "lemma": "clientèle",
+        "en": "clientele / customers",
+        "bn": "গ্রাহকবৃন্দ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la clientèle"
+      },
+      "madame": {
+        "lemma": "madame",
+        "en": "madam / ma'am",
+        "bn": "ম্যাডাম / বেগম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "madame"
+      },
+      "martin": {
+        "lemma": "Martin",
+        "en": "Martin (surname)",
+        "bn": "মার্টিন (পদবি)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Martin"
+      },
+      "invite": {
+        "lemma": "inviter",
+        "en": "invites",
+        "bn": "আমন্ত্রণ জানায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "chaleureusement": {
+        "lemma": "chaleureusement",
+        "en": "warmly",
+        "bn": "উষ্ণভাবে / আন্তরিকভাবে",
+        "pos": "adverb"
+      },
+      "entrer": {
+        "lemma": "entrer",
+        "en": "to enter / come in",
+        "bn": "প্রবেশ করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "bureau": {
+        "lemma": "bureau",
+        "en": "office / desk",
+        "bn": "অফিস / পড়ার টেবিল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bureau"
+      },
+      "vitré": {
+        "lemma": "vitré",
+        "en": "glass (counter)",
+        "bn": "কাঁচের",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "assoit": {
+        "lemma": "asseoir",
+        "en": "sits",
+        "bn": "বসে",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "face": {
+        "lemma": "face",
+        "en": "in front of / across",
+        "bn": "মুখোমুখি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la face"
+      },
+      "elle": {
+        "lemma": "elle",
+        "en": "she",
+        "bn": "সে (মহিলা)",
+        "pos": "pronoun",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "explique": {
+        "lemma": "expliquer",
+        "en": "explains",
+        "bn": "ব্যাখ্যা করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "objet": {
+        "lemma": "objet",
+        "en": "object / purpose",
+        "bn": "উদ্দেশ্য / বিষয়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'objet"
+      },
+      "sa": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "visite": {
+        "lemma": "visite",
+        "en": "visit / property viewing",
+        "bn": "পরিদর্শন / দেখা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la visite"
+      },
+      "souhaite": {
+        "lemma": "souhaiter",
+        "en": "wishes / desires",
+        "bn": "কামনা করে / চায়",
+        "pos": "verb",
+        "person": "1st person singular",
+        "tense": "present"
+      },
+      "dépôt": {
+        "lemma": "dépôt",
+        "en": "deposit (account)",
+        "bn": "আমানত / সঞ্চয়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le dépôt"
+      },
+      "standard": {
+        "lemma": "standard",
+        "en": "standard",
+        "bn": "মানসম্মত / সাধারণ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "services": {
+        "lemma": "service",
+        "en": "services",
+        "bn": "সেবাসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le service"
+      },
+      "bancaires": {
+        "lemma": "bancaire",
+        "en": "banking (plural)",
+        "bn": "ব্যাংক সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "base": {
+        "lemma": "base",
+        "en": "base / basis / foundation",
+        "bn": "ভিত্তি / মৌলিক",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la base"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "number": "singular"
+      },
+      "s": {
+        "lemma": "se",
+        "en": "himself / herself (elision)",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "examine": {
+        "lemma": "examiner",
+        "en": "examines / reviews",
+        "bn": "পরীক্ষা করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "soin": {
+        "lemma": "soin",
+        "en": "care / diligence",
+        "bn": "যত্ন / মনোযোগ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le soin"
+      },
+      "pièces": {
+        "lemma": "pièce",
+        "en": "documents / coins / rooms",
+        "bn": "নথিপত্র / মুদ্রা / কক্ষ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la pièce"
+      },
+      "justificatives": {
+        "lemma": "justificatif",
+        "en": "supporting (plural)",
+        "bn": "প্রমাণপত্রমূলক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "apportées": {
+        "lemma": "apporter",
+        "en": "brought (feminine plural)",
+        "bn": "আনা / নিয়ে আসা",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "par": {
+        "lemma": "par",
+        "en": "by",
+        "bn": "দ্বারা / দিয়ে",
+        "pos": "preposition"
+      },
+      "contrôle": {
+        "lemma": "contrôler",
+        "en": "checks / inspects",
+        "bn": "পরীক্ষা করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "passeport": {
+        "lemma": "passeport",
+        "en": "passport",
+        "bn": "পাসপোর্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le passeport"
+      },
+      "original": {
+        "lemma": "original",
+        "en": "original",
+        "bn": "আসল / মূল",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "visa": {
+        "lemma": "visa",
+        "en": "visa / entry permit",
+        "bn": "ভিসা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le visa"
+      },
+      "cours": {
+        "lemma": "cours",
+        "en": "class / course / in progress",
+        "bn": "ক্লাস / কোর্স / চলমান",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cours"
+      },
+      "validité": {
+        "lemma": "validité",
+        "en": "validity",
+        "bn": "বৈধতা / মেয়াদ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la validité"
+      },
+      "justificatif": {
+        "lemma": "justificatif",
+        "en": "supporting document / proof",
+        "bn": "প্রমাণপত্র / প্রত্যয়ন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le justificatif"
+      },
+      "domicile": {
+        "lemma": "domicile",
+        "en": "home / residence",
+        "bn": "বাসস্থান / ঠিকানা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le domicile"
+      },
+      "récent": {
+        "lemma": "récent",
+        "en": "recent",
+        "bn": "সাম্প্রতিক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "attestant": {
+        "lemma": "attester",
+        "en": "attesting / certifying",
+        "bn": "প্রত্যয়নকারী / প্রমাণকারী",
+        "pos": "verb",
+        "tense": "present participle"
+      },
+      "adresse": {
+        "lemma": "adresse",
+        "en": "address",
+        "bn": "ঠিকানা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'adresse"
+      },
+      "postale": {
+        "lemma": "postal",
+        "en": "postal",
+        "bn": "ডাক সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "ainsi": {
+        "lemma": "ainsi",
+        "en": "thus / in this way",
+        "bn": "এভাবে / সুতরাং",
+        "pos": "adverb"
+      },
+      "que": {
+        "lemma": "que",
+        "en": "that / what",
+        "bn": "কী / যে",
+        "pos": "pronoun"
+      },
+      "attestation": {
+        "lemma": "attestation",
+        "en": "certificate / formal proof",
+        "bn": "প্রত্যয়নপত্র / সনদ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attestation"
+      },
+      "embauche": {
+        "lemma": "embauche",
+        "en": "hiring / employment",
+        "bn": "চাকরি নিয়োগ / নিয়োগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'embauche"
+      },
+      "tout": {
+        "lemma": "tout",
+        "en": "all / everything",
+        "bn": "সবকিছু",
+        "pos": "pronoun"
+      },
+      "est": {
+        "lemma": "être",
+        "en": "is",
+        "bn": "হয় / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "parfaitement": {
+        "lemma": "parfaitement",
+        "en": "perfectly",
+        "bn": "নিখুঁতভাবে",
+        "pos": "adverb"
+      },
+      "ordre": {
+        "lemma": "ordre",
+        "en": "order / in order",
+        "bn": "ক্রম / শৃঙ্খলা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ordre"
+      },
+      "conforme": {
+        "lemma": "conforme",
+        "en": "compliant / conforming",
+        "bn": "যথাযথ / মানসম্মত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "aux": {
+        "lemma": "à + les",
+        "en": "to the / at the (plural)",
+        "bn": "তে / প্রতি",
+        "pos": "preposition"
+      },
+      "exigences": {
+        "lemma": "exigence",
+        "en": "requirements",
+        "bn": "শর্তাবলী / প্রয়োজনীয়তা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'exigence"
+      },
+      "réglementaires": {
+        "lemma": "réglementaire",
+        "en": "regulatory / legal",
+        "bn": "আইনসম্মত / নিয়ন্ত্রণমূলক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "différentes": {
+        "lemma": "différent",
+        "en": "different (plural)",
+        "bn": "বিভিন্ন / নানা ধরনের",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "options": {
+        "lemma": "option",
+        "en": "options",
+        "bn": "বিকল্পসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'option"
+      },
+      "nous": {
+        "lemma": "nous",
+        "en": "we / us",
+        "bn": "আমরা / আমাদের",
+        "pos": "pronoun"
+      },
+      "proposons": {
+        "lemma": "proposer",
+        "en": "offer (nous)",
+        "bn": "অফার করি / দিই",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "courant": {
+        "lemma": "courant",
+        "en": "current (account) / everyday",
+        "bn": "চলতি (হিসাব) / সাধারণ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "carte": {
+        "lemma": "carte",
+        "en": "card / menu",
+        "bn": "কার্ড / মেনু",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carte"
+      },
+      "internationale": {
+        "lemma": "international",
+        "en": "international (feminine)",
+        "bn": "আন্তর্জাতিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "débit": {
+        "lemma": "débit",
+        "en": "debit (immediate)",
+        "bn": "ডেবিট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le débit"
+      },
+      "immédiat": {
+        "lemma": "immédiat",
+        "en": "immediate",
+        "bn": "তাৎক্ষণিক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "accès": {
+        "lemma": "accès",
+        "en": "access / entrance",
+        "bn": "প্রবেশাধিকার / অ্যাক্সেস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'accès"
+      },
+      "illimité": {
+        "lemma": "illimité",
+        "en": "unlimited",
+        "bn": "সীমাহীন / আনলিমিটেড",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "notre": {
+        "lemma": "notre",
+        "en": "our",
+        "bn": "আমাদের",
+        "pos": "pronoun"
+      },
+      "application": {
+        "lemma": "application",
+        "en": "app / application",
+        "bn": "অ্যাপ্লিকেশন / অ্যাপ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'application"
+      },
+      "mobile": {
+        "lemma": "mobile",
+        "en": "mobile (phone/network)",
+        "bn": "মোবাইল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "sécurisée": {
+        "lemma": "sécuriser",
+        "en": "secured / secure (feminine)",
+        "bn": "সুরক্ষিত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "pourrez": {
+        "lemma": "pouvoir",
+        "en": "will be able to (vous)",
+        "bn": "পারবেন",
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "future"
+      },
+      "suivre": {
+        "lemma": "suivre",
+        "en": "to follow / track",
+        "bn": "অনুসরণ করা / পর্যবেক্ষণ",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "vos": {
+        "lemma": "votre",
+        "en": "your (plural)",
+        "bn": "আপনার",
+        "pos": "pronoun"
+      },
+      "temps": {
+        "lemma": "temps",
+        "en": "time / weather / real-time",
+        "bn": "সময় / আবহাওয়া",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le temps"
+      },
+      "réel": {
+        "lemma": "réel",
+        "en": "real / live",
+        "bn": "বাস্তব",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "bloquer": {
+        "lemma": "bloquer",
+        "en": "to block / freeze (card)",
+        "bn": "ব্লক করা / সাময়িক বন্ধ করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "temporairement": {
+        "lemma": "temporairement",
+        "en": "temporarily",
+        "bn": "সাময়িকভাবে",
+        "pos": "adverb"
+      },
+      "votre": {
+        "lemma": "votre",
+        "en": "your (formal)",
+        "bn": "আপনার",
+        "pos": "pronoun"
+      },
+      "si": {
+        "lemma": "si",
+        "en": "if",
+        "bn": "যদি",
+        "pos": "conjunction"
+      },
+      "nécessaire": {
+        "lemma": "nécessaire",
+        "en": "necessary",
+        "bn": "প্রয়োজনীয়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "effectuer": {
+        "lemma": "effectuer",
+        "en": "to carry out / make (transfer)",
+        "bn": "সম্পন্ন করা / পাঠানো",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "des": {
+        "lemma": "un",
+        "en": "some / of the",
+        "bn": "কিছু / গুলির",
+        "pos": "article",
+        "number": "plural"
+      },
+      "virements": {
+        "lemma": "virement",
+        "en": "bank transfers",
+        "bn": "ব্যাংক ট্রান্সফারসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le virement"
+      },
+      "instantanés": {
+        "lemma": "instantané",
+        "en": "instant (transfers)",
+        "bn": "তাৎক্ষণিক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "gratuitement": {
+        "lemma": "gratuitement",
+        "en": "free of charge",
+        "bn": "বিনামূল্যে",
+        "pos": "adverb"
+      },
+      "valide": {
+        "lemma": "valider",
+        "en": "validates / valid",
+        "bn": "অনুমোদন করে / বৈধ",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "cette": {
+        "lemma": "ce",
+        "en": "this (feminine)",
+        "bn": "এই",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "formule": {
+        "lemma": "formule",
+        "en": "set deal / package",
+        "bn": "প্যাকেজ / সেট মেনু",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la formule"
+      },
+      "moderne": {
+        "lemma": "moderne",
+        "en": "modern",
+        "bn": "আধুনিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "pratique": {
+        "lemma": "pratique",
+        "en": "practical / practice",
+        "bn": "বাস্তবমুখী / ব্যবহারিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "électroniquement": {
+        "lemma": "électroniquement",
+        "en": "electronically",
+        "bn": "ইলেকট্রনিকভাবে",
+        "pos": "adverb"
+      },
+      "convention": {
+        "lemma": "convention",
+        "en": "agreement / convention",
+        "bn": "চুক্তি / সনদ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la convention"
+      },
+      "tablette": {
+        "lemma": "tablette",
+        "en": "tablet computer",
+        "bn": "ট্যাবলেট কম্পিউটার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la tablette"
+      },
+      "tactile": {
+        "lemma": "tactile",
+        "en": "touch (screen)",
+        "bn": "স্পর্শকাতর / টাচস্ক্রিন",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "imprime": {
+        "lemma": "imprimer",
+        "en": "prints",
+        "bn": "প্রিন্ট করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "document": {
+        "lemma": "document",
+        "en": "document",
+        "bn": "নথি / দলিল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le document"
+      },
+      "essentiel": {
+        "lemma": "essentiel",
+        "en": "essential / vital",
+        "bn": "অত্যাবশ্যকীয় / মূল",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "voici": {
+        "lemma": "voici",
+        "en": "here is / here are",
+        "bn": "এই যে / এখানে",
+        "pos": "preposition"
+      },
+      "relevé": {
+        "lemma": "relevé",
+        "en": "statement (RIB / bank / grades)",
+        "bn": "বিবরণী / স্টেটমেন্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le relevé"
+      },
+      "identité": {
+        "lemma": "identité",
+        "en": "identity",
+        "bn": "পরিচয়",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'identité"
+      },
+      "on": {
+        "lemma": "on",
+        "en": "one / we / people",
+        "bn": "আমরা / মানুষ",
+        "pos": "pronoun"
+      },
+      "appelle": {
+        "lemma": "appeler",
+        "en": "calls / names",
+        "bn": "ডাকে / নাম",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "couramment": {
+        "lemma": "couramment",
+        "en": "commonly / fluently",
+        "bn": "সাধারণভাবে / সাবলীলভাবে",
+        "pos": "adverb"
+      },
+      "rib": {
+        "lemma": "RIB",
+        "en": "bank account details statement",
+        "bn": "আরআইবি (ব্যাংক বিবরণী)",
+        "pos": "noun",
+        "ttsText": "Relevé d'identité bancaire",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le RIB"
+      },
+      "devez": {
+        "lemma": "devoir",
+        "en": "must / have to (vous)",
+        "bn": "আপনাকে অবশ্যই হবে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "transmettre": {
+        "lemma": "transmettre",
+        "en": "to transmit / hand over",
+        "bn": "জমা দেওয়া / পাঠানো",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "ce": {
+        "lemma": "ce",
+        "en": "this",
+        "bn": "এই",
+        "pos": "pronoun"
+      },
+      "employeur": {
+        "lemma": "employeur",
+        "en": "employer",
+        "bn": "নিয়োগকর্তা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'employeur"
+      },
+      "versement": {
+        "lemma": "versement",
+        "en": "payment / deposit (wages)",
+        "bn": "টাকা জমা / বেতন প্রদান",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le versement"
+      },
+      "automatique": {
+        "lemma": "automatique",
+        "en": "automatic",
+        "bn": "স্বয়ংক্রিয়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "fin": {
+        "lemma": "fin",
+        "en": "end",
+        "bn": "শেষ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fin"
+      },
+      "mois": {
+        "lemma": "mois",
+        "en": "month / months",
+        "bn": "মাস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mois"
+      },
+      "physique": {
+        "lemma": "physique",
+        "en": "physical (card)",
+        "bn": "বাস্তব / দৃশ্যমান কার্ড",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "code": {
+        "lemma": "code",
+        "en": "PIN code / rule",
+        "bn": "কোড / পিন নম্বর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le code"
+      },
+      "confidentiel": {
+        "lemma": "confidentiel",
+        "en": "confidential",
+        "bn": "গোপনীয়",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "arriveront": {
+        "lemma": "arriver",
+        "en": "will arrive",
+        "bn": "পৌঁছাবে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "courrier": {
+        "lemma": "courrier",
+        "en": "mail / letters",
+        "bn": "চিঠিপত্র / ডাক",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le courrier"
+      },
+      "sécurisé": {
+        "lemma": "sécuriser",
+        "en": "secure",
+        "bn": "সুরক্ষিত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "ici": {
+        "lemma": "ici",
+        "en": "here",
+        "bn": "এখানে",
+        "pos": "adverb"
+      },
+      "semaine": {
+        "lemma": "semaine",
+        "en": "week",
+        "bn": "সপ্তাহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la semaine"
+      },
+      "repart": {
+        "lemma": "repartir",
+        "en": "leaves / goes away",
+        "bn": "প্রস্থান করে / চলে যায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "ravi": {
+        "lemma": "ravi",
+        "en": "delighted / thrilled",
+        "bn": "আনন্দিত / সন্তুষ্ট",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "serein": {
+        "lemma": "serein",
+        "en": "serene / confident",
+        "bn": "নিশ্চিন্ত / প্রশান্ত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "suite": {
+        "lemma": "suite",
+        "en": "following / next steps",
+        "bn": "পরবর্তী ধাপ / ধারাবাহিকতা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la suite"
+      },
+      "démarches": {
+        "lemma": "démarche",
+        "en": "procedures / steps",
+        "bn": "প্রশাসনিক পদক্ষেপসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la démarche"
+      },
+      "qu": {
+        "lemma": "que",
+        "en": "that / what (elision)",
+        "bn": "যা / কী",
+        "pos": "pronoun"
+      }
+    },
+    "quiz": [
+      {
+        "question": "Pourquoi l'ouverture d'un compte bancaire est-elle indispensable pour Kabir ?",
+        "options": [
+          "Pour acheter une voiture de luxe",
+          "Pour recevoir son salaire professionnel et payer ses dépenses quotidiennes",
+          "Pour voyager sans passeport",
+          "Pour changer de numéro de téléphone"
+        ],
+        "answer": 1,
+        "explanation": "The text explains: \"pour percevoir son salaire et régler ses dépenses du quotidien\" (to receive his wages and pay everyday expenses).",
+        "explanationBn": "টেক্সটে বলা আছে: বেতন গ্রহণ করার জন্য এবং দৈনন্দিন খরচ মেটানোর জন্য ব্যাংক অ্যাকাউন্ট প্রয়োজন।"
+      },
+      {
+        "question": "Quel document financier très important la conseillère remet-elle immédiatement à Kabir ?",
+        "options": [
+          "Un chéquier de voyage",
+          "Le Relevé d'Identité Bancaire (RIB)",
+          "Un prêt immobilier",
+          "Une carte d'assurance auto"
+        ],
+        "answer": 1,
+        "explanation": "The advisor prints the RIB: \"Voici votre Relevé d'Identité Bancaire, qu'on appelle couramment le RIB\".",
+        "explanationBn": "ব্যাংক কর্মকর্তা তাকে তাৎক্ষণিকভাবে আরআইবি (RIB - ব্যাংক অ্যাকাউন্ট বিবরণী) প্রদান করেন।"
+      },
+      {
+        "question": "À qui Kabir doit-il transmettre son Relevé d'Identité Bancaire (RIB) ?",
+        "options": [
+          "À son propriétaire d'hôtel",
+          "À son employeur pour le virement de son salaire",
+          "À la boulangère du quartier",
+          "Au chauffeur de taxi"
+        ],
+        "answer": 1,
+        "explanation": "The advisor states: \"Vous devez transmettre ce document à votre employeur pour le versement automatique de votre salaire\".",
+        "explanationBn": "বেতন সরাসরি জমা হওয়ার জন্য এই নথিটি নিজ নিয়োগকর্তা বা প্রতিষ্ঠানে জমা দিতে হয়।"
+      }
+    ]
+  },
+  {
+    "id": "entretien-embauche-informatique",
+    "title": "Entretien d'embauche : technicien informatique",
+    "subtitle": "Présenter son parcours et ses compétences techniques",
+    "level": "A2",
+    "topic": "Travail & Emploi",
+    "wordCount": 317,
+    "estimatedMinutes": 4,
+    "paragraphs": [
+      "Aujourd'hui est un grand jour pour Rahim. Après avoir répondu à une offre d'emploi sur un site spécialisé, il a été convoqué pour un entretien d'embauche au siège d'une entreprise de services numériques à Paris. Le poste proposé est un contrat à durée indéterminée en tant que technicien de support informatique de proximité.",
+      "Rahim arrive vêtu d'une chemise propre et d'un pantalon élégant. À l'accueil, il annonce son arrivée à l'hôtesse qui prévient le recruteur. Deux minutes plus tard, monsieur Bernard, le responsable du support technique, vient le chercher et le conduit dans une salle de réunion lumineuse. Après les salutations d'usage, l'entretien commence dans une ambiance bienveillante.",
+      "Le recruteur invite Rahim à retracer son parcours : « Parlez-moi un peu de vos études et de votre expérience technique. » Rahim s'exprime avec clarté et assurance : « J'ai obtenu un diplôme d'ingénierie en technologie informatique d'une durée de quatre ans. Au cours de ma formation pratique, j'ai appris à configurer des réseaux locaux, installer des systèmes d'exploitation Windows et Linux, et diagnostiquer des pannes matérielles sur des ordinateurs de bureau. »",
+      "Monsieur Bernard pose ensuite une question sur la relation avec les utilisateurs : « Comment réagissez-vous lorsqu'un employé panique à cause d'un ordinateur bloqué avant une réunion urgente ? » Rahim répond avec calme : « Je l'écoute d'abord attentivement pour le rassurer. Ensuite, j'identifie le problème avec méthode sans précipitation, puis je propose une solution rapide ou un poste de remplacement provisoire. L'écoute et la patience sont indispensables dans le support client. »",
+      "Le responsable technique hoche la tête, visiblement conquis par cette attitude professionnelle : « Très bonne réponse. Votre profil technique correspond tout à fait à nos besoins actuels. Nous terminons les entretiens cette semaine et nous vous contacterons lundi prochain pour vous donner notre réponse définitive. » Rahim remercie chaleureusement son interlocuteur et quitte l'immeuble le cœur léger et plein d'espoir."
+    ],
+    "paragraphTranslations": [
+      "Today is a major day for Rahim. After applying to a job listing on a specialized platform, he was invited for a job interview at the headquarters of a digital services company in Paris. The position being offered is an open-ended permanent contract as an on-site IT support technician.",
+      "Rahim arrives dressed in a clean collared shirt and tailored trousers. At the reception desk, he announces his arrival to the receptionist who notifies the recruiter. Two minutes later, Mr. Bernard, the technical support manager, comes down to meet him and leads him into a bright meeting room. After standard greetings, the interview begins in a supportive atmosphere.",
+      "The recruiter invites Rahim to outline his background: \"Tell me a bit about your studies and your technical background.\" Rahim speaks with clarity and confidence: \"I completed a four-year diploma in computer technology engineering. During my hands-on training, I learned how to set up local networks, deploy Windows and Linux operating systems, and troubleshoot hardware failures on desktop computers.\"",
+      "Mr. Bernard then asks a question regarding user interaction: \"How do you handle a situation where an employee is panicking because their workstation crashed right before an urgent meeting?\" Rahim answers calmly: \"First, I listen attentively to reassure them. Next, I diagnose the root issue methodically without rushing, and then offer an immediate fix or a temporary loan workstation. Empathy and patience are fundamental in user support.\"",
+      "The technical manager nods, visibly impressed by this professional mindset: \"Very good answer. Your technical profile aligns perfectly with our present needs. We finish interviews this week and will get back to you next Monday with our final decision.\" Rahim thanks his host warmly and leaves the building with high spirits and optimism."
+    ],
+    "vocabulary": {
+      "aujourd'hui": {
+        "lemma": "aujourd'hui",
+        "en": "today",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "est": {
+        "lemma": "être",
+        "en": "is",
+        "bn": "হয় / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "grand": {
+        "lemma": "grand",
+        "en": "large / big",
+        "bn": "বড়",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "jour": {
+        "lemma": "jour",
+        "en": "day",
+        "bn": "দিন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le jour"
+      },
+      "pour": {
+        "lemma": "pour",
+        "en": "for / in order to",
+        "bn": "জন্য",
+        "pos": "preposition"
+      },
+      "rahim": {
+        "lemma": "Rahim",
+        "en": "Rahim (first name)",
+        "bn": "রহিম (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Rahim"
+      },
+      "après": {
+        "lemma": "après",
+        "en": "after",
+        "bn": "পরে",
+        "pos": "preposition"
+      },
+      "avoir": {
+        "lemma": "avoir",
+        "en": "to have",
+        "bn": "থাকা / পাওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "répondu": {
+        "lemma": "répondre",
+        "en": "answered / applied",
+        "bn": "উত্তর দিয়েছে / আবেদন করেছে",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "offre": {
+        "lemma": "offre",
+        "en": "offer / job offer",
+        "bn": "অফার / চাকরির সুযোগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'offre"
+      },
+      "emploi": {
+        "lemma": "emploi",
+        "en": "job / employment",
+        "bn": "চাকরি / কর্মসংস্থান",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'emploi"
+      },
+      "sur": {
+        "lemma": "sur",
+        "en": "on / upon",
+        "bn": "উপর",
+        "pos": "preposition"
+      },
+      "site": {
+        "lemma": "site",
+        "en": "website / site",
+        "bn": "ওয়েবসাইট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le site"
+      },
+      "spécialisé": {
+        "lemma": "spécialiser",
+        "en": "specialized",
+        "bn": "বিশেষায়িত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "a": {
+        "lemma": "avoir",
+        "en": "has",
+        "bn": "আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "été": {
+        "lemma": "être",
+        "en": "been (past participle) / summer",
+        "bn": "হয়েছে / গ্রীষ্ম",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "convoqué": {
+        "lemma": "convoquer",
+        "en": "summoned / invited",
+        "bn": "আমন্ত্রিত / তলব করা",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "entretien": {
+        "lemma": "entretien",
+        "en": "interview / maintenance",
+        "bn": "ইন্টারভিউ / রক্ষণাবেক্ষণ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entretien"
+      },
+      "embauche": {
+        "lemma": "embauche",
+        "en": "hiring / employment",
+        "bn": "চাকরি নিয়োগ / নিয়োগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'embauche"
+      },
+      "au": {
+        "lemma": "à + le",
+        "en": "with / to the",
+        "bn": "দিয়ে",
+        "pos": "preposition"
+      },
+      "siège": {
+        "lemma": "siège",
+        "en": "headquarters / seat",
+        "bn": "প্রধান কার্যালয় / হেডকোয়ার্টার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le siège"
+      },
+      "entreprise": {
+        "lemma": "entreprise",
+        "en": "company / enterprise",
+        "bn": "প্রতিষ্ঠান / কোম্পানি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entreprise"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "services": {
+        "lemma": "service",
+        "en": "services",
+        "bn": "সেবাসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le service"
+      },
+      "numériques": {
+        "lemma": "numérique",
+        "en": "digital (services)",
+        "bn": "ডিজিটাল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "paris": {
+        "lemma": "Paris",
+        "en": "Paris",
+        "bn": "প্যারিস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Paris"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "poste": {
+        "lemma": "poste",
+        "en": "job position / workstation / mail",
+        "bn": "পদ / ওয়ার্কস্টেশন / ডাক",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le poste"
+      },
+      "proposé": {
+        "lemma": "proposer",
+        "en": "offered / proposed",
+        "bn": "প্রস্তাবিত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "contrat": {
+        "lemma": "contrat",
+        "en": "contract / agreement",
+        "bn": "চুক্তিপত্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le contrat"
+      },
+      "durée": {
+        "lemma": "durée",
+        "en": "duration / length",
+        "bn": "মেয়াদ / সময়কাল",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la durée"
+      },
+      "indéterminée": {
+        "lemma": "indéterminé",
+        "en": "permanent (contract CDI)",
+        "bn": "স্থায়ী (চাকরির চুক্তি)",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "tant": {
+        "lemma": "tant",
+        "en": "as (en tant que)",
+        "bn": "হিসেবে",
+        "pos": "adverb"
+      },
+      "que": {
+        "lemma": "que",
+        "en": "that / what",
+        "bn": "কী / যে",
+        "pos": "pronoun"
+      },
+      "technicien": {
+        "lemma": "technicien",
+        "en": "technician",
+        "bn": "টেকনিশিয়ান / কারিগরি কর্মী",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le technicien"
+      },
+      "support": {
+        "lemma": "support",
+        "en": "support (IT)",
+        "bn": "আইটি সহায়তা / সাপোর্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le support"
+      },
+      "informatique": {
+        "lemma": "informatique",
+        "en": "IT / computing",
+        "bn": "আইটি / কম্পিউটার বিজ্ঞান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'informatique"
+      },
+      "proximité": {
+        "lemma": "proximité",
+        "en": "proximity / on-site (support de proximité)",
+        "bn": "নিকটবর্তী / অন-সাইট",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la proximité"
+      },
+      "aujourd": {
+        "lemma": "aujourd'hui",
+        "en": "today",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "hui": {
+        "lemma": "aujourd'hui",
+        "en": "today (part of aujourd'hui)",
+        "bn": "আজ",
+        "pos": "adverb"
+      },
+      "d": {
+        "lemma": "de",
+        "en": "of / from (elision)",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "arrive": {
+        "lemma": "arriver",
+        "en": "arrives",
+        "bn": "পৌঁছায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "vêtu": {
+        "lemma": "vêtir",
+        "en": "dressed",
+        "bn": "পোশাক পরিহিত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "chemise": {
+        "lemma": "chemise",
+        "en": "shirt / paper folder",
+        "bn": "শার্ট / ফাইল ফোল্ডার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la chemise"
+      },
+      "propre": {
+        "lemma": "propre",
+        "en": "clean / own",
+        "bn": "পরিষ্কার / নিজস্ব",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "pantalon": {
+        "lemma": "pantalon",
+        "en": "trousers / pants",
+        "bn": "প্যান্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le pantalon"
+      },
+      "élégant": {
+        "lemma": "élégant",
+        "en": "smart / elegant",
+        "bn": "মার্জিত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "accueil": {
+        "lemma": "accueil",
+        "en": "reception / welcome",
+        "bn": "অভ্যর্থনা / স্বাগত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'accueil"
+      },
+      "annonce": {
+        "lemma": "annoncer",
+        "en": "announces / states",
+        "bn": "জানায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "arrivée": {
+        "lemma": "arrivée",
+        "en": "arrival",
+        "bn": "আগমন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'arrivée"
+      },
+      "hôtesse": {
+        "lemma": "hôte",
+        "en": "receptionist / hostess",
+        "bn": "অভ্যর্থনাকারী",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'hôte"
+      },
+      "qui": {
+        "lemma": "qui",
+        "en": "who / which",
+        "bn": "যে / কে",
+        "pos": "pronoun"
+      },
+      "prévient": {
+        "lemma": "prévenir",
+        "en": "notifies / informs",
+        "bn": "জানায় / অবহিত করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "recruteur": {
+        "lemma": "recruteur",
+        "en": "recruiter / hiring manager",
+        "bn": "নিয়োগকারী",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le recruteur"
+      },
+      "deux": {
+        "lemma": "deux",
+        "en": "two",
+        "bn": "দুই",
+        "pos": "number"
+      },
+      "minutes": {
+        "lemma": "minute",
+        "en": "minutes",
+        "bn": "মিনিট",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la minute"
+      },
+      "plus": {
+        "lemma": "plus",
+        "en": "more / plus",
+        "bn": "আরও",
+        "pos": "adverb"
+      },
+      "tard": {
+        "lemma": "tard",
+        "en": "late (plus tard = later)",
+        "bn": "দেরিতে (পরে)",
+        "pos": "adverb"
+      },
+      "monsieur": {
+        "lemma": "monsieur",
+        "en": "sir / gentleman",
+        "bn": "জনাব / মহাশয়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
+      },
+      "bernard": {
+        "lemma": "Bernard",
+        "en": "Bernard (name)",
+        "bn": "বার্নার্ড (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Bernard"
+      },
+      "responsable": {
+        "lemma": "responsable",
+        "en": "manager / coordinator / responsible",
+        "bn": "প্রধান কর্মকর্তা / দায়িত্বপ্রাপ্ত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le responsable"
+      },
+      "du": {
+        "lemma": "de + le",
+        "en": "of the / from the",
+        "bn": "দোকানের",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "technique": {
+        "lemma": "technique",
+        "en": "technical / technique",
+        "bn": "কারিগরি / টেকনিক্যাল",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "vient": {
+        "lemma": "venir",
+        "en": "comes / has just (vient de)",
+        "bn": "আসে / এইমাত্র",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "chercher": {
+        "lemma": "chercher",
+        "en": "to look for / fetch",
+        "bn": "খোঁজা / নিয়ে আসা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "conduit": {
+        "lemma": "conduire",
+        "en": "leads / guides",
+        "bn": "নিয়ে যায় / পরিচালনা করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "salle": {
+        "lemma": "salle",
+        "en": "room / hall",
+        "bn": "কক্ষ / রুম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la salle"
+      },
+      "réunion": {
+        "lemma": "réunion",
+        "en": "meeting",
+        "bn": "সভা / মিটিং",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la réunion"
+      },
+      "lumineuse": {
+        "lemma": "lumineux",
+        "en": "bright (feminine)",
+        "bn": "উজ্জ্বল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "salutations": {
+        "lemma": "salutation",
+        "en": "greetings",
+        "bn": "অভিবাদন / সম্ভাষণ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la salutation"
+      },
+      "usage": {
+        "lemma": "usage",
+        "en": "customary / usage (d'usage)",
+        "bn": "প্রচলিত রীতি / ব্যবহার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'usage"
+      },
+      "commence": {
+        "lemma": "commencer",
+        "en": "starts / begins",
+        "bn": "শুরু হয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "ambiance": {
+        "lemma": "ambiance",
+        "en": "atmosphere / mood",
+        "bn": "পরিবেশ / আবহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ambiance"
+      },
+      "bienveillante": {
+        "lemma": "bienveillant",
+        "en": "benevolent / kind / caring",
+        "bn": "সহানুভূতিশীল / অমায়িক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "number": "singular"
+      },
+      "invite": {
+        "lemma": "inviter",
+        "en": "invites",
+        "bn": "আমন্ত্রণ জানায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "retracer": {
+        "lemma": "retracer",
+        "en": "to recount / trace back",
+        "bn": "তুলে ধরা / বর্ণনা করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "parcours": {
+        "lemma": "parcours",
+        "en": "career path / background",
+        "bn": "অভিজ্ঞতার পথ / ক্যারিয়ার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le parcours"
+      },
+      "parlez-moi": {
+        "lemma": "parler",
+        "en": "tell me",
+        "bn": "আমাকে বলুন",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "peu": {
+        "lemma": "peu",
+        "en": "little / slight",
+        "bn": "একটু / অল্প",
+        "pos": "adverb"
+      },
+      "vos": {
+        "lemma": "votre",
+        "en": "your (plural)",
+        "bn": "আপনার",
+        "pos": "pronoun"
+      },
+      "études": {
+        "lemma": "étude",
+        "en": "studies / degree",
+        "bn": "পড়াশোনা / উচ্চশিক্ষা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'étude"
+      },
+      "votre": {
+        "lemma": "votre",
+        "en": "your (formal)",
+        "bn": "আপনার",
+        "pos": "pronoun"
+      },
+      "expérience": {
+        "lemma": "expérience",
+        "en": "experience",
+        "bn": "অভিজ্ঞতা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'expérience"
+      },
+      "exprime": {
+        "lemma": "exprimer",
+        "en": "expresses oneself",
+        "bn": "ব্যক্ত করে / প্রকাশ করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "clarté": {
+        "lemma": "clarté",
+        "en": "clarity",
+        "bn": "স্পষ্টতা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la clarté"
+      },
+      "assurance": {
+        "lemma": "assurance",
+        "en": "confidence / insurance",
+        "bn": "আত্মবিশ্বাস / নিশ্চয়তা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'assurance"
+      },
+      "ai": {
+        "lemma": "avoir",
+        "en": "have (first person: j'ai)",
+        "bn": "আছে (আমার আছে)",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "obtenu": {
+        "lemma": "obtenir",
+        "en": "obtained / completed",
+        "bn": "অর্জন করেছে / পেয়েছে",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "diplôme": {
+        "lemma": "diplôme",
+        "en": "diploma / degree",
+        "bn": "সনদ / ডিপ্লোমা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le diplôme"
+      },
+      "ingénierie": {
+        "lemma": "ingénierie",
+        "en": "engineering",
+        "bn": "প্রকৌশল / ইঞ্জিনিয়ারিং",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ingénierie"
+      },
+      "technologie": {
+        "lemma": "technologie",
+        "en": "technology",
+        "bn": "প্রযুক্তি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la technologie"
+      },
+      "quatre": {
+        "lemma": "quatre",
+        "en": "four",
+        "bn": "চার",
+        "pos": "number"
+      },
+      "ans": {
+        "lemma": "an",
+        "en": "years",
+        "bn": "বছর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'an"
+      },
+      "cours": {
+        "lemma": "cours",
+        "en": "class / course / in progress",
+        "bn": "ক্লাস / কোর্স / চলমান",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cours"
+      },
+      "ma": {
+        "lemma": "son",
+        "en": "my (feminine)",
+        "bn": "আমার",
+        "pos": "pronoun"
+      },
+      "formation": {
+        "lemma": "formation",
+        "en": "training course / studies",
+        "bn": "প্রশিক্ষণ / কোর্স",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la formation"
+      },
+      "pratique": {
+        "lemma": "pratique",
+        "en": "practical / practice",
+        "bn": "বাস্তবমুখী / ব্যবহারিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "appris": {
+        "lemma": "apprendre",
+        "en": "learned",
+        "bn": "শিখেছে",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "configurer": {
+        "lemma": "configurer",
+        "en": "to configure / set up",
+        "bn": "কনফিগার করা / সেটআপ করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "des": {
+        "lemma": "un",
+        "en": "some / of the",
+        "bn": "কিছু / গুলির",
+        "pos": "article",
+        "number": "plural"
+      },
+      "réseaux": {
+        "lemma": "réseau",
+        "en": "networks",
+        "bn": "নেটওয়ার্কসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le réseau"
+      },
+      "locaux": {
+        "lemma": "local",
+        "en": "premises / local (plural)",
+        "bn": "কক্ষসমূহ / স্থানীয়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le local"
+      },
+      "installer": {
+        "lemma": "installer",
+        "en": "to install / deploy",
+        "bn": "ইনস্টল করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "systèmes": {
+        "lemma": "système",
+        "en": "systems",
+        "bn": "সিস্টেমসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le système"
+      },
+      "exploitation": {
+        "lemma": "système d'exploitation",
+        "en": "operating system",
+        "bn": "অপারেটিং সিস্টেম",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le système d'exploitation"
+      },
+      "windows": {
+        "lemma": "Windows",
+        "en": "Microsoft Windows OS",
+        "bn": "উইন্ডোজ অপারেটিং সিস্টেম",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Windows"
+      },
+      "linux": {
+        "lemma": "Linux",
+        "en": "Linux operating system",
+        "bn": "লিনাক্স অপারেটিং সিস্টেম",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Linux"
+      },
+      "diagnostiquer": {
+        "lemma": "diagnostiquer",
+        "en": "to troubleshoot / diagnose",
+        "bn": "ত্রুটি চিহ্নিত করা / নির্ণয় করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "pannes": {
+        "lemma": "panne",
+        "en": "breakdowns / hardware failures",
+        "bn": "হার্ডওয়্যার ত্রুটিসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la panne"
+      },
+      "matérielles": {
+        "lemma": "matériel",
+        "en": "hardware (failures)",
+        "bn": "হার্ডওয়্যার সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "ordinateurs": {
+        "lemma": "ordinateur",
+        "en": "computers",
+        "bn": "কম্পিউটারসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'ordinateur"
+      },
+      "bureau": {
+        "lemma": "bureau",
+        "en": "office / desk",
+        "bn": "অফিস / পড়ার টেবিল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bureau"
+      },
+      "parlez": {
+        "lemma": "parler",
+        "en": "speak / tell (parlez-moi)",
+        "bn": "বলুন",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "moi": {
+        "lemma": "moi",
+        "en": "me",
+        "bn": "আমাকে / আমি",
+        "pos": "pronoun"
+      },
+      "s": {
+        "lemma": "se",
+        "en": "himself / herself (elision)",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "j": {
+        "lemma": "je",
+        "en": "I (elision)",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "pose": {
+        "lemma": "poser",
+        "en": "places / puts / asks",
+        "bn": "রাখে / জিজ্ঞেস করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "ensuite": {
+        "lemma": "ensuite",
+        "en": "then / next",
+        "bn": "তারপর",
+        "pos": "adverb"
+      },
+      "question": {
+        "lemma": "question",
+        "en": "question",
+        "bn": "প্রশ্ন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la question"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "relation": {
+        "lemma": "relation",
+        "en": "relationship / interaction",
+        "bn": "সম্পর্ক / যোগাযোগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la relation"
+      },
+      "utilisateurs": {
+        "lemma": "utilisateur",
+        "en": "users",
+        "bn": "ব্যবহারকারীগণ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'utilisateur"
+      },
+      "comment": {
+        "lemma": "comment",
+        "en": "how / what",
+        "bn": "কেমন / কীভাবে / কী",
+        "pos": "adverb"
+      },
+      "réagissez-vous": {
+        "lemma": "réagir",
+        "en": "how do you react",
+        "bn": "আপনি কীভাবে প্রতিক্রিয়া জানান",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "lorsqu'un": {
+        "lemma": "lorsque",
+        "en": "when a / when an",
+        "bn": "যখন একজন",
+        "pos": "conjunction"
+      },
+      "employé": {
+        "lemma": "employé",
+        "en": "employee",
+        "bn": "কর্মচারী",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'employé"
+      },
+      "panique": {
+        "lemma": "paniquer",
+        "en": "panics",
+        "bn": "আতঙ্কিত হয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "cause": {
+        "lemma": "cause",
+        "en": "cause / reason",
+        "bn": "কারণ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la cause"
+      },
+      "ordinateur": {
+        "lemma": "ordinateur",
+        "en": "computer",
+        "bn": "কম্পিউটার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ordinateur"
+      },
+      "bloqué": {
+        "lemma": "bloquer",
+        "en": "blocked / frozen / stuck",
+        "bn": "আটকে যাওয়া / বন্ধ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "avant": {
+        "lemma": "avant",
+        "en": "before",
+        "bn": "আগে",
+        "pos": "preposition"
+      },
+      "urgente": {
+        "lemma": "urgent",
+        "en": "urgent (feminine)",
+        "bn": "জরুরি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "répond": {
+        "lemma": "répondre",
+        "en": "answers / replies",
+        "bn": "উত্তর দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "calme": {
+        "lemma": "calme",
+        "en": "calm / quiet",
+        "bn": "শান্ত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "je": {
+        "lemma": "je",
+        "en": "I",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "écoute": {
+        "lemma": "écouter",
+        "en": "listens / active listening",
+        "bn": "শোনে / মনোযোগ দিয়ে শোনা",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "abord": {
+        "lemma": "d'abord",
+        "en": "first of all",
+        "bn": "প্রথমে / শুরুতে",
+        "pos": "adverb"
+      },
+      "attentivement": {
+        "lemma": "attentivement",
+        "en": "attentively / carefully",
+        "bn": "মনোযোগ সহকারে",
+        "pos": "adverb"
+      },
+      "rassurer": {
+        "lemma": "rassurer",
+        "en": "to reassure",
+        "bn": "আশ্বস্ত করা / সাহস দেওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "identifie": {
+        "lemma": "identifier",
+        "en": "identifies / detects",
+        "bn": "চিহ্নিত করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "problème": {
+        "lemma": "problème",
+        "en": "problem / issue",
+        "bn": "সমস্যা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le problème"
+      },
+      "méthode": {
+        "lemma": "méthode",
+        "en": "method / structured way",
+        "bn": "পদ্ধতি / নিয়ম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la méthode"
+      },
+      "sans": {
+        "lemma": "sans",
+        "en": "without",
+        "bn": "ছাড়া / বিহীন",
+        "pos": "preposition"
+      },
+      "précipitation": {
+        "lemma": "précipitation",
+        "en": "haste / rushing",
+        "bn": "তাড়াহুড়ো",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la précipitation"
+      },
+      "puis": {
+        "lemma": "puis",
+        "en": "then",
+        "bn": "তারপর",
+        "pos": "adverb"
+      },
+      "propose": {
+        "lemma": "proposer",
+        "en": "offers / suggests",
+        "bn": "প্রস্তাব দেয় / প্রদান করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "solution": {
+        "lemma": "solution",
+        "en": "solution",
+        "bn": "সমাধান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la solution"
+      },
+      "rapide": {
+        "lemma": "rapide",
+        "en": "fast / quick",
+        "bn": "দ্রুত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "ou": {
+        "lemma": "ou",
+        "en": "or",
+        "bn": "অথবা",
+        "pos": "conjunction"
+      },
+      "remplacement": {
+        "lemma": "remplacement",
+        "en": "replacement (loan machine)",
+        "bn": "প্রতিস্থাপন / বিকল্প",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le remplacement"
+      },
+      "provisoire": {
+        "lemma": "provisoire",
+        "en": "provisional / temporary",
+        "bn": "সাময়িক / অস্থায়ী",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "patience": {
+        "lemma": "patience",
+        "en": "patience",
+        "bn": "ধৈর্য",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la patience"
+      },
+      "sont": {
+        "lemma": "être",
+        "en": "are (plural)",
+        "bn": "হয় / আছেন",
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
+      },
+      "indispensables": {
+        "lemma": "indispensable",
+        "en": "indispensable (plural)",
+        "bn": "অপরিহার্য",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "client": {
+        "lemma": "client",
+        "en": "customer / client",
+        "bn": "গ্রাহক",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le client"
+      },
+      "réagissez": {
+        "lemma": "réagir",
+        "en": "react (vous)",
+        "bn": "প্রতিক্রিয়া জানান",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "vous": {
+        "lemma": "vous",
+        "en": "you (formal/plural)",
+        "bn": "আপনি / আপনারা",
+        "pos": "pronoun"
+      },
+      "lorsqu": {
+        "lemma": "lorsque",
+        "en": "when / whenever (before vowel)",
+        "bn": "যখন",
+        "pos": "conjunction"
+      },
+      "hoche": {
+        "lemma": "hocher",
+        "en": "nods (head)",
+        "bn": "মাথা নাড়ায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "tête": {
+        "lemma": "tête",
+        "en": "head / headache",
+        "bn": "মাথা / মাথা ব্যথা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la tête"
+      },
+      "visiblement": {
+        "lemma": "visiblement",
+        "en": "visibly / clearly",
+        "bn": "দৃশ্যমানভাবে / স্পষ্টতই",
+        "pos": "adverb"
+      },
+      "conquis": {
+        "lemma": "conquérir",
+        "en": "won over / impressed",
+        "bn": "মুগ্ধ / সন্তুষ্ট",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "par": {
+        "lemma": "par",
+        "en": "by",
+        "bn": "দ্বারা / দিয়ে",
+        "pos": "preposition"
+      },
+      "cette": {
+        "lemma": "ce",
+        "en": "this (feminine)",
+        "bn": "এই",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "attitude": {
+        "lemma": "attitude",
+        "en": "attitude / mindset",
+        "bn": "মনোভাব / আচরণ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attitude"
+      },
+      "professionnelle": {
+        "lemma": "professionnel",
+        "en": "professional (feminine)",
+        "bn": "পেশাদার",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "très": {
+        "lemma": "très",
+        "en": "very",
+        "bn": "খুব",
+        "pos": "adverb"
+      },
+      "bonne": {
+        "lemma": "bon",
+        "en": "good",
+        "bn": "ভালো",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "réponse": {
+        "lemma": "réponse",
+        "en": "answer / reply / decision",
+        "bn": "উত্তর / সিদ্ধান্ত",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la réponse"
+      },
+      "profil": {
+        "lemma": "profil",
+        "en": "profile / background",
+        "bn": "প্রোফাইল / যোগ্যতা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le profil"
+      },
+      "correspond": {
+        "lemma": "correspondre",
+        "en": "matches / corresponds",
+        "bn": "মিলে যায় / মানানসই হয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "tout": {
+        "lemma": "tout",
+        "en": "all / everything",
+        "bn": "সবকিছু",
+        "pos": "pronoun"
+      },
+      "fait": {
+        "lemma": "faire",
+        "en": "makes / does / fact",
+        "bn": "করে / ঘটনা",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "nos": {
+        "lemma": "notre",
+        "en": "our (plural)",
+        "bn": "আমাদের",
+        "pos": "pronoun"
+      },
+      "besoins": {
+        "lemma": "besoin",
+        "en": "needs / requirements",
+        "bn": "প্রয়োজনীয়তা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le besoin"
+      },
+      "actuels": {
+        "lemma": "actuel",
+        "en": "current / present",
+        "bn": "বর্তমান / চলমান",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "nous": {
+        "lemma": "nous",
+        "en": "we / us",
+        "bn": "আমরা / আমাদের",
+        "pos": "pronoun"
+      },
+      "terminons": {
+        "lemma": "terminer",
+        "en": "finish (nous)",
+        "bn": "শেষ করছি",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "entretiens": {
+        "lemma": "entretien",
+        "en": "interviews",
+        "bn": "ইন্টারভিউগুলো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'entretien"
+      },
+      "semaine": {
+        "lemma": "semaine",
+        "en": "week",
+        "bn": "সপ্তাহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la semaine"
+      },
+      "contacterons": {
+        "lemma": "contacter",
+        "en": "will contact (future)",
+        "bn": "যোগাযোগ করব",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "lundi": {
+        "lemma": "lundi",
+        "en": "Monday",
+        "bn": "সোমবার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le lundi"
+      },
+      "prochain": {
+        "lemma": "prochain",
+        "en": "next",
+        "bn": "পরবর্তী",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "donner": {
+        "lemma": "donner",
+        "en": "to give",
+        "bn": "দেওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "notre": {
+        "lemma": "notre",
+        "en": "our",
+        "bn": "আমাদের",
+        "pos": "pronoun"
+      },
+      "définitive": {
+        "lemma": "définitif",
+        "en": "final / definitive",
+        "bn": "চূড়ান্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "remercie": {
+        "lemma": "remercier",
+        "en": "thanks",
+        "bn": "ধন্যবাদ জানায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "chaleureusement": {
+        "lemma": "chaleureusement",
+        "en": "warmly",
+        "bn": "উষ্ণভাবে / আন্তরিকভাবে",
+        "pos": "adverb"
+      },
+      "interlocuteur": {
+        "lemma": "interlocuteur",
+        "en": "interviewer / conversational partner",
+        "bn": "কথোপকথনকারী / কর্মকর্তা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'interlocuteur"
+      },
+      "quitte": {
+        "lemma": "quitter",
+        "en": "leaves / exits",
+        "bn": "বের হয় / ছেড়ে যায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "immeuble": {
+        "lemma": "immeuble",
+        "en": "apartment building",
+        "bn": "বিল্ডিং / বহুতল ভবন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'immeuble"
+      },
+      "c": {
+        "lemma": "ce",
+        "en": "it / this (c'est)",
+        "bn": "এটা / এই",
+        "pos": "pronoun"
+      },
+      "ur": {
+        "lemma": "heure",
+        "en": "hour",
+        "bn": "ঘণ্টা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'heure"
+      },
+      "léger": {
+        "lemma": "léger",
+        "en": "light / carefree",
+        "bn": "হালকা / ভারমুক্ত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "plein": {
+        "lemma": "plein",
+        "en": "full",
+        "bn": "পূর্ণ / ভরা",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "espoir": {
+        "lemma": "espoir",
+        "en": "hope",
+        "bn": "আশা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'espoir"
+      }
+    },
+    "quiz": [
+      {
+        "question": "Pour quel poste informatique Rahim passe-t-il cet entretien ?",
+        "options": [
+          "Développeur d'applications mobiles senior",
+          "Technicien de support informatique de proximité",
+          "Directeur financier de l'entreprise",
+          "Vendeur de téléphones en magasin"
+        ],
+        "answer": 1,
+        "explanation": "The text states: \"Le poste proposé est un contrat à durée indéterminée en tant que technicien de support informatique de proximité\".",
+        "explanationBn": "গল্পে স্পষ্ট উল্লেখ আছে: পদটি হলো অন-সাইট আইটি সাপোর্ট টেকনিশিয়ান।"
+      },
+      {
+        "question": "Quelle formation académique Rahim a-t-il suivie avant d'arriver en France ?",
+        "options": [
+          "Des études de médecine",
+          "Un diplôme d'ingénierie en technologie informatique de quatre ans",
+          "Une école de cuisine gastronomique",
+          "Une formation en droit international"
+        ],
+        "answer": 1,
+        "explanation": "Rahim explains: \"J'ai obtenu un diplôme d'ingénierie en technologie informatique d'une durée de quatre ans\".",
+        "explanationBn": "রহিম জানায়: সে চার বছর মেয়াদি কম্পিউটার টেকনোলজি ইঞ্জিনিয়ারিং ডিপ্লোমা সম্পন্ন করেছে।"
+      },
+      {
+        "question": "Quelle attitude Rahim privilégie-t-il face à un utilisateur paniqué ?",
+        "options": [
+          "L'ignorer et fermer le ticket",
+          "L'écouter patiemment, le rassurer et trouver une solution avec méthode",
+          "Lui demander de réparer lui-même son ordinateur",
+          "Quitter la pièce"
+        ],
+        "answer": 1,
+        "explanation": "Rahim highlights listening calmly and using a structured method: \"L'écoute et la patience sont indispensables dans le support client\".",
+        "explanationBn": "রহিম জানায় ধৈর্য সহকারে কথা শুনে শান্ত করা এবং নিয়মতান্ত্রিকভাবে দ্রুত সমাধান দেওয়াই তার নীতি।"
+      }
+    ]
+  },
+  {
+    "id": "rendez-vous-france-travail",
+    "title": "Rendez-vous à France Travail",
+    "subtitle": "Faire le point sur son projet professionnel avec un conseiller",
+    "level": "A2",
+    "topic": "Emploi & Formation",
+    "wordCount": 292,
+    "estimatedMinutes": 4,
+    "paragraphs": [
+      "Installé en France depuis quelques mois, Fahim s'est inscrit en ligne sur le portail national de France Travail pour bénéficier d'un accompagnement personnalisé dans sa recherche d'emploi. Ce matin, il se rend à son premier entretien obligatoire dans l'agence locale de sa circonscription.",
+      "À l'accueil de l'agence, Fahim tape son numéro d'identifiant à huit chiffres sur la borne interactive et s'installe dans l'espace d'attente. Quelques instants plus tard, un conseiller pour l'emploi, monsieur Vasseur, vient à sa rencontre avec un sourire encourageant : « Bonjour monsieur Fahim, bienvenue. Venez avec moi dans mon bureau pour que nous fassions le point ensemble sur votre situation. »",
+      "L'entretien débute par l'analyse du projet professionnel. Fahim remet son curriculum vitae imprimé au conseiller : « J'ai une formation solide de quatre ans en technologie informatique et j'aimerais beaucoup travailler dans la maintenance de réseaux ou l'assistance aux utilisateurs. Cependant, j'ai parfois du mal à comprendre tous les codes du marché du travail français. »",
+      "Monsieur Vasseur étudie le CV avec grand intérêt : « Vos compétences techniques sont très appréciées par les recruteurs du secteur informatique. Pour maximiser vos chances d'embauche, nous allons organiser une demande d'attestation de comparabilité pour faire reconnaître officiellement votre diplôme étranger. De plus, je vous inscris à un atelier de deux demi-journées pour adapter votre CV aux standards français et vous entraîner aux entretiens oraux. »",
+      "Le conseiller paramètre également l'espace personnel de Fahim sur l'application mobile pour qu'il reçoive des alertes d'offres ciblées chaque matin : « Vous avez un excellent profil et votre motivation est remarquable. Avec ces démarches et cet accompagnement, vous allez trouver une opportunité intéressante très prochainement. » Fahim quitte l'agence avec une feuille de route claire et une confiance renforcée pour son avenir professionnel."
+    ],
+    "paragraphTranslations": [
+      "Having settled in France a few months ago, Fahim registered online on the France Travail national portal to benefit from tailored guidance in his job search. This morning, he attends his first mandatory interview at the local agency in his district.",
+      "At the agency reception, Fahim types his eight-digit user identification number on the interactive kiosk and sits down in the waiting area. Moments later, an employment advisor, Mr. Vasseur, comes out to greet him with an encouraging smile: \"Good morning Mr. Fahim, welcome. Come with me to my office so we can assess your situation together.\"",
+      "The meeting begins with an analysis of his professional goals. Fahim hands his printed resume over to the advisor: \"I have a solid four-year training in computer technology and I would love to work in network maintenance or user support. However, I sometimes struggle to navigate all the unwritten norms of the French job market.\"",
+      "Mr. Vasseur reviews the resume with great interest: \"Your technical skills are highly sought after by IT recruiters. To maximize your hiring chances, we will arrange an application for an official comparability certificate to formally recognize your foreign diploma. Additionally, I am signing you up for a two-half-day workshop to tailor your CV to French standards and practice oral interviews.\"",
+      "The advisor also configures Fahim's online dashboard on the mobile app so he receives targeted job alerts every morning: \"You have an excellent profile and remarkable motivation. With these steps and this coaching, you will find an exciting opportunity very soon.\" Fahim leaves the branch with a clear roadmap and strengthened confidence for his professional future."
+    ],
+    "vocabulary": {
+      "installé": {
+        "lemma": "installer",
+        "en": "settled in / installed",
+        "bn": "বসবাস শুরু করেছে",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "france": {
+        "lemma": "France",
+        "en": "France",
+        "bn": "ফ্রান্স",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la France"
+      },
+      "depuis": {
+        "lemma": "depuis",
+        "en": "since / for",
+        "bn": "ধরে / যাবত",
+        "pos": "preposition"
+      },
+      "quelques": {
+        "lemma": "quelque",
+        "en": "a few / some",
+        "bn": "কয়েকটি / কিছু",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "mois": {
+        "lemma": "mois",
+        "en": "month / months",
+        "bn": "মাস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mois"
+      },
+      "fahim": {
+        "lemma": "Fahim",
+        "en": "Fahim (first name)",
+        "bn": "ফাহিম (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Fahim"
+      },
+      "est": {
+        "lemma": "être",
+        "en": "is",
+        "bn": "হয় / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "inscrit": {
+        "lemma": "inscrire",
+        "en": "enrolled / registered",
+        "bn": "নিবন্ধিত করেছে",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "ligne": {
+        "lemma": "ligne",
+        "en": "line (metro / telephone / online)",
+        "bn": "লাইন / সংযোগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la ligne"
+      },
+      "sur": {
+        "lemma": "sur",
+        "en": "on / upon",
+        "bn": "উপর",
+        "pos": "preposition"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "portail": {
+        "lemma": "portail",
+        "en": "web portal / gate",
+        "bn": "ওয়েব পোর্টাল / গেট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le portail"
+      },
+      "national": {
+        "lemma": "national",
+        "en": "national",
+        "bn": "জাতীয়",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "travail": {
+        "lemma": "France Travail",
+        "en": "France Travail (national employment agency)",
+        "bn": "ফ্রান্স ত্রাভাই (কর্মসংস্থান সংস্থা)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "France Travail"
+      },
+      "pour": {
+        "lemma": "pour",
+        "en": "for / in order to",
+        "bn": "জন্য",
+        "pos": "preposition"
+      },
+      "bénéficier": {
+        "lemma": "bénéficier",
+        "en": "to benefit / receive",
+        "bn": "সুবিধা পাওয়া / লাভ করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "accompagnement": {
+        "lemma": "accompagnement",
+        "en": "guidance / support / coaching",
+        "bn": "দিকনির্দেশনা / সহায়তা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'accompagnement"
+      },
+      "personnalisé": {
+        "lemma": "personnaliser",
+        "en": "personalized / tailored",
+        "bn": "ব্যক্তিমাফিক / নিজস্বকৃত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "sa": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "recherche": {
+        "lemma": "recherche",
+        "en": "search / job hunting",
+        "bn": "অনুসন্ধান / খোঁজা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la recherche"
+      },
+      "emploi": {
+        "lemma": "emploi",
+        "en": "job / employment",
+        "bn": "চাকরি / কর্মসংস্থান",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'emploi"
+      },
+      "ce": {
+        "lemma": "ce",
+        "en": "this",
+        "bn": "এই",
+        "pos": "pronoun"
+      },
+      "matin": {
+        "lemma": "matin",
+        "en": "morning",
+        "bn": "সকাল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "se": {
+        "lemma": "se",
+        "en": "himself / herself / oneself",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "rend": {
+        "lemma": "rendre",
+        "en": "returns / gives back",
+        "bn": "ফেরত দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "premier": {
+        "lemma": "premier",
+        "en": "first",
+        "bn": "প্রথম",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "entretien": {
+        "lemma": "entretien",
+        "en": "interview / maintenance",
+        "bn": "ইন্টারভিউ / রক্ষণাবেক্ষণ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entretien"
+      },
+      "obligatoire": {
+        "lemma": "obligatoire",
+        "en": "mandatory / compulsory",
+        "bn": "বাধ্যতামূলক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "agence": {
+        "lemma": "agence",
+        "en": "agency / branch",
+        "bn": "সংস্থা / এজেন্সি / শাখা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'agence"
+      },
+      "locale": {
+        "lemma": "local",
+        "en": "local (feminine)",
+        "bn": "স্থানীয়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "circonscription": {
+        "lemma": "circonscription",
+        "en": "district / area",
+        "bn": "এলাকা / প্রশাসনিক এলাকা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la circonscription"
+      },
+      "s": {
+        "lemma": "se",
+        "en": "himself / herself (elision)",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "d": {
+        "lemma": "de",
+        "en": "of / from (elision)",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "number": "singular"
+      },
+      "accueil": {
+        "lemma": "accueil",
+        "en": "reception / welcome",
+        "bn": "অভ্যর্থনা / স্বাগত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'accueil"
+      },
+      "tape": {
+        "lemma": "taper",
+        "en": "types / keys in",
+        "bn": "টাইপ করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "numéro": {
+        "lemma": "numéro",
+        "en": "number / ticket number",
+        "bn": "নম্বর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le numéro"
+      },
+      "identifiant": {
+        "lemma": "identifiant",
+        "en": "user ID / login number",
+        "bn": "ব্যবহারকারী নম্বর / আইডি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'identifiant"
+      },
+      "huit": {
+        "lemma": "huit",
+        "en": "eight",
+        "bn": "আট",
+        "pos": "number"
+      },
+      "chiffres": {
+        "lemma": "chiffre",
+        "en": "digits / figures",
+        "bn": "সংখ্যা / ডিজিট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le chiffre"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "borne": {
+        "lemma": "borne",
+        "en": "terminal / kiosk machine",
+        "bn": "মেশিন / কিয়স্ক",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la borne"
+      },
+      "interactive": {
+        "lemma": "interactif",
+        "en": "interactive (feminine)",
+        "bn": "ইন্টারেক্টিভ",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "installe": {
+        "lemma": "installer",
+        "en": "settles in / installs",
+        "bn": "বসে / ইনস্টল করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "espace": {
+        "lemma": "espace",
+        "en": "space / area / user dashboard",
+        "bn": "জায়গা / ড্যাশবোর্ড",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'espace"
+      },
+      "attente": {
+        "lemma": "attente",
+        "en": "waiting",
+        "bn": "অপেক্ষা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attente"
+      },
+      "instants": {
+        "lemma": "instant",
+        "en": "moments",
+        "bn": "মুহূর্তগুলো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'instant"
+      },
+      "plus": {
+        "lemma": "plus",
+        "en": "more / plus",
+        "bn": "আরও",
+        "pos": "adverb"
+      },
+      "tard": {
+        "lemma": "tard",
+        "en": "late (plus tard = later)",
+        "bn": "দেরিতে (পরে)",
+        "pos": "adverb"
+      },
+      "conseiller": {
+        "lemma": "conseiller",
+        "en": "advisor / counselor",
+        "bn": "পরামর্শক / কর্মকর্তা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le conseiller"
+      },
+      "monsieur": {
+        "lemma": "monsieur",
+        "en": "sir / gentleman",
+        "bn": "জনাব / মহাশয়",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "monsieur"
+      },
+      "vasseur": {
+        "lemma": "Vasseur",
+        "en": "Vasseur (surname)",
+        "bn": "ভাসুর (পদবি)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Vasseur"
+      },
+      "vient": {
+        "lemma": "venir",
+        "en": "comes / has just (vient de)",
+        "bn": "আসে / এইমাত্র",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "rencontre": {
+        "lemma": "rencontre",
+        "en": "meeting / encounter",
+        "bn": "সাক্ষাৎ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la rencontre"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "sourire": {
+        "lemma": "sourire",
+        "en": "smile",
+        "bn": "হাসি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le sourire"
+      },
+      "encourageant": {
+        "lemma": "encourager",
+        "en": "encouraging",
+        "bn": "উৎসাহব্যঞ্জক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "bonjour": {
+        "lemma": "bonjour",
+        "en": "hello / good day",
+        "bn": "শুভ সকাল / নমস্কার",
+        "pos": "expression"
+      },
+      "bienvenue": {
+        "lemma": "bienvenue",
+        "en": "welcome",
+        "bn": "স্বাগতম",
+        "pos": "expression"
+      },
+      "venez": {
+        "lemma": "venir",
+        "en": "come (imperative/formal)",
+        "bn": "আসুন",
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
+      },
+      "moi": {
+        "lemma": "moi",
+        "en": "me",
+        "bn": "আমাকে / আমি",
+        "pos": "pronoun"
+      },
+      "mon": {
+        "lemma": "son",
+        "en": "my (masculine)",
+        "bn": "আমার",
+        "pos": "pronoun"
+      },
+      "bureau": {
+        "lemma": "bureau",
+        "en": "office / desk",
+        "bn": "অফিস / পড়ার টেবিল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bureau"
+      },
+      "que": {
+        "lemma": "que",
+        "en": "that / what",
+        "bn": "কী / যে",
+        "pos": "pronoun"
+      },
+      "nous": {
+        "lemma": "nous",
+        "en": "we / us",
+        "bn": "আমরা / আমাদের",
+        "pos": "pronoun"
+      },
+      "fassions": {
+        "lemma": "faire",
+        "en": "make / do (subjunctive: que nous fassions)",
+        "bn": "করি",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "point": {
+        "lemma": "point",
+        "en": "point / assessment (faire le point)",
+        "bn": "পর্যালোচনা / বিন্দু",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le point"
+      },
+      "ensemble": {
+        "lemma": "ensemble",
+        "en": "together",
+        "bn": "একসাথে",
+        "pos": "adverb"
+      },
+      "votre": {
+        "lemma": "votre",
+        "en": "your (formal)",
+        "bn": "আপনার",
+        "pos": "pronoun"
+      },
+      "situation": {
+        "lemma": "situation",
+        "en": "situation / circumstances",
+        "bn": "পরিস্থিতি / অবস্থা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la situation"
+      },
+      "débute": {
+        "lemma": "débuter",
+        "en": "begins / starts",
+        "bn": "শুরু হয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "par": {
+        "lemma": "par",
+        "en": "by",
+        "bn": "দ্বারা / দিয়ে",
+        "pos": "preposition"
+      },
+      "analyse": {
+        "lemma": "analyse",
+        "en": "analysis / review",
+        "bn": "বিশ্লেষণ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'analyse"
+      },
+      "du": {
+        "lemma": "de + le",
+        "en": "of the / from the",
+        "bn": "দোকানের",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "projet": {
+        "lemma": "projet",
+        "en": "project / professional plan",
+        "bn": "প্রকল্প / পরিকল্পনা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le projet"
+      },
+      "professionnel": {
+        "lemma": "professionnel",
+        "en": "professional",
+        "bn": "পেশাদার",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "remet": {
+        "lemma": "remettre",
+        "en": "hands over / gives",
+        "bn": "হস্তান্তর করে / দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "curriculum": {
+        "lemma": "curriculum vitae",
+        "en": "curriculum (CV)",
+        "bn": "সিভি / জীবনবৃত্তান্ত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le curriculum vitae"
+      },
+      "vitae": {
+        "lemma": "curriculum vitae",
+        "en": "vitae (CV)",
+        "bn": "জীবনবৃত্তান্ত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le curriculum vitae"
+      },
+      "imprimé": {
+        "lemma": "imprimer",
+        "en": "printed",
+        "bn": "মুদ্রিত / প্রিন্ট করা",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "au": {
+        "lemma": "à + le",
+        "en": "with / to the",
+        "bn": "দিয়ে",
+        "pos": "preposition"
+      },
+      "ai": {
+        "lemma": "avoir",
+        "en": "have (first person: j'ai)",
+        "bn": "আছে (আমার আছে)",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "formation": {
+        "lemma": "formation",
+        "en": "training course / studies",
+        "bn": "প্রশিক্ষণ / কোর্স",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la formation"
+      },
+      "solide": {
+        "lemma": "solide",
+        "en": "solid / sturdy",
+        "bn": "শক্তিশালী / মজবুত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "quatre": {
+        "lemma": "quatre",
+        "en": "four",
+        "bn": "চার",
+        "pos": "number"
+      },
+      "ans": {
+        "lemma": "an",
+        "en": "years",
+        "bn": "বছর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'an"
+      },
+      "technologie": {
+        "lemma": "technologie",
+        "en": "technology",
+        "bn": "প্রযুক্তি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la technologie"
+      },
+      "informatique": {
+        "lemma": "informatique",
+        "en": "IT / computing",
+        "bn": "আইটি / কম্পিউটার বিজ্ঞান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'informatique"
+      },
+      "aimerais": {
+        "lemma": "aimer",
+        "en": "would like",
+        "bn": "চাই / পছন্দ করব",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "beaucoup": {
+        "lemma": "beaucoup",
+        "en": "a lot / very much",
+        "bn": "অনেক",
+        "pos": "adverb"
+      },
+      "travailler": {
+        "lemma": "travailler",
+        "en": "to work",
+        "bn": "কাজ করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "maintenance": {
+        "lemma": "maintenance",
+        "en": "maintenance (IT)",
+        "bn": "রক্ষণাবেক্ষণ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la maintenance"
+      },
+      "réseaux": {
+        "lemma": "réseau",
+        "en": "networks",
+        "bn": "নেটওয়ার্কসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le réseau"
+      },
+      "ou": {
+        "lemma": "ou",
+        "en": "or",
+        "bn": "অথবা",
+        "pos": "conjunction"
+      },
+      "assistance": {
+        "lemma": "assistance",
+        "en": "support / assistance",
+        "bn": "সহায়তা / সাপোর্ট",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'assistance"
+      },
+      "aux": {
+        "lemma": "à + les",
+        "en": "to the / at the (plural)",
+        "bn": "তে / প্রতি",
+        "pos": "preposition"
+      },
+      "utilisateurs": {
+        "lemma": "utilisateur",
+        "en": "users",
+        "bn": "ব্যবহারকারীগণ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'utilisateur"
+      },
+      "cependant": {
+        "lemma": "cependant",
+        "en": "however / nevertheless",
+        "bn": "তবে / তা সত্ত্বেও",
+        "pos": "conjunction"
+      },
+      "parfois": {
+        "lemma": "parfois",
+        "en": "sometimes",
+        "bn": "মাঝে মাঝে",
+        "pos": "adverb"
+      },
+      "mal": {
+        "lemma": "mal",
+        "en": "pain / difficulty / bad",
+        "bn": "ব্যথা / কষ্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le mal"
+      },
+      "comprendre": {
+        "lemma": "comprendre",
+        "en": "to understand",
+        "bn": "বোঝা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "tous": {
+        "lemma": "tout",
+        "en": "all",
+        "bn": "সব",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "codes": {
+        "lemma": "code",
+        "en": "codes / social norms",
+        "bn": "নিয়মাবলী / অলিখিত নিয়ম",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le code"
+      },
+      "marché": {
+        "lemma": "marché",
+        "en": "market (job market)",
+        "bn": "বাজার (চাকরির বাজার)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le marché"
+      },
+      "français": {
+        "lemma": "français",
+        "en": "French",
+        "bn": "ফরাসি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le français"
+      },
+      "j": {
+        "lemma": "je",
+        "en": "I (elision)",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "étudie": {
+        "lemma": "étudier",
+        "en": "studies / reviews",
+        "bn": "পড়ে / পর্যবেক্ষণ করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "cv": {
+        "lemma": "CV",
+        "en": "curriculum vitae / resume",
+        "bn": "জীবনবৃত্তান্ত / সিভি",
+        "pos": "noun",
+        "ttsText": "cé vé",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le CV"
+      },
+      "grand": {
+        "lemma": "grand",
+        "en": "large / big",
+        "bn": "বড়",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "intérêt": {
+        "lemma": "intérêt",
+        "en": "interest",
+        "bn": "আগ্রহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'intérêt"
+      },
+      "vos": {
+        "lemma": "votre",
+        "en": "your (plural)",
+        "bn": "আপনার",
+        "pos": "pronoun"
+      },
+      "compétences": {
+        "lemma": "compétence",
+        "en": "skills / competencies",
+        "bn": "দক্ষতা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la compétence"
+      },
+      "techniques": {
+        "lemma": "technique",
+        "en": "technical (plural)",
+        "bn": "কারিগরি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "sont": {
+        "lemma": "être",
+        "en": "are (plural)",
+        "bn": "হয় / আছেন",
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
+      },
+      "très": {
+        "lemma": "très",
+        "en": "very",
+        "bn": "খুব",
+        "pos": "adverb"
+      },
+      "appréciées": {
+        "lemma": "apprécier",
+        "en": "appreciated (plural)",
+        "bn": "সমাদৃত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "recruteurs": {
+        "lemma": "recruteur",
+        "en": "recruiters",
+        "bn": "নিয়োগকারীগণ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le recruteur"
+      },
+      "secteur": {
+        "lemma": "secteur",
+        "en": "sector / industry",
+        "bn": "খাত / সেক্টর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le secteur"
+      },
+      "maximiser": {
+        "lemma": "maximiser",
+        "en": "to maximize",
+        "bn": "সর্বোচ্চ করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "chances": {
+        "lemma": "chance",
+        "en": "chances / luck",
+        "bn": "সুযোগ / সম্ভাবনা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la chance"
+      },
+      "embauche": {
+        "lemma": "embauche",
+        "en": "hiring / employment",
+        "bn": "চাকরি নিয়োগ / নিয়োগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'embauche"
+      },
+      "allons": {
+        "lemma": "aller",
+        "en": "are going (nous)",
+        "bn": "যাচ্ছি",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "organiser": {
+        "lemma": "organiser",
+        "en": "to arrange / organize",
+        "bn": "আয়োজন করা / ব্যবস্থা করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "demande": {
+        "lemma": "demande",
+        "en": "request / application",
+        "bn": "অনুরোধ / আবেদন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la demande"
+      },
+      "attestation": {
+        "lemma": "attestation",
+        "en": "certificate / formal proof",
+        "bn": "প্রত্যয়নপত্র / সনদ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'attestation"
+      },
+      "comparabilité": {
+        "lemma": "comparabilité",
+        "en": "comparability (diploma recognition)",
+        "bn": "সমতাকরণ / সমমান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la comparabilité"
+      },
+      "faire": {
+        "lemma": "faire",
+        "en": "to do / make",
+        "bn": "করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "reconnaître": {
+        "lemma": "reconnaître",
+        "en": "to recognize officially",
+        "bn": "স্বীকৃতি দেওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "officiellement": {
+        "lemma": "officiellement",
+        "en": "officially",
+        "bn": "আনুষ্ঠানিকভাবে",
+        "pos": "adverb"
+      },
+      "diplôme": {
+        "lemma": "diplôme",
+        "en": "diploma / degree",
+        "bn": "সনদ / ডিপ্লোমা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le diplôme"
+      },
+      "étranger": {
+        "lemma": "étranger",
+        "en": "foreign / abroad",
+        "bn": "বিদেশি",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "je": {
+        "lemma": "je",
+        "en": "I",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "vous": {
+        "lemma": "vous",
+        "en": "you (formal/plural)",
+        "bn": "আপনি / আপনারা",
+        "pos": "pronoun"
+      },
+      "inscris": {
+        "lemma": "inscrire",
+        "en": "enroll / sign up (j'inscris)",
+        "bn": "নিবন্ধন করি / যুক্ত করি",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "atelier": {
+        "lemma": "atelier",
+        "en": "workshop",
+        "bn": "কর্মশালা / ওয়ার্কশপ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'atelier"
+      },
+      "deux": {
+        "lemma": "deux",
+        "en": "two",
+        "bn": "দুই",
+        "pos": "number"
+      },
+      "demi-journées": {
+        "lemma": "demi-journée",
+        "en": "half-days",
+        "bn": "অর্ধ-দিবস",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la demi-journée"
+      },
+      "adapter": {
+        "lemma": "adapter",
+        "en": "to adapt / tailor",
+        "bn": "উপযোগী করা / মানিয়ে নেওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "standards": {
+        "lemma": "standard",
+        "en": "standards / norms",
+        "bn": "মানদণ্ড",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le standard"
+      },
+      "entraîner": {
+        "lemma": "entraîner",
+        "en": "to practice / train",
+        "bn": "অনুশীলন করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "entretiens": {
+        "lemma": "entretien",
+        "en": "interviews",
+        "bn": "ইন্টারভিউগুলো",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'entretien"
+      },
+      "oraux": {
+        "lemma": "oral",
+        "en": "oral (interviews plural)",
+        "bn": "মৌখিক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "demi": {
+        "lemma": "demi",
+        "en": "half",
+        "bn": "অর্ধেক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "journées": {
+        "lemma": "journée",
+        "en": "days (demi-journées)",
+        "bn": "দিনসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la journée"
+      },
+      "paramètre": {
+        "lemma": "paramétrer",
+        "en": "sets up / configures",
+        "bn": "সেটআপ করে / কনফিগার করে",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "également": {
+        "lemma": "également",
+        "en": "also / equally",
+        "bn": "এছাড়াও",
+        "pos": "adverb"
+      },
+      "personnel": {
+        "lemma": "personnel",
+        "en": "personal / staff",
+        "bn": "ব্যক্তিগত / কর্মী",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "application": {
+        "lemma": "application",
+        "en": "app / application",
+        "bn": "অ্যাপ্লিকেশন / অ্যাপ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'application"
+      },
+      "mobile": {
+        "lemma": "mobile",
+        "en": "mobile (phone/network)",
+        "bn": "মোবাইল",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "reçoive": {
+        "lemma": "recevoir",
+        "en": "receives (subjunctive)",
+        "bn": "পায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "subjunctive"
+      },
+      "des": {
+        "lemma": "un",
+        "en": "some / of the",
+        "bn": "কিছু / গুলির",
+        "pos": "article",
+        "number": "plural"
+      },
+      "alertes": {
+        "lemma": "alerte",
+        "en": "alerts / notifications",
+        "bn": "সতর্কবার্তা / নোটিফিকেশন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'alerte"
+      },
+      "offres": {
+        "lemma": "offre",
+        "en": "offers / job listings",
+        "bn": "চাকরির বিজ্ঞাপনসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'offre"
+      },
+      "ciblées": {
+        "lemma": "cibler",
+        "en": "targeted (alerts)",
+        "bn": "লক্ষ্যভিত্তিক / সুনির্দিষ্ট",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "chaque": {
+        "lemma": "chaque",
+        "en": "each / every",
+        "bn": "প্রতিটি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "avez": {
+        "lemma": "avoir",
+        "en": "have (you have)",
+        "bn": "আছে (আপনার আছে)",
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
+      },
+      "excellent": {
+        "lemma": "excellent",
+        "en": "excellent",
+        "bn": "চমৎকার",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "profil": {
+        "lemma": "profil",
+        "en": "profile / background",
+        "bn": "প্রোফাইল / যোগ্যতা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le profil"
+      },
+      "motivation": {
+        "lemma": "motivation",
+        "en": "motivation",
+        "bn": "প্রেরণা / উৎসাহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la motivation"
+      },
+      "remarquable": {
+        "lemma": "remarquable",
+        "en": "remarkable / outstanding",
+        "bn": "অসাধারণ / প্রশংসনীয়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "ces": {
+        "lemma": "ce",
+        "en": "these / those",
+        "bn": "এইসব",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "démarches": {
+        "lemma": "démarche",
+        "en": "procedures / steps",
+        "bn": "প্রশাসনিক পদক্ষেপসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la démarche"
+      },
+      "cet": {
+        "lemma": "ce",
+        "en": "this (masculine vowel)",
+        "bn": "এই",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "allez": {
+        "lemma": "aller",
+        "en": "go / are going (vous)",
+        "bn": "যাচ্ছেন",
+        "pos": "verb",
+        "person": "2nd person plural",
+        "tense": "present"
+      },
+      "trouver": {
+        "lemma": "trouver",
+        "en": "to find",
+        "bn": "খুঁজে পাওয়া",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "opportunité": {
+        "lemma": "opportunité",
+        "en": "opportunity / job opening",
+        "bn": "সুযোগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'opportunité"
+      },
+      "intéressante": {
+        "lemma": "intéressant",
+        "en": "interesting / attractive",
+        "bn": "আকর্ষণীয়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "prochainement": {
+        "lemma": "prochainement",
+        "en": "very soon",
+        "bn": "খুব শীঘ্রই",
+        "pos": "adverb"
+      },
+      "quitte": {
+        "lemma": "quitter",
+        "en": "leaves / exits",
+        "bn": "বের হয় / ছেড়ে যায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "feuille": {
+        "lemma": "feuille",
+        "en": "sheet (of paper) / roadmap",
+        "bn": "কাগজ / রোডম্যাপ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la feuille"
+      },
+      "route": {
+        "lemma": "route",
+        "en": "roadmap / road",
+        "bn": "রোডম্যাপ / পথ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la route"
+      },
+      "claire": {
+        "lemma": "clair",
+        "en": "clear (feminine)",
+        "bn": "পরিষ্কার / সুস্পষ্ট",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "confiance": {
+        "lemma": "confiance",
+        "en": "confidence / trust",
+        "bn": "আত্মবিশ্বাস / ভরসা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la confiance"
+      },
+      "renforcée": {
+        "lemma": "renforcer",
+        "en": "reinforced / strengthened",
+        "bn": "দৃঢ় / জোরদার",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "avenir": {
+        "lemma": "avenir",
+        "en": "future",
+        "bn": "ভবিষ্যত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'avenir"
+      },
+      "qu": {
+        "lemma": "que",
+        "en": "that / what (elision)",
+        "bn": "যা / কী",
+        "pos": "pronoun"
+      }
+    },
+    "quiz": [
+      {
+        "question": "Quel est le but de la visite de Fahim à France Travail ?",
+        "options": [
+          "Renouveler son passeport",
+          "Bénéficier d'un accompagnement personnalisé pour sa recherche d'emploi en informatique",
+          "Prendre un billet d'avion",
+          "Acheter un ordinateur portable"
+        ],
+        "answer": 1,
+        "explanation": "The text explains that Fahim visits France Travail to get personalized guidance for his job search (\"bénéficier d'un accompagnement personnalisé dans sa recherche d'emploi\").",
+        "explanationBn": "টেক্সটে বলা আছে: ফাহিম তার কর্মসংস্থান সন্ধানে ব্যক্তিগত পরামর্শ ও দিকনির্দেশনা পাওয়ার জন্য ফ্রঁস ত্রাভাইয়ে যায়।"
+      },
+      {
+        "question": "Que propose le conseiller pour valoriser le diplôme étranger de Fahim ?",
+        "options": [
+          "D'oublier son diplôme",
+          "De faire une demande d'attestation de comparabilité",
+          "De retourner à l'école primaire",
+          "De payer une amende"
+        ],
+        "answer": 1,
+        "explanation": "The advisor suggests: \"nous allons organiser une demande d'attestation de comparabilité pour faire reconnaître officiellement votre diplôme étranger\".",
+        "explanationBn": "পরামর্শক তার বিদেশি ডিগ্রির সমতাকরণ প্রত্যয়নপত্র (attestation de comparabilité) আবেদনের পরামর্শ দেন।"
+      },
+      {
+        "question": "À quel atelier pratique le conseiller inscrit-il Fahim ?",
+        "options": [
+          "Un cours de natation",
+          "Un atelier pour adapter son CV aux normes françaises et préparer les entretiens",
+          "Un cours de musique",
+          "Un concours de cuisine"
+        ],
+        "answer": 1,
+        "explanation": "The advisor signs him up for a workshop to adapt his resume to French standards and practice interviews.",
+        "explanationBn": "পরামর্শক তাকে ফরাসি নিয়মে সিভি তৈরি ও মৌখিক ইন্টারভিউ অনুশীলনের একটি কর্মশালায় যুক্ত করেন।"
+      }
+    ]
+  },
+  {
+    "id": "sinscrire-formation",
+    "title": "S'inscrire à une formation",
+    "subtitle": "Préparer son admission pour une licence professionnelle",
+    "level": "A2",
+    "topic": "Études & Université",
+    "wordCount": 270,
+    "estimatedMinutes": 4,
+    "paragraphs": [
+      "Pour valoriser son diplôme technique étranger et accélérer sa carrière dans l'ingénierie en France, Tariq a décidé de reprendre ses études en s'inscrivant à une licence professionnelle en administration et sécurité des réseaux informatiques. Ce cursus universitaire d'un an offre une formation pointue très appréciée des entreprises technologiques.",
+      "Ce matin, Tariq se rend sur le campus universitaire pour son rendez-vous avec la responsable pédagogique du département informatique. Le campus est vaste, verdoyant et animé par des centaines d'étudiants de toutes nationalités. Tariq trouve facilement le secrétariat des inscriptions au deuxième étage du bâtiment des sciences appliquées.",
+      "La coordinatrice de la formation, madame Leroux, le reçoit cordialement dans son bureau : « Bonjour Tariq, j'ai examiné avec intérêt votre dossier de candidature préalable. Vos bases techniques en informatique sont solides, mais nous devons vérifier ensemble le volet administratif pour finaliser votre inscription officielle. »",
+      "Tariq présente son dossier complet qui contient toutes les pièces requises : les photocopies certifiées de ses diplômes accompagnées d'une traduction assermentée en français, ses relevés de notes détaillés, une lettre de motivation rédigée avec soin et son justificatif de séjour légal. Madame Leroux vérifie scrupuleusement chaque document et valide l'équivalence des crédits académiques.",
+      "Elle lui explique ensuite le déroulement passionnant de l'année universitaire : « Les cours théoriques auront lieu le matin et les travaux pratiques en laboratoire informatique l'après-midi. Au second semestre, vous effectuerez un stage professionnel de quatre mois en entreprise pour mettre en pratique vos connaissances sur des infrastructures réelles. » Tariq signe son contrat pédagogique avec une fierté immense. Il est prêt à commencer cette nouvelle aventure universitaire avec détermination et enthousiasme."
+    ],
+    "paragraphTranslations": [
+      "To build upon his foreign technical diploma and fast-track his engineering career in France, Tariq decided to resume his studies by enrolling in a vocational bachelor's degree (licence professionnelle) in computer network administration and security. This one-year university program offers specialized training that is highly valued by tech companies.",
+      "This morning, Tariq heads to the university campus for his appointment with the academic director of the computer science department. The campus is vast, green, and buzzing with hundreds of students of all nationalities. Tariq easily locates the admissions office on the second floor of the applied sciences building.",
+      "The program coordinator, Mrs. Leroux, welcomes him warmly into her office: \"Good morning Tariq, I reviewed your preliminary application file with great interest. Your foundational technical skills in computing are solid, but we must review the administrative requirements together to finalize your formal enrollment.\"",
+      "Tariq presents his comprehensive file containing all required documents: certified copies of his diplomas accompanied by a sworn translation into French, his detailed grade transcripts, a carefully written cover letter, and his legal residence permit. Mrs. Leroux scrupulously checks each document and validates his academic credit equivalencies.",
+      "She then outlines the exciting roadmap for the academic year: \"Theoretical lectures will take place in the morning and hands-on laboratory sessions in the afternoon. In the second semester, you will complete a four-month internship in a company to apply your knowledge to live infrastructure.\" Tariq signs his learning agreement with tremendous pride. He is ready to embark on this new university journey with determination and enthusiasm."
+    ],
+    "vocabulary": {
+      "pour": {
+        "lemma": "pour",
+        "en": "for / in order to",
+        "bn": "জন্য",
+        "pos": "preposition"
+      },
+      "valoriser": {
+        "lemma": "valoriser",
+        "en": "to enhance / showcase (skills)",
+        "bn": "মর্যাদা বৃদ্ধি করা / কাজে লাগানো",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "son": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "diplôme": {
+        "lemma": "diplôme",
+        "en": "diploma / degree",
+        "bn": "সনদ / ডিপ্লোমা",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le diplôme"
+      },
+      "technique": {
+        "lemma": "technique",
+        "en": "technical / technique",
+        "bn": "কারিগরি / টেকনিক্যাল",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "étranger": {
+        "lemma": "étranger",
+        "en": "foreign / abroad",
+        "bn": "বিদেশি",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "et": {
+        "lemma": "et",
+        "en": "and",
+        "bn": "এবং",
+        "pos": "conjunction"
+      },
+      "accélérer": {
+        "lemma": "accélérer",
+        "en": "to accelerate / speed up",
+        "bn": "গতিশীল করা / ত্বরান্বিত করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "sa": {
+        "lemma": "son",
+        "en": "his / her",
+        "bn": "তার",
+        "pos": "pronoun"
+      },
+      "carrière": {
+        "lemma": "carrière",
+        "en": "career",
+        "bn": "কর্মজীবন / ক্যারিয়ার",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la carrière"
+      },
+      "dans": {
+        "lemma": "dans",
+        "en": "in / inside",
+        "bn": "মধ্যে",
+        "pos": "preposition"
+      },
+      "ingénierie": {
+        "lemma": "ingénierie",
+        "en": "engineering",
+        "bn": "প্রকৌশল / ইঞ্জিনিয়ারিং",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'ingénierie"
+      },
+      "en": {
+        "lemma": "en",
+        "en": "in / made of",
+        "bn": "তৈরি / দিয়ে",
+        "pos": "preposition"
+      },
+      "france": {
+        "lemma": "France",
+        "en": "France",
+        "bn": "ফ্রান্স",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la France"
+      },
+      "tariq": {
+        "lemma": "Tariq",
+        "en": "Tariq (first name)",
+        "bn": "তারিক (নাম)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Tariq"
+      },
+      "a": {
+        "lemma": "avoir",
+        "en": "has",
+        "bn": "আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "décidé": {
+        "lemma": "décider",
+        "en": "decided",
+        "bn": "সিদ্ধান্ত নিয়েছে",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "de": {
+        "lemma": "de",
+        "en": "of / from",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "reprendre": {
+        "lemma": "reprendre",
+        "en": "to resume (studies)",
+        "bn": "পুনরায় শুরু করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "ses": {
+        "lemma": "son",
+        "en": "his / her / its (plural)",
+        "bn": "তার (বহুবচন)",
+        "pos": "pronoun"
+      },
+      "études": {
+        "lemma": "étude",
+        "en": "studies / degree",
+        "bn": "পড়াশোনা / উচ্চশিক্ষা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'étude"
+      },
+      "inscrivant": {
+        "lemma": "inscrire",
+        "en": "enrolling (by enrolling)",
+        "bn": "ভর্তি হয়ে / নিবন্ধন করে",
+        "pos": "verb",
+        "tense": "present participle"
+      },
+      "à": {
+        "lemma": "à",
+        "en": "to / at",
+        "bn": "প্রতি / দিকে",
+        "pos": "preposition"
+      },
+      "une": {
+        "lemma": "un",
+        "en": "a / an (feminine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "licence": {
+        "lemma": "licence",
+        "en": "bachelor's degree (3-year)",
+        "bn": "স্নাতক ডিগ্রি (লাইসেন্স)",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la licence"
+      },
+      "professionnelle": {
+        "lemma": "professionnel",
+        "en": "professional (feminine)",
+        "bn": "পেশাদার",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "administration": {
+        "lemma": "administration",
+        "en": "administration / public office",
+        "bn": "প্রশাসন / ব্যবস্থাপনা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'administration"
+      },
+      "sécurité": {
+        "lemma": "sécurité",
+        "en": "security",
+        "bn": "নিরাপত্তা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la sécurité"
+      },
+      "des": {
+        "lemma": "un",
+        "en": "some / of the",
+        "bn": "কিছু / গুলির",
+        "pos": "article",
+        "number": "plural"
+      },
+      "réseaux": {
+        "lemma": "réseau",
+        "en": "networks",
+        "bn": "নেটওয়ার্কসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le réseau"
+      },
+      "informatiques": {
+        "lemma": "informatique",
+        "en": "computer / IT (plural)",
+        "bn": "কম্পিউটার সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "ce": {
+        "lemma": "ce",
+        "en": "this",
+        "bn": "এই",
+        "pos": "pronoun"
+      },
+      "cursus": {
+        "lemma": "cursus",
+        "en": "degree program / curriculum",
+        "bn": "শিক্ষাক্রম / পাঠ্যক্রম",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le cursus"
+      },
+      "universitaire": {
+        "lemma": "universitaire",
+        "en": "university (campus/studies)",
+        "bn": "বিশ্ববিদ্যালয় সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "un": {
+        "lemma": "un",
+        "en": "a / an (masculine)",
+        "bn": "একটি",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "an": {
+        "lemma": "an",
+        "en": "year",
+        "bn": "বছর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'an"
+      },
+      "offre": {
+        "lemma": "offre",
+        "en": "offer / job offer",
+        "bn": "অফার / চাকরির সুযোগ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'offre"
+      },
+      "formation": {
+        "lemma": "formation",
+        "en": "training course / studies",
+        "bn": "প্রশিক্ষণ / কোর্স",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la formation"
+      },
+      "pointue": {
+        "lemma": "pointu",
+        "en": "advanced / sharp (training)",
+        "bn": "উন্নত / বিশেষায়িত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "très": {
+        "lemma": "très",
+        "en": "very",
+        "bn": "খুব",
+        "pos": "adverb"
+      },
+      "appréciée": {
+        "lemma": "apprécier",
+        "en": "appreciated / valued",
+        "bn": "প্রশংসিত / সমাদৃত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "entreprises": {
+        "lemma": "entreprise",
+        "en": "companies",
+        "bn": "কোম্পানিসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'entreprise"
+      },
+      "technologiques": {
+        "lemma": "technologique",
+        "en": "technology (companies)",
+        "bn": "প্রযুক্তিগত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "l": {
+        "lemma": "le",
+        "en": "the (elision)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "number": "singular"
+      },
+      "s": {
+        "lemma": "se",
+        "en": "himself / herself (elision)",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "d": {
+        "lemma": "de",
+        "en": "of / from (elision)",
+        "bn": "এর / থেকে",
+        "pos": "preposition"
+      },
+      "matin": {
+        "lemma": "matin",
+        "en": "morning",
+        "bn": "সকাল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le matin"
+      },
+      "se": {
+        "lemma": "se",
+        "en": "himself / herself / oneself",
+        "bn": "নিজেকে",
+        "pos": "pronoun"
+      },
+      "rend": {
+        "lemma": "rendre",
+        "en": "returns / gives back",
+        "bn": "ফেরত দেয়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "sur": {
+        "lemma": "sur",
+        "en": "on / upon",
+        "bn": "উপর",
+        "pos": "preposition"
+      },
+      "le": {
+        "lemma": "le",
+        "en": "the (masculine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "campus": {
+        "lemma": "campus",
+        "en": "university campus",
+        "bn": "ক্যাম্পাস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le campus"
+      },
+      "rendez-vous": {
+        "lemma": "rendez-vous",
+        "en": "appointment / meeting",
+        "bn": "সাক্ষাৎ / অ্যাপয়েন্টমেন্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
+      },
+      "avec": {
+        "lemma": "avec",
+        "en": "with",
+        "bn": "সাথে",
+        "pos": "preposition"
+      },
+      "la": {
+        "lemma": "le",
+        "en": "the (feminine)",
+        "bn": "টি / টা",
+        "pos": "article",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "responsable": {
+        "lemma": "responsable",
+        "en": "manager / coordinator / responsible",
+        "bn": "প্রধান কর্মকর্তা / দায়িত্বপ্রাপ্ত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le responsable"
+      },
+      "pédagogique": {
+        "lemma": "pédagogique",
+        "en": "educational / academic",
+        "bn": "শিক্ষাগত / পাঠদান সংক্রান্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "du": {
+        "lemma": "de + le",
+        "en": "of the / from the",
+        "bn": "দোকানের",
+        "pos": "article",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "département": {
+        "lemma": "département",
+        "en": "department (academic)",
+        "bn": "বিভাগ (বিশ্ববিদ্যালয়)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le département"
+      },
+      "informatique": {
+        "lemma": "informatique",
+        "en": "IT / computing",
+        "bn": "আইটি / কম্পিউটার বিজ্ঞান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'informatique"
+      },
+      "est": {
+        "lemma": "être",
+        "en": "is",
+        "bn": "হয় / আছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "vaste": {
+        "lemma": "vaste",
+        "en": "vast / spacious",
+        "bn": "বিশাল / প্রশস্ত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "verdoyant": {
+        "lemma": "verdoyant",
+        "en": "green / lush",
+        "bn": "সবুজ ঘেরা",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "animé": {
+        "lemma": "animer",
+        "en": "lively / buzzing",
+        "bn": "প্রাণবন্ত / মুখরিত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "par": {
+        "lemma": "par",
+        "en": "by",
+        "bn": "দ্বারা / দিয়ে",
+        "pos": "preposition"
+      },
+      "centaines": {
+        "lemma": "centaine",
+        "en": "hundreds",
+        "bn": "শত শত",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la centaine"
+      },
+      "étudiants": {
+        "lemma": "étudiant",
+        "en": "students",
+        "bn": "শিক্ষার্থীবৃন্দ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "l'étudiant"
+      },
+      "toutes": {
+        "lemma": "tout",
+        "en": "all (feminine plural)",
+        "bn": "সবগুলো",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "nationalités": {
+        "lemma": "nationalité",
+        "en": "nationalities",
+        "bn": "জাতীয়তাসমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la nationalité"
+      },
+      "trouve": {
+        "lemma": "trouver",
+        "en": "finds",
+        "bn": "পায়",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "facilement": {
+        "lemma": "facilement",
+        "en": "easily",
+        "bn": "সহজে",
+        "pos": "adverb"
+      },
+      "secrétariat": {
+        "lemma": "secrétariat",
+        "en": "secretariat / administration office",
+        "bn": "সেক্রেটারিয়েট / প্রশাসনিক দপ্তর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le secrétariat"
+      },
+      "inscriptions": {
+        "lemma": "inscription",
+        "en": "admissions",
+        "bn": "ভর্তি কার্যক্রম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'inscription"
+      },
+      "au": {
+        "lemma": "à + le",
+        "en": "with / to the",
+        "bn": "দিয়ে",
+        "pos": "preposition"
+      },
+      "deuxième": {
+        "lemma": "deuxième",
+        "en": "second",
+        "bn": "দ্বিতীয়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "étage": {
+        "lemma": "étage",
+        "en": "floor / storey",
+        "bn": "তলা / ফ্লোর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'étage"
+      },
+      "bâtiment": {
+        "lemma": "bâtiment",
+        "en": "building",
+        "bn": "ভবন / বিল্ডিং",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bâtiment"
+      },
+      "sciences": {
+        "lemma": "science",
+        "en": "sciences",
+        "bn": "বিজ্ঞান",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la science"
+      },
+      "appliquées": {
+        "lemma": "appliquer",
+        "en": "applied (sciences)",
+        "bn": "ফলিত (বিজ্ঞান)",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "rendez": {
+        "lemma": "rendre",
+        "en": "return / appointment (rendez-vous)",
+        "bn": "সাক্ষাৎ / ফেরত দেওয়া",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le rendez-vous"
+      },
+      "vous": {
+        "lemma": "vous",
+        "en": "you (formal/plural)",
+        "bn": "আপনি / আপনারা",
+        "pos": "pronoun"
+      },
+      "coordinatrice": {
+        "lemma": "coordinateur",
+        "en": "program coordinator (female)",
+        "bn": "সমন্বয়কারী (মহিলা)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le coordinateur"
+      },
+      "madame": {
+        "lemma": "madame",
+        "en": "madam / ma'am",
+        "bn": "ম্যাডাম / বেগম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "madame"
+      },
+      "leroux": {
+        "lemma": "Leroux",
+        "en": "Leroux (surname)",
+        "bn": "লারু (পদবি)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "Leroux"
+      },
+      "reçoit": {
+        "lemma": "recevoir",
+        "en": "receives / welcomes",
+        "bn": "গ্রহণ করে / স্বাগত জানায়",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "cordialement": {
+        "lemma": "cordialement",
+        "en": "cordially / warmly",
+        "bn": "আন্তরিকভাবে",
+        "pos": "adverb"
+      },
+      "bureau": {
+        "lemma": "bureau",
+        "en": "office / desk",
+        "bn": "অফিস / পড়ার টেবিল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le bureau"
+      },
+      "bonjour": {
+        "lemma": "bonjour",
+        "en": "hello / good day",
+        "bn": "শুভ সকাল / নমস্কার",
+        "pos": "expression"
+      },
+      "ai": {
+        "lemma": "avoir",
+        "en": "have (first person: j'ai)",
+        "bn": "আছে (আমার আছে)",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "examiné": {
+        "lemma": "examiner",
+        "en": "reviewed / examined",
+        "bn": "পর্যালোচনা করেছে",
+        "pos": "verb",
+        "tense": "past participle"
+      },
+      "intérêt": {
+        "lemma": "intérêt",
+        "en": "interest",
+        "bn": "আগ্রহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'intérêt"
+      },
+      "votre": {
+        "lemma": "votre",
+        "en": "your (formal)",
+        "bn": "আপনার",
+        "pos": "pronoun"
+      },
+      "dossier": {
+        "lemma": "dossier",
+        "en": "application file / folder",
+        "bn": "ফাইল / আবেদনপত্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le dossier"
+      },
+      "candidature": {
+        "lemma": "candidature",
+        "en": "application / candidacy",
+        "bn": "আবেদন / প্রার্থিতা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la candidature"
+      },
+      "préalable": {
+        "lemma": "préalable",
+        "en": "preliminary / prior",
+        "bn": "প্রাথমিক / পূর্ববর্তী",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "vos": {
+        "lemma": "votre",
+        "en": "your (plural)",
+        "bn": "আপনার",
+        "pos": "pronoun"
+      },
+      "bases": {
+        "lemma": "base",
+        "en": "foundations / basics",
+        "bn": "মৌলিক বিষয়সমূহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la base"
+      },
+      "techniques": {
+        "lemma": "technique",
+        "en": "technical (plural)",
+        "bn": "কারিগরি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "sont": {
+        "lemma": "être",
+        "en": "are (plural)",
+        "bn": "হয় / আছেন",
+        "pos": "verb",
+        "person": "3rd person plural",
+        "tense": "present"
+      },
+      "solides": {
+        "lemma": "solide",
+        "en": "solid (plural)",
+        "bn": "মজবুত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "mais": {
+        "lemma": "mais",
+        "en": "but",
+        "bn": "কিন্তু",
+        "pos": "conjunction"
+      },
+      "nous": {
+        "lemma": "nous",
+        "en": "we / us",
+        "bn": "আমরা / আমাদের",
+        "pos": "pronoun"
+      },
+      "devons": {
+        "lemma": "devoir",
+        "en": "must / have to (nous)",
+        "bn": "আমাদের অবশ্যই হবে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "vérifier": {
+        "lemma": "vérifier",
+        "en": "to check / verify",
+        "bn": "যাচাই করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "ensemble": {
+        "lemma": "ensemble",
+        "en": "together",
+        "bn": "একসাথে",
+        "pos": "adverb"
+      },
+      "volet": {
+        "lemma": "volet",
+        "en": "aspect / section / component",
+        "bn": "দিক / অংশ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le volet"
+      },
+      "administratif": {
+        "lemma": "administratif",
+        "en": "administrative",
+        "bn": "প্রশাসনিক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "finaliser": {
+        "lemma": "finaliser",
+        "en": "to finalize",
+        "bn": "চূড়ান্ত করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "inscription": {
+        "lemma": "inscription",
+        "en": "enrollment / registration",
+        "bn": "ভর্তি / নিবন্ধন",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'inscription"
+      },
+      "officielle": {
+        "lemma": "officiel",
+        "en": "official (feminine)",
+        "bn": "দাপ্তরিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "j": {
+        "lemma": "je",
+        "en": "I (elision)",
+        "bn": "আমি",
+        "pos": "pronoun"
+      },
+      "présente": {
+        "lemma": "présenter",
+        "en": "presents / introduces",
+        "bn": "উপস্থাপন করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "complet": {
+        "lemma": "complet",
+        "en": "complete / full",
+        "bn": "সম্পূর্ণ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "qui": {
+        "lemma": "qui",
+        "en": "who / which",
+        "bn": "যে / কে",
+        "pos": "pronoun"
+      },
+      "contient": {
+        "lemma": "contenir",
+        "en": "contains",
+        "bn": "ধারণ করে / রয়েছে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "les": {
+        "lemma": "les",
+        "en": "the (plural)",
+        "bn": "গুলি / গুলো",
+        "pos": "article",
+        "number": "plural"
+      },
+      "pièces": {
+        "lemma": "pièce",
+        "en": "documents / coins / rooms",
+        "bn": "নথিপত্র / মুদ্রা / কক্ষ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la pièce"
+      },
+      "requises": {
+        "lemma": "requis",
+        "en": "required (plural)",
+        "bn": "প্রয়োজনীয় / আবশ্যকীয়",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "photocopies": {
+        "lemma": "photocopie",
+        "en": "photocopies",
+        "bn": "ফটোকপি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la photocopie"
+      },
+      "certifiées": {
+        "lemma": "certifier",
+        "en": "certified (plural)",
+        "bn": "সত্যায়িত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "diplômes": {
+        "lemma": "diplôme",
+        "en": "diplomas / degrees",
+        "bn": "সনদসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le diplôme"
+      },
+      "accompagnées": {
+        "lemma": "accompagner",
+        "en": "accompanied (feminine plural)",
+        "bn": "সংযুক্ত / সাথে থাকা",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "traduction": {
+        "lemma": "traduction",
+        "en": "translation",
+        "bn": "অনুবাদ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la traduction"
+      },
+      "assermentée": {
+        "lemma": "assermenter",
+        "en": "sworn / certified (translation)",
+        "bn": "অনুমোদিত / শপথবদ্ধ (অনুবাদ)",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "français": {
+        "lemma": "français",
+        "en": "French",
+        "bn": "ফরাসি",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le français"
+      },
+      "relevés": {
+        "lemma": "relevé",
+        "en": "statements / transcripts",
+        "bn": "বিবরণীসমূহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le relevé"
+      },
+      "notes": {
+        "lemma": "note",
+        "en": "grades / transcripts / notes",
+        "bn": "নম্বর / মার্কশিট",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la note"
+      },
+      "détaillés": {
+        "lemma": "détailler",
+        "en": "detailed (transcripts)",
+        "bn": "বিস্তারিত",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "lettre": {
+        "lemma": "lettre",
+        "en": "letter / cover letter",
+        "bn": "চিঠি / আবেদনপত্র",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la lettre"
+      },
+      "motivation": {
+        "lemma": "motivation",
+        "en": "motivation",
+        "bn": "প্রেরণা / উৎসাহ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la motivation"
+      },
+      "rédigée": {
+        "lemma": "rédiger",
+        "en": "written / drafted",
+        "bn": "লিখিত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "soin": {
+        "lemma": "soin",
+        "en": "care / diligence",
+        "bn": "যত্ন / মনোযোগ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le soin"
+      },
+      "justificatif": {
+        "lemma": "justificatif",
+        "en": "supporting document / proof",
+        "bn": "প্রমাণপত্র / প্রত্যয়ন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le justificatif"
+      },
+      "séjour": {
+        "lemma": "séjour",
+        "en": "residence / stay (permit)",
+        "bn": "বসবাস / অবস্থান (পারমিট)",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le séjour"
+      },
+      "légal": {
+        "lemma": "légal",
+        "en": "legal / lawful",
+        "bn": "আইনসম্মত / বৈধ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "vérifie": {
+        "lemma": "vérifier",
+        "en": "checks / verifies",
+        "bn": "যাচাই করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "scrupuleusement": {
+        "lemma": "scrupuleusement",
+        "en": "scrupulously / thoroughly",
+        "bn": "পুঙ্খানুপুঙ্খভাবে",
+        "pos": "adverb"
+      },
+      "chaque": {
+        "lemma": "chaque",
+        "en": "each / every",
+        "bn": "প্রতিটি",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "document": {
+        "lemma": "document",
+        "en": "document",
+        "bn": "নথি / দলিল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le document"
+      },
+      "valide": {
+        "lemma": "valider",
+        "en": "validates / valid",
+        "bn": "অনুমোদন করে / বৈধ",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "équivalence": {
+        "lemma": "équivalence",
+        "en": "equivalency",
+        "bn": "সমমান / সমতাকরণ",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'équivalence"
+      },
+      "crédits": {
+        "lemma": "crédit",
+        "en": "academic credits / credit",
+        "bn": "ক্রেডিট / পয়েন্ট",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le crédit"
+      },
+      "académiques": {
+        "lemma": "académique",
+        "en": "academic",
+        "bn": "একাডেমিক / শিক্ষাগত",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "elle": {
+        "lemma": "elle",
+        "en": "she",
+        "bn": "সে (মহিলা)",
+        "pos": "pronoun",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "lui": {
+        "lemma": "lui",
+        "en": "to him / her",
+        "bn": "তাকে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "explique": {
+        "lemma": "expliquer",
+        "en": "explains",
+        "bn": "ব্যাখ্যা করে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "ensuite": {
+        "lemma": "ensuite",
+        "en": "then / next",
+        "bn": "তারপর",
+        "pos": "adverb"
+      },
+      "déroulement": {
+        "lemma": "déroulement",
+        "en": "process / sequence / course",
+        "bn": "ধারাবাহিকতা / প্রক্রিয়া",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le déroulement"
+      },
+      "passionnant": {
+        "lemma": "passionnant",
+        "en": "exciting / fascinating",
+        "bn": "উত্তেজনাপূর্ণ / চিত্তাকর্ষক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "année": {
+        "lemma": "année",
+        "en": "year (duration)",
+        "bn": "বছর",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'année"
+      },
+      "cours": {
+        "lemma": "cours",
+        "en": "class / course / in progress",
+        "bn": "ক্লাস / কোর্স / চলমান",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le cours"
+      },
+      "théoriques": {
+        "lemma": "théorique",
+        "en": "theoretical (classes)",
+        "bn": "তাত্ত্বিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "auront": {
+        "lemma": "avoir",
+        "en": "will have (plural)",
+        "bn": "থাকবে",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "lieu": {
+        "lemma": "lieu",
+        "en": "place / take place",
+        "bn": "স্থান / অনুষ্ঠিত হওয়া",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le lieu"
+      },
+      "travaux": {
+        "lemma": "travail",
+        "en": "lab work / hands-on sessions (TP)",
+        "bn": "বাস্তব কাজ / ল্যাব প্র্যাকটিক্যাল",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le travail"
+      },
+      "pratiques": {
+        "lemma": "pratique",
+        "en": "practical (plural)",
+        "bn": "ব্যবহারিক",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "plural"
+      },
+      "laboratoire": {
+        "lemma": "laboratoire",
+        "en": "laboratory / computer lab",
+        "bn": "ল্যাবরেটরি / ল্যাব",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le laboratoire"
+      },
+      "après-midi": {
+        "lemma": "après-midi",
+        "en": "afternoon",
+        "bn": "বিকাল / দুপুর",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'après-midi"
+      },
+      "second": {
+        "lemma": "second",
+        "en": "second",
+        "bn": "দ্বিতীয়",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "semestre": {
+        "lemma": "semestre",
+        "en": "semester / term",
+        "bn": "সেমিস্টার",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le semestre"
+      },
+      "effectuerez": {
+        "lemma": "effectuer",
+        "en": "will carry out (future)",
+        "bn": "সম্পন্ন করবেন",
+        "pos": "verb",
+        "person": "3rd person singular",
+        "tense": "present"
+      },
+      "stage": {
+        "lemma": "stage",
+        "en": "internship / practical training",
+        "bn": "ইন্টার্নশিপ / বাস্তব প্রশিক্ষণ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le stage"
+      },
+      "professionnel": {
+        "lemma": "professionnel",
+        "en": "professional",
+        "bn": "পেশাদার",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "quatre": {
+        "lemma": "quatre",
+        "en": "four",
+        "bn": "চার",
+        "pos": "number"
+      },
+      "mois": {
+        "lemma": "mois",
+        "en": "month / months",
+        "bn": "মাস",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "plural",
+        "lemmaWithArticle": "le mois"
+      },
+      "entreprise": {
+        "lemma": "entreprise",
+        "en": "company / enterprise",
+        "bn": "প্রতিষ্ঠান / কোম্পানি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'entreprise"
+      },
+      "mettre": {
+        "lemma": "mettre",
+        "en": "to put / apply",
+        "bn": "রাখা / প্রয়োগ করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "pratique": {
+        "lemma": "pratique",
+        "en": "practical / practice",
+        "bn": "বাস্তবমুখী / ব্যবহারিক",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "connaissances": {
+        "lemma": "connaissance",
+        "en": "knowledge / expertise",
+        "bn": "জ্ঞান / অভিজ্ঞতা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "la connaissance"
+      },
+      "infrastructures": {
+        "lemma": "infrastructure",
+        "en": "infrastructure / hardware systems",
+        "bn": "অবকাঠামো / আইটি সিস্টেম",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "plural",
+        "lemmaWithArticle": "l'infrastructure"
+      },
+      "réelles": {
+        "lemma": "réel",
+        "en": "real / live (systems)",
+        "bn": "বাস্তব",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "plural"
+      },
+      "signe": {
+        "lemma": "signe",
+        "en": "sign / signal",
+        "bn": "ইশারা / সংকেত",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le signe"
+      },
+      "contrat": {
+        "lemma": "contrat",
+        "en": "contract / agreement",
+        "bn": "চুক্তিপত্র",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le contrat"
+      },
+      "fierté": {
+        "lemma": "fierté",
+        "en": "pride",
+        "bn": "গর্ব / আত্মতৃপ্তি",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la fierté"
+      },
+      "immense": {
+        "lemma": "immense",
+        "en": "immense / huge",
+        "bn": "বিশাল / অগাধ",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "il": {
+        "lemma": "il",
+        "en": "he",
+        "bn": "সে",
+        "pos": "pronoun",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "prêt": {
+        "lemma": "prêt",
+        "en": "ready / loan",
+        "bn": "প্রস্তুত / ঋণ",
+        "pos": "adjective",
+        "gender": "masculine",
+        "number": "singular"
+      },
+      "commencer": {
+        "lemma": "commencer",
+        "en": "to start / begin",
+        "bn": "শুরু করা",
+        "pos": "verb",
+        "tense": "infinitive"
+      },
+      "cette": {
+        "lemma": "ce",
+        "en": "this (feminine)",
+        "bn": "এই",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "nouvelle": {
+        "lemma": "nouveau",
+        "en": "new (feminine) / news",
+        "bn": "নতুন",
+        "pos": "adjective",
+        "gender": "feminine",
+        "number": "singular"
+      },
+      "aventure": {
+        "lemma": "aventure",
+        "en": "adventure / journey",
+        "bn": "অভিযান / রোমাঞ্চকর যাত্রা",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "l'aventure"
+      },
+      "détermination": {
+        "lemma": "détermination",
+        "en": "determination",
+        "bn": "দৃঢ় সংকল্প",
+        "pos": "noun",
+        "gender": "feminine",
+        "number": "singular",
+        "lemmaWithArticle": "la détermination"
+      },
+      "enthousiasme": {
+        "lemma": "enthousiasme",
+        "en": "enthusiasm",
+        "bn": "উদ্দীপনা / উৎসাহ",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "l'enthousiasme"
+      },
+      "après": {
+        "lemma": "après",
+        "en": "after",
+        "bn": "পরে",
+        "pos": "preposition"
+      },
+      "midi": {
+        "lemma": "midi",
+        "en": "midday / noon",
+        "bn": "দুপুর / মধ্যাহ্ন",
+        "pos": "noun",
+        "gender": "masculine",
+        "number": "singular",
+        "lemmaWithArticle": "le midi"
+      }
+    },
+    "quiz": [
+      {
+        "question": "À quelle formation universitaire Tariq s'inscrit-il pour progresser dans sa carrière ?",
+        "options": [
+          "Une licence professionnelle en administration et sécurité des réseaux informatiques",
+          "Un diplôme d'art dramatique",
+          "Une école de commerce international",
+          "Un certificat de langue anglaise"
+        ],
+        "answer": 0,
+        "explanation": "The text states: \"en s'inscrivant à une licence professionnelle en administration et sécurité des réseaux informatiques\".",
+        "explanationBn": "টেক্সটে স্পষ্টভাবে বলা আছে: কম্পিউটার নেটওয়ার্ক প্রশাসন ও সুরক্ষার উপর ভোকেশনাল ডিগ্রি (licence professionnelle)।"
+      },
+      {
+        "question": "Quels documents traduits en français Tariq fournit-il pour son inscription ?",
+        "options": [
+          "Des coupures de journaux",
+          "Les copies certifiées de ses diplômes avec une traduction assermentée",
+          "Une lettre manuscrite de son voisin",
+          "Un ticket de cinéma"
+        ],
+        "answer": 1,
+        "explanation": "The text specifies: \"les photocopies certifiées de ses diplômes accompagnées d'une traduction assermentée en français\".",
+        "explanationBn": "তালিকায় আছে মূল সনদের সত্যায়িত কপি ও ফরাসি ভাষায় অনুমোদিত অনুবাদ (traduction assermentée)।"
+      },
+      {
+        "question": "Que prévoit le cursus au second semestre pour acquérir de l'expérience pratique ?",
+        "options": [
+          "Un stage professionnel de quatre mois en entreprise",
+          "Des vacances prolongées",
+          "Des examens oraux quotidiens sans pratique",
+          "Des cours du soir en ligne uniquement"
+        ],
+        "answer": 0,
+        "explanation": "The academic coordinator explains that the second semester includes a 4-month corporate internship (\"un stage professionnel de quatre mois en entreprise\").",
+        "explanationBn": "শিক্ষাবর্ষের দ্বিতীয় সেমিস্টারে বাস্তব কাজের অভিজ্ঞতার জন্য চার মাসের বাধ্যতামূলক ইন্টার্নশিপ রয়েছে।"
+      }
+    ]
+  }
+];
