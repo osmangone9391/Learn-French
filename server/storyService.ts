@@ -67,21 +67,46 @@ function getGeminiClient(): GoogleGenAI {
   return new GoogleGenAI({ apiKey: apiKey.trim() });
 }
 
-async function withTimeout<T>(promise: Promise<T>, timeoutMs: number): Promise<T> {
-  let timer: NodeJS.Timeout;
-  const timeoutPromise = new Promise<T>((_, reject) => {
-    timer = setTimeout(() => {
-      reject(new ServiceError('SERVER_TIMEOUT', 'The server took too long to create the story. Please try again.', 504));
-    }, timeoutMs);
-  });
+async function generateContentWithFallback(
+  ai: GoogleGenAI,
+  requestOptions: {
+    contents: string;
+    config: any;
+  }
+) {
+  const configured = AI_CONFIG.model;
+  const candidateModels = [
+    'gemini-3.1-flash-lite',
+    configured,
+    'gemini-flash-latest',
+    'gemini-3.8-flash',
+    ...(AI_CONFIG.fallbackModels || [])
+  ].filter(m => m && m !== 'gemini-2.5-flash');
 
-  return Promise.race([
-    promise.then(res => {
-      clearTimeout(timer);
-      return res;
-    }),
-    timeoutPromise
-  ]);
+  const modelsToTry = Array.from(new Set(candidateModels));
+  let lastError: any = null;
+
+  for (const model of modelsToTry) {
+    try {
+      const response = await ai.models.generateContent({
+        model,
+        contents: requestOptions.contents,
+        config: requestOptions.config
+      });
+      return response;
+    } catch (err: any) {
+      lastError = err;
+      const status = err?.status || err?.statusCode;
+      const msg = err?.message || String(err);
+      console.warn(`[StoryService] Model ${model} unavailable (${status || msg.slice(0, 60)}), trying next candidate...`);
+      // If auth failure, fail immediately
+      if (status === 401 || status === 403) {
+        throw err;
+      }
+    }
+  }
+
+  throw lastError;
 }
 
 function formatApiError(err: any): ServiceError {
@@ -148,19 +173,15 @@ export async function generateDraft(params: PromptInputParams): Promise<{
   const prompt = buildStep1Prompt(params);
 
   try {
-    const response = await withTimeout(
-      ai.models.generateContent({
-        model: AI_CONFIG.model,
-        contents: prompt,
-        config: {
-          responseMimeType: 'application/json',
-          responseSchema: STEP1_RESPONSE_SCHEMA,
-          temperature: AI_CONFIG.temperature,
-          maxOutputTokens: AI_CONFIG.maxOutputTokens
-        }
-      }),
-      AI_CONFIG.timeoutMs
-    );
+    const response = await generateContentWithFallback(ai, {
+      contents: prompt,
+      config: {
+        responseMimeType: 'application/json',
+        responseSchema: STEP1_RESPONSE_SCHEMA,
+        temperature: AI_CONFIG.temperature,
+        maxOutputTokens: AI_CONFIG.maxOutputTokens
+      }
+    });
 
     const text = response.text?.trim() || '{}';
     const parsed = JSON.parse(text);
@@ -195,19 +216,15 @@ export async function generateVocabulary(paragraphs: string[], tokens?: string[]
   const prompt = buildStep2Prompt(paragraphs, wordTokens);
 
   try {
-    const response = await withTimeout(
-      ai.models.generateContent({
-        model: AI_CONFIG.model,
-        contents: prompt,
-        config: {
-          responseMimeType: 'application/json',
-          responseSchema: STEP2_RESPONSE_SCHEMA,
-          temperature: 0.3,
-          maxOutputTokens: AI_CONFIG.maxOutputTokens
-        }
-      }),
-      AI_CONFIG.timeoutMs
-    );
+    const response = await generateContentWithFallback(ai, {
+      contents: prompt,
+      config: {
+        responseMimeType: 'application/json',
+        responseSchema: STEP2_RESPONSE_SCHEMA,
+        temperature: 0.3,
+        maxOutputTokens: AI_CONFIG.maxOutputTokens
+      }
+    });
 
     const text = response.text?.trim() || '{}';
     const parsed = JSON.parse(text);

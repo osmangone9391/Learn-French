@@ -13,7 +13,10 @@ export const AI_CONFIG = {
   // Exact recommended production model from official Google Gemini documentation:
   // Documentation: https://ai.google.dev/gemini-api/docs/models/gemini
   // Can be overridden via GEMINI_MODEL environment variable
-  model: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
+  model: process.env.GEMINI_MODEL || 'gemini-3.1-flash-lite',
+
+  // Fallback models if primary model is unavailable or encounters high demand spikes
+  fallbackModels: ['gemini-3.1-flash-lite', 'gemini-flash-latest', 'gemini-3.8-flash'],
 
   // Maximum output tokens for model response
   maxOutputTokens: 8192,
@@ -21,8 +24,8 @@ export const AI_CONFIG = {
   // Temperature for balanced creativity and strict grammatical precision
   temperature: 0.7,
 
-  // Per-call request timeout in milliseconds (e.g. 35 seconds)
-  timeoutMs: 35000,
+  // Per-call request timeout in milliseconds (e.g. 50 seconds)
+  timeoutMs: 50000,
 };
 
 export const SECURITY_LIMITS = {

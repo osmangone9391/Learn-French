@@ -1,21 +1,39 @@
-interface NetlifyContext {
-  ip?: string;
-  [key: string]: any;
-}
+import type { Config } from '@netlify/functions';
 import { SECURITY_LIMITS } from '../../server/config';
-import { counterStorage, hashIp } from '../../server/storage';
+import { counterStorage } from '../../server/storage';
 import { generateDraft, generateVocabulary, ServiceError } from '../../server/storyService';
 import { verifyTurnstileToken } from '../../server/turnstile';
 
-export default async (req: Request, context: NetlifyContext) => {
-  if (req.method !== 'POST') {
-    return new Response(JSON.stringify({ error: 'METHOD_NOT_ALLOWED' }), {
-      status: 405,
-      headers: { 'Content-Type': 'application/json' }
+const CORS_HEADERS = {
+  'Content-Type': 'application/json',
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+};
+
+export default async (req: Request, context: any) => {
+  // Handle CORS preflight
+  if (req.method === 'OPTIONS') {
+    return new Response(null, {
+      status: 204,
+      headers: CORS_HEADERS
     });
   }
 
-  const ip = context.ip || '127.0.0.1';
+  if (req.method !== 'POST') {
+    return new Response(
+      JSON.stringify({
+        error: 'METHOD_NOT_ALLOWED',
+        message: `HTTP ${req.method} not allowed. Please use POST.`
+      }),
+      {
+        status: 405,
+        headers: CORS_HEADERS
+      }
+    );
+  }
+
+  const ip = context?.ip || '127.0.0.1';
 
   // 1. Kill Switch
   if (!SECURITY_LIMITS.isAiStoriesEnabled) {
@@ -25,7 +43,7 @@ export default async (req: Request, context: NetlifyContext) => {
         error: 'FEATURE_DISABLED',
         message: 'Story creation is temporarily unavailable.'
       }),
-      { status: 503, headers: { 'Content-Type': 'application/json' } }
+      { status: 503, headers: CORS_HEADERS }
     );
   }
 
@@ -35,7 +53,7 @@ export default async (req: Request, context: NetlifyContext) => {
   } catch {
     return new Response(
       JSON.stringify({ error: 'INVALID_JSON', message: 'Malformed JSON payload.' }),
-      { status: 400, headers: { 'Content-Type': 'application/json' } }
+      { status: 400, headers: CORS_HEADERS }
     );
   }
 
@@ -107,7 +125,7 @@ export default async (req: Request, context: NetlifyContext) => {
       });
       return new Response(JSON.stringify({ step: 'draft', draft }), {
         status: 200,
-        headers: { 'Content-Type': 'application/json' }
+        headers: CORS_HEADERS
       });
     }
 
@@ -116,14 +134,14 @@ export default async (req: Request, context: NetlifyContext) => {
       if (paragraphs.length === 0) {
         return new Response(
           JSON.stringify({ error: 'INVALID_INPUT', message: 'Paragraphs required.' }),
-          { status: 400, headers: { 'Content-Type': 'application/json' } }
+          { status: 400, headers: CORS_HEADERS }
         );
       }
       const vocabulary = await generateVocabulary(paragraphs, body.tokens);
       counterStorage.increment(userId, ip);
       return new Response(JSON.stringify({ step: 'vocab', vocabulary }), {
         status: 200,
-        headers: { 'Content-Type': 'application/json' }
+        headers: CORS_HEADERS
       });
     }
 
@@ -149,7 +167,7 @@ export default async (req: Request, context: NetlifyContext) => {
         quiz: draft.quiz,
         vocabulary
       }),
-      { status: 200, headers: { 'Content-Type': 'application/json' } }
+      { status: 200, headers: CORS_HEADERS }
     );
   } catch (err: any) {
     const errorType = err instanceof ServiceError ? err.code : 'UNKNOWN_ERROR';
@@ -158,13 +176,17 @@ export default async (req: Request, context: NetlifyContext) => {
     if (err instanceof ServiceError) {
       return new Response(
         JSON.stringify({ error: err.code, message: err.message }),
-        { status: err.status, headers: { 'Content-Type': 'application/json' } }
+        { status: err.status, headers: CORS_HEADERS }
       );
     }
 
     return new Response(
       JSON.stringify({ error: 'SERVER_ERROR', message: 'Story creation encountered an error.' }),
-      { status: 500, headers: { 'Content-Type': 'application/json' } }
+      { status: 500, headers: CORS_HEADERS }
     );
   }
+};
+
+export const config: Config = {
+  path: '/api/generate-story'
 };

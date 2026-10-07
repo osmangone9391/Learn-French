@@ -11,11 +11,13 @@
   from = "/api/generate-story"
   to = "/.netlify/functions/generate-story"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/api/story-quota"
   to = "/.netlify/functions/story-quota"
   status = 200
+  force = true
 
 # Single Page Application (SPA) fallback
 [[redirects]]

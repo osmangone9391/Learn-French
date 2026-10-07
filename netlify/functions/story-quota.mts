@@ -1,11 +1,22 @@
-interface NetlifyContext {
-  ip?: string;
-  [key: string]: any;
-}
+import type { Config } from '@netlify/functions';
 import { SECURITY_LIMITS } from '../../server/config';
 import { counterStorage } from '../../server/storage';
 
-export default async (req: Request, context: NetlifyContext) => {
+const CORS_HEADERS = {
+  'Content-Type': 'application/json',
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+};
+
+export default async (req: Request, context: any) => {
+  if (req.method === 'OPTIONS') {
+    return new Response(null, {
+      status: 204,
+      headers: CORS_HEADERS
+    });
+  }
+
   const enabled = SECURITY_LIMITS.isAiStoriesEnabled;
   if (!enabled) {
     return new Response(
@@ -18,13 +29,13 @@ export default async (req: Request, context: NetlifyContext) => {
         globalPaused: false,
         message: 'Story creation is temporarily unavailable.'
       }),
-      { status: 200, headers: { 'Content-Type': 'application/json' } }
+      { status: 200, headers: CORS_HEADERS }
     );
   }
 
   const url = new URL(req.url);
   const userId = url.searchParams.get('userId')?.trim() || 'anonymous';
-  const ip = context.ip || '127.0.0.1';
+  const ip = context?.ip || '127.0.0.1';
   const counts = counterStorage.getCounts(userId, ip);
 
   const userLimit = SECURITY_LIMITS.userDailyLimit;
@@ -52,6 +63,10 @@ export default async (req: Request, context: NetlifyContext) => {
       globalPaused,
       message
     }),
-    { status: 200, headers: { 'Content-Type': 'application/json' } }
+    { status: 200, headers: CORS_HEADERS }
   );
+};
+
+export const config: Config = {
+  path: '/api/story-quota'
 };
