@@ -17,6 +17,7 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
+import os from 'os';
 
 export interface DailyCounters {
   date: string; // YYYY-MM-DD
@@ -40,7 +41,15 @@ class CounterStorage {
   private cache: DailyCounters;
 
   constructor() {
-    this.dataDir = path.resolve(process.cwd(), 'data');
+    const isServerless = Boolean(
+      process.env.NETLIFY ||
+      process.env.AWS_LAMBDA_FUNCTION_NAME ||
+      process.env.LAMBDA_TASK_ROOT ||
+      process.env.VERCEL
+    );
+    this.dataDir = isServerless
+      ? path.join(os.tmpdir(), 'lirefacile-data')
+      : path.resolve(process.cwd(), 'data');
     this.filePath = path.join(this.dataDir, 'daily-counters.json');
     this.cache = this.loadFromDisk();
   }

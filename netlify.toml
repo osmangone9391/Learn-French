@@ -1,0 +1,24 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Direct API routes to Netlify serverless functions
+[[redirects]]
+  from = "/api/generate-story"
+  to = "/.netlify/functions/generate-story"
+  status = 200
+
+[[redirects]]
+  from = "/api/story-quota"
+  to = "/.netlify/functions/story-quota"
+  status = 200
+
+# Single Page Application (SPA) fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
