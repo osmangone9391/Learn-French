@@ -1,6 +1,6 @@
 import React from 'react';
-import { Clock, BookText, CheckCircle2, ChevronRight, HelpCircle, Sparkles, Trash2, RotateCcw } from 'lucide-react';
-import { Story, StoryGenerationSettings } from '../types';
+import { Clock, BookText, CheckCircle2, ChevronRight, HelpCircle } from 'lucide-react';
+import { Story } from '../types';
 import { i18n } from '../i18n/en';
 
 interface StoryCardProps {
@@ -9,8 +9,6 @@ interface StoryCardProps {
   savedWordsCount: number;
   quizScore?: number;
   onSelect: (story: Story) => void;
-  onDelete?: (storyId: string) => void;
-  onRegenerate?: (settings: StoryGenerationSettings) => void;
 }
 
 export const StoryCard: React.FC<StoryCardProps> = ({
@@ -18,9 +16,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({
   isRead,
   savedWordsCount,
   quizScore,
-  onSelect,
-  onDelete,
-  onRegenerate
+  onSelect
 }) => {
   const levelLabel =
     story.level === 'A1'
@@ -41,11 +37,6 @@ export const StoryCard: React.FC<StoryCardProps> = ({
             <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-200">
               {levelLabel}
             </span>
-            {story.isAiGenerated && (
-              <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-purple-700 bg-purple-50 px-2 py-0.5 rounded-full border border-purple-200">
-                <Sparkles size={11} /> AI Story
-              </span>
-            )}
             <span className="text-xs font-medium text-stone-500 bg-stone-100 px-2 py-0.5 rounded-md">
               {story.topic}
             </span>
@@ -57,32 +48,6 @@ export const StoryCard: React.FC<StoryCardProps> = ({
                 <CheckCircle2 size={13} /> {i18n.common.read}
               </span>
             )}
-            {story.isAiGenerated && onRegenerate && story.generationSettings && (
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onRegenerate(story.generationSettings!);
-                }}
-                className="p-1 rounded-lg text-stone-400 hover:text-purple-600 hover:bg-purple-50 transition-colors cursor-pointer"
-                title="Regenerate with same settings"
-              >
-                <RotateCcw size={14} />
-              </button>
-            )}
-            {story.isAiGenerated && onDelete && (
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onDelete(story.id);
-                }}
-                className="p-1 rounded-lg text-stone-400 hover:text-rose-600 hover:bg-rose-50 transition-colors cursor-pointer"
-                title="Delete custom story"
-              >
-                <Trash2 size={14} />
-              </button>
-            )}
           </div>
         </div>
 
@@ -93,12 +58,6 @@ export const StoryCard: React.FC<StoryCardProps> = ({
         <p className="mt-1 text-sm text-stone-600 line-clamp-2 leading-relaxed">
           {story.subtitle}
         </p>
-
-        {story.reusedWords && story.reusedWords.length > 0 && (
-          <div className="mt-2 text-[11px] text-amber-800 bg-amber-50/80 px-2 py-0.5 rounded-md border border-amber-200/60 inline-flex items-center gap-1 font-medium">
-            <span>Reused {story.reusedWords.length} words from your vocabulary</span>
-          </div>
-        )}
       </div>
 
       {/* Meta info & Footer */}

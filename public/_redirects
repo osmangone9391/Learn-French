@@ -1,3 +1,1 @@
-/api/generate-story  /.netlify/functions/generate-story  200!
-/api/story-quota     /.netlify/functions/story-quota     200!
-/*                   /index.html                         200
+/*  /index.html  200

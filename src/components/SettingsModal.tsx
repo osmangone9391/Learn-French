@@ -12,16 +12,13 @@ import {
   CheckCircle2,
   AlertCircle,
   Radio,
-  Trash2,
-  Flag
+  Trash2
 } from 'lucide-react';
-import { AppSettings, UserStats, ReportedVocabItem } from '../types';
+import { AppSettings, UserStats } from '../types';
 import { INITIAL_STORIES } from '../data/stories';
 import {
   exportAllData,
-  importAllData,
-  getReportedVocab,
-  deleteReportedVocabItem
+  importAllData
 } from '../utils/storage';
 import { audioPlayer } from '../utils/audioPlayer';
 import { i18n } from '../i18n/en';
@@ -48,7 +45,6 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const [importStatus, setImportStatus] = useState<{ success: boolean; message: string } | null>(null);
   const [frenchVoices, setFrenchVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [selectedVoiceURI, setSelectedVoiceURI] = useState<string>(settings.preferredVoiceURI || '');
-  const [reportedList, setReportedList] = useState<ReportedVocabItem[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -59,16 +55,10 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
       if (current) {
         setSelectedVoiceURI(current.voiceURI);
       }
-      setReportedList(getReportedVocab());
     }
   }, [isOpen]);
 
   if (!isOpen) return null;
-
-  const handleDeleteReported = (id: string) => {
-    deleteReportedVocabItem(id);
-    setReportedList(getReportedVocab());
-  };
 
   // Handle Export Backup
   const handleExport = () => {
@@ -350,48 +340,6 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               );
             })()}
           </div>
-
-          {/* Reported AI Meanings (if any) */}
-          {reportedList.length > 0 && (
-            <div className="pt-4 border-t border-stone-100 space-y-3">
-              <div className="flex items-center justify-between">
-                <label className="text-xs font-bold uppercase tracking-wider text-stone-700 flex items-center gap-1.5">
-                  <Flag size={14} className="text-amber-600" />
-                  Reported Meanings ({reportedList.length})
-                </label>
-                <span className="text-[11px] text-stone-400">
-                  Flagged by you in AI stories
-                </span>
-              </div>
-              <div className="space-y-2 max-h-40 overflow-y-auto pr-1">
-                {reportedList.map((item) => (
-                  <div
-                    key={item.id}
-                    className="p-2.5 bg-stone-50 rounded-xl border border-stone-200 text-xs flex items-start justify-between gap-2"
-                  >
-                    <div className="space-y-0.5">
-                      <div className="font-semibold text-stone-900">
-                        {item.word} <span className="text-stone-500 font-normal">({item.en})</span>
-                      </div>
-                      <p className="text-[11px] text-stone-500 italic">
-                        « {item.sentence} »
-                      </p>
-                      <p className="text-[10px] text-stone-400">
-                        {item.storyTitle} • {new Date(item.dateReported).toLocaleDateString()}
-                      </p>
-                    </div>
-                    <button
-                      onClick={() => handleDeleteReported(item.id)}
-                      className="p-1 text-stone-400 hover:text-stone-700 transition-colors cursor-pointer shrink-0"
-                      title="Clear flag"
-                    >
-                      <X size={14} />
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
 
           {/* Backup: Export & Import */}
           <div className="pt-4 border-t border-stone-100 space-y-3">

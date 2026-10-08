@@ -4,7 +4,6 @@ import {
   Compass,
   BookOpen,
   Bookmark,
-  Sparkles,
   Calendar,
   Play,
   Layers,
@@ -12,9 +11,10 @@ import {
   CheckCircle2,
   Circle,
   ArrowRight,
-  Lightbulb
+  Lightbulb,
+  Sparkles
 } from 'lucide-react';
-import { Story, UserStats, SavedWord, AppSettings, StoryRecommendation, StoryGenerationSettings } from '../types';
+import { Story, UserStats, SavedWord, AppSettings, StoryRecommendation } from '../types';
 import { StoryCard } from './StoryCard';
 import { getDailyStudyQueue } from '../utils/srs';
 import { getRecommendedStory } from '../utils/stats';
@@ -30,9 +30,6 @@ interface StoryLibraryProps {
   onStartReview: () => void;
   onOpenPlacementQuiz: () => void;
   onOpenProgress: () => void;
-  onOpenCreateStory: () => void;
-  onDeleteCustomStory?: (storyId: string) => void;
-  onRegenerateCustomStory?: (settings: StoryGenerationSettings) => void;
 }
 
 export const StoryLibrary: React.FC<StoryLibraryProps> = ({
@@ -44,10 +41,7 @@ export const StoryLibrary: React.FC<StoryLibraryProps> = ({
   onOpenSavedWords,
   onStartReview,
   onOpenPlacementQuiz,
-  onOpenProgress,
-  onOpenCreateStory,
-  onDeleteCustomStory,
-  onRegenerateCustomStory
+  onOpenProgress
 }) => {
   const [selectedLevel, setSelectedLevel] = useState<string>('ALL');
   const [searchQuery, setSearchQuery] = useState('');
@@ -67,7 +61,6 @@ export const StoryLibrary: React.FC<StoryLibraryProps> = ({
   }, [stories, userStats, savedWords]);
 
   // Counts
-  const customStoriesCount = useMemo(() => stories.filter(s => s.isAiGenerated).length, [stories]);
   const a1Count = useMemo(() => stories.filter(s => s.level === 'A1').length, [stories]);
   const a2Count = useMemo(() => stories.filter(s => s.level === 'A2').length, [stories]);
 
@@ -88,8 +81,6 @@ export const StoryLibrary: React.FC<StoryLibraryProps> = ({
       const matchLevel =
         selectedLevel === 'ALL'
           ? true
-          : selectedLevel === 'MY_STORIES'
-          ? story.isAiGenerated === true
           : story.level === selectedLevel;
 
       const matchQuery =
@@ -289,18 +280,6 @@ export const StoryLibrary: React.FC<StoryLibraryProps> = ({
             {i18n.levels.allLevels} ({stories.length})
           </button>
           <button
-            onClick={() => setSelectedLevel('MY_STORIES')}
-            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all shrink-0 flex items-center gap-1.5 cursor-pointer ${
-              selectedLevel === 'MY_STORIES'
-                ? 'bg-purple-700 text-white shadow-xs'
-                : 'bg-purple-50 hover:bg-purple-100 text-purple-900 border border-purple-200/80'
-            }`}
-          >
-            <Sparkles size={12} className={selectedLevel === 'MY_STORIES' ? 'text-amber-300' : 'text-purple-600'} />
-            <span>My stories</span>
-            <span className="text-[10px] opacity-80">({customStoriesCount})</span>
-          </button>
-          <button
             onClick={() => setSelectedLevel('A1')}
             className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all shrink-0 flex items-center gap-1 cursor-pointer ${
               selectedLevel === 'A1'
@@ -335,17 +314,8 @@ export const StoryLibrary: React.FC<StoryLibraryProps> = ({
           </button>
         </div>
 
-        {/* Right controls: Create My Story + Search */}
+        {/* Right controls: Search */}
         <div className="flex items-center gap-2">
-          <button
-            onClick={onOpenCreateStory}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-purple-700 hover:bg-purple-800 text-white text-xs font-semibold shadow-xs hover:shadow transition-all shrink-0 cursor-pointer active:scale-95"
-            title="Create an original story personalized for you"
-          >
-            <Sparkles size={13} className="text-amber-300" />
-            <span>Create my story</span>
-          </button>
-
           {/* Search */}
           <div className="relative min-w-[150px] sm:w-48">
             <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400" />
@@ -354,7 +324,7 @@ export const StoryLibrary: React.FC<StoryLibraryProps> = ({
               placeholder={i18n.library.searchPlaceholder}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-8 pr-3 py-1.5 text-xs bg-white border border-stone-200 rounded-full focus:outline-hidden focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 transition-all text-stone-800 placeholder-stone-400"
+              className="w-full pl-8 pr-3 py-1.5 text-xs bg-white border border-stone-200 rounded-full focus:outline-hidden focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 transition-all text-stone-800 placeholder-stone-400"
             />
           </div>
         </div>
@@ -365,32 +335,20 @@ export const StoryLibrary: React.FC<StoryLibraryProps> = ({
         <div className="text-center py-12 bg-white rounded-3xl border border-stone-200 p-8 space-y-3">
           <Compass size={36} className="mx-auto text-stone-300" />
           <p className="text-base font-semibold text-stone-800">
-            {selectedLevel === 'MY_STORIES' ? 'No personalized stories yet' : i18n.library.noStoriesFound}
+            {i18n.library.noStoriesFound}
           </p>
           <p className="text-xs text-stone-500 max-w-sm mx-auto">
-            {selectedLevel === 'MY_STORIES'
-              ? 'Click "Create my story" above to generate an original French story at your level that reuses your active words!'
-              : 'Try resetting your search query or level filters to view all available stories.'}
+            Try resetting your search query or level filters to view all available stories.
           </p>
-          {selectedLevel === 'MY_STORIES' ? (
-            <button
-              onClick={onOpenCreateStory}
-              className="mt-2 inline-flex items-center gap-1.5 px-4 py-2 bg-purple-700 text-white rounded-full text-xs font-semibold hover:bg-purple-800 cursor-pointer shadow-xs"
-            >
-              <Sparkles size={14} className="text-amber-300" />
-              <span>Create my story now</span>
-            </button>
-          ) : (
-            <button
-              onClick={() => {
-                setSelectedLevel('ALL');
-                setSearchQuery('');
-              }}
-              className="mt-2 px-4 py-2 bg-stone-900 text-white rounded-full text-xs font-medium hover:bg-stone-800 cursor-pointer"
-            >
-              {i18n.library.resetFilters}
-            </button>
-          )}
+          <button
+            onClick={() => {
+              setSelectedLevel('ALL');
+              setSearchQuery('');
+            }}
+            className="mt-2 px-4 py-2 bg-stone-900 text-white rounded-full text-xs font-medium hover:bg-stone-800 cursor-pointer"
+          >
+            {i18n.library.resetFilters}
+          </button>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -402,8 +360,6 @@ export const StoryLibrary: React.FC<StoryLibraryProps> = ({
               savedWordsCount={wordsSavedByStory[story.id] || 0}
               quizScore={userStats.quizHistory?.[story.id]?.bestScore ?? userStats.quizScores[story.id]}
               onSelect={onSelectStory}
-              onDelete={story.isAiGenerated && onDeleteCustomStory ? onDeleteCustomStory : undefined}
-              onRegenerate={story.isAiGenerated && onRegenerateCustomStory ? onRegenerateCustomStory : undefined}
             />
           ))}
         </div>

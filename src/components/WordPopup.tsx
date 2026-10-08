@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Volume2, Bookmark, Check, X, BookOpen, Flag } from 'lucide-react';
+import React from 'react';
+import { Volume2, Bookmark, Check, X, BookOpen } from 'lucide-react';
 import { VocabEntry, PartOfSpeech } from '../types';
 import { audioPlayer } from '../utils/audioPlayer';
 import { i18n } from '../i18n/en';
@@ -15,8 +15,6 @@ interface WordPopupProps {
   onSave: () => void;
   onClose: () => void;
   playbackRate?: number;
-  isAiStory?: boolean;
-  onReportMeaning?: (word: string, lemma: string) => void;
 }
 
 const POS_LABELS: Record<PartOfSpeech, { label: string; bn: string; color: string }> = {
@@ -41,22 +39,11 @@ export const WordPopup: React.FC<WordPopupProps> = ({
   isSaved,
   onSave,
   onClose,
-  playbackRate = 1.0,
-  isAiStory = false,
-  onReportMeaning
+  playbackRate = 1.0
 }) => {
-  const [hasReported, setHasReported] = useState(false);
   const displayLemma = vocab?.lemma || lemma || word;
   const posInfo = vocab?.pos ? POS_LABELS[vocab.pos] : null;
   const grammar = getGrammarForVocab(word, vocab);
-
-  const handleReport = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (onReportMeaning) {
-      onReportMeaning(word, displayLemma);
-      setHasReported(true);
-    }
-  };
 
   const handlePlayAudio = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -204,27 +191,6 @@ export const WordPopup: React.FC<WordPopupProps> = ({
               )}
             </button>
           </div>
-
-          {/* Report wrong meaning button for AI stories */}
-          {isAiStory && (
-            <div className="mt-3 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
-              {hasReported ? (
-                <span className="text-emerald-700 font-medium flex items-center gap-1 text-[11px]">
-                  <Check size={13} /> Meaning flagged for your review
-                </span>
-              ) : (
-                <button
-                  onClick={handleReport}
-                  className="flex items-center gap-1 text-[11px] text-stone-500 hover:text-amber-800 transition-colors cursor-pointer"
-                  title="Report an inaccurate or awkward translation"
-                >
-                  <Flag size={12} />
-                  <span>Report a wrong meaning</span>
-                </button>
-              )}
-              <span className="text-[10px] text-stone-400">AI Story</span>
-            </div>
-          )}
         </div>
       </div>
     </div>

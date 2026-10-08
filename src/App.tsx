@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { Story, SavedWord, UserStats, AppSettings, CEFRLevel, StoryGenerationSettings } from './types';
+import { Story, SavedWord, UserStats, AppSettings, CEFRLevel } from './types';
 import { INITIAL_STORIES } from './data/stories';
 import {
   getSavedWords,
@@ -20,9 +20,6 @@ import {
   dismissPlacementPrompt,
   getAppSettings,
   updateAppSettings,
-  getCustomStories,
-  saveCustomStory,
-  deleteCustomStory,
   cleanupOldApiKey
 } from './utils/storage';
 import { getDailyStudyQueue } from './utils/srs';
@@ -34,15 +31,11 @@ import { ReviewSession } from './components/ReviewSession';
 import { ProgressPage } from './components/ProgressPage';
 import { SettingsModal } from './components/SettingsModal';
 import { PlacementQuizModal } from './components/PlacementQuizModal';
-import { CreateStoryModal } from './components/CreateStoryModal';
 import { AudioSourceIndicator } from './components/AudioSourceIndicator';
 
 type AppView = 'library' | 'reader' | 'words' | 'review' | 'progress';
 
 export default function App() {
-  const [customStories, setCustomStories] = useState<Story[]>(getCustomStories());
-  const allStories = useMemo(() => [...customStories, ...INITIAL_STORIES], [customStories]);
-
   const [activeView, setActiveView] = useState<AppView>('library');
   const [activeStory, setActiveStory] = useState<Story | null>(null);
   const [savedWords, setSavedWords] = useState<SavedWord[]>([]);
@@ -51,10 +44,6 @@ export default function App() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isPlacementQuizOpen, setIsPlacementQuizOpen] = useState(false);
   const [isFirstLaunchPlacement, setIsFirstLaunchPlacement] = useState(false);
-
-  // Personalized Story Creation state
-  const [isCreateStoryOpen, setIsCreateStoryOpen] = useState(false);
-  const [regenerateSettings, setRegenerateSettings] = useState<StoryGenerationSettings | undefined>(undefined);
 
   // Load persisted state on mount
   useEffect(() => {
@@ -65,11 +54,9 @@ export default function App() {
       const words = getSavedWords();
       const stats = getUserStats();
       const sett = getAppSettings();
-      const custom = getCustomStories();
       setSavedWords(words);
       setUserStats(stats);
       setSettings(sett);
-      setCustomStories(custom);
 
       // Offer placement test on first launch if not seen yet
       if (!stats.hasSeenPlacementPrompt && !stats.placementResult) {
@@ -100,6 +87,11 @@ export default function App() {
     sentence: string;
     storyId: string;
     storyTitle: string;
+    gender?: SavedWord['gender'];
+    number?: SavedWord['number'];
+    person?: string;
+    tense?: string;
+    lemmaWithArticle?: string;
   }) => {
     const res = saveWord(item);
     if (res.success) {
@@ -108,12 +100,21 @@ export default function App() {
   };
 
   // Handle removing a saved word
-  const handleRemoveSavedWord = (id: string) => {
-    removeSavedWord(id);
+  const handleRemoveWord = (wordId: string) => {
+    removeSavedWord(wordId);
     setSavedWords(getSavedWords());
   };
 
-  // Handle finished review session
+  // Handle story read status toggle
+  const handleToggleRead = (storyId: string, wordCount: number) => {
+    const isCurrentlyRead = userStats.storiesReadIds.includes(storyId);
+    const updated = isCurrentlyRead
+      ? unmarkStoryAsRead(storyId, wordCount)
+      : markStoryAsRead(storyId, wordCount);
+    setUserStats(updated);
+  };
+
+  // Handle finish SRS review session
   const handleFinishReviewSession = (
     updatedCards: SavedWord[],
     cardsReviewed: number,
@@ -121,8 +122,8 @@ export default function App() {
   ) => {
     if (updatedCards.length > 0) {
       const currentList = getSavedWords();
-      const updatedMap = new Map(updatedCards.map(c => [c.id, c]));
-      const newList = currentList.map(card => updatedMap.get(card.id) || card);
+      const updatedMap = new Map(updatedCards.map((c) => [c.id, c]));
+      const newList = currentList.map((card) => updatedMap.get(card.id) || card);
 
       updateBatchSavedWords(newList);
       setSavedWords(newList);
@@ -133,74 +134,39 @@ export default function App() {
     setActiveView('library');
   };
 
-  // Toggle mark story as read
-  const handleToggleRead = (storyId: string, wordCount: number) => {
-    const isCurrentlyRead = userStats.storiesReadIds.includes(storyId);
-    const updated = isCurrentlyRead
-      ? unmarkStoryAsRead(storyId, wordCount)
-      : markStoryAsRead(storyId, wordCount);
-    setUserStats(updated);
-  };
-
-  // Handle quiz completion (retaining best score and last score)
+  // Handle quiz completion
   const handleQuizCompleted = (scorePercentage: number) => {
     if (!activeStory) return;
-    const updatedStats = recordQuizScore(activeStory.id, scorePercentage);
-    setUserStats(updatedStats);
+    const statsUpdated = recordQuizScore(activeStory.id, scorePercentage);
+    setUserStats(statsUpdated);
   };
 
-  // Handle placement test completion
+  // Handle placement quiz completion
   const handlePlacementComplete = (level: CEFRLevel, score: number, total: number) => {
-    const updated = savePlacementResult(level, score, total);
-    setUserStats(updated);
+    const statsUpdated = savePlacementResult(level, score, total);
+    setUserStats(statsUpdated);
     setIsPlacementQuizOpen(false);
+    setIsFirstLaunchPlacement(false);
   };
 
-  // Handle skip placement test
   const handlePlacementSkip = () => {
-    const updated = dismissPlacementPrompt();
-    setUserStats(updated);
+    const statsUpdated = dismissPlacementPrompt();
+    setUserStats(statsUpdated);
     setIsPlacementQuizOpen(false);
+    setIsFirstLaunchPlacement(false);
   };
 
-  // Update app settings
-  const handleUpdateSettings = (partial: Partial<AppSettings>) => {
-    const updated = updateAppSettings(partial);
+  // Settings update handler
+  const handleUpdateSettings = (newSettings: Partial<AppSettings>) => {
+    const updated = updateAppSettings(newSettings);
     setSettings(updated);
   };
 
-  // Data restored from backup
+  // Backup restore callback
   const handleDataRestored = () => {
     setSavedWords(getSavedWords());
     setUserStats(getUserStats());
     setSettings(getAppSettings());
-    setCustomStories(getCustomStories());
-  };
-
-  // Story Creation & Management Handlers
-  const handleStoryCreated = (newStory: Story) => {
-    saveCustomStory(newStory);
-    const updated = getCustomStories();
-    setCustomStories(updated);
-    setActiveStory(newStory);
-    setActiveView('reader');
-    setIsCreateStoryOpen(false);
-    setRegenerateSettings(undefined);
-  };
-
-  const handleDeleteCustomStory = (storyId: string) => {
-    deleteCustomStory(storyId);
-    const updated = getCustomStories();
-    setCustomStories(updated);
-    if (activeStory?.id === storyId) {
-      setActiveStory(null);
-      setActiveView('library');
-    }
-  };
-
-  const handleRegenerateStory = (storyGenSettings: StoryGenerationSettings) => {
-    setRegenerateSettings(storyGenSettings);
-    setIsCreateStoryOpen(true);
   };
 
   // Navigation handlers
@@ -254,14 +220,12 @@ export default function App() {
             onSaveWord={handleSaveWord}
             onUpdateSettings={handleUpdateSettings}
             onQuizCompleted={handleQuizCompleted}
-            onDeleteStory={handleDeleteCustomStory}
-            onRegenerateStory={handleRegenerateStory}
           />
         ) : activeView === 'words' ? (
           <SavedWordsList
             savedWords={savedWords}
             settings={settings}
-            onRemoveWord={handleRemoveSavedWord}
+            onRemoveWord={handleRemoveWord}
             onStartReview={handleStartReview}
             onBack={handleResetToLibrary}
           />
@@ -275,7 +239,7 @@ export default function App() {
           />
         ) : activeView === 'progress' ? (
           <ProgressPage
-            stories={allStories}
+            stories={INITIAL_STORIES}
             userStats={userStats}
             savedWords={savedWords}
             onOpenPlacementQuiz={() => setIsPlacementQuizOpen(true)}
@@ -283,7 +247,7 @@ export default function App() {
           />
         ) : (
           <StoryLibrary
-            stories={allStories}
+            stories={INITIAL_STORIES}
             userStats={userStats}
             savedWords={savedWords}
             settings={settings}
@@ -292,12 +256,6 @@ export default function App() {
             onStartReview={handleStartReview}
             onOpenPlacementQuiz={() => setIsPlacementQuizOpen(true)}
             onOpenProgress={handleOpenProgress}
-            onOpenCreateStory={() => {
-              setRegenerateSettings(undefined);
-              setIsCreateStoryOpen(true);
-            }}
-            onDeleteCustomStory={handleDeleteCustomStory}
-            onRegenerateCustomStory={handleRegenerateStory}
           />
         )}
       </div>
@@ -320,20 +278,6 @@ export default function App() {
         onComplete={handlePlacementComplete}
         onSkip={handlePlacementSkip}
         isFirstLaunch={isFirstLaunchPlacement}
-      />
-
-      {/* Create Story Modal */}
-      <CreateStoryModal
-        isOpen={isCreateStoryOpen}
-        onClose={() => {
-          setIsCreateStoryOpen(false);
-          setRegenerateSettings(undefined);
-        }}
-        savedWords={savedWords}
-        recommendedLevel={userStats.recommendedLevel || 'A1'}
-        onStoryCreated={handleStoryCreated}
-        onOpenSettings={() => setIsSettingsOpen(true)}
-        initialSettings={regenerateSettings}
       />
 
       {/* Persistent Audio Source Indicator (Neural vs Browser Voice) */}

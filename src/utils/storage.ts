@@ -6,8 +6,7 @@ import {
   StoryQuizRecord,
   CEFRLevel,
   PlacementResult,
-  Story,
-  ReportedVocabItem
+  Story
 } from '../types';
 
 const STORAGE_KEYS = {
@@ -491,46 +490,6 @@ export function updateAppSettings(partial: Partial<AppSettings>): AppSettings {
 }
 
 /**
- * Custom Stories Storage (AI-generated stories)
- */
-export function getCustomStories(): Story[] {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEYS.CUSTOM_STORIES);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : [];
-  } catch (error) {
-    console.error('Failed to get custom stories:', error);
-    return [];
-  }
-}
-
-export function saveCustomStory(story: Story): void {
-  try {
-    const current = getCustomStories();
-    const existingIndex = current.findIndex(s => s.id === story.id);
-    if (existingIndex >= 0) {
-      current[existingIndex] = story;
-    } else {
-      current.unshift(story);
-    }
-    localStorage.setItem(STORAGE_KEYS.CUSTOM_STORIES, JSON.stringify(current));
-  } catch (error) {
-    console.error('Failed to save custom story:', error);
-  }
-}
-
-export function deleteCustomStory(storyId: string): void {
-  try {
-    const current = getCustomStories();
-    const filtered = current.filter(s => s.id !== storyId);
-    localStorage.setItem(STORAGE_KEYS.CUSTOM_STORIES, JSON.stringify(filtered));
-  } catch (error) {
-    console.error('Failed to delete custom story:', error);
-  }
-}
-
-/**
  * Cleans up legacy browser-stored API key on app start.
  */
 export function cleanupOldApiKey(): void {
@@ -539,81 +498,6 @@ export function cleanupOldApiKey(): void {
   } catch {
     // Ignore storage errors
   }
-}
-
-/**
- * Gets or creates an anonymous random identifier stored strictly in browser localStorage
- * for fair per-device daily story creation quotas.
- */
-export function getAnonymousUserId(): string {
-  try {
-    let uid = localStorage.getItem(STORAGE_KEYS.ANONYMOUS_UID);
-    if (!uid) {
-      uid = 'usr_' + Math.random().toString(36).substring(2, 10) + Date.now().toString(36);
-      localStorage.setItem(STORAGE_KEYS.ANONYMOUS_UID, uid);
-    }
-    return uid;
-  } catch {
-    return 'usr_' + Math.random().toString(36).substring(2, 10);
-  }
-}
-
-/**
- * Reported Vocabulary (for user-flagged AI story errors)
- */
-export function getReportedVocab(): ReportedVocabItem[] {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEYS.REPORTED_VOCAB);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : [];
-  } catch {
-    return [];
-  }
-}
-
-export function reportVocabItem(item: Omit<ReportedVocabItem, 'id' | 'dateReported'>): ReportedVocabItem {
-  try {
-    const items = getReportedVocab();
-    const newItem: ReportedVocabItem = {
-      ...item,
-      id: `report_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`,
-      dateReported: new Date().toISOString()
-    };
-    items.unshift(newItem);
-    localStorage.setItem(STORAGE_KEYS.REPORTED_VOCAB, JSON.stringify(items));
-    return newItem;
-  } catch (error) {
-    console.error('Failed to report vocab item:', error);
-    return {
-      ...item,
-      id: `report_${Date.now()}`,
-      dateReported: new Date().toISOString()
-    };
-  }
-}
-
-export function deleteReportedVocabItem(id: string): void {
-  try {
-    const items = getReportedVocab().filter(i => i.id !== id);
-    localStorage.setItem(STORAGE_KEYS.REPORTED_VOCAB, JSON.stringify(items));
-  } catch (error) {
-    console.error('Failed to delete reported vocab item:', error);
-  }
-}
-
-/**
- * Selects up to 8 of the user's saved words from Box 1 or Box 2,
- * preferring those least recently seen, for inclusion in a personalized story.
- */
-export function getWordsForPersonalizedStory(savedWords: SavedWord[], maxWords: number = 8): SavedWord[] {
-  const eligible = savedWords.filter(w => w.srsStage === 1 || w.srsStage === 2);
-  eligible.sort((a, b) => {
-    const aDate = a.lastReviewedDate || a.dateAdded || '';
-    const bDate = b.lastReviewedDate || b.dateAdded || '';
-    return aDate.localeCompare(bDate);
-  });
-  return eligible.slice(0, maxWords);
 }
 
 /**
@@ -626,9 +510,7 @@ export function exportAllData(): string {
       exportDate: new Date().toISOString(),
       savedWords: getSavedWords(),
       userStats: getUserStats(),
-      settings: getAppSettings(),
-      customStories: getCustomStories(),
-      reportedVocab: getReportedVocab()
+      settings: getAppSettings()
     };
     return JSON.stringify(backup, null, 2);
   } catch (error) {
@@ -639,6 +521,7 @@ export function exportAllData(): string {
 
 /**
  * Backup: Imports application data from a JSON string with safe validation.
+ * Accepts older backup files with customStories or old keys, ignoring them without errors.
  */
 export function importAllData(jsonString: string): { success: boolean; message: string } {
   try {
@@ -660,13 +543,7 @@ export function importAllData(jsonString: string): { success: boolean; message: 
       localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(data.settings));
     }
 
-    if (Array.isArray(data.customStories)) {
-      localStorage.setItem(STORAGE_KEYS.CUSTOM_STORIES, JSON.stringify(data.customStories));
-    }
-
-    if (Array.isArray(data.reportedVocab)) {
-      localStorage.setItem(STORAGE_KEYS.REPORTED_VOCAB, JSON.stringify(data.reportedVocab));
-    }
+    // Older backups may contain customStories or reportedVocab; safely ignore them without errors
 
     return { success: true, message: 'Data imported successfully!' };
   } catch (error) {
