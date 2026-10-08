@@ -1,4 +1,4 @@
-export type CEFRLevel = 'A1' | 'A2' | 'B1';
+export type CEFRLevel = 'A1' | 'A2' | 'B1' | 'B2';
 
 export type Gender = 'masculine' | 'feminine';
 export type GrammaticalNumber = 'singular' | 'plural';
@@ -53,6 +53,8 @@ export interface Story {
   subtitle: string;
   level: CEFRLevel;
   topic: string;
+  topics?: string[];
+  series?: string;
   wordCount: number;
   estimatedMinutes: number;
   paragraphs: string[];
@@ -129,9 +131,15 @@ export interface UserStats {
   recommendedLevel: CEFRLevel;
 }
 
+export type ThemeMode = 'light' | 'dark' | 'sepia';
+export type FontSizeSetting = 'small' | 'medium' | 'large' | 'xlarge';
+export type LineSpacingSetting = 'normal' | 'relaxed';
+
 export interface AppSettings {
   playbackRate: number; // 0.7, 0.85, 1.0
-  fontSize: 'small' | 'medium' | 'large' | 'xlarge';
+  fontSize: FontSizeSetting;
+  lineSpacing?: LineSpacingSetting; // 'normal' | 'relaxed'
+  theme?: ThemeMode; // 'light' | 'dark' | 'sepia' (defaults to device preference if undefined)
   showParallelTranslation: boolean;
   activeLanguageTab: 'both' | 'bn' | 'en';
   dailyReviewLimit: number; // default 20

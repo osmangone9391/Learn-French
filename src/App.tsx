@@ -4,13 +4,12 @@
  */
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { Story, SavedWord, UserStats, AppSettings, CEFRLevel } from './types';
+import { Story, SavedWord, UserStats, AppSettings, CEFRLevel, ThemeMode } from './types';
 import { INITIAL_STORIES } from './data/stories';
 import {
   getSavedWords,
   saveWord,
   removeSavedWord,
-  updateBatchSavedWords,
   getUserStats,
   markStoryAsRead,
   unmarkStoryAsRead,
@@ -45,9 +44,39 @@ export default function App() {
   const [isPlacementQuizOpen, setIsPlacementQuizOpen] = useState(false);
   const [isFirstLaunchPlacement, setIsFirstLaunchPlacement] = useState(false);
 
+  // Track system dark-mode preference (default fallback when theme setting is not explicitly chosen)
+  const [systemPrefersDark, setSystemPrefersDark] = useState<boolean>(() => {
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    return false;
+  });
+
+  // Listen to system color scheme changes
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    const handler = (e: MediaQueryListEvent) => setSystemPrefersDark(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+
+  // Compute active effective theme: user setting takes precedence; otherwise follows device preference
+  const activeTheme: ThemeMode = useMemo(() => {
+    if (settings.theme) return settings.theme;
+    return systemPrefersDark ? 'dark' : 'light';
+  }, [settings.theme, systemPrefersDark]);
+
+  // Synchronize active theme with document root
+  useEffect(() => {
+    const root = document.documentElement;
+    root.setAttribute('data-theme', activeTheme);
+    root.classList.remove('dark', 'sepia', 'light');
+    root.classList.add(activeTheme);
+  }, [activeTheme]);
+
   // Load persisted state on mount
   useEffect(() => {
-    // Delete old legacy browser-stored API key
     cleanupOldApiKey();
 
     try {
@@ -116,53 +145,52 @@ export default function App() {
 
   // Handle finish SRS review session
   const handleFinishReviewSession = (
-    updatedCards: SavedWord[],
+    _updatedCards: SavedWord[],
     cardsReviewed: number,
     cardsCorrect: number
   ) => {
-    if (updatedCards.length > 0) {
-      const currentList = getSavedWords();
-      const updatedMap = new Map(updatedCards.map((c) => [c.id, c]));
-      const newList = currentList.map((card) => updatedMap.get(card.id) || card);
-
-      updateBatchSavedWords(newList);
-      setSavedWords(newList);
-    }
-
     const updatedStats = recordReviewSession(cardsReviewed, cardsCorrect);
     setUserStats(updatedStats);
+    setSavedWords(getSavedWords());
     setActiveView('library');
   };
 
-  // Handle quiz completion
+  // Handle comprehension quiz complete
   const handleQuizCompleted = (scorePercentage: number) => {
     if (!activeStory) return;
-    const statsUpdated = recordQuizScore(activeStory.id, scorePercentage);
-    setUserStats(statsUpdated);
+    const updatedStats = recordQuizScore(activeStory.id, scorePercentage);
+    setUserStats(updatedStats);
   };
 
-  // Handle placement quiz completion
+  // Handle placement quiz complete
   const handlePlacementComplete = (level: CEFRLevel, score: number, total: number) => {
-    const statsUpdated = savePlacementResult(level, score, total);
-    setUserStats(statsUpdated);
+    const updated = savePlacementResult(level, score, total);
+    setUserStats(updated);
     setIsPlacementQuizOpen(false);
-    setIsFirstLaunchPlacement(false);
   };
 
+  // Handle placement quiz skip
   const handlePlacementSkip = () => {
-    const statsUpdated = dismissPlacementPrompt();
-    setUserStats(statsUpdated);
+    const updated = dismissPlacementPrompt();
+    setUserStats(updated);
     setIsPlacementQuizOpen(false);
-    setIsFirstLaunchPlacement(false);
   };
 
-  // Settings update handler
-  const handleUpdateSettings = (newSettings: Partial<AppSettings>) => {
-    const updated = updateAppSettings(newSettings);
+  // Update app settings with persistence
+  const handleUpdateSettings = (partial: Partial<AppSettings>) => {
+    const updated = updateAppSettings(partial);
     setSettings(updated);
   };
 
-  // Backup restore callback
+  // Quick theme cycle handler (Light -> Sepia -> Dark)
+  const handleToggleTheme = () => {
+    const themes: ThemeMode[] = ['light', 'sepia', 'dark'];
+    const current = activeTheme;
+    const nextIdx = (themes.indexOf(current) + 1) % themes.length;
+    handleUpdateSettings({ theme: themes[nextIdx] });
+  };
+
+  // Handle data restored from backup JSON
   const handleDataRestored = () => {
     setSavedWords(getSavedWords());
     setUserStats(getUserStats());
@@ -173,18 +201,22 @@ export default function App() {
   const handleSelectStory = (story: Story) => {
     setActiveStory(story);
     setActiveView('reader');
-  };
-
-  const handleStartReview = () => {
-    setActiveView('review');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleOpenSavedWords = () => {
     setActiveView('words');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleStartReview = () => {
+    setActiveView('review');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleOpenProgress = () => {
     setActiveView('progress');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleResetToLibrary = () => {
@@ -193,17 +225,19 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-100/60 text-stone-900 font-sans antialiased flex flex-col">
+    <div className="min-h-screen text-stone-900 dark:text-stone-100 sepia:text-[#382716] font-sans antialiased flex flex-col transition-colors">
       {/* Top Header */}
       <Navbar
         savedWordsCount={savedWords.length}
         dueCardsCount={studyQueue.totalQueue.length}
         activeView={activeView}
+        currentTheme={activeTheme}
         onOpenSavedWords={handleOpenSavedWords}
         onStartReview={handleStartReview}
         onOpenProgress={handleOpenProgress}
         onOpenSettings={() => setIsSettingsOpen(true)}
         onResetView={handleResetToLibrary}
+        onToggleTheme={handleToggleTheme}
       />
 
       {/* Main View Switching */}
@@ -215,6 +249,7 @@ export default function App() {
             savedWords={savedWords}
             settings={settings}
             quizRecord={userStats.quizHistory?.[activeStory.id]}
+            currentTheme={activeTheme}
             onBack={handleResetToLibrary}
             onToggleRead={handleToggleRead}
             onSaveWord={handleSaveWord}
@@ -265,6 +300,7 @@ export default function App() {
         isOpen={isSettingsOpen}
         settings={settings}
         userStats={userStats}
+        currentTheme={activeTheme}
         onClose={() => setIsSettingsOpen(false)}
         onUpdateSettings={handleUpdateSettings}
         onOpenPlacementQuiz={() => setIsPlacementQuizOpen(true)}

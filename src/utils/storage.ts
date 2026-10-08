@@ -21,6 +21,8 @@ const STORAGE_KEYS = {
 const DEFAULT_SETTINGS: AppSettings = {
   playbackRate: 0.85,
   fontSize: 'medium',
+  lineSpacing: 'normal',
+  theme: undefined,
   showParallelTranslation: false,
   activeLanguageTab: 'both',
   dailyReviewLimit: 20,

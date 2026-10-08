@@ -7,6 +7,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Acheter du pain frais et des viennoiseries le matin",
     "level": "A1",
     "topic": "Vie quotidienne & Nourriture",
+    "topics": ["daily life","food","shopping"],
     "wordCount": 142,
     "estimatedMinutes": 2,
     "paragraphs": [
@@ -799,6 +800,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Prendre les transports en commun à Paris en toute confiance",
     "level": "A1",
     "topic": "Transports & Ville",
+    "topics": ["transport","daily life"],
     "wordCount": 163,
     "estimatedMinutes": 3,
     "paragraphs": [
@@ -1669,6 +1671,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Se présenter à la sous-préfecture avec son dossier",
     "level": "A1",
     "topic": "Démarches administratives",
+    "topics": ["administration","daily life"],
     "wordCount": 156,
     "estimatedMinutes": 3,
     "paragraphs": [
@@ -2638,6 +2641,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Acheter des produits alimentaires et payer à la caisse",
     "level": "A1",
     "topic": "Vie quotidienne & Achats",
+    "topics": ["shopping","food","daily life"],
     "wordCount": 163,
     "estimatedMinutes": 3,
     "paragraphs": [
@@ -3627,6 +3631,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Échanger sur le travail technique pendant la pause du matin",
     "level": "A1",
     "topic": "Travail & Entreprise",
+    "topics": ["work","technology","friends"],
     "wordCount": 171,
     "estimatedMinutes": 3,
     "paragraphs": [
@@ -4532,6 +4537,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Expliquer ses symptômes et obtenir une ordonnance",
     "level": "A1",
     "topic": "Santé & Vie quotidienne",
+    "topics": ["health","daily life"],
     "wordCount": 214,
     "estimatedMinutes": 3,
     "paragraphs": [
@@ -5643,6 +5649,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Commander un plat du jour et une carafe d'eau",
     "level": "A1",
     "topic": "Restauration & Vie quotidienne",
+    "topics": ["food","daily life","friends"],
     "wordCount": 208,
     "estimatedMinutes": 3,
     "paragraphs": [
@@ -6734,6 +6741,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Présenter une ordonnance et demander conseil",
     "level": "A1",
     "topic": "Santé & Achats",
+    "topics": ["health","shopping","daily life"],
     "wordCount": 194,
     "estimatedMinutes": 3,
     "paragraphs": [
@@ -7807,6 +7815,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Choisir un forfait mobile prépayé dans une boutique",
     "level": "A1",
     "topic": "Téléphonie & Vie pratique",
+    "topics": ["technology","shopping","daily life"],
     "wordCount": 193,
     "estimatedMinutes": 3,
     "paragraphs": [
@@ -8928,6 +8937,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Faire connaissance dans le couloir de l'immeuble",
     "level": "A1",
     "topic": "Logement & Voisinage",
+    "topics": ["housing","friends","daily life"],
     "wordCount": 231,
     "estimatedMinutes": 3,
     "paragraphs": [
@@ -10188,6 +10198,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Visiter un studio et préparer son dossier de location",
     "level": "A2",
     "topic": "Logement & Démarches",
+    "topics": ["housing","administration"],
     "wordCount": 281,
     "estimatedMinutes": 4,
     "paragraphs": [
@@ -11812,6 +11823,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Obtenir un compte courant et un relevé d'identité bancaire",
     "level": "A2",
     "topic": "Banque & Démarches",
+    "topics": ["administration","daily life"],
     "wordCount": 287,
     "estimatedMinutes": 4,
     "paragraphs": [
@@ -13317,6 +13329,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Présenter son parcours et ses compétences techniques",
     "level": "A2",
     "topic": "Travail & Emploi",
+    "topics": ["work","technology"],
     "wordCount": 317,
     "estimatedMinutes": 4,
     "paragraphs": [
@@ -14997,6 +15010,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Faire le point sur son projet professionnel avec un conseiller",
     "level": "A2",
     "topic": "Emploi & Formation",
+    "topics": ["work","administration"],
     "wordCount": 292,
     "estimatedMinutes": 4,
     "paragraphs": [
@@ -16515,6 +16529,7 @@ export const INITIAL_STORIES: Story[] = [
     "subtitle": "Préparer son admission pour une licence professionnelle",
     "level": "A2",
     "topic": "Études & Université",
+    "topics": ["work","administration","daily life"],
     "wordCount": 270,
     "estimatedMinutes": 4,
     "paragraphs": [

@@ -139,7 +139,7 @@ export function getRecommendedStory(
     }
   });
 
-  const levelHierarchy: Record<CEFRLevel, number> = { A1: 1, A2: 2, B1: 3 };
+  const levelHierarchy: Record<CEFRLevel, number> = { A1: 1, A2: 2, B1: 3, B2: 4 };
   const userLevelNum = levelHierarchy[userStats.recommendedLevel || 'A1'];
 
   // Candidate stories: matching level or 1 level above

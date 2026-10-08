@@ -26,7 +26,30 @@ export const i18n = {
     A1: 'A1 Beginner',
     A2: 'A2 Elementary',
     B1: 'B1 Intermediate',
+    B2: 'B2 Upper-intermediate',
     allLevels: 'All Levels',
+  },
+  levelDescriptions: {
+    A1: {
+      name: 'A1 Beginner',
+      canRead: 'Can read very short, simple phrases, signs, bakery and cafe menus, greetings, and basic everyday interactions (140–250 words).',
+      context: 'Best for beginners building core daily French vocabulary and basic sentence structure.'
+    },
+    A2: {
+      name: 'A2 Elementary',
+      canRead: 'Can understand short practical texts, routine appointments, apartment listings, public transport notices, and simple narratives (250–400 words).',
+      context: 'Best for learners navigating everyday administrative steps, housing, and social life in France.'
+    },
+    B1: {
+      name: 'B1 Intermediate',
+      canRead: 'Can read straightforward factual texts, workplace emails, personal experiences, news summaries, and opinions (400–600 words).',
+      context: 'Best for independent learners working, studying, or communicating comfortably in France.'
+    },
+    B2: {
+      name: 'B2 Upper-intermediate',
+      canRead: 'Can read contemporary articles, detailed professional briefs, complex arguments, debates, and literature (600+ words).',
+      context: 'Best for advanced learners aiming for full professional and academic fluency in French.'
+    }
   },
   dailyLoop: {
     title: 'Daily Study Loop',
@@ -54,9 +77,25 @@ export const i18n = {
     subheading: 'Read authentic real-world dialogues and stories. Tap any word for instant English and Bengali translations, listen to spoken French, and save vocabulary for spaced repetition.',
     storiesReadStat: 'Stories read',
     savedWordsStat: 'Words saved',
-    searchPlaceholder: 'Search stories (bakery, metro, work, papers)...',
+    searchPlaceholder: 'Search by title or words in story...',
     noStoriesFound: 'No stories found matching your criteria.',
-    resetFilters: 'Show all stories',
+    moreStoriesComingSoon: 'More stories coming soon',
+    moreStoriesComingSoonDesc: 'We are writing and curating authentic stories for this level and topic. Try another filter to keep reading!',
+    resetFilters: 'Reset filters & show all',
+    readingTimeTooltip: 'Estimated at 100 words per minute for language learners',
+    aboutLevelsTitle: 'About Reading Levels',
+    aboutLevelsSubtitle: 'What can you understand at each CEFR stage?',
+    filterLevel: 'Level',
+    filterTopic: 'Topic',
+    filterStatus: 'Status',
+    statusAll: 'All',
+    statusUnread: 'Not read',
+    statusRead: 'Read',
+    allTopics: 'All Topics',
+    sortBy: 'Sort by',
+    sortRecommended: 'Recommended',
+    sortShortest: 'Shortest first',
+    sortLevel: 'Level (A1 → B2)',
     learningTipTitle: 'Comprehensible Input Learning Method',
     learningTipDesc: 'Do not stress about memorizing grammar tables. Focus on overall story comprehension. Tap unfamiliar words to see English & Bangla meanings, then re-listen to the sentence at 0.85x.',
     placementBannerTitle: 'Not sure about your level?',
@@ -220,6 +259,22 @@ export const i18n = {
     backupDesc: 'Export your progress to move your saved words, Leitner boxes, and quiz history between your phone and laptop.',
     exportBtn: 'Export my data',
     importBtn: 'Import my data',
+    themeTitle: 'Theme & Reading Comfort',
+    themeDesc: 'Light cream, high-contrast charcoal dark, or warm sepia book mode. Follows device default until chosen.',
+    themeLight: 'Light (Cream)',
+    themeDark: 'Dark (Charcoal)',
+    themeSepia: 'Sepia',
+    themeSystem: 'Device default',
+    fontSizeTitle: 'Font Size (Reader & Reviews)',
+    fontSizeDesc: 'Adjust text size across the story reader and review flashcards.',
+    sizeSmall: 'Small',
+    sizeMedium: 'Medium',
+    sizeLarge: 'Large',
+    sizeXLarge: 'Extra Large',
+    lineSpacingTitle: 'Line Spacing (Reader & Reviews)',
+    lineSpacingDesc: 'Choose comfortable line height between sentences.',
+    spacingNormal: 'Normal',
+    spacingRelaxed: 'Relaxed',
     saveCloseBtn: 'Close',
   }
 };
