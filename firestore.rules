@@ -11,26 +11,11 @@ service cloud.firestore {
       return isAuthenticated() && request.auth.uid == userId;
     }
 
-    // Maximum document size safeguard (approx 500 KB limit, well below Firestore 1 MiB limit)
-    function isWithinSizeLimit() {
-      return request.resource.data.size() < 1000;
-    }
-
     // User data hierarchy: users/{userId}/...
     match /users/{userId} {
       allow read, write: if isOwner(userId);
 
-      // Data subcollection: settings, stats, vocab_index
-      match /data/{documentId} {
-        allow read, write: if isOwner(userId) && isWithinSizeLimit();
-      }
-
-      // Vocabulary shards: users/{userId}/vocabulary/{shardId}
-      match /vocabulary/{shardId} {
-        allow read, write: if isOwner(userId) && isWithinSizeLimit();
-      }
-
-      // Deny any other subcollections
+      // Subcollections (data, vocabulary, etc.)
       match /{allChildren=**} {
         allow read, write: if isOwner(userId);
       }
@@ -42,3 +27,4 @@ service cloud.firestore {
     }
   }
 }
+

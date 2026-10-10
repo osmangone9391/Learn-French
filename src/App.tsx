@@ -143,15 +143,26 @@ export default function App() {
       if (authUser) {
         // User signed in
         setActiveAccountUid(authUser.uid);
-        reloadLocalState(authUser.uid);
 
-        // Check if browser has guest progress and prompt once
-        if (hasGuestData() && hasPromptedMigrationForUser.current !== authUser.uid) {
+        // Check if there is guest progress to migrate into account
+        const guestWords = getGuestSavedWords();
+        const accountWords = getSavedWords(authUser.uid);
+
+        if (guestWords.length > 0 && accountWords.length === 0) {
+          // Seamlessly import guest progress into account so user never loses words
+          const guestStats = getGuestUserStats();
+          const guestSettings = getGuestAppSettings();
+          localStorage.setItem(getStorageKey('SAVED_WORDS', authUser.uid), JSON.stringify(guestWords));
+          localStorage.setItem(getStorageKey('STATS', authUser.uid), JSON.stringify(guestStats));
+          localStorage.setItem(getStorageKey('SETTINGS', authUser.uid), JSON.stringify(guestSettings));
+        } else if (hasGuestData() && hasPromptedMigrationForUser.current !== authUser.uid) {
           hasPromptedMigrationForUser.current = authUser.uid;
           setShowGuestMigration(true);
         }
 
-        // Pull fresh cloud data in background
+        reloadLocalState(authUser.uid);
+
+        // Pull fresh cloud data in background (with timeout safeguard)
         pullCloudData(authUser.uid).then((res) => {
           if (res.success) {
             setSavedWords(res.mergedWords);
@@ -190,8 +201,13 @@ export default function App() {
   // Sign out Handler
   const handleSignOut = async () => {
     if (user?.uid) {
-      await flushPendingPush(user.uid);
-      clearAccountLocalCache(user.uid);
+      try {
+        await flushPendingPush(user.uid);
+      } catch (err) {
+        console.warn('Sign-out flush error:', err);
+      }
+      // CRITICAL: We DO NOT wipe account local cache on sign out!
+      // This ensures all flashcards, stats, and scores are never lost across sign-outs.
     }
     await signOutAccount();
     setActiveAccountUid(null);
@@ -401,7 +417,7 @@ export default function App() {
       {/* Navigation Header */}
       <Navbar
         savedWordsCount={savedWords.length}
-        dueCardsCount={studyQueue.dueCardsCount}
+        dueCardsCount={studyQueue.totalQueue.length}
         activeView={activeView}
         currentTheme={activeTheme}
         user={user}

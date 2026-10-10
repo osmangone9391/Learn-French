@@ -10,10 +10,13 @@ import {
   CloudOff,
   ChevronDown,
   Lock,
-  MailCheck
+  MailCheck,
+  Copy,
+  CheckCheck
 } from 'lucide-react';
 import { AuthUser, SyncStatus } from '../types';
 import { deleteUserAccount } from '../firebase/auth';
+import { getLastSyncError, getLastSyncTimestamp } from '../firebase/sync';
 
 interface AccountMenuProps {
   user: AuthUser | null;
@@ -36,6 +39,8 @@ export const AccountMenu: React.FC<AccountMenuProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [showRulesModal, setShowRulesModal] = useState(false);
+  const [copiedRules, setCopiedRules] = useState(false);
   const [deletePassword, setDeletePassword] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [deleteError, setDeleteError] = useState<string | null>(null);
@@ -68,15 +73,32 @@ export const AccountMenu: React.FC<AccountMenuProps> = ({
 
   // Signed In Mode Header Trigger
   const initial = (user.displayName || user.email || 'U').charAt(0).toUpperCase();
+  const lastError = getLastSyncError();
+  const lastTime = getLastSyncTimestamp();
 
   const syncText =
     syncStatus === 'synced'
-      ? 'Synced'
+      ? `Synced ${lastTime ? `(${lastTime})` : ''}`
       : syncStatus === 'syncing'
       ? 'Syncing...'
       : syncStatus === 'offline'
-      ? 'Offline, will sync later'
-      : 'Sync failed, retrying';
+      ? 'Offline (Saved locally)'
+      : 'Saved locally (Cloud issue)';
+
+  const firestoreRulesSnippet = `rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId}/{allChildren=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}`;
+
+  const handleCopyRules = () => {
+    navigator.clipboard.writeText(firestoreRulesSnippet);
+    setCopiedRules(true);
+    setTimeout(() => setCopiedRules(false), 2500);
+  };
 
   const handleDeleteAccount = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -120,7 +142,7 @@ export const AccountMenu: React.FC<AccountMenuProps> = ({
                 ? 'bg-amber-500 animate-pulse'
                 : syncStatus === 'offline'
                 ? 'bg-stone-400'
-                : 'bg-rose-500'
+                : 'bg-amber-500'
             }`}
           />
         </div>
@@ -133,7 +155,7 @@ export const AccountMenu: React.FC<AccountMenuProps> = ({
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-72 bg-white dark:bg-[#1E2126] sepia:bg-[#FAF4E6] rounded-2xl shadow-xl border border-stone-200 dark:border-stone-800 sepia:border-[#DDCFB6] py-2 z-50 text-stone-900 dark:text-stone-100 sepia:text-[#382716] animate-in fade-in zoom-in-95">
+        <div className="absolute right-0 mt-2 w-80 bg-white dark:bg-[#1E2126] sepia:bg-[#FAF4E6] rounded-2xl shadow-xl border border-stone-200 dark:border-stone-800 sepia:border-[#DDCFB6] py-2 z-50 text-stone-900 dark:text-stone-100 sepia:text-[#382716] animate-in fade-in zoom-in-95">
           {/* User Info Header */}
           <div className="px-4 py-2.5 border-b border-stone-100 dark:border-stone-800 sepia:border-[#E8DEC7]">
             <div className="text-xs font-bold text-stone-900 dark:text-stone-100 sepia:text-[#382716] truncate">
@@ -142,28 +164,48 @@ export const AccountMenu: React.FC<AccountMenuProps> = ({
             <div className="text-[11px] text-stone-500 dark:text-stone-400 sepia:text-[#78644E] truncate flex items-center gap-1 mt-0.5">
               <span>{user.email}</span>
               {user.emailVerified && (
-                <MailCheck size={12} className="text-emerald-600 dark:text-emerald-400 shrink-0" title="Email verified" />
+                <span title="Email verified">
+                  <MailCheck size={12} className="text-emerald-600 dark:text-emerald-400 shrink-0" />
+                </span>
               )}
             </div>
           </div>
 
           {/* Sync Status Banner */}
-          <div className="px-4 py-2.5 flex items-center justify-between text-xs border-b border-stone-100 dark:border-stone-800 sepia:border-[#E8DEC7]">
-            <div className="flex items-center gap-1.5 min-w-0">
-              {syncStatus === 'synced' && <Check size={14} className="text-emerald-600 dark:text-emerald-400 shrink-0" />}
-              {syncStatus === 'syncing' && <RefreshCw size={14} className="text-amber-600 dark:text-amber-400 animate-spin shrink-0" />}
-              {syncStatus === 'offline' && <CloudOff size={14} className="text-stone-400 shrink-0" />}
-              {syncStatus === 'error' && <AlertCircle size={14} className="text-rose-600 dark:text-rose-400 shrink-0" />}
-              <span className="text-[11px] text-stone-600 dark:text-stone-400 sepia:text-[#644E35] truncate">
-                {syncText}
-              </span>
+          <div className="px-4 py-2.5 border-b border-stone-100 dark:border-stone-800 sepia:border-[#E8DEC7] space-y-1.5">
+            <div className="flex items-center justify-between text-xs">
+              <div className="flex items-center gap-1.5 min-w-0">
+                {syncStatus === 'synced' && <Check size={14} className="text-emerald-600 dark:text-emerald-400 shrink-0" />}
+                {syncStatus === 'syncing' && <RefreshCw size={14} className="text-amber-600 dark:text-amber-400 animate-spin shrink-0" />}
+                {syncStatus === 'offline' && <CloudOff size={14} className="text-stone-400 shrink-0" />}
+                {syncStatus === 'error' && <AlertCircle size={14} className="text-amber-600 dark:text-amber-400 shrink-0" />}
+                <span className="text-[11px] font-medium text-stone-700 dark:text-stone-300 sepia:text-[#644E35] truncate">
+                  {syncText}
+                </span>
+              </div>
+              <button
+                onClick={onTriggerSync}
+                disabled={syncStatus === 'syncing'}
+                className="text-[10px] font-semibold text-amber-800 dark:text-amber-400 sepia:text-[#8C4712] hover:underline cursor-pointer shrink-0 disabled:opacity-50"
+              >
+                Sync Now
+              </button>
             </div>
-            <button
-              onClick={onTriggerSync}
-              className="text-[10px] font-semibold text-amber-800 dark:text-amber-400 sepia:text-[#8C4712] hover:underline cursor-pointer shrink-0"
-            >
-              Sync Now
-            </button>
+
+            {/* Error diagnostic info if present */}
+            {lastError && syncStatus === 'error' && (
+              <div className="p-2 bg-amber-50 dark:bg-amber-950/40 rounded-xl border border-amber-200/80 dark:border-amber-900/60 text-[10px] text-amber-800 dark:text-amber-300 sepia:text-[#8C4712] leading-tight space-y-1">
+                <p>{lastError}</p>
+                {lastError.includes('permission') && (
+                  <button
+                    onClick={() => setShowRulesModal(true)}
+                    className="underline font-semibold hover:text-amber-950 dark:hover:text-amber-200 cursor-pointer block"
+                  >
+                    View required Firestore rules ↗
+                  </button>
+                )}
+              </div>
+            )}
           </div>
 
           {/* Actions */}
@@ -191,6 +233,52 @@ export const AccountMenu: React.FC<AccountMenuProps> = ({
               <Trash2 size={14} />
               <span>Delete my account & data</span>
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* Firestore Security Rules Modal */}
+      {showRulesModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4 animate-in fade-in">
+          <div
+            className="w-full max-w-lg bg-white dark:bg-[#1E2126] sepia:bg-[#FAF4E6] rounded-3xl p-6 shadow-2xl border border-stone-200 dark:border-stone-800 sepia:border-[#DDCFB6] space-y-4 text-stone-900 dark:text-stone-100 sepia:text-[#382716]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between">
+              <h4 className="font-serif font-bold text-base">
+                Firebase Firestore Security Rules
+              </h4>
+              <button
+                onClick={() => setShowRulesModal(false)}
+                className="text-xs text-stone-500 hover:text-stone-800 cursor-pointer"
+              >
+                Close
+              </button>
+            </div>
+
+            <p className="text-xs text-stone-600 dark:text-stone-400 sepia:text-[#644E35] leading-relaxed">
+              If cloud sync shows a permission error, go to your <strong>Firebase Console</strong> → <strong>Cloud Firestore</strong> → <strong>Rules</strong> tab, and paste the following rules:
+            </p>
+
+            <div className="relative bg-stone-900 text-stone-100 p-3.5 rounded-xl text-xs font-mono overflow-x-auto">
+              <pre>{firestoreRulesSnippet}</pre>
+              <button
+                onClick={handleCopyRules}
+                className="absolute top-2 right-2 px-2.5 py-1 rounded-md bg-stone-800 hover:bg-stone-700 text-[11px] font-sans flex items-center gap-1 cursor-pointer"
+              >
+                {copiedRules ? <CheckCheck size={12} className="text-emerald-400" /> : <Copy size={12} />}
+                <span>{copiedRules ? 'Copied' : 'Copy'}</span>
+              </button>
+            </div>
+
+            <div className="pt-2 flex justify-end">
+              <button
+                onClick={() => setShowRulesModal(false)}
+                className="px-4 py-2 bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-white dark:text-stone-950 text-white rounded-xl text-xs font-semibold cursor-pointer"
+              >
+                Got it
+              </button>
+            </div>
           </div>
         </div>
       )}

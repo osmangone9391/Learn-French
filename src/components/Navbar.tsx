@@ -56,10 +56,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
           <div>
             <div className="font-serif font-bold text-base text-stone-900 dark:text-stone-100 sepia:text-[#382716] leading-none">
-              {i18n.common.appTitle}
+              {i18n.common.appName}
             </div>
             <div className="text-[10px] text-stone-500 dark:text-stone-400 sepia:text-[#78644E] leading-tight font-medium">
-              {i18n.common.appSubtitle}
+              {i18n.common.tagline}
             </div>
           </div>
         </button>

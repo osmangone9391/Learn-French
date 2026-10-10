@@ -106,8 +106,8 @@ export const ReviewSession: React.FC<ReviewSessionProps> = ({
     const isCorrect = chosenOption ? chosenOption.isCorrect : false;
 
     // Process review according to Leitner system rules
-    const updated = processCardReview(currentCard, isCorrect);
-    setUpdatedCardsMap(prev => ({ ...prev, [updated.id]: updated }));
+    const reviewResult = processCardReview(currentCard, isCorrect);
+    setUpdatedCardsMap(prev => ({ ...prev, [reviewResult.updatedCard.id]: reviewResult.updatedCard }));
 
     setSessionResults(prev => [
       ...prev,
@@ -115,7 +115,7 @@ export const ReviewSession: React.FC<ReviewSessionProps> = ({
         card: currentCard,
         isCorrect,
         previousBox: currentCard.srsStage,
-        newBox: updated.srsStage
+        newBox: reviewResult.newBox
       }
     ]);
 

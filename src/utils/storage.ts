@@ -121,7 +121,7 @@ export const DEFAULT_STATS: UserStats = {
  * When profileId is 'default', returns base key unchanged!
  */
 export function getStorageKey(baseKey: keyof typeof BASE_STORAGE_KEYS, profileId?: string): string {
-  const resolvedProfileId = profileId !== undefined ? profileId : getActiveProfileId();
+  const resolvedProfileId = profileId !== undefined ? profileId : (currentAccountUid || getActiveProfileId());
   const root = BASE_STORAGE_KEYS[baseKey];
   if (!resolvedProfileId || resolvedProfileId === 'default') {
     return root;
@@ -133,6 +133,9 @@ export function getStorageKey(baseKey: keyof typeof BASE_STORAGE_KEYS, profileId
  * Gets the current active profile ID from state.
  */
 export function getActiveProfileId(): string {
+  if (currentAccountUid) {
+    return currentAccountUid;
+  }
   try {
     const raw = localStorage.getItem(PROFILES_REGISTRY_KEY);
     if (raw) {

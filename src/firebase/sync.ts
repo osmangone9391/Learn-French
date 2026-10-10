@@ -35,14 +35,25 @@ import {
 
 const SHARD_SIZE = 200; // 200 words per shard (~20-25 KB per doc, 2% of 1 MiB limit)
 const DEBOUNCE_PUSH_DELAY_MS = 25000; // ~25-30s debounce
+const OPERATION_TIMEOUT_MS = 6000; // 6s timeout to prevent UI hanging
 
 let currentSyncStatus: SyncStatus = 'synced';
+let lastSyncErrorMessage: string | null = null;
+let lastSyncTimestamp: string | null = null;
 const syncListeners = new Set<(status: SyncStatus) => void>();
 let pushDebounceTimer: NodeJS.Timeout | null = null;
 let activeUid: string | null = null;
 
 export function getSyncStatus(): SyncStatus {
   return currentSyncStatus;
+}
+
+export function getLastSyncError(): string | null {
+  return lastSyncErrorMessage;
+}
+
+export function getLastSyncTimestamp(): string | null {
+  return lastSyncTimestamp;
 }
 
 export function subscribeSyncStatus(listener: (status: SyncStatus) => void): () => void {
@@ -56,6 +67,46 @@ function updateSyncStatus(newStatus: SyncStatus) {
     currentSyncStatus = newStatus;
     syncListeners.forEach(fn => fn(newStatus));
   }
+}
+
+/**
+ * Wraps an async Firestore promise with a safety timeout so network hangs never freeze the app.
+ */
+function withTimeout<T>(promise: Promise<T>, timeoutMs: number, operationName: string): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    const timer = setTimeout(() => {
+      reject(new Error(`${operationName} timed out after ${timeoutMs}ms`));
+    }, timeoutMs);
+
+    promise
+      .then((res) => {
+        clearTimeout(timer);
+        resolve(res);
+      })
+      .catch((err) => {
+        clearTimeout(timer);
+        reject(err);
+      });
+  });
+}
+
+function formatSyncError(error: any): string {
+  if (!error) return 'Unknown sync issue';
+  const msg = String(error?.message || error);
+  const code = error?.code || '';
+  if (code === 'permission-denied' || msg.includes('permission') || msg.includes('insufficient')) {
+    return 'Cloud permission denied: Firestore Security Rules in Firebase Console require update.';
+  }
+  if (msg.includes('timed out') || code === 'deadline-exceeded') {
+    return 'Cloud timed out: Progress is safely stored on this device.';
+  }
+  if (code === 'unavailable') {
+    return 'Cloud service unavailable: Progress is safely stored on this device.';
+  }
+  if (code === 'not-found' || msg.includes('not found')) {
+    return 'Firestore database not found in Firebase project.';
+  }
+  return msg;
 }
 
 /**
@@ -78,7 +129,10 @@ export async function pullCloudData(uid: string): Promise<{
   mergedStats: UserStats;
   mergedSettings: AppSettings;
 }> {
-  if (!isFirebaseConfigured() || !db) {
+  activeUid = uid;
+  const firestore = db;
+
+  if (!isFirebaseConfigured() || !firestore) {
     updateSyncStatus('offline');
     return {
       success: false,
@@ -101,19 +155,19 @@ export async function pullCloudData(uid: string): Promise<{
   updateSyncStatus('syncing');
 
   try {
-    // 1. Fetch cloud settings
-    const settingsDocRef = doc(db, 'users', uid, 'data', 'settings');
-    const settingsSnap = await getDoc(settingsDocRef);
+    // 1. Fetch cloud settings with timeout
+    const settingsDocRef = doc(firestore, 'users', uid, 'data', 'settings');
+    const settingsSnap = await withTimeout(getDoc(settingsDocRef), OPERATION_TIMEOUT_MS, 'Fetch settings');
     const cloudSettingsData = settingsSnap.exists() ? settingsSnap.data() : null;
 
-    // 2. Fetch cloud stats
-    const statsDocRef = doc(db, 'users', uid, 'data', 'stats');
-    const statsSnap = await getDoc(statsDocRef);
+    // 2. Fetch cloud stats with timeout
+    const statsDocRef = doc(firestore, 'users', uid, 'data', 'stats');
+    const statsSnap = await withTimeout(getDoc(statsDocRef), OPERATION_TIMEOUT_MS, 'Fetch stats');
     const cloudStatsData = statsSnap.exists() ? statsSnap.data() : null;
 
-    // 3. Fetch cloud vocabulary shards
-    const vocabColRef = collection(db, 'users', uid, 'vocabulary');
-    const vocabSnap = await getDocs(vocabColRef);
+    // 3. Fetch cloud vocabulary shards with timeout
+    const vocabColRef = collection(firestore, 'users', uid, 'vocabulary');
+    const vocabSnap = await withTimeout(getDocs(vocabColRef), OPERATION_TIMEOUT_MS, 'Fetch vocabulary');
     const cloudWords: SavedWord[] = [];
     vocabSnap.forEach(d => {
       const data = d.data();
@@ -145,6 +199,8 @@ export async function pullCloudData(uid: string): Promise<{
     localStorage.setItem(getStorageKey('SETTINGS', uid), JSON.stringify(mergedSettings));
     localStorage.setItem(getStorageKey('SETTINGS', uid) + '_updatedAt', new Date().toISOString());
 
+    lastSyncErrorMessage = null;
+    lastSyncTimestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     updateSyncStatus('synced');
 
     return {
@@ -154,7 +210,8 @@ export async function pullCloudData(uid: string): Promise<{
       mergedSettings
     };
   } catch (error) {
-    console.warn('Sync pull error:', error);
+    console.warn('Sync pull warning:', error);
+    lastSyncErrorMessage = formatSyncError(error);
     updateSyncStatus(navigator.onLine ? 'error' : 'offline');
     return {
       success: false,
@@ -169,7 +226,10 @@ export async function pullCloudData(uid: string): Promise<{
  * PUSH local cache for the specified user to Cloud Firestore
  */
 export async function pushLocalData(uid: string): Promise<boolean> {
-  if (!isFirebaseConfigured() || !db) {
+  activeUid = uid;
+  const firestore = db;
+
+  if (!isFirebaseConfigured() || !firestore) {
     updateSyncStatus('offline');
     return false;
   }
@@ -187,17 +247,17 @@ export async function pushLocalData(uid: string): Promise<boolean> {
     const localSettings = getAppSettings(uid);
     const nowISO = new Date().toISOString();
 
-    const batch = writeBatch(db);
+    const batch = writeBatch(firestore);
 
     // Write settings doc
-    const settingsDocRef = doc(db, 'users', uid, 'data', 'settings');
+    const settingsDocRef = doc(firestore, 'users', uid, 'data', 'settings');
     batch.set(settingsDocRef, {
       settings: localSettings,
       updatedAt: nowISO
     }, { merge: true });
 
     // Write stats doc
-    const statsDocRef = doc(db, 'users', uid, 'data', 'stats');
+    const statsDocRef = doc(firestore, 'users', uid, 'data', 'stats');
     batch.set(statsDocRef, {
       stats: localStats,
       updatedAt: nowISO
@@ -207,7 +267,7 @@ export async function pushLocalData(uid: string): Promise<boolean> {
     const shards = chunkWords(localWords);
 
     // Write shard metadata index
-    const indexDocRef = doc(db, 'users', uid, 'data', 'vocab_index');
+    const indexDocRef = doc(firestore, 'users', uid, 'data', 'vocab_index');
     batch.set(indexDocRef, {
       shardCount: shards.length,
       totalWords: localWords.length,
@@ -216,7 +276,7 @@ export async function pushLocalData(uid: string): Promise<boolean> {
 
     // Write each shard
     shards.forEach((chunk, index) => {
-      const shardDocRef = doc(db, 'users', uid, 'vocabulary', `shard_${index}`);
+      const shardDocRef = doc(firestore, 'users', uid, 'vocabulary', `shard_${index}`);
       batch.set(shardDocRef, {
         index,
         count: chunk.length,
@@ -225,12 +285,15 @@ export async function pushLocalData(uid: string): Promise<boolean> {
       });
     });
 
-    await batch.commit();
+    await withTimeout(batch.commit(), OPERATION_TIMEOUT_MS, 'Push commit');
 
+    lastSyncErrorMessage = null;
+    lastSyncTimestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     updateSyncStatus('synced');
     return true;
   } catch (error) {
-    console.warn('Sync push error:', error);
+    console.warn('Sync push warning:', error);
+    lastSyncErrorMessage = formatSyncError(error);
     updateSyncStatus(navigator.onLine ? 'error' : 'offline');
     return false;
   }
@@ -259,29 +322,34 @@ export async function flushPendingPush(uid: string): Promise<void> {
     clearTimeout(pushDebounceTimer);
     pushDebounceTimer = null;
   }
-  await pushLocalData(uid);
+  try {
+    await pushLocalData(uid);
+  } catch (err) {
+    console.warn('Flush push caught error:', err);
+  }
 }
 
 /**
  * Deletes all documents under users/{uid} in Firestore
  */
 export async function deleteUserCloudData(uid: string): Promise<boolean> {
-  if (!isFirebaseConfigured() || !db) return true;
+  const firestore = db;
+  if (!isFirebaseConfigured() || !firestore) return true;
   try {
     // 1. Delete vocab shards
-    const vocabColRef = collection(db, 'users', uid, 'vocabulary');
-    const vocabSnap = await getDocs(vocabColRef);
-    const deleteBatch = writeBatch(db);
+    const vocabColRef = collection(firestore, 'users', uid, 'vocabulary');
+    const vocabSnap = await withTimeout(getDocs(vocabColRef), OPERATION_TIMEOUT_MS, 'Delete fetch vocab');
+    const deleteBatch = writeBatch(firestore);
     vocabSnap.forEach(d => {
       deleteBatch.delete(d.ref);
     });
 
     // 2. Delete data docs
-    deleteBatch.delete(doc(db, 'users', uid, 'data', 'settings'));
-    deleteBatch.delete(doc(db, 'users', uid, 'data', 'stats'));
-    deleteBatch.delete(doc(db, 'users', uid, 'data', 'vocab_index'));
+    deleteBatch.delete(doc(firestore, 'users', uid, 'data', 'settings'));
+    deleteBatch.delete(doc(firestore, 'users', uid, 'data', 'stats'));
+    deleteBatch.delete(doc(firestore, 'users', uid, 'data', 'vocab_index'));
 
-    await deleteBatch.commit();
+    await withTimeout(deleteBatch.commit(), OPERATION_TIMEOUT_MS, 'Delete commit');
     return true;
   } catch (error) {
     console.error('Failed to delete cloud data:', error);
