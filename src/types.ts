@@ -81,6 +81,8 @@ export interface SavedWord {
   timesReviewed: number;
   timesCorrect: number;
   lastReviewedDate?: string;
+  updatedAt?: string; // ISO date of latest update
+  deletedAt?: string; // ISO date if tombstoned for cross-device sync
   ttsText?: string;
   gender?: Gender;
   number?: GrammaticalNumber;
@@ -129,6 +131,28 @@ export interface UserStats {
   placementResult?: PlacementResult;
   hasSeenPlacementPrompt?: boolean;
   recommendedLevel: CEFRLevel;
+}
+
+export interface UserProfile {
+  id: string; // 'default' for original profile, or random/slug id for created profiles
+  name: string; // Display name, e.g. "Me" or "Alice"
+  createdAt: string;
+}
+
+export interface ProfilesState {
+  profiles: UserProfile[];
+  activeProfileId: string;
+  hasPromptedInitialName?: boolean;
+}
+
+export type SyncStatus = 'synced' | 'syncing' | 'offline' | 'error';
+
+export interface AuthUser {
+  uid: string;
+  email: string | null;
+  displayName: string | null;
+  photoURL: string | null;
+  emailVerified: boolean;
 }
 
 export type ThemeMode = 'light' | 'dark' | 'sepia';

@@ -17,7 +17,10 @@ import {
   BookOpen,
   Type,
   AlignLeft,
-  Palette
+  Palette,
+  ShieldAlert,
+  User,
+  Users
 } from 'lucide-react';
 import { AppSettings, UserStats, ThemeMode, FontSizeSetting, LineSpacingSetting } from '../types';
 import { audioPlayer } from '../utils/audioPlayer';
@@ -34,6 +37,7 @@ interface SettingsModalProps {
   onUpdateSettings: (settings: Partial<AppSettings>) => void;
   onOpenPlacementQuiz: () => void;
   onDataRestored: () => void;
+  onOpenPrivacy?: () => void;
 }
 
 export const SettingsModal: React.FC<SettingsModalProps> = ({
@@ -44,7 +48,8 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   onClose,
   onUpdateSettings,
   onOpenPlacementQuiz,
-  onDataRestored
+  onDataRestored,
+  onOpenPrivacy
 }) => {
   const [frenchVoices, setFrenchVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [selectedVoiceURI, setSelectedVoiceURI] = useState<string>(
@@ -86,8 +91,8 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       const dateStr = new Date().toISOString().split('T')[0];
+      a.download = `lirefacile-backup-${dateStr}.json`;
       a.href = url;
-      a.download = `learn-french-backup-${dateStr}.json`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -515,23 +520,41 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
           {/* Backup: Export & Import */}
           <div className="pt-4 border-t border-stone-100 dark:border-stone-800 sepia:border-[#E8DEC7] space-y-3">
-            <label className="text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 sepia:text-[#4A3825] block">
-              {i18n.settings.backupTitle}
-            </label>
+            <div className="flex items-center justify-between">
+              <label className="text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 sepia:text-[#4A3825] block">
+                {i18n.settings.backupTitle}
+              </label>
+              {onOpenPrivacy && (
+                <button
+                  type="button"
+                  onClick={onOpenPrivacy}
+                  className="text-[11px] font-semibold text-amber-800 dark:text-amber-400 sepia:text-[#8C4712] hover:underline cursor-pointer"
+                >
+                  Privacy Policy & Data Security
+                </button>
+              )}
+            </div>
+            
             <p className="text-[11px] text-stone-500 dark:text-stone-400 sepia:text-[#78644E] leading-relaxed">
               {i18n.settings.backupDesc}
             </p>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2 pt-1">
+              {/* Export backup */}
               <button
                 onClick={handleExport}
                 className="flex items-center gap-1.5 px-4 py-2 bg-stone-100 dark:bg-stone-800 sepia:bg-[#EDE3CB] hover:bg-stone-200 dark:hover:bg-stone-700 sepia:hover:bg-[#E5D7BD] text-stone-800 dark:text-stone-200 sepia:text-[#382716] rounded-xl text-xs font-semibold transition-colors border border-stone-200 dark:border-stone-700 sepia:border-[#DDCFB6] cursor-pointer"
+                title="Export a complete JSON backup of your learning progress"
               >
                 <FileDown size={14} />
                 <span>{i18n.settings.exportBtn}</span>
               </button>
 
-              <label className="flex items-center gap-1.5 px-4 py-2 bg-stone-100 dark:bg-stone-800 sepia:bg-[#EDE3CB] hover:bg-stone-200 dark:hover:bg-stone-700 sepia:hover:bg-[#E5D7BD] text-stone-800 dark:text-stone-200 sepia:text-[#382716] rounded-xl text-xs font-semibold transition-colors border border-stone-200 dark:border-stone-700 sepia:border-[#DDCFB6] cursor-pointer">
+              {/* Import backup */}
+              <label
+                className="flex items-center gap-1.5 px-4 py-2 bg-stone-100 dark:bg-stone-800 sepia:bg-[#EDE3CB] hover:bg-stone-200 dark:hover:bg-stone-700 sepia:hover:bg-[#E5D7BD] text-stone-800 dark:text-stone-200 sepia:text-[#382716] rounded-xl text-xs font-semibold transition-colors border border-stone-200 dark:border-stone-700 sepia:border-[#DDCFB6] cursor-pointer"
+                title="Import a previously saved JSON backup"
+              >
                 <FileUp size={14} />
                 <span>{i18n.settings.importBtn}</span>
                 <input

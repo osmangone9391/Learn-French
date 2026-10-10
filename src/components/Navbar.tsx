@@ -1,13 +1,21 @@
 import React from 'react';
 import { Bookmark, Play, Settings, TrendingUp, Sun, Moon, BookOpen } from 'lucide-react';
-import { ThemeMode } from '../types';
+import { ThemeMode, AuthUser, SyncStatus } from '../types';
 import { i18n } from '../i18n/en';
+import { AccountMenu } from './AccountMenu';
 
 interface NavbarProps {
   savedWordsCount: number;
   dueCardsCount: number;
   activeView: 'library' | 'reader' | 'words' | 'review' | 'progress';
   currentTheme: ThemeMode;
+  user: AuthUser | null;
+  syncStatus: SyncStatus;
+  onOpenAuth: () => void;
+  onOpenPrivacy: () => void;
+  onSignOut: () => void;
+  onTriggerSync: () => void;
+  onAccountDeleted: () => void;
   onOpenSavedWords: () => void;
   onStartReview: () => void;
   onOpenProgress: () => void;
@@ -21,6 +29,13 @@ export const Navbar: React.FC<NavbarProps> = ({
   dueCardsCount,
   activeView,
   currentTheme,
+  user,
+  syncStatus,
+  onOpenAuth,
+  onOpenPrivacy,
+  onSignOut,
+  onTriggerSync,
+  onAccountDeleted,
   onOpenSavedWords,
   onStartReview,
   onOpenProgress,
@@ -36,42 +51,35 @@ export const Navbar: React.FC<NavbarProps> = ({
           onClick={onResetView}
           className="flex items-center gap-2.5 text-left group cursor-pointer"
         >
-          <div className="w-9 h-9 rounded-xl bg-amber-800 dark:bg-amber-700 sepia:bg-[#8C4712] text-amber-50 flex items-center justify-center font-serif font-bold text-lg shadow-xs group-hover:bg-amber-900 transition-colors">
+          <div className="w-8 h-8 rounded-xl bg-amber-800 dark:bg-amber-600 sepia:bg-[#8C4712] text-white flex items-center justify-center font-serif font-black text-sm shadow-2xs group-hover:scale-105 transition-transform">
             LF
           </div>
           <div>
-            <div className="flex items-center gap-1.5">
-              <span className="font-serif font-bold text-stone-900 dark:text-stone-100 sepia:text-[#382716] text-lg tracking-tight group-hover:text-amber-800 dark:group-hover:text-amber-300 sepia:group-hover:text-[#8C4712] transition-colors">
-                {i18n.common.appName}
-              </span>
-              <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-100 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 sepia:bg-amber-200/80 sepia:text-amber-950 border border-amber-200 dark:border-amber-800 sepia:border-amber-400">
-                French Reader
-              </span>
+            <div className="font-serif font-bold text-base text-stone-900 dark:text-stone-100 sepia:text-[#382716] leading-none">
+              {i18n.common.appTitle}
             </div>
-            <p className="text-[11px] text-stone-500 dark:text-stone-400 sepia:text-[#78644E] hidden sm:block">
-              {i18n.common.tagline}
-            </p>
+            <div className="text-[10px] text-stone-500 dark:text-stone-400 sepia:text-[#78644E] leading-tight font-medium">
+              {i18n.common.appSubtitle}
+            </div>
           </div>
         </button>
 
         {/* Navigation Action Buttons */}
-        <div className="flex items-center gap-1 sm:gap-2">
-          {/* Review button */}
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          {/* Daily Review queue CTA button */}
           <button
             onClick={onStartReview}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
-              activeView === 'review'
-                ? 'bg-amber-800 text-white shadow-xs'
-                : dueCardsCount > 0
-                ? 'bg-amber-100 hover:bg-amber-200 text-amber-950 border border-amber-300 dark:bg-amber-950/70 dark:text-amber-200 dark:border-amber-800 sepia:bg-amber-200/80 sepia:text-amber-950 sepia:border-amber-400'
+              dueCardsCount > 0
+                ? 'bg-amber-800 hover:bg-amber-900 dark:bg-amber-600 dark:hover:bg-amber-500 sepia:bg-[#8C4712] sepia:hover:bg-[#733A0F] text-white shadow-2xs animate-pulse hover:animate-none'
                 : 'bg-stone-100 hover:bg-stone-200 text-stone-700 dark:bg-stone-800 dark:hover:bg-stone-750 dark:text-stone-300 sepia:bg-[#EDE3CB] sepia:hover:bg-[#E5D7BD] sepia:text-[#382716]'
             }`}
-            title="Spaced Repetition Review"
+            title={dueCardsCount > 0 ? `${dueCardsCount} flashcards due for spaced-repetition review` : 'All caught up on reviews'}
           >
-            <Play size={12} fill="currentColor" />
-            <span>{i18n.common.review}</span>
+            <Play size={12} className={dueCardsCount > 0 ? 'fill-white' : ''} />
+            <span className="hidden sm:inline">{i18n.common.review}</span>
             {dueCardsCount > 0 && (
-              <span className="ml-0.5 px-1.5 py-0.2 bg-amber-800 text-white rounded-full text-[10px]">
+              <span className="bg-white/20 text-white rounded-full px-1.5 py-0.2 text-[10px] font-bold">
                 {dueCardsCount}
               </span>
             )}
@@ -105,6 +113,17 @@ export const Navbar: React.FC<NavbarProps> = ({
             <TrendingUp size={13} />
             <span className="hidden sm:inline">{i18n.common.progress}</span>
           </button>
+
+          {/* Account Menu (Firebase Auth & Cloud Sync) */}
+          <AccountMenu
+            user={user}
+            syncStatus={syncStatus}
+            onOpenAuth={onOpenAuth}
+            onOpenPrivacy={onOpenPrivacy}
+            onSignOut={onSignOut}
+            onTriggerSync={onTriggerSync}
+            onAccountDeleted={onAccountDeleted}
+          />
 
           {/* Quick Theme Switcher Button */}
           <button

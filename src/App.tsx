@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect, useMemo } from 'react';
-import { Story, SavedWord, UserStats, AppSettings, CEFRLevel, ThemeMode } from './types';
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import { Story, SavedWord, UserStats, AppSettings, CEFRLevel, ThemeMode, AuthUser, SyncStatus } from './types';
 import { INITIAL_STORIES } from './data/stories';
 import {
   getSavedWords,
@@ -19,8 +19,33 @@ import {
   dismissPlacementPrompt,
   getAppSettings,
   updateAppSettings,
-  cleanupOldApiKey
+  cleanupOldApiKey,
+  setActiveAccountUid,
+  clearAccountLocalCache,
+  hasGuestData,
+  getGuestSavedWords,
+  getGuestUserStats,
+  getGuestAppSettings,
+  getStorageKey
 } from './utils/storage';
+import {
+  subscribeToAuthState,
+  signOutAccount
+} from './firebase/auth';
+import {
+  subscribeSyncStatus,
+  pullCloudData,
+  pushLocalData,
+  scheduleDebouncedPush,
+  flushPendingPush,
+  initializeSyncListeners,
+  deleteUserCloudData
+} from './firebase/sync';
+import {
+  mergeSavedWords,
+  mergeUserStats,
+  mergeAppSettings
+} from './firebase/merge';
 import { getDailyStudyQueue } from './utils/srs';
 import { Navbar } from './components/Navbar';
 import { StoryLibrary } from './components/StoryLibrary';
@@ -31,20 +56,34 @@ import { ProgressPage } from './components/ProgressPage';
 import { SettingsModal } from './components/SettingsModal';
 import { PlacementQuizModal } from './components/PlacementQuizModal';
 import { AudioSourceIndicator } from './components/AudioSourceIndicator';
+import { AuthModal } from './components/AuthModal';
+import { PrivacyModal } from './components/PrivacyModal';
+import { GuestMigrationPrompt } from './components/GuestMigrationPrompt';
 
 type AppView = 'library' | 'reader' | 'words' | 'review' | 'progress';
 
 export default function App() {
   const [activeView, setActiveView] = useState<AppView>('library');
   const [activeStory, setActiveStory] = useState<Story | null>(null);
-  const [savedWords, setSavedWords] = useState<SavedWord[]>([]);
-  const [userStats, setUserStats] = useState<UserStats>(getUserStats());
-  const [settings, setSettings] = useState<AppSettings>(getAppSettings());
+
+  // Authentication & Cloud Sync State
+  const [user, setUser] = useState<AuthUser | null>(null);
+  const [syncStatus, setSyncStatus] = useState<SyncStatus>('synced');
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
+  const [showGuestMigration, setShowGuestMigration] = useState(false);
+  const hasPromptedMigrationForUser = useRef<string | null>(null);
+
+  // Active Learner Data (Guest Mode or Signed-In Account)
+  const [savedWords, setSavedWords] = useState<SavedWord[]>(() => getSavedWords());
+  const [userStats, setUserStats] = useState<UserStats>(() => getUserStats());
+  const [settings, setSettings] = useState<AppSettings>(() => getAppSettings());
+
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isPlacementQuizOpen, setIsPlacementQuizOpen] = useState(false);
   const [isFirstLaunchPlacement, setIsFirstLaunchPlacement] = useState(false);
 
-  // Track system dark-mode preference (default fallback when theme setting is not explicitly chosen)
+  // Track system dark-mode preference
   const [systemPrefersDark, setSystemPrefersDark] = useState<boolean>(() => {
     if (typeof window !== 'undefined' && window.matchMedia) {
       return window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -52,7 +91,6 @@ export default function App() {
     return false;
   });
 
-  // Listen to system color scheme changes
   useEffect(() => {
     if (typeof window === 'undefined' || !window.matchMedia) return;
     const mq = window.matchMedia('(prefers-color-scheme: dark)');
@@ -61,13 +99,12 @@ export default function App() {
     return () => mq.removeEventListener('change', handler);
   }, []);
 
-  // Compute active effective theme: user setting takes precedence; otherwise follows device preference
+  // Compute active effective theme
   const activeTheme: ThemeMode = useMemo(() => {
     if (settings.theme) return settings.theme;
     return systemPrefersDark ? 'dark' : 'light';
   }, [settings.theme, systemPrefersDark]);
 
-  // Synchronize active theme with document root
   useEffect(() => {
     const root = document.documentElement;
     root.setAttribute('data-theme', activeTheme);
@@ -75,29 +112,156 @@ export default function App() {
     root.classList.add(activeTheme);
   }, [activeTheme]);
 
-  // Load persisted state on mount
+  // Reload current learner data from storage
+  const reloadLocalState = useCallback((targetUid?: string | null) => {
+    const resolvedUid = targetUid !== undefined ? targetUid : (user ? user.uid : null);
+    const words = getSavedWords(resolvedUid || undefined);
+    const stats = getUserStats(resolvedUid || undefined);
+    const sett = getAppSettings(resolvedUid || undefined);
+    setSavedWords(words);
+    setUserStats(stats);
+    setSettings(sett);
+  }, [user]);
+
+  // Auth & Sync Subscription Lifecycle
   useEffect(() => {
     cleanupOldApiKey();
 
-    try {
-      const words = getSavedWords();
-      const stats = getUserStats();
-      const sett = getAppSettings();
-      setSavedWords(words);
-      setUserStats(stats);
-      setSettings(sett);
+    // Subscribe to sync status changes
+    const unsubSync = subscribeSyncStatus((st) => setSyncStatus(st));
 
-      // Offer placement test on first launch if not seen yet
-      if (!stats.hasSeenPlacementPrompt && !stats.placementResult) {
-        setIsPlacementQuizOpen(true);
-        setIsFirstLaunchPlacement(true);
+    // Initialize cross-tab visibility and online/offline sync listeners
+    const unsubListeners = initializeSyncListeners((mWords, mStats, mSettings) => {
+      setSavedWords(mWords);
+      setUserStats(mStats);
+      setSettings(mSettings);
+    });
+
+    // Subscribe to Firebase Auth state
+    const unsubAuth = subscribeToAuthState((authUser) => {
+      setUser(authUser);
+      if (authUser) {
+        // User signed in
+        setActiveAccountUid(authUser.uid);
+        reloadLocalState(authUser.uid);
+
+        // Check if browser has guest progress and prompt once
+        if (hasGuestData() && hasPromptedMigrationForUser.current !== authUser.uid) {
+          hasPromptedMigrationForUser.current = authUser.uid;
+          setShowGuestMigration(true);
+        }
+
+        // Pull fresh cloud data in background
+        pullCloudData(authUser.uid).then((res) => {
+          if (res.success) {
+            setSavedWords(res.mergedWords);
+            setUserStats(res.mergedStats);
+            setSettings(res.mergedSettings);
+          }
+        });
+      } else {
+        // Guest mode
+        setActiveAccountUid(null);
+        reloadLocalState(null);
       }
-    } catch (e) {
-      console.error('Initialization error from localStorage:', e);
-    }
-  }, []);
+    });
 
-  // Compute due cards for the review session
+    // Placement prompt check on launch for unplaced learners
+    const stats = getUserStats();
+    if (!stats.hasSeenPlacementPrompt && !stats.placementResult && stats.storiesReadIds.length === 0) {
+      setIsPlacementQuizOpen(true);
+      setIsFirstLaunchPlacement(true);
+    }
+
+    return () => {
+      unsubSync();
+      unsubListeners();
+      unsubAuth();
+    };
+  }, [reloadLocalState]);
+
+  // Background Push Trigger Helper
+  const notifyChangeForSync = useCallback(() => {
+    if (user?.uid) {
+      scheduleDebouncedPush(user.uid);
+    }
+  }, [user]);
+
+  // Sign out Handler
+  const handleSignOut = async () => {
+    if (user?.uid) {
+      await flushPendingPush(user.uid);
+      clearAccountLocalCache(user.uid);
+    }
+    await signOutAccount();
+    setActiveAccountUid(null);
+    reloadLocalState(null);
+    setActiveStory(null);
+    setActiveView('library');
+  };
+
+  // Account Deletion Handler
+  const handleAccountDeleted = async () => {
+    if (user?.uid) {
+      await deleteUserCloudData(user.uid);
+      clearAccountLocalCache(user.uid);
+    }
+    setActiveAccountUid(null);
+    reloadLocalState(null);
+    setActiveStory(null);
+    setActiveView('library');
+  };
+
+  // Manual Trigger Sync Button
+  const handleTriggerSync = async () => {
+    if (!user?.uid) return;
+    const res = await pullCloudData(user.uid);
+    if (res.success) {
+      setSavedWords(res.mergedWords);
+      setUserStats(res.mergedStats);
+      setSettings(res.mergedSettings);
+    }
+    await pushLocalData(user.uid);
+  };
+
+  // Guest Progress Migration Confirmation
+  const handleConfirmGuestMigration = async () => {
+    setShowGuestMigration(false);
+    if (!user?.uid) return;
+
+    // Load guest progress
+    const guestWords = getGuestSavedWords();
+    const guestStats = getGuestUserStats();
+    const guestSettings = getGuestAppSettings();
+
+    // Load account progress
+    const accountWords = getSavedWords(user.uid);
+    const accountStats = getUserStats(user.uid);
+    const accountSettings = getAppSettings(user.uid);
+
+    // Deterministically merge
+    const mergedWords = mergeSavedWords(guestWords, accountWords);
+    const mergedStats = mergeUserStats(guestStats, accountStats);
+    const mergedSettings = mergeAppSettings(guestSettings, accountSettings);
+
+    // Save to account storage
+    localStorage.setItem(getStorageKey('SAVED_WORDS', user.uid), JSON.stringify(mergedWords));
+    localStorage.setItem(getStorageKey('STATS', user.uid), JSON.stringify(mergedStats));
+    localStorage.setItem(getStorageKey('SETTINGS', user.uid), JSON.stringify(mergedSettings));
+
+    setSavedWords(mergedWords);
+    setUserStats(mergedStats);
+    setSettings(mergedSettings);
+
+    // Push merged data immediately to cloud
+    await pushLocalData(user.uid);
+  };
+
+  const handleDismissGuestMigration = () => {
+    setShowGuestMigration(false);
+  };
+
+  // Study Queue
   const studyQueue = useMemo(() => {
     return getDailyStudyQueue(
       savedWords,
@@ -106,7 +270,7 @@ export default function App() {
     );
   }, [savedWords, settings.dailyReviewLimit, settings.dailyNewWordsLimit]);
 
-  // Handle saving a word from reader or popup
+  // Saved Words Handlers
   const handleSaveWord = (item: {
     word: string;
     lemma: string;
@@ -122,86 +286,94 @@ export default function App() {
     tense?: string;
     lemmaWithArticle?: string;
   }) => {
-    const res = saveWord(item);
+    const targetUid = user ? user.uid : undefined;
+    const res = saveWord(item, targetUid);
     if (res.success) {
-      setSavedWords(getSavedWords());
+      setSavedWords(getSavedWords(targetUid));
+      notifyChangeForSync();
     }
   };
 
-  // Handle removing a saved word
   const handleRemoveWord = (wordId: string) => {
-    removeSavedWord(wordId);
-    setSavedWords(getSavedWords());
+    const targetUid = user ? user.uid : undefined;
+    removeSavedWord(wordId, targetUid);
+    setSavedWords(getSavedWords(targetUid));
+    notifyChangeForSync();
   };
 
-  // Handle story read status toggle
   const handleToggleRead = (storyId: string, wordCount: number) => {
+    const targetUid = user ? user.uid : undefined;
     const isCurrentlyRead = userStats.storiesReadIds.includes(storyId);
     const updated = isCurrentlyRead
-      ? unmarkStoryAsRead(storyId, wordCount)
-      : markStoryAsRead(storyId, wordCount);
+      ? unmarkStoryAsRead(storyId, wordCount, targetUid)
+      : markStoryAsRead(storyId, wordCount, targetUid);
     setUserStats(updated);
+    notifyChangeForSync();
   };
 
-  // Handle finish SRS review session
   const handleFinishReviewSession = (
     _updatedCards: SavedWord[],
     cardsReviewed: number,
     cardsCorrect: number
   ) => {
-    const updatedStats = recordReviewSession(cardsReviewed, cardsCorrect);
+    const targetUid = user ? user.uid : undefined;
+    const updatedStats = recordReviewSession(cardsReviewed, cardsCorrect, targetUid);
     setUserStats(updatedStats);
-    setSavedWords(getSavedWords());
+    setSavedWords(getSavedWords(targetUid));
+    notifyChangeForSync();
     setActiveView('library');
   };
 
-  // Handle comprehension quiz complete
   const handleQuizCompleted = (scorePercentage: number) => {
     if (!activeStory) return;
-    const updatedStats = recordQuizScore(activeStory.id, scorePercentage);
+    const targetUid = user ? user.uid : undefined;
+    const updatedStats = recordQuizScore(activeStory.id, scorePercentage, targetUid);
     setUserStats(updatedStats);
+    notifyChangeForSync();
   };
 
-  // Handle placement quiz complete
   const handlePlacementComplete = (level: CEFRLevel, score: number, total: number) => {
-    const updated = savePlacementResult(level, score, total);
+    const targetUid = user ? user.uid : undefined;
+    const updated = savePlacementResult(level, score, total, targetUid);
     setUserStats(updated);
     setIsPlacementQuizOpen(false);
+    notifyChangeForSync();
   };
 
-  // Handle placement quiz skip
   const handlePlacementSkip = () => {
-    const updated = dismissPlacementPrompt();
+    const targetUid = user ? user.uid : undefined;
+    const updated = dismissPlacementPrompt(targetUid);
     setUserStats(updated);
     setIsPlacementQuizOpen(false);
+    notifyChangeForSync();
   };
 
-  // Update app settings with persistence
   const handleUpdateSettings = (partial: Partial<AppSettings>) => {
-    const updated = updateAppSettings(partial);
+    const targetUid = user ? user.uid : undefined;
+    const updated = updateAppSettings(partial, targetUid);
     setSettings(updated);
+    notifyChangeForSync();
   };
 
-  // Quick theme cycle handler (Light -> Sepia -> Dark)
   const handleToggleTheme = () => {
-    const themes: ThemeMode[] = ['light', 'sepia', 'dark'];
-    const current = activeTheme;
-    const nextIdx = (themes.indexOf(current) + 1) % themes.length;
-    handleUpdateSettings({ theme: themes[nextIdx] });
+    const current = settings.theme || (systemPrefersDark ? 'dark' : 'light');
+    let nextTheme: ThemeMode = 'light';
+    if (current === 'light') nextTheme = 'sepia';
+    else if (current === 'sepia') nextTheme = 'dark';
+    else nextTheme = 'light';
+
+    handleUpdateSettings({ theme: nextTheme });
   };
 
-  // Handle data restored from backup JSON
-  const handleDataRestored = () => {
-    setSavedWords(getSavedWords());
-    setUserStats(getUserStats());
-    setSettings(getAppSettings());
-  };
-
-  // Navigation handlers
   const handleSelectStory = (story: Story) => {
     setActiveStory(story);
     setActiveView('reader');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleResetToLibrary = () => {
+    setActiveStory(null);
+    setActiveView('library');
   };
 
   const handleOpenSavedWords = () => {
@@ -219,19 +391,26 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleResetToLibrary = () => {
-    setActiveStory(null);
-    setActiveView('library');
+  const handleDataRestored = () => {
+    reloadLocalState();
+    notifyChangeForSync();
   };
 
   return (
-    <div className="min-h-screen text-stone-900 dark:text-stone-100 sepia:text-[#382716] font-sans antialiased flex flex-col transition-colors">
-      {/* Top Header */}
+    <div className="min-h-screen flex flex-col font-sans selection:bg-amber-100 selection:text-amber-900 dark:selection:bg-amber-950 dark:selection:text-amber-100 sepia:selection:bg-[#E5D7BD] sepia:selection:text-[#382716]">
+      {/* Navigation Header */}
       <Navbar
         savedWordsCount={savedWords.length}
-        dueCardsCount={studyQueue.totalQueue.length}
+        dueCardsCount={studyQueue.dueCardsCount}
         activeView={activeView}
         currentTheme={activeTheme}
+        user={user}
+        syncStatus={syncStatus}
+        onOpenAuth={() => setIsAuthModalOpen(true)}
+        onOpenPrivacy={() => setIsPrivacyModalOpen(true)}
+        onSignOut={handleSignOut}
+        onTriggerSync={handleTriggerSync}
+        onAccountDeleted={handleAccountDeleted}
         onOpenSavedWords={handleOpenSavedWords}
         onStartReview={handleStartReview}
         onOpenProgress={handleOpenProgress}
@@ -305,6 +484,10 @@ export default function App() {
         onUpdateSettings={handleUpdateSettings}
         onOpenPlacementQuiz={() => setIsPlacementQuizOpen(true)}
         onDataRestored={handleDataRestored}
+        onOpenPrivacy={() => {
+          setIsSettingsOpen(false);
+          setIsPrivacyModalOpen(true);
+        }}
       />
 
       {/* Placement Quiz Modal */}
@@ -314,6 +497,29 @@ export default function App() {
         onComplete={handlePlacementComplete}
         onSkip={handlePlacementSkip}
         isFirstLaunch={isFirstLaunchPlacement}
+      />
+
+      {/* Authentication Modal */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
+        onOpenPrivacy={() => {
+          setIsAuthModalOpen(false);
+          setIsPrivacyModalOpen(true);
+        }}
+      />
+
+      {/* Plain-English GDPR Privacy Modal */}
+      <PrivacyModal
+        isOpen={isPrivacyModalOpen}
+        onClose={() => setIsPrivacyModalOpen(false)}
+      />
+
+      {/* Guest Progress Migration Modal (shown on first sign-in) */}
+      <GuestMigrationPrompt
+        isOpen={showGuestMigration}
+        onConfirmMerge={handleConfirmGuestMigration}
+        onDismiss={handleDismissGuestMigration}
       />
 
       {/* Persistent Audio Source Indicator (Neural vs Browser Voice) */}
