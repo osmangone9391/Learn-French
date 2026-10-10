@@ -43,6 +43,21 @@ export function mapFirebaseUser(user: User | null): AuthUser | null {
  */
 export function formatAuthError(error: any): string {
   const code = error?.code || '';
+  const message = error?.message || '';
+
+  if (code === 'auth/configuration-not-found' || message.includes('CONFIGURATION_NOT_FOUND')) {
+    return 'Authentication is not yet enabled in your Firebase Console. Please go to Firebase Console → Build → Authentication → click "Get Started" and enable Google and Email/Password.';
+  }
+
+  if (code === 'auth/unauthorized-domain' || message.includes('unauthorized-domain')) {
+    const host = typeof window !== 'undefined' ? window.location.hostname : 'this domain';
+    return `This website domain (${host}) is not authorized in your Firebase Console yet. Please go to Firebase Console → Authentication → Settings → Authorized domains and add "${host}".`;
+  }
+
+  if (code === 'auth/operation-not-allowed' || message.includes('operation-not-allowed')) {
+    return 'This sign-in method is not enabled in your Firebase Console. Please go to Firebase Console → Authentication → Sign-in method and enable Email/Password and Google.';
+  }
+
   switch (code) {
     case 'auth/invalid-credential':
     case 'auth/wrong-password':
@@ -55,6 +70,7 @@ export function formatAuthError(error: any): string {
     case 'auth/invalid-email':
       return 'Please enter a valid email address.';
     case 'auth/popup-closed-by-user':
+    case 'auth/cancelled-popup-request':
       return 'Sign-in popup was closed before completing. Please try again.';
     case 'auth/popup-blocked':
       return 'The sign-in popup was blocked by your browser. Please allow popups for this site.';
@@ -68,7 +84,7 @@ export function formatAuthError(error: any): string {
       if (!isFirebaseConfigured()) {
         return 'Firebase is not yet configured for this deployment. You can continue using Guest Mode.';
       }
-      return 'Could not complete sign-in. Please try again in a few moments.';
+      return message || 'Could not complete sign-in. Please check your Firebase settings or try again.';
   }
 }
 
@@ -86,6 +102,7 @@ export async function signInWithGoogle(): Promise<{ success: boolean; user?: Aut
     const cred = await signInWithPopup(auth, googleProvider);
     return { success: true, user: mapFirebaseUser(cred.user) || undefined };
   } catch (err: any) {
+    console.error('[Firebase Auth] signInWithGoogle failed:', err);
     return { success: false, message: formatAuthError(err) };
   }
 }
@@ -107,6 +124,7 @@ export async function signInWithEmail(
     const cred = await signInWithEmailAndPassword(auth, email.trim(), pass);
     return { success: true, user: mapFirebaseUser(cred.user) || undefined };
   } catch (err: any) {
+    console.error('[Firebase Auth] signInWithEmail failed:', err);
     return { success: false, message: formatAuthError(err) };
   }
 }
@@ -139,6 +157,7 @@ export async function signUpWithEmail(
       verificationSent
     };
   } catch (err: any) {
+    console.error('[Firebase Auth] signUpWithEmail failed:', err);
     return { success: false, message: formatAuthError(err) };
   }
 }
